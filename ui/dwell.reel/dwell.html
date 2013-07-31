@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="dwell.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/dwell.reel",
+            "properties": {
+                "element": {"#": "Dwell"},
+                "indicator": {"#": "indicator"}
+            }
+        },
+        "rotateComposer": {
+            "prototype": "core/rotation-composer",
+            "properties": {
+                "component": {"@": "owner"}
+            },
+            "listeners": [
+                {
+                    "type": "rotate",
+                    "listener": {"@": "owner"}
+                },
+                {
+                    "type": "rotateStart",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="Dwell" class="Dwell">
+        <div class="Dwell-title">
+            dwell
+        </div>
+        <div data-montage-id="indicator" class="Dwell-indicatorContainer">
+            <div class="Dwell-indicator">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
