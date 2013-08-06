@@ -43,12 +43,6 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
             this._translateComposer._load();
             this._translateComposer.addEventListener("translateStart", this, false);
             this._translateComposer.addEventListener("translate", this, false);
-
-            var topLeft = webkitConvertPointFromNodeToPage(this.element, new WebKitPoint(0,0));
-            this._center = {};
-            this._center.pageX = topLeft.x + this.element.offsetWidth / 2;
-            this._center.pageY = topLeft.y + this.element.offsetHeight / 2;
-            console.log("_center", this._center);
         }
     },
 
@@ -59,18 +53,13 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
     
     handleTranslateStart: {
         value: function(event) {
-            console.log("_center", this._center);
             if (! this._start) {
                 this._start = this._translateComposer.pointerStartEventPosition;
             }
             var start = this._start;
-            console.log("start", start)
-            var deltaX = start.pageX - this._center.pageX;
-            var deltaY = this._center.pageY - start.pageY;
-            console.log("deltaX", deltaX)
-            console.log("deltaY", deltaY)
+            var deltaX = start.pageX - this.center.pageX;
+            var deltaY = this.center.pageY - start.pageY;
             this._startAngle = (Math.atan2(deltaY, deltaX) * 180 / 3.14);
-            console.log("_startAngle", this._startAngle)
             this._dispatchRotateStart();
         }
     },
@@ -84,16 +73,14 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
 
     _move: {
         value: function(event) {
-            var deltaX = (this._start.pageX + event.translateX) - this._center.pageX;
-            var deltaY = this._center.pageY - (this._start.pageY + event.translateY);
-            console.log("translate", event.translateX, event.translateY)
-            console.log("deltaX", deltaX)
-            console.log("deltaY", deltaY)
+            var deltaX = (this._start.pageX + event.translateX) - this.center.pageX;
+            var deltaY = this.center.pageY - (this._start.pageY + event.translateY);
             var angle = (Math.atan2(deltaY, deltaX) * 180 / 3.14)
-            console.log("currentAngle", angle)
             angle = this._startAngle - angle;
-            console.log("rotation", angle)
             this._dispatchRotate(angle);
+
+
+            this._debug(angle, event);
         }
     },
     
@@ -114,16 +101,88 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
         }
     },
 
-    _start: {
+    center: {
         value: null
     },
 
-    _center: {
+    rotationOrigin: {
+        value: 0
+    },
+    
+    _start: {
         value: null
     },
 
     _translateComposer: {
         value: null
+    },
+
+    _debugCanvas: {
+        value: null
+    },
+
+    _debug: {
+        value: function(angle, event) {
+            var canvas = this._debugCanvas;
+            if (this._debugCanvas === null) {
+                canvas = document.createElement("canvas");
+                canvas.style.position = "absolute";
+                canvas.style.top = "0px";
+                canvas.style.left = "0px";
+                canvas.style.pointerEvents = "none";
+
+                var resizeCanvas = function () {
+                    canvas.width = document.documentElement.offsetWidth;
+                    canvas.height = document.documentElement.offsetHeight;
+                };
+                resizeCanvas();
+                window.addEventListener("resize", resizeCanvas);
+                document.body.appendChild(canvas);
+                this._debugCanvas = canvas;
+            }
+
+            var context = canvas.getContext('2d');
+            context.clearRect(0,0,canvas.width,canvas.height);
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var radius = 75;
+            var startAngle = 1.1 * Math.PI;
+            var endAngle = 1.9 * Math.PI;
+            var counterClockwise = angle<0;
+
+            context.beginPath();
+            context.arc(this.center.pageX, this.center.pageY, radius, 0, angle * Math.PI/180, counterClockwise);
+            context.lineWidth = 2;
+      
+            // line color
+            context.strokeStyle = 'red';
+            context.stroke();
+
+            var grid = function (x, y) {
+                context.beginPath();
+                context.moveTo(x, 0);
+                context.lineTo(x, canvas.height);
+                context.stroke();
+                context.beginPath();
+                context.moveTo(0, y);
+                context.lineTo(canvas.width, y);
+                context.stroke();
+            }
+            //center
+            context.strokeStyle = 'red';
+            grid(this.center.pageX, this.center.pageY);
+            //translate
+            context.strokeStyle = 'blue';
+            grid( this._start.pageX + event.translateX,  this._start.pageY + event.translateY);
+
+
+
+            context.font="20px Futura";
+            context.fillText(angle.toFixed(2) + " degrees", this.center.pageX+75, this.center.pageY+75);
+
+
+        }
     }
+
 
 });

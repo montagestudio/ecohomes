@@ -1,0 +1,87 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_awake": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "awake",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_active": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "active",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_outsideTemperature": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "outsideTemperature",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_targetTemperature": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "targetTemperature",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_ambientTemperature": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "ambientTemperature",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_ambietTemperature": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "ambietTemperature",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_awake"},
+        {"@": "blueprint_unnamed_active"},
+        {"@": "blueprint_unnamed_outsideTemperature"},
+        {"@": "blueprint_unnamed_targetTemperature"},
+        {"@": "blueprint_unnamed_ambientTemperature"},
+        {"@": "blueprint_unnamed_ambietTemperature"}
+      ],
+      "propertyBlueprintGroups": {
+        "Den": [
+          {"@": "blueprint_unnamed_awake"},
+          {"@": "blueprint_unnamed_active"},
+          {"@": "blueprint_unnamed_outsideTemperature"},
+          {"@": "blueprint_unnamed_targetTemperature"},
+          {"@": "blueprint_unnamed_ambientTemperature"}
+        ],
+        "default": [
+          {"@": "blueprint_unnamed_ambietTemperature"}
+        ]
+      },
+      "module": {
+        "%": "ui/den.reel"
+      },
+      "exportName": "Den"
+    }
+  }
+}

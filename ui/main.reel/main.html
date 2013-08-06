@@ -14,10 +14,25 @@
                 "element": {"#": "main"}
             }
         },
-        "dwell": {
-            "prototype": "ui/dwell.reel",
+        "den": {
+            "prototype": "ui/den.reel",
             "properties": {
-                "element": {"#": "dwell"}
+                "element": {"#": "den"}
+            }
+        },
+        "scene1": {
+            "prototype": "glTF-webgl-viewer/runtime/scene",
+            "properties": {
+                "path": "assets/3d/bot/bot.json"
+            }
+        },
+        "view1": {
+            "prototype": "glTF-webgl-viewer/ui/view.reel",
+            "properties": {
+                "element": {"#": "colladaView"},
+                "height": "200",
+                "scene": {"@": "scene1"},
+                "width": "400"
             }
         }
     }
@@ -25,7 +40,8 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <div data-montage-id="dwell"></div>
+        <div data-montage-id="colladaView"></div>
+        <div data-montage-id="den"></div>
     </div>
 </body>
 </html>

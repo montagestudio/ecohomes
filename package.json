@@ -1,9 +1,10 @@
 {
-    "name": "dwell",
+    "name": "den",
     "version": "0.1.0",
     "dependencies": {
         "montage": "~0.13.2",
-        "digit": "~0.3.1"
+        "digit": "~0.3.1",
+        "glTF-webgl-viewer": "git+ssh://git@github.com:fabrobinet/glTF-webgl-viewer.git"
     },
     "devDependencies": {
         "montage-testing": "0.2.0"
