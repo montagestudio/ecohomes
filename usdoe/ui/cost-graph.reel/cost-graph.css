@@ -1,0 +1,26 @@
+/**
+ * User Configurable:
+ *
+ * .usdoe-CostGraph width
+ * .usdoe-CostGraph .usdoe-Bar margin
+ * .usdoe-CostGraph-costBar .usdoe-Bar-level background-color
+ * .usdoe-CostGraph-consumptionBar .usdoe-Bar-level background-color
+ */
+
+.usdoe-CostGraph {
+    display: inline-block;
+    position: relative;
+    width: 244px;
+}
+
+.usdoe-CostGraph .usdoe-Bar {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.usdoe-CostGraph-base {
+    margin: 0;
+    border-top: 1px solid blue;
+}

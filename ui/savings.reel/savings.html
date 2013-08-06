@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="savings.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/savings.reel",
+            "properties": {
+                "element": {"#": "savings"}
+            }
+        },
+        "temperatureController": {
+            "prototype": "core/temperature-controller",
+            "bindings": {
+                "dayTemperature": {"<-": "@day.value"},
+                "nightTemperature": {"<-": "@night.value"},
+                "zipCode": {"<-": "@cost.zipCode"}
+            }
+        },
+        "cost": {
+            "prototype": "usdoe/ui/cost.reel",
+            "properties": {
+                "element": {"#": "cost"}
+            },
+            "bindings": {
+                "consumption": {"<-": "@temperatureController.consumption"}
+            }
+        },
+        "day": {
+            "prototype": "digit/ui/slider.reel",
+            "properties": {
+                "element": {"#": "day"},
+                "max": 100,
+                "min": 50,
+                "step": 1,
+                "value": 70
+            }
+        },
+        "dayTemperature": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "dayTemperature"}
+            },
+            "bindings": {
+                "value": {"<-": "@day.value"}
+            }
+        },
+        "dollarsSaved": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "dollarsSaved"}
+            },
+            "bindings": {
+                "value": {"<-": "'$' + (@cost.averageCost - @cost.consumptionCost)"}
+            }
+        },
+        "night": {
+            "prototype": "digit/ui/slider.reel",
+            "properties": {
+                "element": {"#": "night"},
+                "max": 100,
+                "min": 50,
+                "step": 1,
+                "value": 60
+            }
+        },
+        "nightTemperature": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "nightTemperature"}
+            },
+            "bindings": {
+                "value": {"<->": "@night.value"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="savings" class="Savings">
+        <div data-montage-id="cost"></div>
+        <span data-montage-id="dollarsSaved"></span>
+        <p></p>
+        <span data-montage-id="dayTemperature"></span>
+        <div data-montage-id="day"></div>
+        <span data-montage-id="nightTemperature"></span>
+        <div data-montage-id="night"></div>
+    </div>
+</body>
+</html>

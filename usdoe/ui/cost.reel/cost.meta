@@ -1,0 +1,73 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_zipCode": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "zipCode",
+      "blueprint": {"@": "root"},
+      "readOnly": true
+    }
+  },
+  "blueprint_unnamed_consumption": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "consumption",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_consumptionCost": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "consumptionCost",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_averageCost": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "averageCost",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "usdoe/ui/cost.reel/cost.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_zipCode"},
+        {"@": "blueprint_unnamed_consumption"},
+        {"@": "blueprint_unnamed_consumptionCost"},
+        {"@": "blueprint_unnamed_averageCost"}
+      ],
+      "propertyBlueprintGroups": {
+        "default": [
+          {"@": "blueprint_unnamed_zipCode"},
+          {"@": "blueprint_unnamed_consumption"},
+          {"@": "blueprint_unnamed_consumptionCost"},
+          {"@": "blueprint_unnamed_averageCost"}
+        ]
+      },
+      "module": {
+        "%": "usdoe/ui/cost.reel"
+      },
+      "exportName": "Cost"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_value": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "value",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_maxValue": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "maxValue",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_label": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "label",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "usdoe/ui/cost-graph.reel/bar.reel/bar.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_value"},
+        {"@": "blueprint_unnamed_maxValue"},
+        {"@": "blueprint_unnamed_label"}
+      ],
+      "propertyBlueprintGroups": {
+        "default": [
+          {"@": "blueprint_unnamed_value"},
+          {"@": "blueprint_unnamed_maxValue"},
+          {"@": "blueprint_unnamed_label"}
+        ]
+      },
+      "module": {
+        "%": "usdoe/ui/cost-graph.reel/bar.reel"
+      },
+      "exportName": "Bar"
+    }
+  }
+}

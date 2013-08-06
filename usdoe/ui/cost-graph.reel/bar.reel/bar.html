@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bar.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "usdoe/ui/cost-graph.reel/bar.reel",
+            "properties": {
+                "element": {"#": "Bar"},
+                "_valueElement": {"#": "value"},
+                "_levelElement": {"#": "level"}
+            }
+        },
+        "label": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "label"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.label"}
+            }
+        },
+        "value": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "value"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.value"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="Bar" class="usdoe-Bar">&nbsp;
+        <div class="usdoe-Bar-level" data-montage-id="level">
+            <span class="usdoe-Bar-value" data-montage-id="value"></span>
+            <span class="usdoe-Bar-label" data-montage-id="label"></span>
+        </div>
+    </div>
+</body>
+</html>

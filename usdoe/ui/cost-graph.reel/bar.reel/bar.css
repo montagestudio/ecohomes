@@ -1,0 +1,34 @@
+.usdoe-Bar {
+    position: relative;
+    width: 100px;
+    height: 200px;
+}
+
+.usdoe-Bar-level {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: height 400ms ease-in;
+    -moz-transition: height 400ms ease-in;
+    -ms-transition: height 400ms ease-in;
+    transition: height 400ms ease-in;
+    background-color: blue;
+    text-align: center;
+}
+
+.usdoe-Bar-value {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1.2em;
+}
+
+.usdoe-Bar-label {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1.2em;
+}

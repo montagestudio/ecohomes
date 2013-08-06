@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="cost-graph.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "usdoe/ui/cost-graph.reel",
+            "properties": {
+                "element": {"#": "costGraph"}
+            }
+        },
+        "averageCost": {
+            "prototype": "./bar.reel",
+            "properties": {
+                "element": {"#": "averageCost"},
+                "label": "average"
+            },
+            "bindings": {
+                "maxValue": {"<-": "@owner.max"},
+                "value": {"<-": "@owner.average"}
+            }
+        },
+        "consumptionCost": {
+            "prototype": "./bar.reel",
+            "properties": {
+                "element": {"#": "consumptionCost"},
+                "label": "you"
+            },
+            "bindings": {
+                "maxValue": {"<-": "@owner.max"},
+                "value": {"<-": "@owner.consumption"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="costGraph" class="usdoe-CostGraph">
+        <span class="usdoe-CostGraph-costBar" data-montage-id="averageCost"></span>
+        <span class="usdoe-CostGraph-consumptionBar" data-montage-id="consumptionCost"></span>
+        <div class="usdoe-CostGraph-base"></div>
+    </div>
+</body>
+</html>
