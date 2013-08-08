@@ -30,10 +30,10 @@
             "prototype": "glTF-webgl-viewer/ui/view.reel",
             "properties": {
                 "element": {"#": "colladaView"},
-                "height": "300",
+                "height": "768",
                 "scene": {"@": "scene1"},
                 "viewPoint": {"@": "viewPoint"},
-                "width": "300"
+                "width": "624"
             }
         },
         "viewPoint": {
@@ -48,8 +48,9 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <div data-montage-id="colladaView"></div>
-        <div data-montage-id="den"></div>
+        <div class="Main-view" data-montage-id="colladaView"></div>
+        <div class="Main-title">The Den</div>
+        <div class="Main-wall"><div data-montage-id="den" class="Main-den"></div></div>
     </div>
 </body>
 </html>

@@ -1,1 +1,29 @@
 .Main {}
+
+.Main-view {
+    position: absolute;
+    left: 0px;
+    top:0px;
+    overflow: hidden;
+    height: 768px;
+    width: 624px;
+}
+
+.Main-wall {
+    position: absolute;
+    left: 624px;
+    top:0px;
+    overflow: hidden;
+    height: 768px;
+    width: 400px;
+}
+
+.Main-den {
+    margin-left: -50px;
+}
+.Main-title {
+    position: absolute;
+    left: 50px;
+    top:50px;
+    font-size: 50px;
+}
