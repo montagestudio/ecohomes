@@ -13,7 +13,7 @@
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
-      "name": null,
+      "name": "Savings",
       "blueprintModule": {
         "%": "ui/savings.reel/savings.meta"
       },

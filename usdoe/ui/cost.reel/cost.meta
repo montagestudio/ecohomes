@@ -45,7 +45,7 @@
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
-      "name": null,
+      "name": "Cost",
       "blueprintModule": {
         "%": "usdoe/ui/cost.reel/cost.meta"
       },

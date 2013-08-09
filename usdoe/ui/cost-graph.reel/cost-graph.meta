@@ -37,7 +37,7 @@
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
-      "name": null,
+      "name": "CostGraph",
       "blueprintModule": {
         "%": "usdoe/ui/cost-graph.reel/cost-graph.meta"
       },
