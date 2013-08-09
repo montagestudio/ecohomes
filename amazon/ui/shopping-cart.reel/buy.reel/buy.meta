@@ -1,0 +1,51 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_product": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "product",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_isLoading": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "isLoading",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "amazon/ui/shopping-cart.reel/buy.reel/buy.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_product"},
+        {"@": "blueprint_unnamed_isLoading"}
+      ],
+      "propertyBlueprintGroups": {
+        "Buy": [
+          {"@": "blueprint_unnamed_product"},
+          {"@": "blueprint_unnamed_isLoading"}
+        ]
+      },
+      "module": {
+        "%": "amazon/ui/shopping-cart.reel/buy.reel"
+      },
+      "exportName": "Buy"
+    }
+  }
+}

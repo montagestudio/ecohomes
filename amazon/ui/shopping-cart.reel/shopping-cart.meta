@@ -1,0 +1,42 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_shoppingcart_asin": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "asin",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": "ShoppingCart",
+      "blueprintModule": {
+        "%": "amazon/ui/shopping-cart.reel/shopping-cart.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_shoppingcart_asin"}
+      ],
+      "propertyBlueprintGroups": {
+        "ShoppingCart": [
+          {"@": "blueprint_shoppingcart_asin"}
+        ]
+      },
+      "module": {
+        "%": "amazon/ui/shopping-cart.reel"
+      },
+      "exportName": "ShoppingCart"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="shopping-cart.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "amazon/ui/shopping-cart.reel",
+            "properties": {
+                "element": {"#": "shoppingCart"},
+                "asin": "B009GDHYPQ"
+            }
+        },
+        "buy": {
+            "prototype": "./buy.reel",
+            "properties": {
+                "element": {"#": "buy"}
+            },
+            "bindings": {
+                "product": {"<-": "@owner._product"}
+            },
+            "listeners": [
+                {
+                    "type": "buy",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "logo": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "logo"},
+                "src": "../../assets/amazon.png"
+            }
+        },
+        "receipt": {
+            "prototype": "./receipt.reel",
+            "properties": {
+                "element": {"#": "receipt"}
+            },
+            "bindings": {
+                "product": {"<-": "@owner._product"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="shoppingCart" class="amazon-ShoppingCart">
+        <img data-montage-id="logo" class="amazon-ShoppingCart-logo">
+        <div data-montage-id="buy" class="amazon-ShoppingCart-content"></div>
+        <span data-montage-id="receipt" class="amazon-ShoppingCart-content amazon-ShoppingCart-receipt"></span>
+    </div>
+</body>
+</html>

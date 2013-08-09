@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="buy.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "amazon/ui/shopping-cart.reel/buy.reel",
+            "properties": {
+                "element": {"#": "buy"}
+            }
+        },
+        "buyButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "buyButton"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "deliveryEstimatation": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "deliveryEstimatation"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner._deliveryEstimation"}
+            }
+        },
+        "description": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "description"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.product.description"}
+            }
+        },
+        "isLoading": {
+            "prototype": "montage/ui/condition.reel",
+            "properties": {
+                "element": {"#": "isLoading"},
+                "removalStrategy": "remove"
+            },
+            "bindings": {
+                "condition": {"<-": "@owner.isLoading"}
+            }
+        },
+        "isNotLoading": {
+            "prototype": "montage/ui/condition.reel",
+            "properties": {
+                "element": {"#": "isNotLoading"},
+                "removalStrategy": "remove"
+            },
+            "bindings": {
+                "condition": {"<-": "!@owner.isLoading"}
+            }
+        },
+        "name": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "name"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.product.name"}
+            }
+        },
+        "orderWithin": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "orderWithin"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner._orderWithin"}
+            }
+        },
+        "price": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "price"}
+            },
+            "bindings": {
+                "value": {"<-": "'$' + (@owner.product.price * @quantity.value.label)"}
+            }
+        },
+        "processingLabel": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "processingLabel"},
+                "value": "Processing..."
+            }
+        },
+        "productImage": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "productImage"}
+            },
+            "bindings": {
+                "src": {"<-": "'../../../' + @owner.product.imageUrl"}
+            }
+        },
+        "quantity": {
+            "prototype": "digit/ui/select.reel",
+            "properties": {
+                "element": {"#": "quantity"},
+                "content": [
+                    {
+                        "label": 1
+                    },
+                    {
+                        "label": 2
+                    },
+                    {
+                        "label": 3
+                    },
+                    {
+                        "label": 4
+                    },
+                    {
+                        "label": 5
+                    }
+                ]
+            }
+        },
+        "quantityLabel": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "quantityLabel"},
+                "value": "Quantity:"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="buy" class="amazon-Buy">
+        <div>
+            <span data-montage-id="quantityLabel"></span>
+            <select data-montage-id="quantity"></select>
+        </div>
+        <div class="amazon-Buy-product">
+            <img data-montage-id="productImage" class="amazon-Buy-image">
+            <span data-montage-id="price" class="amazon-Buy-price"></span>
+            <br>
+            <span data-montage-id="name"></span>
+            <br>
+            <span data-montage-id="description" class="amazon-Buy-description"></span>
+        </div>
+        <div class="amazon-Buy-buy">
+            <div data-montage-id="isNotLoading">
+                <button data-montage-id="buyButton" class="amazon-Buy-buyButton"></button>
+            </div>
+            <div data-montage-id="isLoading">
+                <div data-montage-id="processingLabel"
+                     class="amazon-Buy-processing"></div>
+            </div>
+        </div>
+        <div class="amazon-Buy-estimation">
+            Order within
+            <span data-montage-id="orderWithin" class="amazon-Buy-orderWithin"></span>
+            - get it by
+            <span data-montage-id="deliveryEstimatation" class="amazon-Buy-deliveryEstimation"></span>
+        </div>
+    </div>
+</body>
+</html>
