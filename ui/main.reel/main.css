@@ -6,20 +6,23 @@
     top:0px;
     overflow: hidden;
     height: 768px;
-    width: 624px;
+    width: 674px;
 }
 
 .Main-wall {
     position: absolute;
-    left: 624px;
+    left: 674px;
     top:0px;
     overflow: hidden;
     height: 768px;
-    width: 400px;
+    width: 350px;
+    background-color: #ececec;
 }
 
 .Main-den {
-    margin-left: -50px;
+    position: absolute;
+    margin-left: -75px;
+    bottom: 0px;
 }
 .Main-title {
     position: absolute;
