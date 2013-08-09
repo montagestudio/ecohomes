@@ -1,0 +1,4061 @@
+{
+    "animations": {
+        "animation_0": {
+            "channels": [
+                {
+                    "sampler": "animation_0_translation_sampler",
+                    "target": {
+                        "id": "node-temperature_01_idea02",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_0_rotation_sampler",
+                    "target": {
+                        "id": "node-temperature_01_idea02",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_0_scale_sampler",
+                    "target": {
+                        "id": "node-temperature_01_idea02",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 0,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 9616,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 19232,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 2404,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_0_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_0_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_0_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_1": {
+            "channels": [
+                {
+                    "sampler": "animation_1_translation_sampler",
+                    "target": {
+                        "id": "node-temperature_02_idea02",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_1_rotation_sampler",
+                    "target": {
+                        "id": "node-temperature_02_idea02",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_1_scale_sampler",
+                    "target": {
+                        "id": "node-temperature_02_idea02",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 26444,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 36060,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 45676,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 28848,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_1_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_1_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_1_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_2": {
+            "channels": [
+                {
+                    "sampler": "animation_2_translation_sampler",
+                    "target": {
+                        "id": "node-temperature_03_idea02",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_2_rotation_sampler",
+                    "target": {
+                        "id": "node-temperature_03_idea02",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_2_scale_sampler",
+                    "target": {
+                        "id": "node-temperature_03_idea02",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 52888,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 62504,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 72120,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 55292,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_2_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_2_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_2_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_3": {
+            "channels": [
+                {
+                    "sampler": "animation_3_translation_sampler",
+                    "target": {
+                        "id": "node-temperature_04_idea02",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_3_rotation_sampler",
+                    "target": {
+                        "id": "node-temperature_04_idea02",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_3_scale_sampler",
+                    "target": {
+                        "id": "node-temperature_04_idea02",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 79332,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 88948,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 98564,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 81736,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_3_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_3_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_3_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_4": {
+            "channels": [
+                {
+                    "sampler": "animation_4_translation_sampler",
+                    "target": {
+                        "id": "node-temperature_05_idea02",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_4_rotation_sampler",
+                    "target": {
+                        "id": "node-temperature_05_idea02",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_4_scale_sampler",
+                    "target": {
+                        "id": "node-temperature_05_idea02",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 105776,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 115392,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 125008,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 108180,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_4_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_4_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_4_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_5": {
+            "channels": [
+                {
+                    "sampler": "animation_5_translation_sampler",
+                    "target": {
+                        "id": "node-maison",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_5_rotation_sampler",
+                    "target": {
+                        "id": "node-maison",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_5_scale_sampler",
+                    "target": {
+                        "id": "node-maison",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 132220,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 141836,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 151452,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 134624,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_5_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_5_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_5_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_6": {
+            "channels": [
+                {
+                    "sampler": "animation_6_translation_sampler",
+                    "target": {
+                        "id": "node-camera001",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_6_rotation_sampler",
+                    "target": {
+                        "id": "node-camera001",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_6_scale_sampler",
+                    "target": {
+                        "id": "node-camera001",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 158664,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 168280,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 177896,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 161068,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_6_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_6_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_6_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_7": {
+            "channels": [
+                {
+                    "sampler": "animation_7_translation_sampler",
+                    "target": {
+                        "id": "node-camera002",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_7_rotation_sampler",
+                    "target": {
+                        "id": "node-camera002",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_7_scale_sampler",
+                    "target": {
+                        "id": "node-camera002",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 185108,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 194724,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 204340,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 187512,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_7_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_7_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_7_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_8": {
+            "channels": [
+                {
+                    "sampler": "animation_8_translation_sampler",
+                    "target": {
+                        "id": "node-camera003",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_8_rotation_sampler",
+                    "target": {
+                        "id": "node-camera003",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_8_scale_sampler",
+                    "target": {
+                        "id": "node-camera003",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 211552,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 221168,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 230784,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 213956,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_8_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_8_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_8_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        }
+    },
+    "asset": {
+        "generator": "collada2gltf@e993f6dd07bbab896998d014f38e817959390e1c"
+    },
+    "attributes": {
+        "attribute_104": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 384,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                4.23407,
+                4.25605,
+                0
+            ],
+            "min": [
+                -4.23407,
+                -4.21886,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_106": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 432,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                0,
+                0,
+                1
+            ],
+            "min": [
+                0,
+                0,
+                1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_108": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 480,
+            "byteStride": 8,
+            "count": 4,
+            "max": [
+                0.9995,
+                0.9995
+            ],
+            "min": [
+                0.000499576,
+                0.000499487
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_131": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 512,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                4.23407,
+                4.25605,
+                0
+            ],
+            "min": [
+                -4.23407,
+                -4.21886,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_133": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 560,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                0,
+                0,
+                1
+            ],
+            "min": [
+                0,
+                0,
+                1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_135": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 608,
+            "byteStride": 8,
+            "count": 4,
+            "max": [
+                0.9995,
+                0.9995
+            ],
+            "min": [
+                0.000499576,
+                0.000499487
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_158": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 640,
+            "byteStride": 12,
+            "count": 2277,
+            "max": [
+                4.48741,
+                8.616,
+                7.46141
+            ],
+            "min": [
+                -4.48741,
+                -8.68671,
+                0.400001
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_160": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 27964,
+            "byteStride": 12,
+            "count": 2277,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_162": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 55288,
+            "byteStride": 8,
+            "count": 2277,
+            "max": [
+                0.985863,
+                0.995664
+            ],
+            "min": [
+                0.00399585,
+                0.00446951
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_185": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 73504,
+            "byteStride": 12,
+            "count": 2826,
+            "max": [
+                0.700301,
+                1.52816,
+                1.77037
+            ],
+            "min": [
+                -0.789456,
+                -9.76677,
+                -2.38742
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_187": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 107416,
+            "byteStride": 12,
+            "count": 2826,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_189": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 141328,
+            "byteStride": 8,
+            "count": 2826,
+            "max": [
+                0.995829,
+                0.995752
+            ],
+            "min": [
+                0.00417019,
+                0.00847858
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_212": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 163936,
+            "byteStride": 12,
+            "count": 2808,
+            "max": [
+                0.345537,
+                0.306412,
+                0.624861
+            ],
+            "min": [
+                -0.345537,
+                -1.30142,
+                -0.624861
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_214": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 197632,
+            "byteStride": 12,
+            "count": 2808,
+            "max": [
+                0.999723,
+                0.999843,
+                1
+            ],
+            "min": [
+                -1,
+                -0.999987,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_216": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 231328,
+            "byteStride": 8,
+            "count": 2808,
+            "max": [
+                0.97267,
+                0.991794
+            ],
+            "min": [
+                0.00787843,
+                0.00974452
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_23": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                4.23407,
+                4.25605,
+                0
+            ],
+            "min": [
+                -4.23407,
+                -4.21886,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_239": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 253792,
+            "byteStride": 12,
+            "count": 1188,
+            "max": [
+                0.684026,
+                0.721006,
+                0.279774
+            ],
+            "min": [
+                -0.684026,
+                -0.721006,
+                -0.210656
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_241": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 268048,
+            "byteStride": 12,
+            "count": 1188,
+            "max": [
+                0.998951,
+                0.996195,
+                1
+            ],
+            "min": [
+                -0.996195,
+                -0.996195,
+                -0.887966
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_243": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 282304,
+            "byteStride": 8,
+            "count": 1188,
+            "max": [
+                0.983162,
+                0.992062
+            ],
+            "min": [
+                0.00844271,
+                0.0084427
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_25": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 48,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                0,
+                0,
+                1
+            ],
+            "min": [
+                0,
+                0,
+                1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_266": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 291808,
+            "byteStride": 12,
+            "count": 966,
+            "max": [
+                0.27857,
+                1.88942,
+                0.985165
+            ],
+            "min": [
+                -8.34379,
+                -4.51583,
+                -0.00170013
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_268": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 303400,
+            "byteStride": 12,
+            "count": 966,
+            "max": [
+                0.999048,
+                0.999048,
+                1
+            ],
+            "min": [
+                -0.939693,
+                -0.999048,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_27": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 96,
+            "byteStride": 8,
+            "count": 4,
+            "max": [
+                0.9995,
+                0.9995
+            ],
+            "min": [
+                0.000499576,
+                0.000499487
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_270": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 314992,
+            "byteStride": 8,
+            "count": 966,
+            "max": [
+                0.986505,
+                0.991887
+            ],
+            "min": [
+                0.00799759,
+                0.00876433
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_293": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 322720,
+            "byteStride": 12,
+            "count": 243,
+            "max": [
+                0.643547,
+                0.714868,
+                0.423114
+            ],
+            "min": [
+                -0.839453,
+                -0.714868,
+                -0.295933
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_295": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 325636,
+            "byteStride": 12,
+            "count": 243,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -0.999989,
+                -1,
+                -0.0142805
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_297": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 328552,
+            "byteStride": 8,
+            "count": 243,
+            "max": [
+                0.995213,
+                0.996094
+            ],
+            "min": [
+                0.00390625,
+                0.0189784
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_329": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 330496,
+            "byteStride": 12,
+            "count": 2004,
+            "max": [
+                1.11975,
+                1.81943,
+                0.434725
+            ],
+            "min": [
+                -1.18446,
+                -0.367938,
+                -0.434725
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_331": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 354544,
+            "byteStride": 12,
+            "count": 2004,
+            "max": [
+                1,
+                1,
+                0.999544
+            ],
+            "min": [
+                -1,
+                -1,
+                -0.999128
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_333": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 378592,
+            "byteStride": 8,
+            "count": 2004,
+            "max": [
+                0.988129,
+                0.99151
+            ],
+            "min": [
+                0.00799395,
+                0.00798261
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_335": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 394624,
+            "byteStride": 8,
+            "count": 2004,
+            "max": [
+                0.114495,
+                1.02928
+            ],
+            "min": [
+                -0.503566,
+                0.435987
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_358": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 410656,
+            "byteStride": 12,
+            "count": 1194,
+            "max": [
+                2.51656,
+                4.31239,
+                2.11473
+            ],
+            "min": [
+                -0.986575,
+                -0.403362,
+                -0.942383
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_360": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 424984,
+            "byteStride": 12,
+            "count": 1194,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_362": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 439312,
+            "byteStride": 8,
+            "count": 1194,
+            "max": [
+                0.990834,
+                0.99094
+            ],
+            "min": [
+                0.00843654,
+                0.0358099
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_385": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 448864,
+            "byteStride": 12,
+            "count": 150,
+            "max": [
+                8.72161,
+                13.9476,
+                0.600001
+            ],
+            "min": [
+                -0.019107,
+                -0.888725,
+                -0.6
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_387": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 450664,
+            "byteStride": 12,
+            "count": 150,
+            "max": [
+                1,
+                0.999999,
+                1
+            ],
+            "min": [
+                -1,
+                -0.999999,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_389": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 452464,
+            "byteStride": 8,
+            "count": 150,
+            "max": [
+                0.94287,
+                0.995216
+            ],
+            "min": [
+                0.00408902,
+                0.00408882
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_412": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 453664,
+            "byteStride": 12,
+            "count": 2472,
+            "max": [
+                0.156854,
+                1.49988,
+                2.2
+            ],
+            "min": [
+                -0.143982,
+                -1.50474,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_414": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 483328,
+            "byteStride": 12,
+            "count": 2472,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_416": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 512992,
+            "byteStride": 8,
+            "count": 2472,
+            "max": [
+                0.993372,
+                0.996037
+            ],
+            "min": [
+                0.00412602,
+                0.00411558
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_439": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 532768,
+            "byteStride": 12,
+            "count": 105,
+            "max": [
+                12.9126,
+                15.3502,
+                4.05848
+            ],
+            "min": [
+                -13.2985,
+                -28.6754,
+                -4.05848
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_441": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 534028,
+            "byteStride": 12,
+            "count": 105,
+            "max": [
+                0.99801,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -3.04882e-07
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_443": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 535288,
+            "byteStride": 8,
+            "count": 105,
+            "max": [
+                0.825892,
+                0.995148
+            ],
+            "min": [
+                0.00418754,
+                0.0041191
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_471": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 536128,
+            "byteStride": 12,
+            "count": 2346,
+            "max": [
+                0.273165,
+                9.7182,
+                0.704949
+            ],
+            "min": [
+                -5.58283,
+                -3.09639,
+                -2.29505
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_473": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 564280,
+            "byteStride": 12,
+            "count": 2346,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_475": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 592432,
+            "byteStride": 8,
+            "count": 2346,
+            "max": [
+                0.996062,
+                0.996004
+            ],
+            "min": [
+                0.0039965,
+                0.00814182
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_477": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 611200,
+            "byteStride": 16,
+            "count": 2346,
+            "max": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "type": "FLOAT_VEC4"
+        },
+        "attribute_50": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 128,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                4.23407,
+                4.25605,
+                0
+            ],
+            "min": [
+                -4.23407,
+                -4.21886,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_509": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 648736,
+            "byteStride": 12,
+            "count": 108,
+            "max": [
+                0.360519,
+                0.20616,
+                1.24093
+            ],
+            "min": [
+                -0.244325,
+                -0.252416,
+                0.469573
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_511": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 650032,
+            "byteStride": 12,
+            "count": 108,
+            "max": [
+                0.943445,
+                0.967504,
+                4.11959e-07
+            ],
+            "min": [
+                -0.937566,
+                -0.962982,
+                -3.74909e-07
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_513": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 651328,
+            "byteStride": 8,
+            "count": 108,
+            "max": [
+                0.999834,
+                0.898276
+            ],
+            "min": [
+                -0.000469741,
+                0.000499606
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_515": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 652192,
+            "byteStride": 8,
+            "count": 108,
+            "max": [
+                0.987926,
+                0.741956
+            ],
+            "min": [
+                0.00619711,
+                0.0130094
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_52": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 176,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                0,
+                0,
+                1
+            ],
+            "min": [
+                0,
+                0,
+                1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_54": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 224,
+            "byteStride": 8,
+            "count": 4,
+            "max": [
+                0.9995,
+                0.9995
+            ],
+            "min": [
+                0.000499576,
+                0.000499487
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_543": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 653056,
+            "byteStride": 12,
+            "count": 165,
+            "max": [
+                0.296454,
+                0.258987,
+                0.405743
+            ],
+            "min": [
+                -0.222097,
+                -0.315864,
+                -0.0922229
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_545": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 655036,
+            "byteStride": 12,
+            "count": 165,
+            "max": [
+                1,
+                0.984808,
+                0.92367
+            ],
+            "min": [
+                -1,
+                -0.984808,
+                -0.246093
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_547": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 657016,
+            "byteStride": 8,
+            "count": 165,
+            "max": [
+                1.07892,
+                0.849421
+            ],
+            "min": [
+                -0.87772,
+                -0.00439298
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_549": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 658336,
+            "byteStride": 16,
+            "count": 165,
+            "max": [
+                1.55544e-43,
+                8.58993e+09,
+                1.54143e-43,
+                8.58993e+09
+            ],
+            "min": [
+                0,
+                0,
+                0,
+                4.2039e-45
+            ],
+            "type": "FLOAT_VEC4"
+        },
+        "attribute_572": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 660976,
+            "byteStride": 12,
+            "count": 12,
+            "max": [
+                3.31861,
+                0.0194731,
+                0.000902342
+            ],
+            "min": [
+                -3.31861,
+                -0.0194731,
+                -0.000902342
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_574": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 661120,
+            "byteStride": 12,
+            "count": 12,
+            "max": [
+                4.19467e-09,
+                0.287331,
+                1
+            ],
+            "min": [
+                -3.86706e-09,
+                -0.287355,
+                0.957824
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_576": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 661264,
+            "byteStride": 8,
+            "count": 12,
+            "max": [
+                1,
+                1
+            ],
+            "min": [
+                0,
+                0
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_599": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 661360,
+            "byteStride": 12,
+            "count": 2466,
+            "max": [
+                1.63154,
+                3.91296,
+                0.354198
+            ],
+            "min": [
+                -2.71051,
+                -0.55081,
+                -0.354198
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_601": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 690952,
+            "byteStride": 12,
+            "count": 2466,
+            "max": [
+                0.99592,
+                0.999463,
+                1
+            ],
+            "min": [
+                -0.997061,
+                -0.999462,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_603": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 720544,
+            "byteStride": 8,
+            "count": 2466,
+            "max": [
+                0.995794,
+                0.995702
+            ],
+            "min": [
+                0.00398112,
+                0.0400295
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_77": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 256,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                4.23407,
+                4.25605,
+                0
+            ],
+            "min": [
+                -4.23407,
+                -4.21886,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_79": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 304,
+            "byteStride": 12,
+            "count": 4,
+            "max": [
+                0,
+                0,
+                1
+            ],
+            "min": [
+                0,
+                0,
+                1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_81": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 352,
+            "byteStride": 8,
+            "count": 4,
+            "max": [
+                0.9995,
+                0.9995
+            ],
+            "min": [
+                0.000499576,
+                0.000499487
+            ],
+            "type": "FLOAT_VEC2"
+        }
+    },
+    "bufferViews": {
+        "bufferView_715": {
+            "buffer": "testRoom10Plaque3.bin",
+            "byteLength": 740272,
+            "byteOffset": 0,
+            "target": "ARRAY_BUFFER"
+        },
+        "bufferView_716": {
+            "buffer": "testRoom10Plaque3.bin",
+            "byteLength": 42732,
+            "byteOffset": 740272,
+            "target": "ELEMENT_ARRAY_BUFFER"
+        },
+        "bufferView_717": {
+            "buffer": "testRoom10Plaque3.bin",
+            "byteLength": 237996,
+            "byteOffset": 783004
+        }
+    },
+    "buffers": {
+        "testRoom10Plaque3.bin": {
+            "byteLength": 1021000,
+            "path": "testRoom10Plaque3.bin"
+        }
+    },
+    "cameras": {
+        "camera_0": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1500,
+            "znear": 1
+        },
+        "camera_1": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1500,
+            "znear": 1
+        },
+        "camera_2": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1500,
+            "znear": 1
+        }
+    },
+    "images": {
+        "image_0": {
+            "path": "0_option02_thermo_normal.png"
+        },
+        "image_1": {
+            "path": "1_maisonVRayCompleteMap.jpg"
+        },
+        "image_10": {
+            "path": "10_bibliotheque_lowVRayCompleteMap.jpg"
+        },
+        "image_11": {
+            "path": "11_background.jpg"
+        },
+        "image_12": {
+            "path": "12_lampeCanape001VRayCompleteMap.jpg"
+        },
+        "image_13": {
+            "path": "13_Youka_leaves.png"
+        },
+        "image_14": {
+            "path": "14_Arbuste01_Diff.PNG"
+        },
+        "image_15": {
+            "path": "15_plintheVRayCompleteMap.jpg"
+        },
+        "image_16": {
+            "path": "16_fauteuil001VRayCompleteMap.jpg"
+        },
+        "image_2": {
+            "path": "2_escalierVRayCompleteMap.jpg"
+        },
+        "image_3": {
+            "path": "3_chaiseBarVRayCompleteMap.jpg"
+        },
+        "image_4": {
+            "path": "4_tableFauteuilVRayCompleteMap.jpg"
+        },
+        "image_5": {
+            "path": "5_tableHifiVRayCompleteMap.jpg"
+        },
+        "image_6": {
+            "path": "6_tableCuisineVRayCompleteMap.jpg"
+        },
+        "image_7": {
+            "path": "7_chaiseCuisineVRayCompleteMap.jpg"
+        },
+        "image_8": {
+            "path": "8_cuisineVRayCompleteMap.jpg"
+        },
+        "image_9": {
+            "path": "9_photo02VRayCompleteMap.jpg"
+        }
+    },
+    "indices": {
+        "indices_102": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 36,
+            "count": 6,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_129": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 48,
+            "count": 6,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_156": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 60,
+            "count": 2277,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_183": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 4614,
+            "count": 2826,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_21": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 0,
+            "count": 6,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_210": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 10266,
+            "count": 2808,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_237": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 15882,
+            "count": 1188,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_264": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 18258,
+            "count": 966,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_291": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 20190,
+            "count": 243,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_327": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 20676,
+            "count": 2004,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_356": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 24684,
+            "count": 1194,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_383": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 27072,
+            "count": 150,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_410": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 27372,
+            "count": 2472,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_437": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 32316,
+            "count": 105,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_469": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 32526,
+            "count": 2346,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_48": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 12,
+            "count": 6,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_507": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 37218,
+            "count": 108,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_541": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 37434,
+            "count": 165,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_570": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 37764,
+            "count": 18,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_597": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 37800,
+            "count": 2466,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_75": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 24,
+            "count": 6,
+            "type": "UNSIGNED_SHORT"
+        }
+    },
+    "lights": {
+        "EnvironmentAmbientLight": {
+            "ambient": {
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "EnvironmentAmbientLight",
+            "type": "ambient"
+        }
+    },
+    "materials": {
+        "Feuille01": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_14"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_14"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "Feuille01"
+        },
+        "background": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_11"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_11"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "background"
+        },
+        "bibliotheque": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_10"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_10"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "bibliotheque"
+        },
+        "chaiseCuisine": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_7"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_7"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "chaiseCuisine"
+        },
+        "chaisebar": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_3"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_3"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "chaisebar"
+        },
+        "cuisine": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_8"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_8"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "cuisine"
+        },
+        "escalier": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_2"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_2"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "escalier"
+        },
+        "fauteuils": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_16"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_16"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "fauteuils"
+        },
+        "hihi": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_5"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_5"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "hihi"
+        },
+        "lampes": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_12"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_12"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "lampes"
+        },
+        "maison": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_1"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_1"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "maison"
+        },
+        "photos": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_9"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_9"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "photos"
+        },
+        "plinthe": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_15"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_15"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "plinthe"
+        },
+        "tableCuisine": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_6"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_6"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "tableCuisine"
+        },
+        "tableFauteuil": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_4"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_4"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "tableFauteuil"
+        },
+        "thermo-normal": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_0"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_0"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0.9,
+                            0.9,
+                            0.9,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "thermo-normal"
+        },
+        "yuka_leaves": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_13"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_13"
+                    },
+                    {
+                        "parameter": "emission",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "yuka_leaves"
+        }
+    },
+    "meshes": {
+        "geom-background": {
+            "name": "background",
+            "primitives": [
+                {
+                    "indices": "indices_437",
+                    "material": "background",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_441",
+                        "POSITION": "attribute_439",
+                        "TEXCOORD_0": "attribute_443"
+                    }
+                }
+            ]
+        },
+        "geom-bibliotheque_low": {
+            "name": "bibliotheque_low",
+            "primitives": [
+                {
+                    "indices": "indices_410",
+                    "material": "bibliotheque",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_414",
+                        "POSITION": "attribute_412",
+                        "TEXCOORD_0": "attribute_416"
+                    }
+                }
+            ]
+        },
+        "geom-chaiseBar": {
+            "name": "chaiseBar",
+            "primitives": [
+                {
+                    "indices": "indices_210",
+                    "material": "chaisebar",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_214",
+                        "POSITION": "attribute_212",
+                        "TEXCOORD_0": "attribute_216"
+                    }
+                }
+            ]
+        },
+        "geom-chaiseCuisine": {
+            "name": "chaiseCuisine",
+            "primitives": [
+                {
+                    "indices": "indices_327",
+                    "material": "chaiseCuisine",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_331",
+                        "POSITION": "attribute_329",
+                        "TEXCOORD_0": "attribute_333",
+                        "TEXCOORD_1": "attribute_335"
+                    }
+                }
+            ]
+        },
+        "geom-cuisine": {
+            "name": "cuisine",
+            "primitives": [
+                {
+                    "indices": "indices_356",
+                    "material": "cuisine",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_360",
+                        "POSITION": "attribute_358",
+                        "TEXCOORD_0": "attribute_362"
+                    }
+                }
+            ]
+        },
+        "geom-escalier": {
+            "name": "escalier",
+            "primitives": [
+                {
+                    "indices": "indices_183",
+                    "material": "escalier",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_187",
+                        "POSITION": "attribute_185",
+                        "TEXCOORD_0": "attribute_189"
+                    }
+                }
+            ]
+        },
+        "geom-fauteuil001": {
+            "name": "fauteuil001",
+            "primitives": [
+                {
+                    "indices": "indices_597",
+                    "material": "fauteuils",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_601",
+                        "POSITION": "attribute_599",
+                        "TEXCOORD_0": "attribute_603"
+                    }
+                }
+            ]
+        },
+        "geom-lampeCanape001": {
+            "name": "lampeCanape001",
+            "primitives": [
+                {
+                    "indices": "indices_469",
+                    "material": "lampes",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "COLOR": "attribute_477",
+                        "NORMAL": "attribute_473",
+                        "POSITION": "attribute_471",
+                        "TEXCOORD_0": "attribute_475"
+                    }
+                }
+            ]
+        },
+        "geom-maison": {
+            "name": "maison",
+            "primitives": [
+                {
+                    "indices": "indices_156",
+                    "material": "maison",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_160",
+                        "POSITION": "attribute_158",
+                        "TEXCOORD_0": "attribute_162"
+                    }
+                }
+            ]
+        },
+        "geom-palmier_alpha": {
+            "name": "palmier_alpha",
+            "primitives": [
+                {
+                    "indices": "indices_541",
+                    "material": "Feuille01",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "COLOR": "attribute_549",
+                        "NORMAL": "attribute_545",
+                        "POSITION": "attribute_543",
+                        "TEXCOORD_0": "attribute_547"
+                    }
+                }
+            ]
+        },
+        "geom-photo02": {
+            "name": "photo02",
+            "primitives": [
+                {
+                    "indices": "indices_383",
+                    "material": "photos",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_387",
+                        "POSITION": "attribute_385",
+                        "TEXCOORD_0": "attribute_389"
+                    }
+                }
+            ]
+        },
+        "geom-plinthe": {
+            "name": "plinthe",
+            "primitives": [
+                {
+                    "indices": "indices_570",
+                    "material": "plinthe",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_574",
+                        "POSITION": "attribute_572",
+                        "TEXCOORD_0": "attribute_576"
+                    }
+                }
+            ]
+        },
+        "geom-tableCuisine": {
+            "name": "tableCuisine",
+            "primitives": [
+                {
+                    "indices": "indices_291",
+                    "material": "tableCuisine",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_295",
+                        "POSITION": "attribute_293",
+                        "TEXCOORD_0": "attribute_297"
+                    }
+                }
+            ]
+        },
+        "geom-tableFauteuil": {
+            "name": "tableFauteuil",
+            "primitives": [
+                {
+                    "indices": "indices_237",
+                    "material": "tableFauteuil",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_241",
+                        "POSITION": "attribute_239",
+                        "TEXCOORD_0": "attribute_243"
+                    }
+                }
+            ]
+        },
+        "geom-tableHifi": {
+            "name": "tableHifi",
+            "primitives": [
+                {
+                    "indices": "indices_264",
+                    "material": "hihi",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_268",
+                        "POSITION": "attribute_266",
+                        "TEXCOORD_0": "attribute_270"
+                    }
+                }
+            ]
+        },
+        "geom-temperature_01_idea02": {
+            "name": "temperature_01_idea02",
+            "primitives": [
+                {
+                    "indices": "indices_21",
+                    "material": "thermo-normal",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_25",
+                        "POSITION": "attribute_23",
+                        "TEXCOORD_0": "attribute_27"
+                    }
+                }
+            ]
+        },
+        "geom-temperature_02_idea02": {
+            "name": "temperature_02_idea02",
+            "primitives": [
+                {
+                    "indices": "indices_48",
+                    "material": "thermo-normal",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_52",
+                        "POSITION": "attribute_50",
+                        "TEXCOORD_0": "attribute_54"
+                    }
+                }
+            ]
+        },
+        "geom-temperature_03_idea02": {
+            "name": "temperature_03_idea02",
+            "primitives": [
+                {
+                    "indices": "indices_75",
+                    "material": "thermo-normal",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_79",
+                        "POSITION": "attribute_77",
+                        "TEXCOORD_0": "attribute_81"
+                    }
+                }
+            ]
+        },
+        "geom-temperature_04_idea02": {
+            "name": "temperature_04_idea02",
+            "primitives": [
+                {
+                    "indices": "indices_102",
+                    "material": "thermo-normal",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_106",
+                        "POSITION": "attribute_104",
+                        "TEXCOORD_0": "attribute_108"
+                    }
+                }
+            ]
+        },
+        "geom-temperature_05_idea02": {
+            "name": "temperature_05_idea02",
+            "primitives": [
+                {
+                    "indices": "indices_129",
+                    "material": "thermo-normal",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_133",
+                        "POSITION": "attribute_131",
+                        "TEXCOORD_0": "attribute_135"
+                    }
+                }
+            ]
+        },
+        "geom-yuka_alpha": {
+            "name": "yuka_alpha",
+            "primitives": [
+                {
+                    "indices": "indices_507",
+                    "material": "yuka_leaves",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_511",
+                        "POSITION": "attribute_509",
+                        "TEXCOORD_0": "attribute_513",
+                        "TEXCOORD_1": "attribute_515"
+                    }
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "node-background": {
+            "children": [],
+            "meshes": [
+                "geom-background"
+            ],
+            "name": "background",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                179.277,
+                -346.855,
+                159.783
+            ]
+        },
+        "node-bibliotheque_low": {
+            "children": [],
+            "meshes": [
+                "geom-bibliotheque_low"
+            ],
+            "name": "bibliotheque_low",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                339.778,
+                -401.528,
+                0
+            ]
+        },
+        "node-camera001": {
+            "camera": "camera_0",
+            "children": [],
+            "name": "camera001",
+            "rotation": [
+                0.782707,
+                -0.444729,
+                -0.435415,
+                1.83379
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                21.1525,
+                -655.165,
+                61.2538
+            ]
+        },
+        "node-camera002": {
+            "camera": "camera_1",
+            "children": [],
+            "name": "camera002",
+            "rotation": [
+                0.808285,
+                0.427814,
+                0.404537,
+                1.8364
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                294.593,
+                -410.61,
+                62.9921
+            ]
+        },
+        "node-camera003": {
+            "camera": "camera_2",
+            "children": [],
+            "name": "camera003",
+            "rotation": [
+                0.442806,
+                0.630852,
+                0.637141,
+                2.30051
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                301.477,
+                -55.5437,
+                62.9921
+            ]
+        },
+        "node-chaiseBar": {
+            "children": [],
+            "meshes": [
+                "geom-chaiseBar"
+            ],
+            "name": "chaiseBar",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                157.197,
+                -246.148,
+                24.6008
+            ]
+        },
+        "node-chaiseCuisine": {
+            "children": [],
+            "meshes": [
+                "geom-chaiseCuisine"
+            ],
+            "name": "chaiseCuisine",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                136.185,
+                -95.3746,
+                17.1152
+            ]
+        },
+        "node-cuisine": {
+            "children": [],
+            "meshes": [
+                "geom-cuisine"
+            ],
+            "name": "cuisine",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                41.9124,
+                -327.026,
+                37.1017
+            ]
+        },
+        "node-escalier": {
+            "children": [],
+            "meshes": [
+                "geom-escalier"
+            ],
+            "name": "escalier",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                207.816,
+                -282,
+                93.9927
+            ]
+        },
+        "node-fauteuil001": {
+            "children": [],
+            "meshes": [
+                "geom-fauteuil001"
+            ],
+            "name": "fauteuil001",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                208.838,
+                -614.611,
+                13.9867
+            ]
+        },
+        "node-lampeCanape001": {
+            "children": [],
+            "meshes": [
+                "geom-lampeCanape001"
+            ],
+            "name": "lampeCanape001",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                238.755,
+                -443.876,
+                90.3564
+            ]
+        },
+        "node-maison": {
+            "children": [],
+            "meshes": [
+                "geom-maison"
+            ],
+            "name": "maison",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                175.419,
+                -332.125,
+                -15.7481
+            ]
+        },
+        "node-palmier_alpha": {
+            "children": [],
+            "meshes": [
+                "geom-palmier_alpha"
+            ],
+            "name": "palmier_alpha",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                135.088,
+                -66.7657,
+                36.9207
+            ]
+        },
+        "node-photo02": {
+            "children": [],
+            "meshes": [
+                "geom-photo02"
+            ],
+            "name": "photo02",
+            "rotation": [
+                -1,
+                0,
+                0,
+                1.76313e-07
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                4.18437,
+                -573.709,
+                61.4312
+            ]
+        },
+        "node-plinthe": {
+            "children": [],
+            "meshes": [
+                "geom-plinthe"
+            ],
+            "name": "plinthe",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                217.473,
+                -160.809,
+                0.0355253
+            ]
+        },
+        "node-tableCuisine": {
+            "children": [],
+            "meshes": [
+                "geom-tableCuisine"
+            ],
+            "name": "tableCuisine",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                139.09,
+                -67.7682,
+                11.6453
+            ]
+        },
+        "node-tableFauteuil": {
+            "children": [],
+            "meshes": [
+                "geom-tableFauteuil"
+            ],
+            "name": "tableFauteuil",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                187.087,
+                -545.988,
+                8.16871
+            ]
+        },
+        "node-tableHifi": {
+            "children": [],
+            "meshes": [
+                "geom-tableHifi"
+            ],
+            "name": "tableHifi",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                332.696,
+                -483.035,
+                0.0240296
+            ]
+        },
+        "node-temperature_01_idea02": {
+            "children": [],
+            "meshes": [
+                "geom-temperature_01_idea02"
+            ],
+            "name": "temperature_01_idea02",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.00249963,
+                0.00249963,
+                0.00105621
+            ],
+            "translation": [
+                176.064,
+                -332.346,
+                0.393701
+            ]
+        },
+        "node-temperature_02_idea02": {
+            "children": [],
+            "meshes": [
+                "geom-temperature_02_idea02"
+            ],
+            "name": "temperature_02_idea02",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.000431012,
+                0.000431012,
+                0.000182123
+            ],
+            "translation": [
+                176.064,
+                -332.346,
+                0.393701
+            ]
+        },
+        "node-temperature_03_idea02": {
+            "children": [],
+            "meshes": [
+                "geom-temperature_03_idea02"
+            ],
+            "name": "temperature_03_idea02",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.000431012,
+                0.000431012,
+                0.000182123
+            ],
+            "translation": [
+                176.064,
+                -332.346,
+                0.393701
+            ]
+        },
+        "node-temperature_04_idea02": {
+            "children": [],
+            "meshes": [
+                "geom-temperature_04_idea02"
+            ],
+            "name": "temperature_04_idea02",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.000431012,
+                0.000431012,
+                0.000182123
+            ],
+            "translation": [
+                176.064,
+                -332.346,
+                0.393701
+            ]
+        },
+        "node-temperature_05_idea02": {
+            "children": [],
+            "meshes": [
+                "geom-temperature_05_idea02"
+            ],
+            "name": "temperature_05_idea02",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                0.000431012,
+                0.000431012,
+                0.000182123
+            ],
+            "translation": [
+                176.064,
+                -332.346,
+                0.393701
+            ]
+        },
+        "node-yuka_alpha": {
+            "children": [],
+            "meshes": [
+                "geom-yuka_alpha"
+            ],
+            "name": "yuka_alpha",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                174.669,
+                -461.364,
+                0.0652685
+            ]
+        },
+        "node_0": {
+            "children": [],
+            "lights": [
+                "EnvironmentAmbientLight"
+            ],
+            "name": "EnvironmentAmbientLight",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "profile": "WebGL 1.0",
+    "programs": {
+        "program_0": {
+            "fragmentShader": "testRoom10Plaque30FS",
+            "vertexShader": "testRoom10Plaque30VS"
+        },
+        "program_1": {
+            "fragmentShader": "testRoom10Plaque32FS",
+            "vertexShader": "testRoom10Plaque32VS"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": "LINEAR",
+            "minFilter": "LINEAR",
+            "wrapS": "REPEAT",
+            "wrapT": "REPEAT"
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_0",
+                "node-temperature_01_idea02",
+                "node-temperature_02_idea02",
+                "node-temperature_03_idea02",
+                "node-temperature_04_idea02",
+                "node-temperature_05_idea02",
+                "node-maison",
+                "node-escalier",
+                "node-chaiseBar",
+                "node-tableFauteuil",
+                "node-tableHifi",
+                "node-tableCuisine",
+                "node-chaiseCuisine",
+                "node-cuisine",
+                "node-photo02",
+                "node-bibliotheque_low",
+                "node-background",
+                "node-lampeCanape001",
+                "node-yuka_alpha",
+                "node-palmier_alpha",
+                "node-plinthe",
+                "node-fauteuil001",
+                "node-camera001",
+                "node-camera002",
+                "node-camera003"
+            ]
+        }
+    },
+    "shaders": {
+        "testRoom10Plaque30FS": {
+            "path": "testRoom10Plaque30FS.glsl"
+        },
+        "testRoom10Plaque30VS": {
+            "path": "testRoom10Plaque30VS.glsl"
+        },
+        "testRoom10Plaque32FS": {
+            "path": "testRoom10Plaque32FS.glsl"
+        },
+        "testRoom10Plaque32VS": {
+            "path": "testRoom10Plaque32VS.glsl"
+        }
+    },
+    "skins": {},
+    "techniques": {
+        "technique1": {
+            "parameters": {
+                "diffuse": {
+                    "type": "SAMPLER_2D"
+                },
+                "filterColor": {
+                    "type": "FLOAT_VEC4",
+                    "value": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "normal": {
+                    "semantic": "NORMAL",
+                    "type": "FLOAT_VEC3"
+                },
+                "normalMatrix": {
+                    "semantic": "WORLDVIEWINVERSETRANSPOSE",
+                    "type": "FLOAT_MAT3"
+                },
+                "position": {
+                    "semantic": "POSITION",
+                    "type": "FLOAT_VEC3"
+                },
+                "projectionMatrix": {
+                    "semantic": "PROJECTION",
+                    "type": "FLOAT_MAT4"
+                },
+                "texcoord0": {
+                    "semantic": "TEXCOORD_0",
+                    "type": "FLOAT_VEC2"
+                },
+                "transparency": {
+                    "type": "FLOAT"
+                },
+                "worldViewMatrix": {
+                    "semantic": "WORLDVIEW",
+                    "type": "FLOAT_MAT4"
+                }
+            },
+            "pass": "defaultPass",
+            "passes": {
+                "defaultPass": {
+                    "instanceProgram": {
+                        "attributes": {
+                            "a_normal": "normal",
+                            "a_position": "position",
+                            "a_texcoord0": "texcoord0"
+                        },
+                        "program": "program_0",
+                        "uniforms": {
+                            "u_diffuse": "diffuse",
+                            "u_filterColor": "filterColor",
+                            "u_normalMatrix": "normalMatrix",
+                            "u_projectionMatrix": "projectionMatrix",
+                            "u_transparency": "transparency",
+                            "u_worldViewMatrix": "worldViewMatrix"
+                        }
+                    },
+                    "states": {
+                        "blendEnable": true,
+                        "blendEquation": "FUNC_ADD",
+                        "blendFunc": {
+                            "dfactor": "ONE_MINUS_SRC_ALPHA",
+                            "sfactor": "SRC_ALPHA"
+                        },
+                        "cullFaceEnable": true,
+                        "depthMask": false,
+                        "depthTestEnable": true
+                    }
+                }
+            }
+        },
+        "technique2": {
+            "parameters": {
+                "diffuse": {
+                    "type": "SAMPLER_2D"
+                },
+                "filterColor": {
+                    "type": "FLOAT_VEC4",
+                    "value": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "normal": {
+                    "semantic": "NORMAL",
+                    "type": "FLOAT_VEC3"
+                },
+                "normalMatrix": {
+                    "semantic": "WORLDVIEWINVERSETRANSPOSE",
+                    "type": "FLOAT_MAT3"
+                },
+                "position": {
+                    "semantic": "POSITION",
+                    "type": "FLOAT_VEC3"
+                },
+                "projectionMatrix": {
+                    "semantic": "PROJECTION",
+                    "type": "FLOAT_MAT4"
+                },
+                "texcoord0": {
+                    "semantic": "TEXCOORD_0",
+                    "type": "FLOAT_VEC2"
+                },
+                "transparency": {
+                    "type": "FLOAT"
+                },
+                "worldViewMatrix": {
+                    "semantic": "WORLDVIEW",
+                    "type": "FLOAT_MAT4"
+                }
+            },
+            "pass": "defaultPass",
+            "passes": {
+                "defaultPass": {
+                    "instanceProgram": {
+                        "attributes": {
+                            "a_normal": "normal",
+                            "a_position": "position",
+                            "a_texcoord0": "texcoord0"
+                        },
+                        "program": "program_1",
+                        "uniforms": {
+                            "u_diffuse": "diffuse",
+                            "u_filterColor": "filterColor",
+                            "u_normalMatrix": "normalMatrix",
+                            "u_projectionMatrix": "projectionMatrix",
+                            "u_transparency": "transparency",
+                            "u_worldViewMatrix": "worldViewMatrix"
+                        }
+                    },
+                    "states": {
+                        "blendEnable": false,
+                        "cullFaceEnable": true,
+                        "depthMask": true,
+                        "depthTestEnable": true
+                    }
+                }
+            }
+        }
+    },
+    "textures": {
+        "texture_image_0": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_0",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_1": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_1",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_10": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_10",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_11": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_11",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_12": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_12",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_13": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_13",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_14": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_14",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_15": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_15",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_16": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_16",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_2": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_2",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_3": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_3",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_4": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_4",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_5": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_5",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_6": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_6",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_7": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_7",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_8": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_8",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_9": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_9",
+            "target": "TEXTURE_2D"
+        }
+    }
+}
