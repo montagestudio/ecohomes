@@ -148,7 +148,7 @@ exports.Den = Component.specialize(/** @lends Den# */ {
                 } else if(diff < 0) {
                     this.ambientTemperature++;
                 }
-            }.bind(this), 500)
+            }.bind(this), 100)
         }
     },
     
