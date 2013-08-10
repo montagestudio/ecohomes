@@ -32,6 +32,7 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
             this.super();
             this._translateComposer = new TranslateComposer();
             this._translateComposer.hasMomentum = false;
+            this._translateComposer.hasBouncing = false;
        }
     },
 
@@ -53,13 +54,13 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
     
     handleTranslateStart: {
         value: function(event) {
-            if (! this._start) {
-                this._start = this._translateComposer.pointerStartEventPosition;
-            }
+            this._start = this._translateComposer.pointerStartEventPosition;
+            this._translateComposer.translateX = this._start.pageX;
+            this._translateComposer.translateY = this._start.pageY;
             var start = this._start;
             var deltaX = start.pageX - this.center.pageX;
             var deltaY = this.center.pageY - start.pageY;
-            this._startAngle = (Math.atan2(deltaY, deltaX) * 180 / 3.14);
+            this._startAngle = this.angle + (Math.atan2(deltaY, deltaX) * 180 / Math.PI);
             this._dispatchRotateStart();
         }
     },
@@ -71,16 +72,21 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
         }
     },
 
+    angle: {
+        value: 0
+    },
+
     _move: {
         value: function(event) {
-            var deltaX = (this._start.pageX + event.translateX) - this.center.pageX;
-            var deltaY = this.center.pageY - (this._start.pageY + event.translateY);
-            var angle = (Math.atan2(deltaY, deltaX) * 180 / 3.14)
-            angle = this._startAngle - angle;
-            this._dispatchRotate(angle);
+            /*var deltaX = (this._start.pageX + event.translateX) - this.center.pageX;
+            var deltaY = this.center.pageY - (this._start.pageY + event.translateY);*/
+            var deltaX = event.translateX - this.center.pageX;
+            var deltaY = this.center.pageY - event.translateY;
+            this.angle = this._startAngle - (Math.atan2(deltaY, deltaX) * 180 / Math.PI);
+            this._dispatchRotate(this.angle);
 
 
-            this._debug(angle, event);
+            //this._debug(this.angle, event);
         }
     },
     
