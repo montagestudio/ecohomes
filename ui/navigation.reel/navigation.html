@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/navigation.reel",
+            "properties": {
+                "element": {"#": "Navigation"}
+            }
+        },
+        "header": {
+            "prototype": "ui/navigation.reel/header.reel",
+            "properties": {
+                "element": {"#": "header"}
+            },
+            "listeners": [
+                {
+                    "type": "back",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "list": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "list"},
+                "contentController": {"@": "rangeController"}
+            }
+        },
+        "listItem": {
+            "prototype": "digit/ui/list-item.reel",
+            "properties": {
+                "element": {"#": "listItem"}
+            }
+        },
+        "navText": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "navText"}
+            },
+            "bindings": {
+                "value": {"<-": "@list.objectAtCurrentIteration.title"}
+            }
+        },
+        "page": {
+            "prototype": "ui/element.reel",
+            "properties": {
+                "element": {"#": "page"}
+            }
+        },
+        "rangeController": {
+            "prototype": "montage/core/range-controller"
+        },
+        "substitution": {
+            "prototype": "montage/ui/substitution.reel",
+            "properties": {
+                "element": {"#": "substitution"},
+                "switchValue": "page1"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.pages"}
+            }
+        },
+        "page1": {
+            "prototype": "ui/page1.reel",
+            "properties": {
+                "element": {"#": "page1"}
+            }
+        },
+        "page2": {
+            "prototype": "ui/page2.reel",
+            "properties": {
+                "element": {"#": "page2"}
+            }
+        },
+        "page3": {
+            "prototype": "ui/page3.reel",
+            "properties": {
+                "element": {"#": "page3"}
+            }
+        },
+        "page4": {
+            "prototype": "ui/page4.reel",
+            "properties": {
+                "element": {"#": "page4"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="Navigation" class="Navigation">
+        <nav class="Navigation-list">
+            <ul data-montage-id="list">
+                <li data-montage-id="listItem">
+                    <span data-montage-id="navText"></span>
+                </li>
+            </ul>
+        </nav>
+        <div data-montage-id="page" class="Navigation-page">
+            <header data-montage-id="header"></header>
+            <div data-montage-id="substitution" class="Navigation-page-slot">
+                <div data-arg="page1" data-montage-id="page1"></div>
+                <div data-arg="page2" data-montage-id="page2"></div>
+                <div data-arg="page3" data-montage-id="page3"></div>
+                <div data-arg="page4" data-montage-id="page4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

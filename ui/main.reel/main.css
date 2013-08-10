@@ -1,25 +1,4 @@
-.Main {}
-
-.Main-view {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 768px;
-    width: 674px;
+.Main {
+    height: 100%;
 }
 
-.Main-wall {
-    position: absolute;
-    left: 674px;
-    top: 0px;
-    height: 768px;
-    width: 350px;
-    background-color: #ececec;
-}
-
-.Main-title {
-    position: absolute;
-    left: 50px;
-    top:50px;
-    font-size: 50px;
-}
