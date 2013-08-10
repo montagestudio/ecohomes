@@ -9,8 +9,19 @@
             "prototype": "ui/den.reel",
             "properties": {
                 "element": {"#": "Den"},
-                "ambient": {"#": "ambient"},
-                "indicator": {"#": "indicator"},
+                "whiteBar": {"#": "whiteBar"},
+                "redFadingBar": {"#": "redFadingBar"},
+                "blueFadingBar": {"#": "blueFadingBar"},
+                "redBar": {"#": "redBar"},
+                "rightRedBarClip": {"#": "rightRedBarClip"},
+                "rightRedBar": {"#": "rightRedBar"},
+                "leftRedBarClip": {"#": "leftRedBarClip"},
+                "leftRedBar": {"#": "leftRedBar"},
+                "blueBar": {"#": "blueBar"},
+                "rightBlueBarClip": {"#": "rightBlueBarClip"},
+                "rightBlueBar": {"#": "rightBlueBar"},
+                "leftBlueBarClip": {"#": "leftBlueBarClip"},
+                "leftBlueBar": {"#": "leftBlueBar"},
                 "_rotateComposer": {"@": "rotateComposer"}
             }
         },
@@ -29,37 +40,31 @@
                     "listener": {"@": "owner"}
                 }
             ]
-        },
-        "text1": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "temperature"},
-                "value": "Text"
-            },
-            "bindings": {
-                "value": {"<-": "@owner._inputTemperature"}
-            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="Den" class="Den">
-        <div class="Den-title">
-            den
-        </div>
-        <div class="Den-onColor"></div>
-        <div data-montage-id="ambient" class="Den-ambientContainer">
-            <div class="Den-ambient">
-
+        <div data-montage-id="whiteBar" class="Den-white-bar"></div>
+        <div data-montage-id="redFadingBar" class="Den-red-fading-bar"></div>
+        <div data-montage-id="blueFadingBar" class="Den-blue-fading-bar"></div>
+        <div data-montage-id="redBar" class="Den-red-bar">
+            <div data-montage-id="rightRedBarClip" class="Den-right-red-bar-clip">
+                <div data-montage-id="rightRedBar" class="Den-right-red-bar"></div>
+            </div>
+            <div data-montage-id="leftRedBarClip" class="Den-left-red-bar-clip">
+                <div data-montage-id="leftRedBar" class="Den-left-red-bar"></div>
             </div>
         </div>
-        <div data-montage-id="indicator" class="Den-indicatorContainer">
-            <div class="Den-indicator">
-
+        <div data-montage-id="blueBar" class="Den-blue-bar">
+            <div data-montage-id="rightBlueBarClip" class="Den-right-blue-bar-clip">
+                <div data-montage-id="rightBlueBar" class="Den-right-blue-bar"></div>
+            </div>
+            <div data-montage-id="leftBlueBarClip" class="Den-left-blue-bar-clip">
+                <div data-montage-id="leftBlueBar" class="Den-left-blue-bar"></div>
             </div>
         </div>
-        <div data-montage-id="temperature" class="Den-temperatureNumber"></div>
     </div>
 </body>
 </html>
