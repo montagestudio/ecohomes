@@ -9,8 +9,8 @@ lowp vec4 diffuse = texture2D(u_diffuse, v_texcoord0);
 if (diffuse.a <0.001) 
 	discard;
 lowp vec4 color = vec4(0., 0., 0., 0.);
+diffuse *= u_filterColor;
 
 color.xyz += diffuse.xyz;
-color *= u_filterColor;
 gl_FragColor = vec4(color.rgb * diffuse.a, diffuse.a * u_transparency);
 }

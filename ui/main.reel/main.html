@@ -20,6 +20,16 @@
                 "element": {"#": "den"}
             }
         },
+        "material1": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "thermo-normal",
+                "scene": {"@": "scene1"}
+            },
+            "bindings": {
+                "filterColor": {"<-": "((@den.ambientTemperature - 50) / (94 - 50))  > 0.5 ? [1, 0.2, 0.1, ((((@den.ambientTemperature - 50) / (94 - 50) ) - 0.5) * 2)  * 0.6] : [0.1, 0.2, 1, ((0.5- ((@den.ambientTemperature - 50) / (94 - 50) ) ) * 2) * 0.6 ]"}
+            }
+        },
         "scene1": {
             "prototype": "glTF-webgl-viewer/runtime/scene",
             "properties": {
@@ -49,8 +59,12 @@
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <div class="Main-view" data-montage-id="colladaView"></div>
-        <div class="Main-title">The Den</div>
-        <div class="Main-wall"><div data-montage-id="den" class="Main-den"></div></div>
+        <div class="Main-title">
+            The Den
+        </div>
+        <div class="Main-wall">
+            <div data-montage-id="den" class="Main-den"></div>
+        </div>
     </div>
 </body>
 </html>
