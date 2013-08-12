@@ -924,16 +924,16 @@
             "byteStride": 16,
             "count": 165,
             "max": [
-                1.55544e-43,
-                2,
-                1.54143e-43,
-                2
+                0.995898,
+                0.994317,
+                0.994317,
+                0.995898
             ],
             "min": [
                 0,
+                -4.65661e-10,
                 0,
-                0,
-                4.2039e-45
+                -4.65661e-10
             ],
             "type": "FLOAT_VEC4"
         },
@@ -1185,27 +1185,27 @@
     },
     "bufferViews": {
         "bufferView_553": {
-            "buffer": "testRoom11.bin",
+            "buffer": "loft.bin",
             "byteLength": 739824,
             "byteOffset": 0,
             "target": "ARRAY_BUFFER"
         },
         "bufferView_554": {
-            "buffer": "testRoom11.bin",
+            "buffer": "loft.bin",
             "byteLength": 42684,
             "byteOffset": 739824,
             "target": "ELEMENT_ARRAY_BUFFER"
         },
         "bufferView_555": {
-            "buffer": "testRoom11.bin",
+            "buffer": "loft.bin",
             "byteLength": 105776,
             "byteOffset": 782508
         }
     },
     "buffers": {
-        "testRoom11.bin": {
+        "loft.bin": {
             "byteLength": 888284,
-            "path": "testRoom11.bin"
+            "path": "loft.bin"
         }
     },
     "cameras": {
@@ -2704,18 +2704,24 @@
     "profile": "WebGL 1.0",
     "programs": {
         "program_0": {
-            "fragmentShader": "testRoom110FS",
-            "vertexShader": "testRoom110VS"
+            "fragmentShader": "loft0FS",
+            "vertexShader": "loft0VS"
         },
         "program_1": {
-            "fragmentShader": "testRoom112FS",
-            "vertexShader": "testRoom112VS"
+            "fragmentShader": "loft2FS",
+            "vertexShader": "loft2VS"
         }
     },
     "samplers": {
         "sampler_0": {
             "magFilter": "LINEAR",
             "minFilter": "LINEAR",
+            "wrapS": "REPEAT",
+            "wrapT": "REPEAT"
+        },
+        "sampler_1": {
+            "magFilter": "LINEAR",
+            "minFilter": "LINEAR_MIPMAP_LINEAR",
             "wrapS": "REPEAT",
             "wrapT": "REPEAT"
         }
@@ -2749,17 +2755,17 @@
         }
     },
     "shaders": {
-        "testRoom110FS": {
-            "path": "testRoom110FS.glsl"
+        "loft0FS": {
+            "path": "loft0FS.glsl"
         },
-        "testRoom110VS": {
-            "path": "testRoom110VS.glsl"
+        "loft0VS": {
+            "path": "loft0VS.glsl"
         },
-        "testRoom112FS": {
-            "path": "testRoom112FS.glsl"
+        "loft2FS": {
+            "path": "loft2FS.glsl"
         },
-        "testRoom112VS": {
-            "path": "testRoom112VS.glsl"
+        "loft2VS": {
+            "path": "loft2VS.glsl"
         }
     },
     "skins": {},
@@ -2942,14 +2948,14 @@
         "texture_image_12": {
             "format": "RGBA",
             "internalFormat": "RGBA",
-            "sampler": "sampler_0",
+            "sampler": "sampler_1",
             "source": "image_12",
             "target": "TEXTURE_2D"
         },
         "texture_image_13": {
             "format": "RGBA",
             "internalFormat": "RGBA",
-            "sampler": "sampler_0",
+            "sampler": "sampler_1",
             "source": "image_13",
             "target": "TEXTURE_2D"
         },
