@@ -27,6 +27,29 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
         @param {RotationEvent} event
     */
 
+
+    /**
+        Unit for dispatched angles. Options: radians and degrees
+        Radians are the default as it is the standard in angular measures
+        To think about: should it accept "deg" as degrees to be equivalent to CSS notation?
+    */
+    _unit: {
+        value: "radians"
+    },
+
+    unit: {
+        get: function () {
+            return this._unit;
+        },
+        set: function (value) {
+            if (value === "degrees") {
+                this._unit = "degrees";
+            } else {
+                this._unit = "radians";
+            }
+        }
+    },
+
     constructor: {
         value: function RotationComposer() {
             this.super();
@@ -43,6 +66,7 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
             this.component.addComposerForElement(this._translateComposer, this.element);
             this._translateComposer._load();
             this._translateComposer.addEventListener("translateStart", this, false);
+            this._translateComposer.addEventListener("translateEnd", this, false);
             this._translateComposer.addEventListener("translate", this, false);
         }
     },
@@ -51,144 +75,116 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
         value: function() {
         }
     },
-    
+
     handleTranslateStart: {
-        value: function(event) {
-            this._start = this._translateComposer.pointerStartEventPosition;
-            this._translateComposer.translateX = this._start.pageX;
-            this._translateComposer.translateY = this._start.pageY;
-            var start = this._start;
-            var deltaX = start.pageX - this.center.pageX;
-            var deltaY = this.center.pageY - start.pageY;
-            this._startAngle = this.angle + (Math.atan2(deltaY, deltaX) * 180 / Math.PI);
+        value: function() {
+            var start = this._translateComposer.pointerStartEventPosition,
+                deltaX = start.pageX - this.center.pageX,
+                deltaY = start.pageY - this.center.pageY;
+
+            this._translateComposer.translateX = start.pageX;
+            this._translateComposer.translateY = start.pageY;
+            this._previousAngle = Math.atan2(deltaY, deltaX);
+            this._deltaAngle = 0;
             this._dispatchRotateStart();
         }
     },
 
+    handleTranslateEnd: {
+        value: function() {
+            this._dispatchRotateEnd();
+        }
+    },
 
     handleTranslate: {
         value: function(event) {
-            this._move(event);
+            var deltaX = event.translateX - this.center.pageX,
+                deltaY = event.translateY - this.center.pageY,
+                currentAngle = Math.atan2(deltaY, deltaX),
+                deltaAngle = currentAngle - this._previousAngle;
+
+            if (deltaAngle > Math.PI) {
+                deltaAngle -= Math.PI * 2;
+            } else {
+                if (deltaAngle < -Math.PI) {
+                    deltaAngle += Math.PI * 2;
+                }
+            }
+            this.angleInRadians += deltaAngle;
+            this._deltaAngle = deltaAngle;
+            this._previousAngle = currentAngle;
+            this._dispatchRotate();
         }
     },
 
-    angle: {
+    angleInRadians: {
         value: 0
     },
 
-    _move: {
-        value: function(event) {
-            /*var deltaX = (this._start.pageX + event.translateX) - this.center.pageX;
-            var deltaY = this.center.pageY - (this._start.pageY + event.translateY);*/
-            var deltaX = event.translateX - this.center.pageX;
-            var deltaY = this.center.pageY - event.translateY;
-            this.angle = this._startAngle - (Math.atan2(deltaY, deltaX) * 180 / Math.PI);
-            this._dispatchRotate(this.angle);
-
-
-            //this._debug(this.angle, event);
-        }
+    _deltaAngle: {
+        value: 0
     },
-    
+
     _dispatchRotateStart: {
-        value: function(angle) {
+        value: function() {
             var event = document.createEvent("CustomEvent");
+
             event.initCustomEvent("rotateStart", true, true, null);
+            event.unit = this._unit;
+            if (this._unit === "radians") {
+                event.rotation = this.angleInRadians;
+                event.deltaRotation = this._deltaAngle;
+            } else {
+                event.rotation = (this.angleInRadians * 180) / Math.PI;
+                event.deltaRotation = (this._deltaAngle * 180) / Math.PI;
+            }
             this.dispatchEvent(event);
         }
     },
 
     _dispatchRotate: {
-        value: function(angle) {
+        value: function() {
             var event = document.createEvent("CustomEvent");
+
             event.initCustomEvent("rotate", true, true, null);
-            event.rotation = angle;
+            event.unit = this._unit;
+            if (this._unit === "radians") {
+                event.rotation = this.angleInRadians;
+                event.deltaRotation = this._deltaAngle;
+            } else {
+                event.rotation = (this.angleInRadians * 180) / Math.PI;
+                event.deltaRotation = (this._deltaAngle * 180) / Math.PI;
+            }
             this.dispatchEvent(event);
         }
     },
 
+    _dispatchRotateEnd: {
+        value: function() {
+            var event = document.createEvent("CustomEvent");
+
+            event.initCustomEvent("rotateEnd", true, true, null);
+            event.unit = this._unit;
+            event.deltaRotation = 0;
+            if (this._unit === "radians") {
+                event.rotation = this.angleInRadians;
+            } else {
+                event.rotation = (this.angleInRadians * 180) / Math.PI;
+            }
+            this.dispatchEvent(event);
+        }
+    },
+
+    // To review: I would call this axisCoordinates or similar
     center: {
         value: null
     },
 
-    rotationOrigin: {
-        value: 0
-    },
-    
     _start: {
         value: null
     },
 
     _translateComposer: {
         value: null
-    },
-
-    _debugCanvas: {
-        value: null
-    },
-
-    _debug: {
-        value: function(angle, event) {
-            var canvas = this._debugCanvas;
-            if (this._debugCanvas === null) {
-                canvas = document.createElement("canvas");
-                canvas.style.position = "absolute";
-                canvas.style.top = "0px";
-                canvas.style.left = "0px";
-                canvas.style.pointerEvents = "none";
-
-                var resizeCanvas = function () {
-                    canvas.width = document.documentElement.offsetWidth;
-                    canvas.height = document.documentElement.offsetHeight;
-                };
-                resizeCanvas();
-                window.addEventListener("resize", resizeCanvas);
-                document.body.appendChild(canvas);
-                this._debugCanvas = canvas;
-            }
-
-            var context = canvas.getContext('2d');
-            context.clearRect(0,0,canvas.width,canvas.height);
-            var x = canvas.width / 2;
-            var y = canvas.height / 2;
-            var radius = 75;
-            var startAngle = 1.1 * Math.PI;
-            var endAngle = 1.9 * Math.PI;
-            var counterClockwise = angle<0;
-
-            context.beginPath();
-            context.arc(this.center.pageX, this.center.pageY, radius, 0, angle * Math.PI/180, counterClockwise);
-            context.lineWidth = 2;
-      
-            // line color
-            context.strokeStyle = 'red';
-            context.stroke();
-
-            var grid = function (x, y) {
-                context.beginPath();
-                context.moveTo(x, 0);
-                context.lineTo(x, canvas.height);
-                context.stroke();
-                context.beginPath();
-                context.moveTo(0, y);
-                context.lineTo(canvas.width, y);
-                context.stroke();
-            }
-            //center
-            context.strokeStyle = 'red';
-            grid(this.center.pageX, this.center.pageY);
-            //translate
-            context.strokeStyle = 'blue';
-            grid( this._start.pageX + event.translateX,  this._start.pageY + event.translateY);
-
-
-
-            context.font="20px Futura";
-            context.fillText(angle.toFixed(2) + " degrees", this.center.pageX+75, this.center.pageY+75);
-
-
-        }
     }
-
-
 });
