@@ -107,16 +107,14 @@ exports.Den = Component.specialize(/** @lends Den# */ {
             this._previousTimestamp = timestamp;
             this.whiteBar.style.webkitTransform = "rotate3d(0, 0, 1, " + (desiredTemperature * 6 - 126) + "deg)";
             if (ambientTemperature === desiredTemperature) {
-                this.rightRedBar.style.webkitTransform = "rotate3d(0, 0, 1, 180deg)";
-                this.leftRedBar.style.webkitTransform = "rotate3d(0, 0, 1, 180deg)";
-                this.rightBlueBar.style.webkitTransform = "rotate3d(0, 0, 1, 180deg)";
-                this.leftBlueBar.style.webkitTransform = "rotate3d(0, 0, 1, 180deg)";
+                this.redBar.style.opacity = 0;
+                this.blueBar.style.opacity = 0;
                 this.blueFadingBar.style.opacity = 0;
                 this.redFadingBar.style.opacity = 0;
             } else {
                 if (ambientTemperature < desiredTemperature) {
-                    this.rightBlueBar.style.webkitTransform = "rotate3d(0, 0, 1, 180deg)";
-                    this.leftBlueBar.style.webkitTransform = "rotate3d(0, 0, 1, 180deg)";
+                    this.redBar.style.opacity = 1;
+                    this.blueBar.style.opacity = 0;
                     this.blueFadingBar.style.opacity = 0;
                     length = desiredTemperature - ambientTemperature - 1;
                     if (length <= 30) {
@@ -133,8 +131,8 @@ exports.Den = Component.specialize(/** @lends Den# */ {
                     this.redFadingBar.style.opacity = 1 - ((this.ambientTemperature - this._temperatureOffset) - ambientTemperature);
                     this.redFadingBar.style.webkitTransform = "rotate3d(0, 0, 1, " + (ambientTemperature * 6 - 126) + "deg)";
                 } else {
-                    this.rightRedBar.style.webkitTransform = "rotate3d(0, 0, 1, 180deg)";
-                    this.leftRedBar.style.webkitTransform = "rotate3d(0, 0, 1, 180deg)";
+                    this.redBar.style.opacity = 0;
+                    this.blueBar.style.opacity = 1;
                     this.redFadingBar.style.opacity = 0;
                     length = ambientTemperature - desiredTemperature - 1;
                     if (length <= 30) {

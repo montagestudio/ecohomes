@@ -26,6 +26,7 @@
     position: absolute;
     left: 97px;
     top: 74px;
+    -webkit-transform: translate3d(0, 0, 0);
 }
 .Den-left-red-bar-clip {
     position: absolute;
@@ -57,6 +58,7 @@
     position: absolute;
     left: 97px;
     top: 74px;
+    -webkit-transform: translate3d(0, 0, 0);
 }
 .Den-left-blue-bar-clip {
     position: absolute;
