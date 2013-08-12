@@ -22,13 +22,16 @@
                 "rightBlueBar": {"#": "rightBlueBar"},
                 "leftBlueBarClip": {"#": "leftBlueBarClip"},
                 "leftBlueBar": {"#": "leftBlueBar"},
+                "leftDigit": {"#": "leftDigit"},
+                "rightDigit": {"#": "rightDigit"},
                 "_rotateComposer": {"@": "rotateComposer"}
             }
         },
         "rotateComposer": {
             "prototype": "core/rotation-composer",
             "properties": {
-                "component": {"@": "owner"}
+                "component": {"@": "owner"},
+                "unit": "degrees"
             },
             "listeners": [
                 {
@@ -36,7 +39,7 @@
                     "listener": {"@": "owner"}
                 },
                 {
-                    "type": "rotateStart",
+                    "type": "rotateEnd",
                     "listener": {"@": "owner"}
                 }
             ]
@@ -64,6 +67,12 @@
             <div data-montage-id="leftBlueBarClip" class="Den-left-blue-bar-clip">
                 <div data-montage-id="leftBlueBar" class="Den-left-blue-bar"></div>
             </div>
+        </div>
+        <div class="Den-left-digit-clip">
+            <div data-montage-id="leftDigit" class="Den-left-digit"></div>
+        </div>
+        <div class="Den-right-digit-clip">
+            <div data-montage-id="rightDigit" class="Den-right-digit"></div>
         </div>
     </div>
 </body>

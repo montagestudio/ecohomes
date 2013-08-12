@@ -3,8 +3,7 @@
 .Main-view {
     position: absolute;
     left: 0px;
-    top:0px;
-    overflow: hidden;
+    top: 0px;
     height: 768px;
     width: 674px;
 }
@@ -12,8 +11,7 @@
 .Main-wall {
     position: absolute;
     left: 674px;
-    top:0px;
-    overflow: hidden;
+    top: 0px;
     height: 768px;
     width: 350px;
     background-color: #ececec;

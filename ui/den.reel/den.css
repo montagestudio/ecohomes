@@ -111,102 +111,32 @@
     left: 170.33px;
     -webkit-transform-origin: 50% 76.75px 0;
 }
-/*.Den {
-    position: relative;
-    background-image: url("den.png");
-    background-size: 100%;
+.Den-left-digit-clip {
+    position: absolute;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+    width: 50px;
+    height: 73px;
+    top: 112px;
+    left: 128px;
+}
+.Den-right-digit-clip {
+    position: absolute;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+    width: 50px;
+    height: 73px;
+    top: 112px;
+    left: 168px;
+}
+.Den-left-digit,
+.Den-right-digit {
+    pointer-events: none;
     width: 500px;
-    height: 500px;
+    height: 73px;
+    background-image: url(numbers.png);
+    background-size: 500px 73px;
+    -webkit-transform: translate3d(0, 0, 0);
 }
-
-
-.Den-title {
-    font-family: Futura;
-    font-size: 17px;
-    color: white;
-    position: absolute;
-    top: 135px;
-    left: 228px;
-}
-
-.Den-temperatureNumber {
-    font-family: Futura;
-    font-size: 65px;
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 236px;
-    margin-left:-50px;
-    width: 100px;
-    height: 50px;
-    text-align: center;
-}
-
-.Den-indicatorContainer {
-    position: absolute;
-    left: 50%;
-    top: 171px;
-    bottom: 171px;
-    margin-left:-1px;
-    width: 2px;
-    opacity: 1;
-    -webkit-transition: opacity .5s ease-in-out;
-}
-
-.Den-indicator {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 2px;
-    height: 15px;
-    background-color: white;
-}
-
-.Den-ambientContainer {
-    position: absolute;
-    left: 50%;
-    top: 171px;
-    bottom: 171px;
-    margin-left:-1px;
-    width: 2px;
-    opacity: 1;
-    -webkit-transition: opacity .5s ease-in-out;
-}
-
-.Den-ambient {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 2px;
-    height: 15px;
-}
-
-.Den--awake .Den-graduation {
-    opacity: .2;
-}
-
-.Den-graduation.Den-graduation--shown {
-    opacity: .5;
-}
-
-.Den-graduation {
-    opacity: 0.01;
-}
-
-.Den-onColor {
-    position: absolute;
-    top:165px;
-    left:165px;
-    width:170px;
-    height:170px;
-    border-radius:85px;
-    background: hsl(108, 57%, 65%);
-    opacity: 0.01;
-    -webkit-transition: opacity 1s ease-in-out;
-}
-
-.Den--awake .Den-onColor {
-    opacity: .2;
-}*/
-
-
