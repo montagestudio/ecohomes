@@ -71,7 +71,7 @@
     width: 153.5px;
     height: 76.75px;
     -webkit-transform-origin: 50% 100% 0;
-    background-color: cyan;
+    background-color: #3af;
 }
 .Den-right-blue-bar-clip {
     position: absolute;
@@ -84,7 +84,7 @@
     width: 153.5px;
     height: 76.75px;
     -webkit-transform-origin: 50% 100% 0;
-    background-color: cyan;
+    background-color: #3af;
 }
 .Den-white-bar {
     width: 6.5px;
@@ -108,7 +108,7 @@
     width: 6.5px;
     height: 19px;
     position: absolute;
-    background-color: cyan;
+    background-color: #3af;
     top: 74px;
     left: 170.33px;
     -webkit-transform-origin: 50% 76.75px 0;
@@ -141,4 +141,15 @@
     background-image: url(numbers.png);
     background-size: 500px 73px;
     -webkit-transform: translate3d(0, 0, 0);
+}
+.Den-icon {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    left: 141px;
+    top: 173px;
+    background-repeat: no-repeat;
+    background-size: 64px 64px;
 }

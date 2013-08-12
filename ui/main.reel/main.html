@@ -27,7 +27,7 @@
                 "scene": {"@": "scene1"}
             },
             "bindings": {
-                "filterColor": {"<-": "((@den.ambientTemperature - 50) / (94 - 50))  > 0.5 ? [1, 0.2, 0.1, ((((@den.ambientTemperature - 50) / (94 - 50) ) - 0.5) * 2)  ] : [0.1, 0.2, 1, ((0.5- ((@den.ambientTemperature - 50) / (94 - 50) ) ) * 2) ]"}
+                "filterColor": {"<-": "@den.temperatureDelta > 0 ? [1, 0, 0, @den.temperatureDelta * 0.7] : [0, 0, 1, -0.7 * @den.temperatureDelta]"}
             }
         },
         "scene1": {

@@ -10,12 +10,45 @@ var Component = require("montage/ui/component").Component;
  */
 exports.Den = Component.specialize(/** @lends Den# */ {
 
+    _icon: {
+        value: null
+    },
+
+    _needsUpdateIcon: {
+        value: false
+    },
+
+    icon: {
+        get: function () {
+            return this._icon;
+        },
+        set: function (value) {
+            switch (value) {
+                case "am":
+                    this._icon = "ui/den.reel/day.png";
+                    break;
+                case "pm":
+                    this._icon = "ui/den.reel/night.png";
+                    break;
+                default:
+                    this._icon = null;
+                    break;
+            };
+            this._needsUpdateIcon = true;
+            this.needsDraw = true;
+        }
+    },
+
     desiredTemperature: {
         value: 72.5
     },
 
     ambientTemperature: {
         value: 72.5
+    },
+
+    temperatureDelta: {
+        value: 0
     },
 
     _temperatureOffset: {
@@ -98,6 +131,7 @@ exports.Den = Component.specialize(/** @lends Den# */ {
                 desiredTemperature = (this.desiredTemperature - this._temperatureOffset) | 0,
                 time;
 
+            this.temperatureDelta = (this.desiredTemperature - this.ambientTemperature) / (93 - 51);
             this.rightDigit.style.webkitTransform = "translate3d(" + (-50 * ((this.desiredTemperature | 0) % 10)) + "px, 0, 0)";
             this.leftDigit.style.webkitTransform = "translate3d(" + (-50 * (this.desiredTemperature / 10 | 0)) + "px, 0, 0)";
             if (this._previousTimestamp === null) {
@@ -166,6 +200,10 @@ exports.Den = Component.specialize(/** @lends Den# */ {
                         this.needsDraw = true;
                     }
                 }
+            }
+            if (this._needsUpdateIcon) {
+                this.iconElement.style.backgroundImage = "url(" + this._icon + ")";
+                this._needsUpdateIcon = false;
             }
         }
     }
