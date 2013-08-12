@@ -26,6 +26,32 @@ exports.Den = Component.specialize(/** @lends Den# */ {
         value: null
     },
 
+
+    // The following enterDocument and handleTouchstart are a workaround for measurement
+    // that should be removed after Afonso fixes loading css styles on time
+
+    enterDocument: {
+        value: function (firstTime) {
+            if (firstTime) {
+                this.element.addEventListener("touchstart", this, false);
+            }
+        }
+    },
+
+    handleTouchstart: {
+        value: function () {
+            var boundingRect = this.element.getBoundingClientRect(),
+                center = {
+                    pageX: 174 + boundingRect.left,
+                    pageY: 151 + boundingRect.top
+                };
+            this._rotateComposer.center = center;
+            this.element.removeEventListener("touchstart", this, false);
+        }
+    },
+
+    // End of workaround
+
     willDraw: {
         value: function() {
             var boundingRect = this.element.getBoundingClientRect(),
