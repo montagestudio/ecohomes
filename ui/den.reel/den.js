@@ -122,6 +122,15 @@ exports.Den = Component.specialize(/** @lends Den# */ {
         }
     },
 
+    // heatingRate and coolingRate are in farenheight degrees per second
+    heatingRate: {
+        value: 1
+    },
+
+    coolingRate: {
+        value: 1
+    },
+
     draw: {
         value: function (timestamp) {
             var length,
@@ -186,14 +195,14 @@ exports.Den = Component.specialize(/** @lends Den# */ {
             }
             if (!this._isRotating) {
                 if (this.ambientTemperature < this.desiredTemperature) {
-                    this.ambientTemperature += time * .005;
+                    this.ambientTemperature += time * .001 * this.heatingRate;
                     if (this.ambientTemperature > this.desiredTemperature) {
                         this.ambientTemperature = this.desiredTemperature;
                     }
                     this.needsDraw = true;
                 } else {
                     if (this.desiredTemperature < this.ambientTemperature) {
-                        this.ambientTemperature -= time * .005;
+                        this.ambientTemperature -= time * .001 * this.coolingRate;
                         if (this.ambientTemperature < this.desiredTemperature) {
                             this.ambientTemperature = this.desiredTemperature;
                         }
