@@ -12,16 +12,11 @@
                 "whiteBar": {"#": "whiteBar"},
                 "redFadingBar": {"#": "redFadingBar"},
                 "blueFadingBar": {"#": "blueFadingBar"},
-                "redBar": {"#": "redBar"},
-                "rightRedBarClip": {"#": "rightRedBarClip"},
                 "rightRedBar": {"#": "rightRedBar"},
-                "leftRedBarClip": {"#": "leftRedBarClip"},
                 "leftRedBar": {"#": "leftRedBar"},
-                "blueBar": {"#": "blueBar"},
-                "rightBlueBarClip": {"#": "rightBlueBarClip"},
                 "rightBlueBar": {"#": "rightBlueBar"},
-                "leftBlueBarClip": {"#": "leftBlueBarClip"},
                 "leftBlueBar": {"#": "leftBlueBar"},
+                "blackBar": {"#": "blackBar"},
                 "leftDigit": {"#": "leftDigit"},
                 "rightDigit": {"#": "rightDigit"},
                 "iconElement": {"#": "icon"},
@@ -44,32 +39,33 @@
                     "listener": {"@": "owner"}
                 }
             ]
+        },
+        "pressComposer": {
+            "prototype": "montage/composer/press-composer",
+            "properties": {
+                "component": {"@": "owner"}
+            },
+            "listeners": [
+                {
+                    "type": "press",
+                    "listener": {"@": "owner"}
+                }
+            ]
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="Den" class="Den">
+        <div data-montage-id="leftRedBar" class="Den-left-red-bar"></div>
+        <div data-montage-id="rightRedBar" class="Den-right-red-bar"></div>
+        <div data-montage-id="leftBlueBar" class="Den-left-blue-bar"></div>
+        <div data-montage-id="rightBlueBar" class="Den-right-blue-bar"></div>
+        <div data-montage-id="blackBar" class="Den-black-bar"></div>
         <div data-montage-id="icon" class="Den-icon"></div>
         <div data-montage-id="whiteBar" class="Den-white-bar"></div>
         <div data-montage-id="redFadingBar" class="Den-red-fading-bar"></div>
         <div data-montage-id="blueFadingBar" class="Den-blue-fading-bar"></div>
-        <div data-montage-id="redBar" class="Den-red-bar">
-            <div data-montage-id="rightRedBarClip" class="Den-right-red-bar-clip">
-                <div data-montage-id="rightRedBar" class="Den-right-red-bar"></div>
-            </div>
-            <div data-montage-id="leftRedBarClip" class="Den-left-red-bar-clip">
-                <div data-montage-id="leftRedBar" class="Den-left-red-bar"></div>
-            </div>
-        </div>
-        <div data-montage-id="blueBar" class="Den-blue-bar">
-            <div data-montage-id="rightBlueBarClip" class="Den-right-blue-bar-clip">
-                <div data-montage-id="rightBlueBar" class="Den-right-blue-bar"></div>
-            </div>
-            <div data-montage-id="leftBlueBarClip" class="Den-left-blue-bar-clip">
-                <div data-montage-id="leftBlueBar" class="Den-left-blue-bar"></div>
-            </div>
-        </div>
         <div class="Den-left-digit-clip">
             <div data-montage-id="leftDigit" class="Den-left-digit"></div>
         </div>

@@ -22,69 +22,28 @@
     width: 154px;
     height: 124px;
 }
-.Den-red-bar {
+.Den-left-red-bar,
+.Den-right-red-bar,
+.Den-left-blue-bar,
+.Den-right-blue-bar,
+.Den-black-bar {
     position: absolute;
     left: 97px;
     top: 74px;
-    -webkit-transform: translate3d(0, 0, 0);
-}
-.Den-left-red-bar-clip {
-    position: absolute;
-    width: 153.5px;
-    height: 76.75px;
-    overflow: hidden;
-    -webkit-transform-origin: 50% 100% 0;
-}
-.Den-left-red-bar {
     width: 153.5px;
     height: 76.75px;
     -webkit-transform-origin: 50% 100% 0;
-    background-color: red;
 }
-.Den-right-red-bar-clip {
-    position: absolute;
-    width: 153.5px;
-    height: 76.75px;
-    overflow: hidden;
-    -webkit-transform-origin: 50% 100% 0;
-}
+.Den-left-red-bar,
 .Den-right-red-bar {
-    width: 153.5px;
-    height: 76.75px;
-    -webkit-transform-origin: 50% 100% 0;
     background-color: red;
 }
-.Den-blue-bar {
-    position: absolute;
-    left: 97px;
-    top: 74px;
-    -webkit-transform: translate3d(0, 0, 0);
-}
-.Den-left-blue-bar-clip {
-    position: absolute;
-    width: 153.5px;
-    height: 76.75px;
-    overflow: hidden;
-    -webkit-transform-origin: 50% 100% 0;
-}
-.Den-left-blue-bar {
-    width: 153.5px;
-    height: 76.75px;
-    -webkit-transform-origin: 50% 100% 0;
-    background-color: #3af;
-}
-.Den-right-blue-bar-clip {
-    position: absolute;
-    width: 153.5px;
-    height: 76.75px;
-    overflow: hidden;
-    -webkit-transform-origin: 50% 100% 0;
-}
+.Den-left-blue-bar,
 .Den-right-blue-bar {
-    width: 153.5px;
-    height: 76.75px;
-    -webkit-transform-origin: 50% 100% 0;
     background-color: #3af;
+}
+.Den-black-bar {
+    background-color: black;
 }
 .Den-white-bar {
     width: 6.5px;
