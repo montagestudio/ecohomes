@@ -10,45 +10,34 @@
       }
     }
   },
-  "blueprint_unnamed_awake": {
+  "blueprint_unnamed_desiredTemperature": {
     "prototype": "montage/core/meta/property-blueprint",
     "properties": {
-      "name": "awake",
-      "blueprint": {"@": "root"}
-    }
-  },
-  "blueprint_unnamed_active": {
-    "prototype": "montage/core/meta/property-blueprint",
-    "properties": {
-      "name": "active",
-      "blueprint": {"@": "root"}
-    }
-  },
-  "blueprint_unnamed_outsideTemperature": {
-    "prototype": "montage/core/meta/property-blueprint",
-    "properties": {
-      "name": "outsideTemperature",
-      "blueprint": {"@": "root"}
-    }
-  },
-  "blueprint_unnamed_targetTemperature": {
-    "prototype": "montage/core/meta/property-blueprint",
-    "properties": {
-      "name": "targetTemperature",
-      "blueprint": {"@": "root"}
+      "name": "desiredTemperature",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
     }
   },
   "blueprint_unnamed_ambientTemperature": {
     "prototype": "montage/core/meta/property-blueprint",
     "properties": {
       "name": "ambientTemperature",
-      "blueprint": {"@": "root"}
+      "blueprint": {"@": "root"},
+      "valueType": "number"
     }
   },
-  "blueprint_unnamed_ambietTemperature": {
+  "blueprint_unnamed_heatingRate": {
     "prototype": "montage/core/meta/property-blueprint",
     "properties": {
-      "name": "ambietTemperature",
+      "name": "heatingRate",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_coolingRate": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "coolingRate",
       "blueprint": {"@": "root"},
       "valueType": "number"
     }
@@ -59,23 +48,17 @@
       "name": null,
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
-        {"@": "blueprint_unnamed_awake"},
-        {"@": "blueprint_unnamed_active"},
-        {"@": "blueprint_unnamed_outsideTemperature"},
-        {"@": "blueprint_unnamed_targetTemperature"},
+        {"@": "blueprint_unnamed_desiredTemperature"},
         {"@": "blueprint_unnamed_ambientTemperature"},
-        {"@": "blueprint_unnamed_ambietTemperature"}
+        {"@": "blueprint_unnamed_heatingRate"},
+        {"@": "blueprint_unnamed_coolingRate"}
       ],
       "propertyBlueprintGroups": {
         "Den": [
-          {"@": "blueprint_unnamed_awake"},
-          {"@": "blueprint_unnamed_active"},
-          {"@": "blueprint_unnamed_outsideTemperature"},
-          {"@": "blueprint_unnamed_targetTemperature"},
-          {"@": "blueprint_unnamed_ambientTemperature"}
-        ],
-        "default": [
-          {"@": "blueprint_unnamed_ambietTemperature"}
+          {"@": "blueprint_unnamed_desiredTemperature"},
+          {"@": "blueprint_unnamed_ambientTemperature"},
+          {"@": "blueprint_unnamed_heatingRate"},
+          {"@": "blueprint_unnamed_coolingRate"}
         ]
       },
       "module": {

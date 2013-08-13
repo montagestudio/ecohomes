@@ -39,12 +39,32 @@ exports.Den = Component.specialize(/** @lends Den# */ {
         }
     },
 
+    _desiredTemperature: {
+        value: 72.5
+    },
+
     desiredTemperature: {
+        get: function () {
+            return this._desiredTemperature;
+        },
+        set: function (value) {
+            this._desiredTemperature = value;
+            this.needsDraw = true;
+        }
+    },
+
+    _ambientTemperature: {
         value: 72.5
     },
 
     ambientTemperature: {
-        value: 72.5
+        get: function () {
+            return this._ambientTemperature;
+        },
+        set: function (value) {
+            this._ambientTemperature = value;
+            this.needsDraw = true;
+        }
     },
 
     temperatureDelta: {

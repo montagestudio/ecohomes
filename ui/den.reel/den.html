@@ -9,19 +9,31 @@
             "prototype": "ui/den.reel",
             "properties": {
                 "element": {"#": "Den"},
-                "whiteBar": {"#": "whiteBar"},
-                "redFadingBar": {"#": "redFadingBar"},
-                "blueFadingBar": {"#": "blueFadingBar"},
-                "rightRedBar": {"#": "rightRedBar"},
-                "leftRedBar": {"#": "leftRedBar"},
-                "rightBlueBar": {"#": "rightBlueBar"},
-                "leftBlueBar": {"#": "leftBlueBar"},
+                "_rotateComposer": {"@": "rotateComposer"},
                 "blackBar": {"#": "blackBar"},
-                "leftDigit": {"#": "leftDigit"},
-                "rightDigit": {"#": "rightDigit"},
+                "blueFadingBar": {"#": "blueFadingBar"},
                 "iconElement": {"#": "icon"},
-                "_rotateComposer": {"@": "rotateComposer"}
+                "leftBlueBar": {"#": "leftBlueBar"},
+                "leftDigit": {"#": "leftDigit"},
+                "leftRedBar": {"#": "leftRedBar"},
+                "redFadingBar": {"#": "redFadingBar"},
+                "rightBlueBar": {"#": "rightBlueBar"},
+                "rightDigit": {"#": "rightDigit"},
+                "rightRedBar": {"#": "rightRedBar"},
+                "whiteBar": {"#": "whiteBar"}
             }
+        },
+        "pressComposer": {
+            "prototype": "montage/composer/press-composer",
+            "properties": {
+                "component": {"@": "owner"}
+            },
+            "listeners": [
+                {
+                    "type": "press",
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "rotateComposer": {
             "prototype": "core/rotation-composer",
@@ -36,18 +48,6 @@
                 },
                 {
                     "type": "rotateEnd",
-                    "listener": {"@": "owner"}
-                }
-            ]
-        },
-        "pressComposer": {
-            "prototype": "montage/composer/press-composer",
-            "properties": {
-                "component": {"@": "owner"}
-            },
-            "listeners": [
-                {
-                    "type": "press",
                     "listener": {"@": "owner"}
                 }
             ]
