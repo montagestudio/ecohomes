@@ -1,13 +1,14 @@
-{{name}}
+Den-Demo
 ==============
-
-This is the Montage app template.
 
 Note: Before working on your app you will need to add montage to it.
 
 ```
 npm install .
-```
+```  
+
+note: when updating it is recommanded to **remove the glTF-webgl-viewer from node_modules**, npm doesn't currently update git repo correctly. (to be investigated).
+
 
 Layout
 ------
