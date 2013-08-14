@@ -6,6 +6,20 @@
         "digit": "~0.3.1",
         "glTF-webgl-viewer": "git+ssh://git@github.com:fabrobinet/glTF-webgl-viewer.git"
     },
+    "mappings": {
+        "amazon": {
+            "name": "amazon",
+            "location": "packages/amazon"
+        },
+        "den": {
+            "name": "den",
+            "location": "packages/den"
+        },
+        "usdoe": {
+            "name": "usdoe",
+            "location": "packages/usdoe"
+        }
+    },
     "devDependencies": {
         "montage-testing": "0.2.0"
     },

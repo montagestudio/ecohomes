@@ -14,24 +14,49 @@
                 "element": {"#": "main"}
             }
         },
-        "navigation": {
-            "prototype": "ui/navigation.reel",
+
+        "material1": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
             "properties": {
-                "element": {"#": "navigation"}
+                "id": "option01",
+                "scene": {"@": "scene1"}
             },
-            "listeners": [
-                {
-                    "type": "back",
-                    "listener": {"@": "owner"}
-                }
-            ]
+            "bindings": {
+                "filterColor": {"<-": "@den.temperatureDelta > 0 ? [1, 0, 0, @den.temperatureDelta * 0.7] : [0, 0, 1, -0.7 * @den.temperatureDelta]"}
+            }
+        },
+        "scene1": {
+            "prototype": "glTF-webgl-viewer/runtime/scene",
+            "properties": {
+                "path": "assets/3d/loft/loft.json"
+            }
+        },
+        "view1": {
+            "prototype": "glTF-webgl-viewer/ui/view.reel",
+            "properties": {
+                "element": {"#": "colladaView"},
+                "height": "768",
+                "scene": {"@": "scene1"},
+                "viewPoint": {"@": "viewPoint"},
+                "width": "674"
+            }
+        },
+        "viewPoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-camera001",
+                "scene": {"@": "scene1"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="dark" class="Main">
-        <div data-montage-id="navigation"></div>R
+        <div data-montage-id="colladaView"></div>
+        <section>
+            Configuration Panels
+        </section>
     </div>
 </body>
 </html>

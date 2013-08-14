@@ -1,0 +1,9 @@
+{
+    "name": "amazon",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "montage": "~0.13.2",
+        "digit": "~0.3.1"
+    }
+}
