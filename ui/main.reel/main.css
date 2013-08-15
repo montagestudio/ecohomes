@@ -1,4 +1,29 @@
 .Main {
+    display: -webkit-flex; /* new */
+    display: -webkit-box; /* old: iOS6 */
     height: 100%;
 }
 
+.Main-colladaView {
+
+}
+
+.Main-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.Main-configuration {
+    position: relative;
+    -webkit-flex: 1; /* new */
+    -webkit-box-flex: 1; /* old: iOS6 */
+    height: 100%;
+}
+
+.Main-cards {
+    list-style: none;
+}

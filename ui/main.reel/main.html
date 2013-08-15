@@ -14,6 +14,27 @@
                 "element": {"#": "main"}
             }
         },
+        "card": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card"}
+            }
+        },
+        "configurations": {
+            "prototype": "montage/ui/substitution.reel",
+            "properties": {
+                "element": {"#": "cards"}
+            },
+            "bindings": {
+                "switchValue": {"<-": "@panels.objectAtCurrentIteration"}
+            }
+        },
+        "introduction": {
+            "prototype": "ui/cards/introduction.reel",
+            "properties": {
+                "element": {"#": "introduction"}
+            }
+        },
         "material1": {
             "prototype": "glTF-webgl-viewer/runtime/material",
             "properties": {
@@ -24,6 +45,15 @@
             },
             "bindings": {
                 "filterColor": {"<-": "[1, 1, 1, 0]"}
+            }
+        },
+        "panels": {
+            "prototype": "ui/panel-flow.reel",
+            "properties": {
+                "element": {"#": "panel"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.cards"}
             }
         },
         "scene1": {
@@ -63,9 +93,14 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="dark" class="Main">
-        <div data-montage-id="colladaView"></div>
-        <section>
-            Configuration Panels
+        <div data-montage-id="colladaView" class="Main-colladaView"></div>
+        <section class="Main-configuration">
+            <ul data-montage-id="panel" class="Main-panel">
+                <li data-montage-id="cards" class="Main-cards">
+                    <div data-arg="introduction" data-montage-id="introduction"></div>
+                    <div data-arg="card" data-montage-id="card"></div>
+                </li>
+            </ul>
         </section>
     </div>
 </body>

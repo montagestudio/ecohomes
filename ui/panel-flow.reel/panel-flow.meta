@@ -1,0 +1,51 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_content": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "content",
+      "blueprint": {"@": "root"},
+      "cardinality": -1,
+      "valueType": "object"
+    }
+  },
+  "blueprint_unnamed_contentController": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "contentController",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_content"},
+        {"@": "blueprint_unnamed_contentController"}
+      ],
+      "propertyBlueprintGroups": {
+        "PanelFlow": [
+          {"@": "blueprint_unnamed_content"},
+          {"@": "blueprint_unnamed_contentController"}
+        ]
+      },
+      "module": {
+        "%": "ui/panel-flow.reel"
+      },
+      "exportName": "PanelFlow"
+    }
+  }
+}
