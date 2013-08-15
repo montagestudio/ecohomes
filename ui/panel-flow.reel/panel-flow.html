@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="panel-flow.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "panel-flow"},
+                "flow": {"@": "flow"}
+            },
+            "bindings": {
+                "_scroll": {"<->": "@flow.scroll"},
+                "_numberOfIterations": {"<->": "@flow._numberOfIterations"},
+                "_firstIteration": {"<-": "@flow._repetition._drawnIterations.0"}
+            }
+        },
+        "flow": {
+            "prototype": "montage/ui/flow.reel",
+            "properties": {
+                "element": {"#": "flow"},
+                "stride": 1,
+                "linearScrollingVector": [0, -200],
+                "paths": [{
+                    "knots": [
+                        {
+                            "knotPosition": [0, 0, 0],
+                            "nextHandlerPosition": [0, 0, 0],
+                            "nextDensity": 1,
+                            "previousDensity": 1,
+                            "opacity": 0
+                        },
+                        {
+                            "knotPosition": [0, 0, 0],
+                            "previousHandlerPosition": [0, 0, 0],
+                            "nextDensity": 1,
+                            "previousDensity": 1,
+                            "opacity": 0
+                        }
+                    ],
+                    "units": {
+                        "opacity": ""
+                    },
+                    "headOffset": 0,
+                    "tailOffset": 0
+                }]
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="panel-flow" class="PanelFlow">
+        <div data-montage-id="flow" class="PanelFlow-flow">
+            <div data-param="*"></div>
+        </div>
+    </div>
+</body>
+</html>
