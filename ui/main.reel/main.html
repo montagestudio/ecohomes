@@ -18,13 +18,27 @@
             "prototype": "glTF-webgl-viewer/runtime/material",
             "properties": {
                 "id": "option01",
+                "image": "dark-stairs.jpg",
+                "opacity": "1",
                 "scene": {"@": "scene1"}
+            },
+            "bindings": {
+                "filterColor": {"<-": "[1, 1, 1, 0]"}
             }
         },
         "scene1": {
             "prototype": "glTF-webgl-viewer/runtime/scene",
             "properties": {
                 "path": "assets/3d/loft2/testWithCameras.json"
+            }
+        },
+        "stairs": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "escalier",
+                "image": "wood-stairs.jpg",
+                "opacity": "1",
+                "scene": {"@": "scene1"}
             }
         },
         "view1": {
