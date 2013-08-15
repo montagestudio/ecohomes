@@ -14,21 +14,17 @@
                 "element": {"#": "main"}
             }
         },
-
         "material1": {
             "prototype": "glTF-webgl-viewer/runtime/material",
             "properties": {
                 "id": "option01",
                 "scene": {"@": "scene1"}
-            },
-            "bindings": {
-                "filterColor": {"<-": "@den.temperatureDelta > 0 ? [1, 0, 0, @den.temperatureDelta * 0.7] : [0, 0, 1, -0.7 * @den.temperatureDelta]"}
             }
         },
         "scene1": {
             "prototype": "glTF-webgl-viewer/runtime/scene",
             "properties": {
-                "path": "assets/3d/loft/loft.json"
+                "path": "assets/3d/loft2/testWithCameras.json"
             }
         },
         "view1": {
