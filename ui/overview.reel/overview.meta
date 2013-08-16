@@ -10,21 +10,34 @@
       }
     }
   },
+  "blueprint_unnamed_configuration": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configuration",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
       "blueprintModule": {
-        "%": "ui/cards/introduction.reel/introduction.meta"
+        "%": "ui/overview.reel/overview.meta"
       },
       "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_configuration"}
+      ],
       "propertyBlueprintGroups": {
-        "Introduction": []
+        "Overview": [
+          {"@": "blueprint_unnamed_configuration"}
+        ]
       },
       "module": {
-        "%": "ui/cards/introduction.reel"
+        "%": "ui/overview.reel"
       },
-      "exportName": "Introduction"
+      "exportName": "Overview"
     }
   }
 }

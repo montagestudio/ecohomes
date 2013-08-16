@@ -1,0 +1,32 @@
+.Overview {
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+
+    padding: 1em 1em;
+
+    color: hsl(0,0%,98%);
+    font-size: 20px;
+    text-shadow: 0 2px 2px hsl(0,0%,20%);
+
+}
+
+.Overview-logo {
+    height: 30px;
+}
+
+.Overview-totals {
+    display: -webkit-flex;
+    -webkit-justify-content: flex-end;
+    -webkit-align-items: center;
+}
+
+.Overview-ecoScore {
+    margin-right: 1em;
+}
+
+.Overview-ecoBars {
+    height: 30px;
+    width: 80px;
+    vertical-align: middle;
+}

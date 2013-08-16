@@ -47,6 +47,12 @@
                 "filterColor": {"<-": "[1, 1, 1, 0]"}
             }
         },
+        "overview1": {
+            "prototype": "ui/overview.reel",
+            "properties": {
+                "element": {"#": "overview"}
+            }
+        },
         "panels": {
             "prototype": "ui/panel-flow.reel",
             "properties": {
@@ -60,6 +66,12 @@
             "prototype": "glTF-webgl-viewer/runtime/scene",
             "properties": {
                 "path": "assets/3d/loft2/loft3.json"
+            }
+        },
+        "staircase1": {
+            "prototype": "ui/cards/staircase.reel",
+            "properties": {
+                "element": {"#": "staircase"}
             }
         },
         "stairs": {
@@ -93,11 +105,17 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="dark" class="Main">
-        <div data-montage-id="colladaView" class="Main-colladaView"></div>
+
+        <section class="Main-viewport">
+            <div data-montage-id="colladaView" class="Main-colladaView"></div>
+            <div data-montage-id="overview" class="Main-overview"></div>
+        </section>
+
         <section class="Main-configuration">
             <ul data-montage-id="panel" class="Main-panel">
                 <li data-montage-id="cards" class="Main-cards">
                     <div data-arg="introduction" data-montage-id="introduction"></div>
+                    <div data-arg="staircase" data-montage-id="staircase"></div>
                     <div data-arg="card" data-montage-id="card"></div>
                 </li>
             </ul>

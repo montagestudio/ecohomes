@@ -16,6 +16,13 @@
             "properties": {
                 "element": {"#": "card"}
             }
+        },
+        "logo": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "logo"},
+                "src": "../../../assets/images/logo.png"
+            }
         }
     }
     </script>
@@ -23,10 +30,20 @@
 <body>
     <div data-montage-id="introduction" class="Introduction">
         <div data-montage-id="card">
-            &nbsp;
-            <h1>Introduction</h1>
+            <header>
+                <div class="Card-icon">
+                    <img data-montage-id="logo">
+                </div>
+                <h1 class="Card-title">Welcome to EcoHomes</h1>
+            </header>
+
             <p>
-                Welcome to the Eco House Configurator
+                Part of the fun of buying an EcoHome is personalizing it to fit your
+                needs, lifestyle, and budget.
+            </p>
+            <p>
+                Choose from a variety of materials and options to build the home of
+                your dreams, while making as small a footprint as possible.
             </p>
         </div>
     </div>

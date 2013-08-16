@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="overview.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/overview.reel",
+            "properties": {
+                "element": {"#": "Overview"}
+            }
+        },
+        "ecoScore": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "ecoScore"},
+                "src": "eco.png"
+            }
+        },
+        "logo": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "logo"},
+                "src": "../../assets/images/logo.png"
+            }
+        },
+        "total": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "value": "Total"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.configuration.configuredPrice"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="Overview" class="Overview">
+        <header class="Overview-header">
+            <img data-montage-id="logo" class="Overview-logo">
+        </header>
+        <section class="Overview-totals">
+
+            <!--TODO replace with live component-->
+            <div class="Overview-ecoScore">
+                Good
+                <img data-montage-id="ecoScore" class="Overview-ecoBars">
+            </div>
+
+            <span>
+                $
+                <em data-montage-id="text"></em>
+            </span>
+        </section>
+    </div>
+</body>
+</html>

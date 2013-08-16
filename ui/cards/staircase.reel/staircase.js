@@ -1,21 +1,17 @@
 /**
- * @module ui/main.reel
+ * @module ./staircase.reel
  * @requires montage/ui/component
  */
 var Component = require("montage/ui/component").Component;
 
 /**
- * @class Main
+ * @class Staircase
  * @extends Component
  */
-exports.Main = Component.specialize(/** @lends Main# */ {
+exports.Staircase = Component.specialize(/** @lends Staircase# */ {
     constructor: {
-        value: function Main() {
+        value: function Staircase() {
             this.super();
         }
-    },
-
-    cards: {
-        value: ["introduction", "staircase"]
     }
 });

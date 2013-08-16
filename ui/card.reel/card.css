@@ -1,4 +1,24 @@
 .Card {
     position: relative;
-    background-color: lightgray;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+
+    padding: 2em;
+
+    background-color: hsl(0,0%,95%);
+    border-left: 1px solid hsl(0,0%,97%);
+}
+
+.Card-icon {
+    text-align: center;
+}
+
+.Card-title {
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid hsla(0,0%,70%,0.2);
+}
+
+.debug .Card * {
+    outline: 1px solid red;
 }

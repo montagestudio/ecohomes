@@ -27,3 +27,24 @@
 .Main-cards {
     list-style: none;
 }
+
+.Main-viewport {
+    position: relative;
+}
+
+.Main-overview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Main .PanelFlow-flow {
+    border-left: 1px solid hsl(0, 0%, 61%);
+
+    background-color: hsl(0, 0%, 27%);
+    background-image: -webkit-linear-gradient(top,
+        hsla(0,0%,20%,0.4) 0%,
+        hsla(0,0%,20%,0.1) 7%,
+        hsla(0,0%,20%,0) 14%);
+}
