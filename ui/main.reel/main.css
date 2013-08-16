@@ -30,6 +30,7 @@
 
 .Main-viewport {
     position: relative;
+    background-color: hsl(0, 0%, 70%);
 }
 
 .Main-overview {
