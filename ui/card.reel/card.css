@@ -50,6 +50,8 @@
     display: -webkit-flex;
     -webkit-align-items: center;
     padding-right: 10px;
+    margin-top: 1px;
+    margin-bottom: 1px;
     min-width: 50%;
 }
 
