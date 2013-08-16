@@ -32,7 +32,7 @@
             }
         },
         "title": {
-            "prototype": "digit/ui/title.reel",
+            "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "title"},
                 "value": "Thermostat"
@@ -44,12 +44,16 @@
 <body>
     <div data-montage-id="thermostat" class="Thermostat">
         <div data-montage-id="card">
-            <h1 data-montage-id="title"></h1>
-            <div data-montage-id="den" class="Thermostat-den"></div>
-            <div>
-                <input type="checkbox" data-montage-id="checkbox">
-                Install energy efficient, internet connected, thermostat
-            </div>
+            <header class="Card-header">
+                <div data-montage-id="den" class="Thermostat-den Card-hero"></div>
+                <h1 data-montage-id="title" class="Card-title">Thermostat</h1>
+            </header>
+            <section class="Card-content">
+                <p>Innovative and smart: Install a thermostat that helps protect your comfort zone and the environment.</p>
+
+                <input type="checkbox" data-montage-id="checkbox"> Smart Thermostat
+
+            </section>
         </div>
     </div>
 </body>

@@ -1,8 +1,8 @@
-.Thermostat {
-
+.Thermostat .Card-header{
+    background-image: none;
 }
 
 .Thermostat-den {
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
 }
