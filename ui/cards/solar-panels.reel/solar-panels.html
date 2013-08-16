@@ -36,15 +36,15 @@
                 "radioButtonController": {"@": "radioButtonController"}
             }
         },
-        "solarPanelsImage": {
+        "hero": {
             "prototype": "digit/ui/image.reel",
             "properties": {
-                "element": {"#": "solarPanelsImage"},
+                "element": {"#": "hero"},
                 "src": "solar-panels.png"
             }
         },
         "title": {
-            "prototype": "digit/ui/title.reel",
+            "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "title"},
                 "value": "Solar Panels"
@@ -56,19 +56,29 @@
 <body>
     <div data-montage-id="solarPanels" class="SolarPanels">
         <div data-montage-id="card">
-            <h1 data-montage-id="title"></h1>
-            <p>
-                <img data-montage-id="solarPanelsImage" class="SolarPanels-solarPanelsImage"><br>
-                Sustainable and smart: Reduce greenhouse gas emissions and flaunt environmental responsibility with solar photovoltaic thermal systems
-            </p>
-            <p>
-                <input type="radio" data-montage-id="solarPanelsOption1">
-                Solar Photovoltaic System
-            </p>
-            <p>
-                <input type="radio" data-montage-id="solarPanelsOption2">
-                Solar Thermal System
-            </p>
+            <header class="Card-header">
+                <div data-montage-id="hero" class="Card-hero"></div>
+                <h1 data-montage-id="title" class="Card-title"></h1>
+            </header>
+            <section class="Card-content">
+                <p>Sustainable and smart: Reduce greenhouse gas emissions and flaunt environmental responsibility with solar photovoltaic thermal
+                    systems.</p>
+
+                <label class="Card-option--booleanField">
+                    <input type="radio" data-montage-id="solarPanelsOption1">
+                    <div class="Card-option-labelArea">
+                        <strong class="Card-option-label">Solar Photovoltaic System</strong>
+                        <span class="Card-option-price">$299</span>
+                    </div>
+                </label>
+                <label class="Card-option--booleanField">
+                    <input type="radio" data-montage-id="solarPanelsOption2">
+                    <div class="Card-option-labelArea">
+                        <strong class="Card-option-label">Solar Thermal System</strong>
+                        <span class="Card-option-price">$249</span>
+                    </div>
+                </label>
+            </section>
         </div>
     </div>
 </body>
