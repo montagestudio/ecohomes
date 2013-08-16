@@ -15,16 +15,16 @@
     "properties": {
       "name": null,
       "blueprintModule": {
-        "%": "ui/cards/appliance.reel/appliance.meta"
+        "%": "ui/cards/kitchen.reel/kitchen.meta"
       },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprintGroups": {
-        "Appliance": []
+        "Kitchen": []
       },
       "module": {
-        "%": "ui/cards/appliance.reel"
+        "%": "ui/cards/kitchen.reel"
       },
-      "exportName": "Appliance"
+      "exportName": "Kitchen"
     }
   }
 }

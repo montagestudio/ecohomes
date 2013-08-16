@@ -14,10 +14,16 @@
                 "element": {"#": "main"}
             }
         },
-        "appliance": {
-            "prototype": "ui/cards/appliance.reel",
+        "kitchen": {
+            "prototype": "ui/cards/kitchen.reel",
             "properties": {
-                "element": {"#": "appliance"}
+                "element": {"#": "kitchen"}
+            }
+        },
+        "laundry": {
+            "prototype": "ui/cards/laundry.reel",
+            "properties": {
+                "element": {"#": "laundry"}
             }
         },
         "card": {
@@ -107,23 +113,6 @@
                 "element": {"#": "thermostat"}
             }
         },
-        "view1": {
-            "prototype": "glTF-webgl-viewer/ui/view.reel",
-            "properties": {
-                "element": {"#": "colladaView"},
-                "height": "768",
-                "scene": {"@": "scene1"},
-                "viewPoint": {"@": "viewPoint"},
-                "width": "674"
-            }
-        },
-        "viewPoint": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
-            "properties": {
-                "id": "node-camera001",
-                "scene": {"@": "scene1"}
-            }
-        },
         "window": {
             "prototype": "ui/cards/window.reel",
             "properties": {
@@ -136,7 +125,8 @@
 <body>
     <div data-montage-id="main" class="Main">
         <section class="Main-viewport" data-montage-skin="dark">
-            <div data-montage-id="colladaView" class="Main-colladaView"></div>
+            <div data-montage-id="colladaView" class="Main-colladaView" style="width: 674px;
+height: 768px; background:#ddd;"></div>
             <div data-montage-id="overview" class="Main-overview"></div>
         </section>
         <section class="Main-configuration" data-montage-skin="light">
@@ -145,7 +135,8 @@
                     <div data-arg="introduction" data-montage-id="introduction"></div>
                     <div data-arg="staircase" data-montage-id="staircase"></div>
                     <div data-arg="thermostat" data-montage-id="thermostat"></div>
-                    <div data-arg="appliance" data-montage-id="appliance"></div>
+                    <div data-arg="kitchen" data-montage-id="kitchen"></div>
+                    <div data-arg="laundry" data-montage-id="laundry"></div>
                     <div data-arg="solarPanels" data-montage-id="solarPanels"></div>
                     <div data-arg="window" data-montage-id="window"></div>
                     <div data-arg="counters" data-montage-id="counters"></div>

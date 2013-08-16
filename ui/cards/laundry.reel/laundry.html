@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="laundry.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/cards/laundry.reel",
+            "properties": {
+                "element": {"#": "laundry"}
+            }
+        },
+        "card": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card"}
+            }
+        },
+        "dryerCheckbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "dryerCheckbox"},
+                "checked": false
+            }
+        },
+        "laundryCheckbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "laundryCheckbox"},
+                "checked": false
+            }
+        },
+        "laundryHero": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "laundryHero"},
+                "src": "laundry.png"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="laundry" class="Laundry">
+        <div data-montage-id="card">
+
+            <header class="Card-header">
+                <img data-montage-id="laundryHero" class="Card-hero">
+                <h1 class="Card-title">Laundry</h1>
+            </header>
+
+            <section class="Card-content">
+                <p>Clean and efficient: Save water and the environment with energy-efficient washing machines and dryers.</p>
+
+                <div class="Card-optionGrid">
+                    <label class="Card-option--booleanField">
+                        <input type="checkbox" data-montage-id="laundryCheckbox">
+                        <div class="Card-option-labelArea">
+                            <strong class="Card-option-label">EcoWash</strong>
+                            <span class="Card-option-price">$1099</span>
+                        </div>
+                    </label>
+
+                    <label class="Card-option--booleanField">
+                        <input type="checkbox" data-montage-id="dryerCheckbox">
+                        <div class="Card-option-labelArea">
+                            <strong class="Card-option-label">EcoDry</strong>
+                            <span class="Card-option-price">$1199</span>
+                        </div>
+                    </label>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>

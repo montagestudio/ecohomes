@@ -2,13 +2,13 @@
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="appliance.css">
+    <link rel="stylesheet" type="text/css" href="kitchen.css">
     <script type="text/montage-serialization">
     {
         "owner": {
-            "prototype": "ui/cards/appliance.reel",
+            "prototype": "ui/cards/kitchen.reel",
             "properties": {
-                "element": {"#": "appliance"}
+                "element": {"#": "kitchen"}
             }
         },
         "bakeCheckbox": {
@@ -24,24 +24,10 @@
                 "element": {"#": "card"}
             }
         },
-        "dryerCheckbox": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "dryerCheckbox"},
-                "checked": false
-            }
-        },
         "fridgeCheckbox": {
             "prototype": "digit/ui/checkbox.reel",
             "properties": {
                 "element": {"#": "fridgeCheckbox"},
-                "checked": false
-            }
-        },
-        "laundryCheckbox": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "laundryCheckbox"},
                 "checked": false
             }
         },
@@ -72,25 +58,19 @@
                 "element": {"#": "kitchenHero"},
                 "src": "kitchen.png"
             }
-        },
-
-        "laundryHero": {
-            "prototype": "digit/ui/image.reel",
-            "properties": {
-                "element": {"#": "laundryHero"},
-                "src": "laundry.png"
-            }
         }
     }
     </script>
 </head>
 <body>
-    <div data-montage-id="appliance" class="Appliance">
+    <div data-montage-id="kitchen" class="Kitchen">
         <div data-montage-id="card">
+            
             <header class="Card-header">
                 <img data-montage-id="kitchenHero" class="Card-hero">
                 <h1 data-montage-id="title" class="Card-title"></h1>
             </header>
+            
             <section class="Card-content">
                 <p>Luxurious and green: Save money and protect the environment with energy-efficient appliances.</p>
 
@@ -103,7 +83,6 @@
                             <span class="Card-option-price">$2599</span>
                         </div>
                     </label>
-
 
                     <label class="Card-option--booleanField">
                         <input type="checkbox" data-montage-id="rangeCheckbox">
@@ -126,33 +105,6 @@
                         <div class="Card-option-labelArea">
                             <strong class="Card-option-label">EcoBake</strong>
                             <span class="Card-option-price">$1899</span>
-                        </div>
-                    </label>
-                </div>
-
-            </section>
-
-            <header class="Card-header">
-                <img data-montage-id="laundryHero" class="Card-hero">
-                <h1 class="Card-title">Laundry</h1>
-            </header>
-            <section class="Card-content">
-                <p>Clean and efficient: Save water and the environment with energy-efficient washing machines and dryers.</p>
-
-                <div class="Card-optionGrid">
-                    <label class="Card-option--booleanField">
-                        <input type="checkbox" data-montage-id="laundryCheckbox">
-                        <div class="Card-option-labelArea">
-                            <strong class="Card-option-label">EcoWash</strong>
-                            <span class="Card-option-price">$1099</span>
-                        </div>
-                    </label>
-
-                    <label class="Card-option--booleanField">
-                        <input type="checkbox" data-montage-id="dryerCheckbox">
-                        <div class="Card-option-labelArea">
-                            <strong class="Card-option-label">EcoDry</strong>
-                            <span class="Card-option-price">$1199</span>
                         </div>
                     </label>
                 </div>

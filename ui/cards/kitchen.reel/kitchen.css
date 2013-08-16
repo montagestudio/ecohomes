@@ -1,0 +1,8 @@
+.Kitchen .Card-header {
+    background-image: none;
+}
+
+.Kitchen .Card-hero {
+    height: 120px;
+    margin-bottom: 30px;
+}

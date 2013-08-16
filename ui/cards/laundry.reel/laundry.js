@@ -1,16 +1,16 @@
 /**
- * @module ./appliance.reel
+ * @module ./laundry.reel
  * @requires montage/ui/component
  */
 var Component = require("montage/ui/component").Component;
 
 /**
- * @class Appliance
+ * @class Laundry
  * @extends Component
  */
-exports.Appliance = Component.specialize(/** @lends Appliance# */ {
+exports.Laundry = Component.specialize(/** @lends Laundry# */ {
     constructor: {
-        value: function Appliance() {
+        value: function Laundry() {
             this.super();
         }
     }
