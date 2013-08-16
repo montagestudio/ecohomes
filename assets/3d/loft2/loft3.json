@@ -3190,7 +3190,14 @@
             "minFilter": "LINEAR",
             "wrapS": "REPEAT",
             "wrapT": "REPEAT"
+        },
+        "sampler_1": {
+            "magFilter": "LINEAR",
+            "minFilter": "LINEAR_MIPMAP_LINEAR",
+            "wrapS": "REPEAT",
+            "wrapT": "REPEAT"
         }
+
     },
     "scene": "defaultScene",
     "scenes": {
@@ -3494,14 +3501,14 @@
         "texture_image_12": {
             "format": "RGBA",
             "internalFormat": "RGBA",
-            "sampler": "sampler_0",
+            "sampler": "sampler_1",
             "source": "image_12",
             "target": "TEXTURE_2D"
         },
         "texture_image_13": {
             "format": "RGBA",
             "internalFormat": "RGBA",
-            "sampler": "sampler_0",
+            "sampler": "sampler_1",
             "source": "image_13",
             "target": "TEXTURE_2D"
         },
