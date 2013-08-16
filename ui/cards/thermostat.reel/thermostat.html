@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="thermostat.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/cards/thermostat.reel",
+            "properties": {
+                "element": {"#": "thermostat"}
+            }
+        },
+        "card": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card"}
+            }
+        },
+        "checkbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked": true
+            }
+        },
+        "den": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "den"},
+                "src": "den.png"
+            }
+        },
+        "title": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Thermostat"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="thermostat" class="Thermostat">
+        <div data-montage-id="card">
+            <h1 data-montage-id="title"></h1>
+            <div data-montage-id="den" class="Thermostat-den"></div>
+            <div>
+                <input type="checkbox" data-montage-id="checkbox">
+                Install energy efficient, internet connected, thermostat
+            </div>
+        </div>
+    </div>
+</body>
+</html>
