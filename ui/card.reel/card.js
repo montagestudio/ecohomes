@@ -31,6 +31,14 @@ exports.Card = Component.specialize(/** @lends Card# */ {
         value: 0
     },
 
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                this.element.ownerDocument.defaultView.addEventListener("resize", this, false);
+            }
+        }
+    },
+
     draw: {
         value: function() {
             if (this._needsResize && this._hasResize) {
@@ -54,6 +62,14 @@ exports.Card = Component.specialize(/** @lends Card# */ {
                 }
                 this.needsDraw = true;
             }
+        }
+    },
+
+    handleResize: {
+        value: function() {
+            this._needsResize = true;
+            this._hasResize = false;
+            this.needsDraw = true;
         }
     }
 });
