@@ -34,6 +34,22 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     configuration: {
         value: null
-    }
+    },
 
+    templateDidLoad: {
+        value: function() {
+            var view = this.templateObjects.roomView,
+                originalWidth = view.width / view.scaleFactor,
+                originalHeight = view.height / view.scaleFactor,
+                newWidth = window.innerHeight * originalWidth / originalHeight,
+                newHeight = window.innerHeight;
+
+            if (window.innerWidth <= 1024) {
+                newWidth -= 100;
+            }
+
+            view.width = newWidth;
+            view.height = newHeight;
+        }
+    }
 });
