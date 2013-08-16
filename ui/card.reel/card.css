@@ -1,8 +1,13 @@
 .Card {
     position: relative;
     box-sizing: border-box;
+    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
     display: -webkit-flex;
     -webkit-flex-direction: column;
+    -webkit-justify-content: center;
 
     background-color: hsl(0,0%,95%);
     border-left: 1px solid hsl(0,0%,97%);
