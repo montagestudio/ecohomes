@@ -31,6 +31,11 @@
     padding-top: 0;
 }
 
+.Card-optionGrid {
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+}
+
 .Card-optionThumbnail {
     display: inline-block;
     border: 2px solid white;
@@ -44,6 +49,8 @@
     display: block;
     display: -webkit-flex;
     -webkit-align-items: center;
+    padding-right: 10px;
+    min-width: 50%;
 }
 
 .Card-option-labelArea {
