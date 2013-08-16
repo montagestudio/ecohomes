@@ -52,28 +52,32 @@
 
 .Card-option--booleanField {
     display: block;
+    display: -webkit-box;
+    -webkit-box-align: center;
     display: -webkit-flex;
     -webkit-align-items: center;
+    -webkit-flex: 1 0 50%;
     padding-right: 10px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    min-width: 50%;
 }
 
 .Card-option-labelArea {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     border-left: 1px solid hsla(0,0%,80%,0.4);
-    padding-left: 10px;
+    padding: 5px 0 5px 10px;
     margin-left: 10px;
 }
 
 .Card-option-label {
+    display: block;
     font-weight: normal;
     font-size: 20px;
 }
 
 .Card-option-price {
+    display: block;
     font-family: "HelveticaNeue-Light";
     font-size: 16px;
     color: hsla(0,0%,15%)
