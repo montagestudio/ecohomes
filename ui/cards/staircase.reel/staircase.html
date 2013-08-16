@@ -8,23 +8,24 @@
         "owner": {
             "prototype": "ui/cards/staircase.reel",
             "properties": {
-                "element": {"#": "Staircase"}
+                "element": {"#": "staircase"}
             }
         },
-        "card1": {
+        "card": {
             "prototype": "ui/card.reel",
             "properties": {
                 "element": {"#": "card"}
             }
         },
-        "image": {
+        "hero": {
             "prototype": "digit/ui/image.reel",
             "properties": {
-                "element": {"#": "image"}
+                "element": {"#": "hero"},
+                "src": "stairs.png"
             }
         },
         "title": {
-            "prototype": "digit/ui/title.reel",
+            "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "title"},
                 "value": "Staircase"
@@ -34,10 +35,43 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="Staircase" class="Staircase">
+    <div data-montage-id="staircase" class="Staircase">
         <div data-montage-id="card">
-            <img data-montage-id="image">
-            <h1 data-montage-id="title"></h1>
+            <header class="Card-header">
+                <img data-montage-id="hero" class="Card-hero" src="">
+                <h1 data-montage-id="title" class="Card-title"></h1>
+            </header>
+            <section class="Card-content">
+
+                <p>Simple and economical: A staircase constructed from timbers sourced from sustainable managed forests or recycled stainless steel.</p>
+
+                <table>
+                    <tr>
+                        <td>
+                            <span class="Card-optionThumbnail" style="background-color: hsl(27,43%,56%);"></span>
+                        </td>
+                        <td><strong>Reclaimed Teak</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="Card-optionThumbnail" style="background-color: hsl(19,57%,22%);"></span>
+                        </td>
+                        <td>Dark Walnut</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="Card-optionThumbnail" style="background-color: hsl(0,0%,24%);"></span>
+                        </td>
+                        <td>Dark Ash</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="Card-optionThumbnail" style="background-color: hsl(357,55%,38%)"></span>
+                        </td>
+                        <td>Powder Coated Metal</td>
+                    </tr>
+                </table>
+            </section>
         </div>
     </div>
 </body>
