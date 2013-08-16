@@ -6,6 +6,7 @@
     <script type="text/montage-serialization">
     {
         "owner": {
+            "prototype": "ui/cards/solar-panels.reel",
             "properties": {
                 "element": {"#": "solarPanels"}
             }
@@ -16,11 +17,23 @@
                 "element": {"#": "card"}
             }
         },
-        "solarPanelsCheckbox": {
-            "prototype": "digit/ui/checkbox.reel",
+        "radioButtonController": {
+            "prototype": "montage/core/radio-button-controller"
+        },
+        "solarPanelsOption1": {
+            "prototype": "digit/ui/radio-button.reel",
             "properties": {
-                "element": {"#": "solarPanelsCheckbox"},
-                "checked": true
+                "element": {"#": "solarPanelsOption1"},
+                "value": "option1",
+                "radioButtonController": {"@": "radioButtonController"}
+            }
+        },
+        "solarPanelsOption2": {
+            "prototype": "digit/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "solarPanelsOption2"},
+                "value": "option2",
+                "radioButtonController": {"@": "radioButtonController"}
             }
         },
         "solarPanelsImage": {
@@ -45,13 +58,17 @@
         <div data-montage-id="card">
             <h1 data-montage-id="title"></h1>
             <p>
-                <div><img data-montage-id="solarPanelsImage" class="SolarPanels-solarPanelsImage"></div>
+                <img data-montage-id="solarPanelsImage" class="SolarPanels-solarPanelsImage"><br>
                 Sustainable and smart: Reduce greenhouse gas emissions and flaunt environmental responsibility with solar photovoltaic thermal systems
             </p>
-            <div>
-                <input type="checkbox" data-montage-id="solarPanelsCheckbox">
-                Sunflower Panels
-            </div>
+            <p>
+                <input type="radio" data-montage-id="solarPanelsOption1">
+                Solar Photovoltaic System
+            </p>
+            <p>
+                <input type="radio" data-montage-id="solarPanelsOption2">
+                Solar Thermal System
+            </p>
         </div>
     </div>
 </body>
