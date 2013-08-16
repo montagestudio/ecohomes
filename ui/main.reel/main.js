@@ -16,6 +16,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     },
 
     cards: {
-        value: ["introduction", "staircase", "thermostat", "appliance"]
+        value: ["introduction", "staircase", "thermostat", "appliance", "solarPanels"]
     }
 });

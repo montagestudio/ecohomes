@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="solar-panels.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "solarPanels"}
+            }
+        },
+        "card": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card"}
+            }
+        },
+        "solarPanelsCheckbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "solarPanelsCheckbox"},
+                "checked": true
+            }
+        },
+        "solarPanelsImage": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "solarPanelsImage"},
+                "src": "solar-panels.png"
+            }
+        },
+        "title": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Solar Panels"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="solarPanels" class="SolarPanels">
+        <div data-montage-id="card">
+            <h1 data-montage-id="title"></h1>
+            <p>
+                <div><img data-montage-id="solarPanelsImage" class="SolarPanels-solarPanelsImage"></div>
+                Sustainable and smart: Reduce greenhouse gas emissions and flaunt environmental responsibility with solar photovoltaic thermal systems
+            </p>
+            <div>
+                <input type="checkbox" data-montage-id="solarPanelsCheckbox">
+                Sunflower Panels
+            </div>
+        </div>
+    </div>
+</body>
+</html>
