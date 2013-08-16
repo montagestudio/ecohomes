@@ -1,0 +1,13 @@
+.Appliance {
+    text-align: center;
+}
+
+.Appliance-fridgeImage {
+    height: 150px;
+    width: 150px;
+}
+
+.Appliance-laundryImage {
+    height: 150px;
+    width: 150px;
+}
