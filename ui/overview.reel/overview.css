@@ -1,4 +1,7 @@
 .Overview {
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
     display: -webkit-flex;
     -webkit-justify-content: space-between;
     -webkit-align-items: center;
@@ -16,6 +19,9 @@
 }
 
 .Overview-totals {
+    display: -webkit-box;
+    -webkit-box-pack: end;
+    -webkit-box-align: center;
     display: -webkit-flex;
     -webkit-justify-content: flex-end;
     -webkit-align-items: center;
