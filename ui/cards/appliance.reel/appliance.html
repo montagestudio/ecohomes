@@ -17,11 +17,18 @@
                 "element": {"#": "card"}
             }
         },
+        "dryerCheckbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "dryerCheckbox"},
+                "checked": false
+            }
+        },
         "fridgeCheckbox": {
             "prototype": "digit/ui/checkbox.reel",
             "properties": {
                 "element": {"#": "fridgeCheckbox"},
-                "checked": true
+                "checked": false
             }
         },
         "fridgeImage": {
@@ -35,7 +42,7 @@
             "prototype": "digit/ui/checkbox.reel",
             "properties": {
                 "element": {"#": "laundryCheckbox"},
-                "checked": true
+                "checked": false
             }
         },
         "laundryImage": {
@@ -45,11 +52,25 @@
                 "src": "laundry.png"
             }
         },
+        "rangeCheckbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "rangeCheckbox"},
+                "checked": false
+            }
+        },
         "title": {
-            "prototype": "digit/ui/title.reel",
+            "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "title"},
                 "value": "Appliances"
+            }
+        },
+        "waveCheckbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "waveCheckbox"},
+                "checked": false
             }
         }
     }
@@ -58,21 +79,38 @@
 <body>
     <div data-montage-id="appliance" class="Appliance">
         <div data-montage-id="card">
-            <h1 data-montage-id="title"></h1>
-            <p>
-                <img data-montage-id="fridgeImage" class="Appliance-fridgeImage">
-            </p>
-            <div>
-                <input type="checkbox" data-montage-id="fridgeCheckbox">
-                Luxurious and green: Save money and protect the environment with energy-efficient appliances.
-            </div>
-            <p>
-                <img data-montage-id="laundryImage" class="Appliance-laundryImage">
-            </p>
-            <div>
-                <input type="checkbox" data-montage-id="laundryCheckbox">
-                Clean and efficient: Save water and the environment with energy-efficient washing machines and dryers.
-            </div>
+            <header class="Card-header">
+                <h1 data-montage-id="title" class="Card-title"></h1>
+            </header>
+            <section class="Card-content">
+                <p>
+                    <img data-montage-id="fridgeImage" class="Appliance-fridgeImage">
+                    <br>
+                    Luxurious and green: Save money and protect the environment with energy-efficient appliances.
+                </p>
+                <p>
+                    <input type="checkbox" data-montage-id="fridgeCheckbox">
+                    EcoFridge
+                    <br>
+                    <input type="checkbox" data-montage-id="rangeCheckbox">
+                    EcoRange
+                    <br>
+                    <input type="checkbox" data-montage-id="waveCheckbox">
+                    EcoWave
+                </p>
+                <p>
+                    <img data-montage-id="laundryImage" class="Appliance-laundryImage">
+                    <br>
+                    Clean and efficient: Save water and the environment with energy-efficient washing machines and dryers.
+                </p>
+                <p>
+                    <input type="checkbox" data-montage-id="laundryCheckbox">
+                    EcoWasher
+                    <br>
+                    <input type="checkbox" data-montage-id="dryerCheckbox">
+                    EcoDryer
+                </p>
+            </section>
         </div>
     </div>
 </body>

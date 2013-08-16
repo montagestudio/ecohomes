@@ -1,5 +1,5 @@
-.Appliance {
-    text-align: center;
+.Appliance .Card-header {
+    background-image: none;
 }
 
 .Appliance-fridgeImage {
