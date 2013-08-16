@@ -6,6 +6,7 @@
     <script type="text/montage-serialization">
     {
         "owner": {
+            "prototype": "ui/cards/window.reel",
             "properties": {
                 "element": {"#": "window"}
             }
@@ -16,23 +17,13 @@
                 "element": {"#": "card"}
             }
         },
-        "radioButtonController": {
-            "prototype": "montage/core/radio-button-controller"
-        },
-        "windowsOption1": {
-            "prototype": "digit/ui/radio-button.reel",
+        "coatingStrengthSlider": {
+            "prototype": "digit/ui/slider.reel",
             "properties": {
-                "element": {"#": "windowsOption1"},
-                "value": "option1",
-                "radioButtonController": {"@": "radioButtonController"}
-            }
-        },
-        "windowsOption2": {
-            "prototype": "digit/ui/radio-button.reel",
-            "properties": {
-                "element": {"#": "windowsOption2"},
-                "value": "option2",
-                "radioButtonController": {"@": "radioButtonController"}
+                "element": {"#": "coatingStrengthSlider"},
+                "max": 100,
+                "min": 0,
+                "value": 50
             }
         },
         "hero": {
@@ -42,11 +33,42 @@
                 "src": "window.png"
             }
         },
+        "radioButtonController": {
+            "prototype": "montage/core/radio-button-controller"
+        },
+        "text1": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text1"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {
+                    "<-": "\"$\" + @coatingStrengthSlider.value * 2.5"
+                }
+            }
+        },
         "title": {
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "title"},
                 "value": "Windows"
+            }
+        },
+        "windowsOption1": {
+            "prototype": "digit/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "windowsOption1"},
+                "radioButtonController": {"@": "radioButtonController"},
+                "value": "option1"
+            }
+        },
+        "windowsOption2": {
+            "prototype": "digit/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "windowsOption2"},
+                "radioButtonController": {"@": "radioButtonController"},
+                "value": "option2"
             }
         }
     }
@@ -60,20 +82,38 @@
                 <h1 data-montage-id="title" class="Card-title"></h1>
             </header>
             <section class="Card-content">
-                <p>Eco-friendly and visionary: Surround yourself with a view that meets your energy-efficient outlook and aesthetic.</p>
-
+                <p>
+                    Eco-friendly and visionary: Surround yourself with a view that meets your energy-efficient outlook and aesthetic.
+                </p>
                 <label class="Card-option--booleanField">
                     <input type="radio" data-montage-id="windowsOption1">
                     <div class="Card-option-labelArea">
-                        <strong class="Card-option-label">Dual-pane EcoGlass</strong>
-                        <span class="Card-option-price">$299</span>
+                        <strong class="Card-option-label">
+                            Dual-pane EcoGlass
+                        </strong>
+                        <span class="Card-option-price">
+                            $299
+                        </span>
                     </div>
                 </label>
                 <label class="Card-option--booleanField">
                     <input type="radio" data-montage-id="windowsOption2">
                     <div class="Card-option-labelArea">
-                        <strong class="Card-option-label">Triple-pane EcoGlass</strong>
-                        <span class="Card-option-price">$399</span>
+                        <strong class="Card-option-label">
+                            Triple-pane EcoGlass
+                        </strong>
+                        <span class="Card-option-price">
+                            $399
+                        </span>
+                    </div>
+                </label>
+                <label>
+                    <strong class="Card-option-label">
+                        UV Coating Strength
+                    </strong>
+                    <div>
+                        <div data-montage-id="coatingStrengthSlider"></div>
+                        <span class="Card-option-price" data-montage-id="text1"></span>
                     </div>
                 </label>
             </section>
