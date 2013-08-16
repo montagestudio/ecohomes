@@ -4,8 +4,16 @@
     height: 100%;
 }
 
-.Main-colladaView {
+.Main-navigation {
+    height: 100%;
+    width: 100px;
+    background-color: black;
+}
 
+@media only screen and (device-aspect-ratio: 3/4) and (orientation : landscape) {
+    .Main-navigation {
+        display: none;
+    }
 }
 
 .Main-panel {
