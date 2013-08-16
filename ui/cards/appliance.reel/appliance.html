@@ -45,12 +45,6 @@
                 "checked": false
             }
         },
-        "laundryImage": {
-            "prototype": "digit/ui/image.reel",
-            "properties": {
-                "element": {"#": "laundryImage"}
-            }
-        },
         "rangeCheckbox": {
             "prototype": "digit/ui/checkbox.reel",
             "properties": {
@@ -72,10 +66,19 @@
                 "checked": false
             }
         },
-        "hero": {
+        "kitchenHero": {
             "prototype": "digit/ui/image.reel",
             "properties": {
-                "element": {"#": "hero"}
+                "element": {"#": "kitchenHero"},
+                "src": "kitchen.png"
+            }
+        },
+
+        "laundryHero": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "laundryHero"},
+                "src": "laundry.png"
             }
         }
     }
@@ -85,7 +88,7 @@
     <div data-montage-id="appliance" class="Appliance">
         <div data-montage-id="card">
             <header class="Card-header">
-                <img data-montage-id="hero" class="Card-hero">
+                <img data-montage-id="kitchenHero" class="Card-hero">
                 <h1 data-montage-id="title" class="Card-title"></h1>
             </header>
             <section class="Card-content">
@@ -130,7 +133,7 @@
             </section>
 
             <header class="Card-header">
-                <img data-montage-id="laundryImage" class="Appliance-laundryImage">
+                <img data-montage-id="laundryHero" class="Card-hero">
                 <h1 class="Card-title">Laundry</h1>
             </header>
             <section class="Card-content">
