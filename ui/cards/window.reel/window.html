@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="window.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "window"}
+            }
+        },
+        "card": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card"}
+            }
+        },
+        "radioButtonController": {
+            "prototype": "montage/core/radio-button-controller"
+        },
+        "windowsOption1": {
+            "prototype": "digit/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "windowsOption1"},
+                "value": "option1",
+                "radioButtonController": {"@": "radioButtonController"}
+            }
+        },
+        "windowsOption2": {
+            "prototype": "digit/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "windowsOption2"},
+                "value": "option2",
+                "radioButtonController": {"@": "radioButtonController"}
+            }
+        },
+        "hero": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "hero"},
+                "src": "window.png"
+            }
+        },
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Windows"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="window" class="Window">
+        <div data-montage-id="card">
+            <header class="Card-header">
+                <div data-montage-id="hero" class="Card-hero"></div>
+                <h1 data-montage-id="title" class="Card-title"></h1>
+            </header>
+            <section class="Card-content">
+                <p>Eco-friendly and visionary: Surround yourself with a view that meets your energy-efficient outlook and aesthetic.</p>
+
+                <label class="Card-option--booleanField">
+                    <input type="radio" data-montage-id="windowsOption1">
+                    <div class="Card-option-labelArea">
+                        <strong class="Card-option-label">Dual-pane EcoGlass</strong>
+                        <span class="Card-option-price">$299</span>
+                    </div>
+                </label>
+                <label class="Card-option--booleanField">
+                    <input type="radio" data-montage-id="windowsOption2">
+                    <div class="Card-option-labelArea">
+                        <strong class="Card-option-label">Triple-pane EcoGlass</strong>
+                        <span class="Card-option-price">$399</span>
+                    </div>
+                </label>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
