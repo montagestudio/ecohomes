@@ -3,5 +3,6 @@
 }
 
 .Thermostat-den {
-    width: 349px;
+    width: 100%;
+    max-width: 349px;
 }
