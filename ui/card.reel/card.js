@@ -48,7 +48,6 @@ exports.Card = Component.specialize(/** @lends Card# */ {
             // measure the container.
             if (!this._hasResize) {
                 if (this.element.offsetParent) {
-                    console.log(this.element.offsetParent);
                     this._hasResize = true;
                     this._width = this.element.offsetParent.offsetWidth;
                     this._height = this.element.offsetParent.offsetHeight;
