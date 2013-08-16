@@ -2,6 +2,10 @@
     background-image: none;
 }
 
+.Appliance .Card-hero {
+    height: 200px;
+}
+
 .Appliance-fridgeImage {
     height: 150px;
     width: 150px;
