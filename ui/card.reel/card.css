@@ -73,7 +73,7 @@
     -webkit-box-orient: vertical;
     display: -webkit-flex;
     -webkit-flex-direction: column;
-    padding-left: 5px;
+    padding-left: 8px;
 }
 
 .Card-option-label {
