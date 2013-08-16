@@ -60,6 +60,11 @@
     padding-right: 10px;
 }
 
+.Card-option--slider {
+    display: block;
+    margin-top: 20px;
+}
+
 .Card-option-labelArea {
     display: -webkit-box;
     -webkit-box-orient: vertical;
