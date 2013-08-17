@@ -6,9 +6,9 @@ var Component = require("montage/ui/component").Component;
 var Configuration = require("core/configuration").Configuration;
 var Map = require("montage/collections/map");
 
-var StaircaseConfigurationSet = require("ui/cards/staircase.reel/configuration-set").ConfigurationSet;
-var ThermostatConfigurationSet = require("ui/cards/thermostat.reel/configuration-set").ConfigurationSet;
-var KitchenConfigurationSet = require("ui/cards/kitchen.reel/configuration-set").ConfigurationSet;
+var StaircaseConfigurationSet = require("configuration/staircase-configuration-set").StaircaseConfigurationSet;
+var ThermostatConfigurationSet = require("configuration/thermostat-configuration-set").ThermostatConfigurationSet;
+var KitchenConfigurationSet = require("configuration/kitchen-configuration-set").KitchenConfigurationSet;
 
 /**
  * @class Main
