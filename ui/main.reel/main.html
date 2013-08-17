@@ -14,43 +14,37 @@
                 "element": {"#": "main"}
             }
         },
-        "kitchen": {
-            "prototype": "ui/cards/kitchen.reel",
-            "properties": {
-                "element": {"#": "kitchen"}
-            }
-        },
-        "laundry": {
-            "prototype": "ui/cards/laundry.reel",
-            "properties": {
-                "element": {"#": "laundry"}
-            }
-        },
-        "card": {
-            "prototype": "ui/card.reel",
-            "properties": {
-                "element": {"#": "card"}
-            }
-        },
-        "configurations": {
+        "configurationPanels": {
             "prototype": "montage/ui/substitution.reel",
             "properties": {
-                "element": {"#": "cards"}
+                "element": {"#": "configurationPanels"}
             },
             "bindings": {
                 "switchValue": {"<-": "@panels.objectAtCurrentIteration"}
             }
         },
-        "counters": {
+        "countersPanel": {
             "prototype": "ui/cards/countertops.reel",
             "properties": {
-                "element": {"#": "counters"}
+                "element": {"#": "countersPanel"}
             }
         },
-        "introduction": {
+        "introductionPanel": {
             "prototype": "ui/cards/introduction.reel",
             "properties": {
-                "element": {"#": "introduction"}
+                "element": {"#": "introductionPanel"}
+            }
+        },
+        "kitchenPanel": {
+            "prototype": "ui/cards/kitchen.reel",
+            "properties": {
+                "element": {"#": "kitchenPanel"}
+            }
+        },
+        "laundryPanel": {
+            "prototype": "ui/cards/laundry.reel",
+            "properties": {
+                "element": {"#": "laundryPanel"}
             }
         },
         "material1": {
@@ -59,13 +53,13 @@
                 "id": "option01",
                 "image": "dark-stairs.jpg",
                 "opacity": "1",
-                "scene": {"@": "scene1"}
+                "scene": {"@": "roomScene"}
             },
             "bindings": {
                 "filterColor": {"<-": "[1, 1, 1, 0]"}
             }
         },
-        "overview1": {
+        "overview": {
             "prototype": "ui/overview.reel",
             "properties": {
                 "element": {"#": "overview"}
@@ -74,66 +68,66 @@
         "panels": {
             "prototype": "ui/panel-flow.reel",
             "properties": {
-                "element": {"#": "panel"}
+                "element": {"#": "panels"}
             },
             "bindings": {
                 "content": {"<-": "@owner.cards"}
             }
         },
-        "scene1": {
+        "roomScene": {
             "prototype": "glTF-webgl-viewer/runtime/scene",
             "properties": {
                 "path": "assets/3d/loft2/loft3.json"
             }
         },
-        "solarPanels": {
+        "roomView": {
+            "prototype": "glTF-webgl-viewer/ui/view.reel",
+            "properties": {
+                "element": {"#": "roomView"},
+                "height": "768",
+                "scene": {"@": "roomScene"},
+                "viewPoint": {"@": "viewPoint"},
+                "width": "674"
+            }
+        },
+        "solarPanel": {
             "prototype": "ui/cards/solar-panels.reel",
             "properties": {
-                "element": {"#": "solarPanels"}
+                "element": {"#": "solarPanel"}
             }
         },
-        "staircase1": {
+        "staircasePanel": {
             "prototype": "ui/cards/staircase.reel",
             "properties": {
-                "element": {"#": "staircase"}
+                "element": {"#": "staircasePanel"}
             }
         },
-        "stairs": {
+        "stairsMaterial": {
             "prototype": "glTF-webgl-viewer/runtime/material",
             "properties": {
                 "id": "escalier",
                 "image": "wood-stairs.jpg",
                 "opacity": "1",
-                "scene": {"@": "scene1"}
+                "scene": {"@": "roomScene"}
             }
         },
-        "thermostat": {
+        "thermostatPanel": {
             "prototype": "ui/cards/thermostat.reel",
             "properties": {
-                "element": {"#": "thermostat"}
-            }
-        },
-        "view1": {
-            "prototype": "glTF-webgl-viewer/ui/view.reel",
-            "properties": {
-                "element": {"#": "colladaView"},
-                "height": "768",
-                "scene": {"@": "scene1"},
-                "viewPoint": {"@": "viewPoint"},
-                "width": "674"
+                "element": {"#": "thermostatPanel"}
             }
         },
         "viewPoint": {
             "prototype": "glTF-webgl-viewer/runtime/node",
             "properties": {
                 "id": "node-camera001",
-                "scene": {"@": "scene1"}
+                "scene": {"@": "roomScene"}
             }
         },
-        "window": {
+        "windowPanel": {
             "prototype": "ui/cards/window.reel",
             "properties": {
-                "element": {"#": "window"}
+                "element": {"#": "windowPanel"}
             }
         }
     }
@@ -142,21 +136,20 @@
 <body>
     <div data-montage-id="main" class="Main">
         <section class="Main-viewport" data-montage-skin="dark">
-            <div data-montage-id="colladaView" class="Main-colladaView"></div>
+            <div data-montage-id="roomView" class="Main-colladaView"></div>
             <div data-montage-id="overview" class="Main-overview"></div>
         </section>
         <section class="Main-configuration" data-montage-skin="light">
-            <ul data-montage-id="panel" class="Main-panel">
-                <li data-montage-id="cards" class="Main-cards">
-                    <div data-arg="introduction" data-montage-id="introduction"></div>
-                    <div data-arg="staircase" data-montage-id="staircase"></div>
-                    <div data-arg="thermostat" data-montage-id="thermostat"></div>
-                    <div data-arg="kitchen" data-montage-id="kitchen"></div>
-                    <div data-arg="laundry" data-montage-id="laundry"></div>
-                    <div data-arg="solarPanels" data-montage-id="solarPanels"></div>
-                    <div data-arg="window" data-montage-id="window"></div>
-                    <div data-arg="counters" data-montage-id="counters"></div>
-                    <div data-arg="card" data-montage-id="card"></div>
+            <ul data-montage-id="panels" class="Main-panel">
+                <li data-montage-id="configurationPanels" class="Main-cards">
+                    <div data-arg="introduction" data-montage-id="introductionPanel"></div>
+                    <div data-arg="staircase" data-montage-id="staircasePanel"></div>
+                    <div data-arg="thermostat" data-montage-id="thermostatPanel"></div>
+                    <div data-arg="kitchen" data-montage-id="kitchenPanel"></div>
+                    <div data-arg="laundry" data-montage-id="laundryPanel"></div>
+                    <div data-arg="solarPanels" data-montage-id="solarPanel"></div>
+                    <div data-arg="window" data-montage-id="windowPanel"></div>
+                    <div data-arg="counters" data-montage-id="countersPanel"></div>
                 </li>
             </ul>
         </section>
