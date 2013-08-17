@@ -8,15 +8,12 @@
     },
     "mappings": {
         "amazon": {
-            "name": "amazon",
             "location": "packages/amazon"
         },
         "den": {
-            "name": "den",
             "location": "packages/den"
         },
         "usdoe": {
-            "name": "usdoe",
             "location": "packages/usdoe"
         }
     },
