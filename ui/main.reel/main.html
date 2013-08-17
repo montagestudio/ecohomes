@@ -48,6 +48,9 @@
             "prototype": "ui/cards/laundry.reel",
             "properties": {
                 "element": {"#": "laundryPanel"}
+            },
+            "bindings": {
+                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('laundry')"}
             }
         },
         "material1": {

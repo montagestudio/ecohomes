@@ -9,6 +9,7 @@ var Map = require("montage/collections/map");
 var StaircaseConfigurationSet = require("configuration/staircase-configuration-set").StaircaseConfigurationSet;
 var ThermostatConfigurationSet = require("configuration/thermostat-configuration-set").ThermostatConfigurationSet;
 var KitchenConfigurationSet = require("configuration/kitchen-configuration-set").KitchenConfigurationSet;
+var LaundryConfigurationSet = require("configuration/laundry-configuration-set").LaundryConfigurationSet;
 
 /**
  * @class Main
@@ -25,6 +26,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             configurationMap.set("staircase", new StaircaseConfigurationSet());
             configurationMap.set("thermostat", new ThermostatConfigurationSet());
             configurationMap.set("kitchen", new KitchenConfigurationSet());
+            configurationMap.set("laundry", new LaundryConfigurationSet());
 
             this.configuration = new Configuration().init(628000, configurationMap);
         }
