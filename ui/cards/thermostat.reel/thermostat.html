@@ -11,20 +11,19 @@
                 "element": {"#": "thermostat"}
             }
         },
+        "booleanOptionField1": {
+            "prototype": "ui/option-fields/boolean-option-field.reel",
+            "properties": {
+                "element": {"#": "booleanOptionField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('thermostat')"}
+            }
+        },
         "card": {
             "prototype": "ui/card.reel",
             "properties": {
                 "element": {"#": "card"}
-            }
-        },
-        "checkbox": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "checkbox"},
-                "checked": true
-            },
-            "bindings": {
-                "checked": {"<->": "@owner.configurationSet.optionMap.get('thermostat').chosen"}
             }
         },
         "den": {
@@ -57,17 +56,7 @@
                 <p>
                     Innovative and smart: Install a thermostat that helps protect your comfort zone and the environment.
                 </p>
-                <label class="Card-option--booleanField">
-                    <input type="checkbox" data-montage-id="checkbox">
-                    <div class="Card-option-labelArea">
-                        <strong class="Card-option-label">
-                            Smart Thermostat
-                        </strong>
-                        <span class="Card-option-price">
-                            $299
-                        </span>
-                    </div>
-                </label>
+                <div data-montage-id="booleanOptionField"></div>
             </section>
         </div>
     </div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="boolean-option-field.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/option-fields/boolean-option-field.reel",
+            "properties": {
+                "element": {"#": "BooleanOptionField"}
+            }
+        },
+        "chosenCheckbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "chosenCheckbox"},
+                "checked": true
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.configurationOption.chosen"}
+            }
+        },
+        "name": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "name"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.configurationOption.name"}
+            }
+        },
+        "price": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "price"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {
+                    "<-": "\"$\" + @owner.configurationOption.price"
+                }
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="BooleanOptionField" class="Card-option--booleanField BooleanOptionField">
+        <input type="checkbox" data-montage-id="chosenCheckbox">
+        <div class="Card-option-labelArea">
+            <strong class="Card-option-label" data-montage-id="name"></strong>
+            <span class="Card-option-price" data-montage-id="price"></span>
+        </div>
+    </div>
+</body>
+</html>
