@@ -255,6 +255,12 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
                 this.currentPanel = Math.round(this.scroll);
             }
         }
+    },
+
+    scrollToPanel: {
+        value: function (index) {
+            this.flow.startScrollingIndexToOffset(index, 0);
+        }
     }
 
 });
