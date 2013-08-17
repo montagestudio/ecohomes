@@ -32,7 +32,7 @@
                 "value": "Total"
             },
             "bindings": {
-                "value": {"<-": "@owner.configuration.configuredPrice"}
+                "value": {"<-": "@owner.configuration.totalPrice"}
             }
         }
     }
@@ -44,13 +44,11 @@
             <img data-montage-id="logo" class="Overview-logo">
         </header>
         <section class="Overview-totals">
-
             <!--TODO replace with live component-->
             <div class="Overview-ecoScore">
                 Good
                 <img data-montage-id="ecoScore" class="Overview-ecoBars">
             </div>
-
             <span>
                 $
                 <em data-montage-id="text"></em>

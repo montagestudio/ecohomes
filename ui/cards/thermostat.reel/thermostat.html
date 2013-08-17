@@ -22,6 +22,9 @@
             "properties": {
                 "element": {"#": "checkbox"},
                 "checked": true
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.configurationSet.optionMap.get('thermostat').chosen"}
             }
         },
         "den": {
@@ -46,20 +49,25 @@
         <div data-montage-id="card">
             <header class="Card-header">
                 <div data-montage-id="den" class="Thermostat-den Card-hero"></div>
-                <h1 data-montage-id="title" class="Card-title">Thermostat</h1>
+                <h1 data-montage-id="title" class="Card-title">
+                    Thermostat
+                </h1>
             </header>
             <section class="Card-content">
-                <p>Innovative and smart: Install a thermostat that helps protect your comfort zone and the environment.</p>
-
+                <p>
+                    Innovative and smart: Install a thermostat that helps protect your comfort zone and the environment.
+                </p>
                 <label class="Card-option--booleanField">
                     <input type="checkbox" data-montage-id="checkbox">
                     <div class="Card-option-labelArea">
-                        <strong class="Card-option-label">Smart Thermostat</strong>
-                        <span class="Card-option-price">$299</span>
+                        <strong class="Card-option-label">
+                            Smart Thermostat
+                        </strong>
+                        <span class="Card-option-price">
+                            $299
+                        </span>
                     </div>
                 </label>
-
-
             </section>
         </div>
     </div>

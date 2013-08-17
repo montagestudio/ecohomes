@@ -10,6 +10,14 @@
       }
     }
   },
+  "blueprint_unnamed_configuration": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configuration",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
@@ -18,9 +26,14 @@
         "%": "ui/main.reel/main.meta"
       },
       "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_configuration"}
+      ],
       "propertyBlueprintGroups": {
         "default": [],
-        "Main": []
+        "Main": [
+          {"@": "blueprint_unnamed_configuration"}
+        ]
       },
       "module": {
         "%": "ui/main.reel"

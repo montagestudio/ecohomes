@@ -63,6 +63,9 @@
             "prototype": "ui/overview.reel",
             "properties": {
                 "element": {"#": "overview"}
+            },
+            "bindings": {
+                "configuration": {"<-": "@owner.configuration"}
             }
         },
         "panels": {
@@ -100,6 +103,9 @@
             "prototype": "ui/cards/staircase.reel",
             "properties": {
                 "element": {"#": "staircasePanel"}
+            },
+            "bindings": {
+                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('staircase')"}
             }
         },
         "stairsMaterial": {
@@ -115,6 +121,9 @@
             "prototype": "ui/cards/thermostat.reel",
             "properties": {
                 "element": {"#": "thermostatPanel"}
+            },
+            "bindings": {
+                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('thermostat')"}
             }
         },
         "viewPoint": {

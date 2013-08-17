@@ -13,5 +13,9 @@ exports.Staircase = Component.specialize(/** @lends Staircase# */ {
         value: function Staircase() {
             this.super();
         }
+    },
+
+    configurationSet: {
+        value: null
     }
 });
