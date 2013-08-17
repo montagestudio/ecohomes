@@ -218,6 +218,43 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
                 return observeProperty(this, key, emit, source, parameters, beforeChange);
             }
         }
+    },
+
+    _scroll: {
+        value: null
+    },
+
+    scroll: {
+        get: function () {
+            return this._scroll;
+        },
+        set: function (value) {
+            this._scroll = value;
+            if (this.currentPanel === null) {
+                this.didTranslateEnd();
+            }
+        }
+    },
+
+    _currentPanel: {
+        value: null
+    },
+
+    currentPanel: {
+        get: function () {
+            return this._currentPanel;
+        },
+        set: function (value) {
+            this._currentPanel = value;
+        }
+    },
+
+    didTranslateEnd: {
+        value: function () {
+            if (this._currentPanel !== Math.round(this.scroll)) {
+                this.currentPanel = Math.round(this.scroll);
+            }
+        }
     }
 
 });

@@ -11,7 +11,7 @@
                 "flow": {"@": "flow"}
             },
             "bindings": {
-                "_scroll": {"<->": "@flow.scroll"},
+                "scroll": {"<->": "@flow.scroll"},
                 "_numberOfIterations": {"<->": "@flow._numberOfIterations"},
                 "_firstIteration": {"<-": "@flow._repetition._drawnIterations.0"}
             }
@@ -23,6 +23,7 @@
                 "stride": 1,
                 "linearScrollingVector": [0, -200],
                 "hasStrideBlocking": true,
+                "delegate": {"@": "owner"},
                 "paths": [{
                     "knots": [
                         {
