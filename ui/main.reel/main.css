@@ -29,8 +29,18 @@
 }
 
 .Main-viewport {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    height: 100%;
+    background-color: hsl(0,0%,95%);
+}
+
+.Main-room {
     position: relative;
-    background-color: hsl(0,0%,95%)
 }
 
 .Main-overview {
