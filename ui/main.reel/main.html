@@ -39,6 +39,9 @@
             "prototype": "ui/cards/kitchen.reel",
             "properties": {
                 "element": {"#": "kitchenPanel"}
+            },
+            "bindings": {
+                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('kitchen')"}
             }
         },
         "laundryPanel": {

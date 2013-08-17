@@ -11,45 +11,19 @@
                 "element": {"#": "kitchen"}
             }
         },
-        "bakeCheckbox": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "bakeCheckbox"},
-                "checked": false
-            }
-        },
         "card": {
             "prototype": "ui/card.reel",
             "properties": {
                 "element": {"#": "card"}
             }
         },
-        "fridgeCheckbox": {
-            "prototype": "digit/ui/checkbox.reel",
+        "fridgeField": {
+            "prototype": "ui/option-fields/boolean-option-field.reel",
             "properties": {
-                "element": {"#": "fridgeCheckbox"},
-                "checked": false
-            }
-        },
-        "rangeCheckbox": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "rangeCheckbox"},
-                "checked": false
-            }
-        },
-        "title": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "title"},
-                "value": "Kitchen"
-            }
-        },
-        "waveCheckbox": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "waveCheckbox"},
-                "checked": false
+                "element": {"#": "fridgeField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('refrigerator')"}
             }
         },
         "kitchenHero": {
@@ -58,6 +32,40 @@
                 "element": {"#": "kitchenHero"},
                 "src": "kitchen.png"
             }
+        },
+        "microwaveField": {
+            "prototype": "ui/option-fields/boolean-option-field.reel",
+            "properties": {
+                "element": {"#": "microwaveField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('microwave')"}
+            }
+        },
+        "ovenField": {
+            "prototype": "ui/option-fields/boolean-option-field.reel",
+            "properties": {
+                "element": {"#": "ovenField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('oven')"}
+            }
+        },
+        "rangeField": {
+            "prototype": "ui/option-fields/boolean-option-field.reel",
+            "properties": {
+                "element": {"#": "rangeField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('range')"}
+            }
+        },
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Kitchen"
+            }
         }
     }
     </script>
@@ -65,52 +73,21 @@
 <body>
     <div data-montage-id="kitchen" class="Kitchen">
         <div data-montage-id="card">
-            
             <header class="Card-header">
                 <img data-montage-id="kitchenHero" class="Card-hero">
                 <h1 data-montage-id="title" class="Card-title"></h1>
             </header>
-            
             <section class="Card-content">
-                <p>Luxurious and green: Save money and protect the environment with energy-efficient appliances.</p>
-
+                <p>
+                    Luxurious and green: Save money and protect the environment with energy-efficient appliances.
+                </p>
                 <div class="Card-optionGrid">
-
-                    <label class="Card-option--booleanField">
-                        <input type="checkbox" data-montage-id="fridgeCheckbox">
-                        <div class="Card-option-labelArea">
-                            <strong class="Card-option-label">EcoFridge</strong>
-                            <span class="Card-option-price">$2599</span>
-                        </div>
-                    </label>
-
-                    <label class="Card-option--booleanField">
-                        <input type="checkbox" data-montage-id="rangeCheckbox">
-                        <div class="Card-option-labelArea">
-                            <strong class="Card-option-label">EcoRange</strong>
-                            <span class="Card-option-price">$1699</span>
-                        </div>
-                    </label>
-
-                    <label class="Card-option--booleanField">
-                        <input type="checkbox" data-montage-id="waveCheckbox">
-                        <div class="Card-option-labelArea">
-                            <strong class="Card-option-label">EcoWave</strong>
-                            <span class="Card-option-price">$1699</span>
-                        </div>
-                    </label>
-
-                    <label class="Card-option--booleanField">
-                        <input type="checkbox" data-montage-id="bakeCheckbox">
-                        <div class="Card-option-labelArea">
-                            <strong class="Card-option-label">EcoBake</strong>
-                            <span class="Card-option-price">$1899</span>
-                        </div>
-                    </label>
+                    <div data-montage-id="fridgeField"></div>
+                    <div data-montage-id="rangeField"></div>
+                    <div data-montage-id="ovenField"></div>
+                    <div data-montage-id="microwaveField"></div>
                 </div>
-
             </section>
-
         </div>
     </div>
 </body>

@@ -10,6 +10,14 @@
       }
     }
   },
+  "blueprint_unnamed_configurationSet": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configurationSet",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
@@ -18,8 +26,13 @@
         "%": "ui/cards/kitchen.reel/kitchen.meta"
       },
       "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_configurationSet"}
+      ],
       "propertyBlueprintGroups": {
-        "Kitchen": []
+        "Kitchen": [
+          {"@": "blueprint_unnamed_configurationSet"}
+        ]
       },
       "module": {
         "%": "ui/cards/kitchen.reel"
