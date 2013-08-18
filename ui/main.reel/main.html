@@ -120,10 +120,13 @@
                 "width": "674"
             }
         },
-        "solarPanel": {
+        "solarPanels": {
             "prototype": "ui/cards/solar-panels.reel",
             "properties": {
-                "element": {"#": "solarPanel"}
+                "element": {"#": "solarPanels"}
+            },
+            "bindings": {
+                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('solarPanels')"}
             }
         },
         "staircasePanel": {
@@ -195,7 +198,7 @@
                     <div data-arg="thermostat" data-montage-id="thermostatPanel"></div>
                     <div data-arg="kitchen" data-montage-id="kitchenPanel"></div>
                     <div data-arg="laundry" data-montage-id="laundryPanel"></div>
-                    <div data-arg="solarPanels" data-montage-id="solarPanel"></div>
+                    <div data-arg="solarPanels" data-montage-id="solarPanels"></div>
                     <div data-arg="window" data-montage-id="windowPanel"></div>
                     <div data-arg="counters" data-montage-id="countersPanel"></div>
                 </li>

@@ -11,6 +11,7 @@ var ThermostatConfigurationSet = require("configuration/thermostat-configuration
 var KitchenConfigurationSet = require("configuration/kitchen-configuration-set").KitchenConfigurationSet;
 var LaundryConfigurationSet = require("configuration/laundry-configuration-set").LaundryConfigurationSet;
 var CountertopsConfigurationSet = require("configuration/countertops-configuration-set").CountertopsConfigurationSet;
+var SolarPanelsConfigurationSet = require("configuration/solar-panels-configuration-set").SolarPanelsConfigurationSet;
 
 /**
  * @class Main
@@ -28,6 +29,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             configurationMap.set("kitchen", new KitchenConfigurationSet());
             configurationMap.set("laundry", new LaundryConfigurationSet());
             configurationMap.set("counters", new CountertopsConfigurationSet());
+            configurationMap.set("solarPanels", new SolarPanelsConfigurationSet());
 
             this.configuration = new Configuration().init(628000, configurationMap);
 

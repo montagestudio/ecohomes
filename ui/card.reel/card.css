@@ -52,7 +52,8 @@
     margin-right: 10px;
 }
 
-.Card-option--booleanField {
+.Card-option--booleanField,
+.Card-option--choiceField {
     display: block;
 
     display: -webkit-box;

@@ -37,7 +37,7 @@ exports.Configuration = Montage.specialize({
      * The price of all options chosen by the owner
      */
     optionsPrice: {
-        value: 0 //TODO implement a binding to populate this
+        value: 0
     },
 
     /**
