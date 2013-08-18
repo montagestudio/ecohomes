@@ -35,7 +35,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     },
 
     cards: {
-        value: ["introduction", "staircase", "thermostat", "kitchen", "counters", "laundry", "window", "solarPanels"]
+        value: ["introduction", "staircase", "kitchen", "counters", "laundry", "window", "thermostat", "solarPanels"]
     },
 
     configuration: {
