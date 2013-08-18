@@ -14,10 +14,6 @@ exports.KitchenConfigurationSet = ConfigurationSet.specialize({
             optionMap.set("oven", new ConfigurationOption().init("EcoBake", 1999));
             optionMap.set("dishwasher", new ConfigurationOption().init("EcoWash", 1199));
         }
-    },
-
-    preferredViewpointLabel: {
-        value: "kitchenViewpoint"
     }
 
 });

@@ -7,10 +7,6 @@ exports.CountertopsConfigurationSet = ConfigurationSet.specialize({
         value: function CountertopsConfigurationSet() {
             this.super();
         }
-    },
-
-    preferredViewpointLabel: {
-        value: "counterViewpoint"
     }
 
 });

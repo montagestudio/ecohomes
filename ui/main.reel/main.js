@@ -22,7 +22,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function Main() {
             this.super();
 
-            //TODO this map should drive which panels are available in the UI, right now they're related somewhat by coincidence
             var configurationMap = new Map();
             configurationMap.set("staircase", new StaircaseConfigurationSet());
             configurationMap.set("thermostat", new ThermostatConfigurationSet());
@@ -31,11 +30,19 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             configurationMap.set("counters", new CountertopsConfigurationSet());
 
             this.configuration = new Configuration().init(628000, configurationMap);
+
+            // NOTE Even panels with no configuration options can have preferred viewpoints
+            // this is why the viewpoint is related to panels, not configuration sets
+            this.panelIdViewpointMap = new Map();
         }
     },
 
     cards: {
         value: ["introduction", "staircase", "kitchen", "counters", "laundry", "window", "thermostat", "solarPanels"]
+    },
+
+    panelIdViewpointMap: {
+        value: null
     },
 
     configuration: {
@@ -57,7 +64,16 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             view.width = newWidth;
             view.height = newHeight;
 
+            //React to the current panel changing
             this.addPathChangeListener("templateObjects.panelFlow.currentPanel", this, "handlePanelIndexChange");
+
+            //Specify preferred cameras for specific panels
+            var viewpointMap = this.panelIdViewpointMap;
+            viewpointMap.set("staircase", this.templateObjects.staircaseViewpoint);
+            viewpointMap.set("kitchen", this.templateObjects.kitchenViewpoint);
+            viewpointMap.set("counters", this.templateObjects.counterViewpoint);
+            viewpointMap.set("window", this.templateObjects.windowViewpoint);
+
         }
     },
 
@@ -65,17 +81,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function (index) {
             var roomView = this.templateObjects.roomView;
             var rideViewpoint = this.templateObjects.rideViewpoint;
-            var configurationKey = this.cards[index];
+            var panelId = this.cards[index];
 
-            //TODO cleanup
             //TODO don't even bother playing iof the viewpoint has not changed
-            if (configurationKey) {
-                var configurationSet = this.configuration.configurationMap.get(configurationKey);
-                var preferredViewpointLabel = configurationSet ? configurationSet.preferredViewpointLabel : null;
+            if (panelId) {
+                var preferredViewpoint = this.panelIdViewpointMap.get(panelId);
 
-                if (preferredViewpointLabel) {
-                    var preferredViewpoint = this.templateObjects[preferredViewpointLabel];
-
+                if (preferredViewpoint) {
                     roomView.pause();
                     roomView.viewPoint = preferredViewpoint;
                 } else {
