@@ -9,6 +9,11 @@
             "prototype": "ui/cards/window.reel",
             "properties": {
                 "element": {"#": "window"}
+            },
+            "bindings": {
+                "coatingStrength": {
+                    "<-": "@coatingStrengthSlider.value * 2.5"
+                }
             }
         },
         "card": {
@@ -23,7 +28,8 @@
                 "element": {"#": "coatingStrengthSlider"},
                 "max": 100,
                 "min": 0,
-                "value": 50
+                "value": 50,
+                "step": 1
             }
         },
         "hero": {
@@ -44,7 +50,7 @@
             },
             "bindings": {
                 "value": {
-                    "<-": "\"$\" + @coatingStrengthSlider.value * 2.5"
+                    "<-": "\"$\" + @owner.coatingStrength"
                 }
             }
         },
