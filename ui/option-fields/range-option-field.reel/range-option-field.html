@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="range-option-field.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "rangeOptionField"}
+            }
+        },
+
+        "rangeSlider": {
+            "prototype": "digit/ui/slider.reel",
+            "properties": {
+                "element": {"#": "rangeSlider"},
+                "step": 1
+            },
+            "bindings": {
+                "min": {"<-": "@owner.configurationOption.minValue"},
+                "max": {"<-": "@owner.configurationOption.maxValue"},
+                "value": {"<->": "@owner.configurationOption.value"}
+            }
+        },
+        "name": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "name"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.configurationOption.name"}
+            }
+        },
+        "price": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "price"}
+            },
+            "bindings": {
+                "value": {
+                    "<-": "\"$\" + @owner.configurationOption.price"
+                }
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="rangeOptionField" class="RangeOptionField">
+        <label class="Card-option--rangeField">
+            <strong class="Card-option-label" data-montage-id="name"></strong>
+            <div>
+                <div data-montage-id="rangeSlider"
+                     class="RangeOptionField-slider"></div>
+                <span class="Card-option-price" data-montage-id="price"></span>
+            </div>
+        </label>
+    </div>
+</body>
+</html>
