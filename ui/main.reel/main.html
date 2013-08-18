@@ -29,6 +29,13 @@
                 "element": {"#": "countersPanel"}
             }
         },
+        "counterViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-LookAtBar",
+                "scene": {"@": "roomScene"}
+            }
+        },
         "introductionPanel": {
             "prototype": "ui/cards/introduction.reel",
             "properties": {
@@ -42,6 +49,13 @@
             },
             "bindings": {
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('kitchen')"}
+            }
+        },
+        "kitchenViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-LookAtFridge",
+                "scene": {"@": "roomScene"}
             }
         },
         "laundryPanel": {
@@ -150,6 +164,13 @@
             "prototype": "ui/cards/window.reel",
             "properties": {
                 "element": {"#": "windowPanel"}
+            }
+        },
+        "windowViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-LookAtWindow",
+                "scene": {"@": "roomScene"}
             }
         }
     }
