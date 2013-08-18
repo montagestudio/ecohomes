@@ -20,7 +20,7 @@
                 "element": {"#": "configurationPanels"}
             },
             "bindings": {
-                "switchValue": {"<-": "@panels.objectAtCurrentIteration"}
+                "switchValue": {"<-": "@panelFlow.objectAtCurrentIteration"}
             }
         },
         "countersPanel": {
@@ -74,13 +74,20 @@
                 "configuration": {"<-": "@owner.configuration"}
             }
         },
-        "panels": {
+        "panelFlow": {
             "prototype": "ui/panel-flow.reel",
             "properties": {
-                "element": {"#": "panels"}
+                "element": {"#": "panelFlow"}
             },
             "bindings": {
                 "content": {"<-": "@owner.cards"}
+            }
+        },
+        "rideViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-camera001",
+                "scene": {"@": "roomScene"}
             }
         },
         "roomScene": {
@@ -95,7 +102,7 @@
                 "element": {"#": "roomView"},
                 "height": "768",
                 "scene": {"@": "roomScene"},
-                "viewPoint": {"@": "viewPoint"},
+                "viewPoint": {"@": "rideViewpoint"},
                 "width": "674"
             }
         },
@@ -114,6 +121,13 @@
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('staircase')"}
             }
         },
+        "staircaseViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-LookAtStairs",
+                "scene": {"@": "roomScene"}
+            }
+        },
         "stairsMaterial": {
             "prototype": "glTF-webgl-viewer/runtime/material",
             "properties": {
@@ -130,13 +144,6 @@
             },
             "bindings": {
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('thermostat')"}
-            }
-        },
-        "viewPoint": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
-            "properties": {
-                "id": "node-camera001",
-                "scene": {"@": "roomScene"}
             }
         },
         "windowPanel": {
@@ -160,7 +167,7 @@
             </div>
         </section>
         <section class="Main-configuration" data-montage-skin="light">
-            <ul data-montage-id="panels" class="Main-panel">
+            <ul data-montage-id="panelFlow" class="Main-panel">
                 <li data-montage-id="configurationPanels" class="Main-cards">
                     <div data-arg="introduction" data-montage-id="introductionPanel"></div>
                     <div data-arg="staircase" data-montage-id="staircasePanel"></div>

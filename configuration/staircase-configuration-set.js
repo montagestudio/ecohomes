@@ -13,6 +13,10 @@ exports.StaircaseConfigurationSet = ConfigurationSet.specialize({
             optionMap.set("ash", new ConfigurationOption().init("Dark Ash", 10000));
             optionMap.set("bold", new ConfigurationOption().init("Powder Coated Metal", 8000));
         }
+    },
+
+    preferredViewpointLabel: {
+        value: "staircaseViewpoint"
     }
 
 });

@@ -54,6 +54,37 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
             view.width = newWidth;
             view.height = newHeight;
+
+            this.addPathChangeListener("templateObjects.panelFlow.currentPanel", this, "handlePanelIndexChange");
+        }
+    },
+
+    handlePanelIndexChange: {
+        value: function (index) {
+            var roomView = this.templateObjects.roomView;
+            var rideViewpoint = this.templateObjects.rideViewpoint;
+            var configurationKey = this.cards[index];
+
+            //TODO cleanup
+            //TODO don't even bother playing iof the viewpoint has not changed
+            if (configurationKey) {
+                var configurationSet = this.configuration.configurationMap.get(configurationKey);
+                var preferredViewpointLabel = configurationSet ? configurationSet.preferredViewpointLabel : null;
+
+                if (preferredViewpointLabel) {
+                    var preferredViewpoint = this.templateObjects[preferredViewpointLabel];
+
+                    roomView.pause();
+                    roomView.viewPoint = preferredViewpoint;
+                } else {
+                    roomView.viewPoint = rideViewpoint;
+                    roomView.play();
+                }
+
+            } else {
+                roomView.viewPoint = rideViewpoint;
+                roomView.play();
+            }
         }
     }
 });
