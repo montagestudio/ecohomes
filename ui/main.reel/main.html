@@ -167,6 +167,9 @@
             "prototype": "ui/cards/window.reel",
             "properties": {
                 "element": {"#": "windowPanel"}
+            },
+            "bindings": {
+                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('window')"}
             }
         },
         "windowViewpoint": {

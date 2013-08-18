@@ -64,9 +64,15 @@
     padding: 5px 10px;
 }
 
-.Card-option--slider {
+.Card-option--rangeField {
     display: block;
     margin-top: 20px;
+    -webkit-flex: 1 0 50%;
+    padding: 5px 10px;
+}
+
+.Card-option--slider {
+
 }
 
 .Card-option-labelArea {

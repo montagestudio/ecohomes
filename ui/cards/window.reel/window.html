@@ -9,27 +9,12 @@
             "prototype": "ui/cards/window.reel",
             "properties": {
                 "element": {"#": "window"}
-            },
-            "bindings": {
-                "coatingStrength": {
-                    "<-": "@coatingStrengthSlider.value * 2.5"
-                }
             }
         },
         "card": {
             "prototype": "ui/card.reel",
             "properties": {
                 "element": {"#": "card"}
-            }
-        },
-        "coatingStrengthSlider": {
-            "prototype": "digit/ui/slider.reel",
-            "properties": {
-                "element": {"#": "coatingStrengthSlider"},
-                "max": 100,
-                "min": 0,
-                "value": 50,
-                "step": 1
             }
         },
         "hero": {
@@ -39,21 +24,6 @@
                 "src": "window.png"
             }
         },
-        "radioButtonController": {
-            "prototype": "montage/core/radio-button-controller"
-        },
-        "text1": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "text1"},
-                "value": "Text"
-            },
-            "bindings": {
-                "value": {
-                    "<-": "\"$\" + @owner.coatingStrength"
-                }
-            }
-        },
         "title": {
             "prototype": "montage/ui/text.reel",
             "properties": {
@@ -61,20 +31,22 @@
                 "value": "Windows"
             }
         },
-        "windowsOption1": {
-            "prototype": "digit/ui/radio-button.reel",
+        "glassField": {
+            "prototype": "ui/option-fields/choice-option-field.reel",
             "properties": {
-                "element": {"#": "windowsOption1"},
-                "radioButtonController": {"@": "radioButtonController"},
-                "value": "option1"
+                "element": {"#": "glassField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('glass')"}
             }
         },
-        "windowsOption2": {
-            "prototype": "digit/ui/radio-button.reel",
+        "coatingField": {
+            "prototype": "ui/option-fields/range-option-field.reel",
             "properties": {
-                "element": {"#": "windowsOption2"},
-                "radioButtonController": {"@": "radioButtonController"},
-                "value": "option2"
+                "element": {"#": "coatingField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('coating')"}
             }
         }
     }
@@ -91,37 +63,8 @@
                 <p>
                     Eco-friendly and visionary: Surround yourself with a view that meets your energy-efficient outlook and aesthetic.
                 </p>
-                <label class="Card-option--booleanField">
-                    <input type="radio" data-montage-id="windowsOption1">
-                    <div class="Card-option-labelArea">
-                        <strong class="Card-option-label">
-                            Dual-pane EcoGlass
-                        </strong>
-                        <span class="Card-option-price">
-                            $299
-                        </span>
-                    </div>
-                </label>
-                <label class="Card-option--booleanField">
-                    <input type="radio" data-montage-id="windowsOption2">
-                    <div class="Card-option-labelArea">
-                        <strong class="Card-option-label">
-                            Triple-pane EcoGlass
-                        </strong>
-                        <span class="Card-option-price">
-                            $399
-                        </span>
-                    </div>
-                </label>
-                <label class="Card-option--slider">
-                    <strong class="Card-option-label">
-                        UV Coating Strength
-                    </strong>
-                    <div>
-                        <div data-montage-id="coatingStrengthSlider"></div>
-                        <span class="Card-option-price" data-montage-id="text1"></span>
-                    </div>
-                </label>
+                <div data-montage-id="glassField"></div>
+                <div data-montage-id="coatingField"></div>
             </section>
         </div>
     </div>
