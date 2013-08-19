@@ -1,5 +1,6 @@
 var ConfigurationSet = require("core/configuration-set").ConfigurationSet;
 var ConfigurationOption = require("core/configuration-option").ConfigurationOption;
+var ConfigurationChoice = require("core/configuration-choice").ConfigurationChoice;
 
 exports.KitchenConfigurationSet = ConfigurationSet.specialize({
 
@@ -8,11 +9,14 @@ exports.KitchenConfigurationSet = ConfigurationSet.specialize({
             this.super();
 
             var optionMap = this.optionMap;
-            optionMap.set("refrigerator", new ConfigurationOption().init("EcoFridge", 2299));
-            optionMap.set("range", new ConfigurationOption().init("EcoRange", 1699));
-            optionMap.set("microwave", new ConfigurationOption().init("EcoWave", 699));
-            optionMap.set("oven", new ConfigurationOption().init("EcoBake", 1999));
-            optionMap.set("dishwasher", new ConfigurationOption().init("EcoWash", 1199));
+            optionMap.set("appliances", new ConfigurationChoice().init(
+                new ConfigurationOption().init("Gütersloh", 12999),
+                new ConfigurationOption().init("Norse", 10299),
+                new ConfigurationOption().init("Electro", 7999),
+                new ConfigurationOption().init("MH", 4999),
+                new ConfigurationOption().init("Vortex", 3199)
+            ));
+
         }
     }
 

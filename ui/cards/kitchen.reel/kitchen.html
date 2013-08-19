@@ -17,15 +17,6 @@
                 "element": {"#": "card"}
             }
         },
-        "fridgeField": {
-            "prototype": "ui/option-fields/boolean-option-field.reel",
-            "properties": {
-                "element": {"#": "fridgeField"}
-            },
-            "bindings": {
-                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('refrigerator')"}
-            }
-        },
         "kitchenHero": {
             "prototype": "digit/ui/image.reel",
             "properties": {
@@ -33,31 +24,13 @@
                 "src": "kitchen.png"
             }
         },
-        "microwaveField": {
-            "prototype": "ui/option-fields/boolean-option-field.reel",
+        "appliancesField": {
+            "prototype": "ui/option-fields/choice-option-field.reel",
             "properties": {
-                "element": {"#": "microwaveField"}
+                "element": {"#": "appliancesField"}
             },
             "bindings": {
-                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('microwave')"}
-            }
-        },
-        "ovenField": {
-            "prototype": "ui/option-fields/boolean-option-field.reel",
-            "properties": {
-                "element": {"#": "ovenField"}
-            },
-            "bindings": {
-                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('oven')"}
-            }
-        },
-        "rangeField": {
-            "prototype": "ui/option-fields/boolean-option-field.reel",
-            "properties": {
-                "element": {"#": "rangeField"}
-            },
-            "bindings": {
-                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('range')"}
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('appliances')"}
             }
         },
         "title": {
@@ -81,12 +54,7 @@
                 <p>
                     Luxurious and green: Save money and protect the environment with energy-efficient appliances.
                 </p>
-                <div class="Card-optionGrid">
-                    <div data-montage-id="fridgeField"></div>
-                    <div data-montage-id="rangeField"></div>
-                    <div data-montage-id="ovenField"></div>
-                    <div data-montage-id="microwaveField"></div>
-                </div>
+                <div data-montage-id="appliancesField"></div>
             </section>
         </div>
     </div>
