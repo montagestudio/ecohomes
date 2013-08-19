@@ -1,3 +1,7 @@
 .CallBack {
 
 }
+
+.CallBack .Card-header {
+	background-image: none;
+}
