@@ -24,6 +24,15 @@
                 "src": "stairs.png"
             }
         },
+        "staircaseField": {
+            "prototype": "ui/option-fields/choice-option-field.reel",
+            "properties": {
+                "element": {"#": "staircaseField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('material')"}
+            }
+        },
         "title": {
             "prototype": "montage/ui/text.reel",
             "properties": {
@@ -42,35 +51,10 @@
                 <h1 data-montage-id="title" class="Card-title"></h1>
             </header>
             <section class="Card-content">
-
-                <p>Simple and economical: A staircase constructed from timbers sourced from sustainable managed forests or recycled stainless steel.</p>
-
-                <table>
-                    <tr>
-                        <td>
-                            <span class="Card-optionThumbnail" style="background-color: hsl(27,43%,56%);"></span>
-                        </td>
-                        <td><strong>FSC Teak</strong></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="Card-optionThumbnail" style="background-color: hsl(19,57%,22%);"></span>
-                        </td>
-                        <td>Dark Walnut</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="Card-optionThumbnail" style="background-color: hsl(0,0%,24%);"></span>
-                        </td>
-                        <td>Dark Ash</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="Card-optionThumbnail" style="background-color: hsl(357,55%,38%)"></span>
-                        </td>
-                        <td>Powder Coated Metal</td>
-                    </tr>
-                </table>
+                <p>
+                    Simple and economical: A staircase constructed from timbers sourced from sustainable managed forests or recycled stainless steel.
+                </p>
+                <div data-montage-id="staircaseField"></div>
             </section>
         </div>
     </div>
