@@ -1,16 +1,38 @@
 Den-Demo
-==============
+========
 
-Note: Before working on your app you will need to add montage to it.
+This demo showcaes the ease of development of a Montage application by leveraging components, bindings, listeners,
+and the declarative approach and toolset promoted by Montage. It is intended for public distribution; though the
+history will be truncated prior to posting. Regardless, please keep confidential information to a minimum.
 
-```
-npm install .
-```  
+Installation
+------------
 
-note: when updating it is recommanded to **remove the glTF-webgl-viewer from node_modules**, npm doesn't currently update git repo correctly. (to be investigated).
+1. Install nodejs (http://nodejs.org)
+2. After cloning this repository, `cd den-demo`
+3. Run `npm install`
+4. Browse to your clone as served by your local system e.g. http://localhost:8081/den-demo
+5. Throughout the course of development run `npm update` to fetch the latest dependencies
 
-Pre-requisites
----------------
+NOTE: Prior to running `npm update` **remove glTF-webgl-viewer from node_modules**, (`rm -rf node_modules/gltf-webgli-viewer`
+
+Contributing
+------------
+- Run `jshint` on your code to ensure it conforms to Filament standards
+
+- Make sure all commit messages follow the 50 character subject/72 character
+body [formatting used throughout git](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) 
+
+- Make sure commit messages start with uppercase present tense commands
+e.g. Prefer "Clear selection when clicking new button" over
+"Cleared selection when clicking new button"
+
+- When adding or updating dependencies list the EXACT version of the dependency
+to minimize differences when building at different times.
+i.e. treat package.json as a shrinkwrapped dependency specifier
+
+3D Components and Objects
+-------------------------
 
 The following points about 3D do not cover - yet - `Scene` and `View`.
 Please ping @fabrobinet if needed.
@@ -53,7 +75,7 @@ Then this viewPoint is referred by a `View` as in:
 ```
 
 Dealing with viewPoints in the "loft" 3d scene
------------------------------------------------
+----------------------------------------------
 
 First of all, to get an idea of where are located the nodes that contains a camera (i.e viewpoints) you can look at the glTF file, as in :
 
@@ -115,26 +137,3 @@ The recommanded way to go to a static viewPoint is to:
 Then to resume the ride:
 * set the viewPoint with `node-camera001` on the view
 * call the `play` action on the view
-
-
-Layout
-------
-
-The template contains the following files and directories:
-
-* `index.html`
-* `package.json` – Describes your app and its dependencies
-* `README.markdown` – This readme. Replace the current content with a description of your app
-* `ui/` – Directory containing all the UI .reel directories.
-  * `main.reel` – The main interface component
-* `core/` – Directory containing all core code for your app.
-* `node_modules/` – Directory containing all npm packages needed, including Montage. Any packages here must be included as `dependencies` in `package.json` for the Montage require to find them.
-* `assets/` – Assets such as global styles and images for your app
-* `test/` – Directory containing tests for your app.
-  * `all.js` – Module that point the test runner to all your jasmine specs.
-* `run-tests.html` – Page to run jasmine tests manually in your browser
-
-Create the following directories if you need them:
-
-* `locale/` – Directory containing localized content.
-* `scripts/` – Directory containing other JS libraries. If a library doesn’t support the CommonJS "exports" object it will need to be loaded through a `<script>` tag.
