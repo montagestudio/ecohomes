@@ -37,6 +37,10 @@ exports.ConfigurationOption = Montage.specialize(/** @lends ConfigurationOption#
         value: null
     },
 
+    description: {
+        value: null
+    },
+
     /**
      * Whether to consider this option chosen
      */
