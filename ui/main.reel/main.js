@@ -85,10 +85,16 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     },
 
     handlePanelIndexChange: {
-        value: function (index) {
+        value: function (panelIndex) {
+            this.changeViewpoint(panelIndex);
+        }
+    },
+
+    changeViewpoint: {
+        value: function (panelIndex) {
             var roomView = this.templateObjects.roomView;
             var rideViewpoint = this.templateObjects.rideViewpoint;
-            var panelId = this.cards[index];
+            var panelId = this.cards[panelIndex];
 
             if (panelId) {
                 var preferredViewpoint = this.panelIdViewpointMap.get(panelId);
@@ -147,6 +153,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
                 if (panelIndex > -1) {
                     this.templateObjects.panelFlow.scrollToPanel(panelIndex);
+                    this.changeViewpoint(panelIndex);
                 }
             }
         }
