@@ -57,6 +57,7 @@
     -webkit-justify-content: center;
     height: 100%;
     background-color: hsl(0,0%,95%);
+    z-index: 2;
 }
 
 .Main-room {
