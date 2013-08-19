@@ -48,6 +48,9 @@
             "prototype": "ui/cards/countertops.reel",
             "properties": {
                 "element": {"#": "countersPanel"}
+            },
+            "bindings": {
+                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('counters')"}
             }
         },
         "counterViewpoint": {

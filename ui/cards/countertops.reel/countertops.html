@@ -6,6 +6,7 @@
     <script type="text/montage-serialization">
     {
         "owner": {
+            "prototype": "ui/cards/countertops.reel",
             "properties": {
                 "element": {"#": "Countertops"}
             }
@@ -14,6 +15,15 @@
             "prototype": "ui/card.reel",
             "properties": {
                 "element": {"#": "card"}
+            }
+        },
+        "materialField": {
+            "prototype": "ui/option-fields/choice-option-field.reel",
+            "properties": {
+                "element": {"#": "materialField"}
+            },
+            "bindings": {
+                "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('material')"}
             }
         }
     }
@@ -24,10 +34,13 @@
         <div data-montage-id="card">
             <header>
                 <img data-montage-id="logo" class="Card-hero">
-                <h1 class="Card-title">Kitchen Counters</h1>
+                <h1 class="Card-title">
+                    Kitchen Counters
+                </h1>
             </header>
             <section class="Card-content">
-                <p></p>
+                <p>Stylish and sustainable: Choose the best responsibly sourced countertops for the hardest working surface in your home.</p>
+                <div data-montage-id="materialField"></div>
             </section>
         </div>
     </div>
