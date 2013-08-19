@@ -81,6 +81,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             //React to options that should alter the scene
             this.addPathChangeListener("configuration.configurationMap.get('staircase').optionMap.get('material')._selectedOption", this, "handleStaircaseMaterialChange");
             this.addPathChangeListener("configuration.configurationMap.get('window').optionMap.get('coating').value", this, "handleWindowCoatingChange");
+            this.addPathChangeListener("configuration.configurationMap.get('kitchen').optionMap.get('appliances')._selectedOption", this, "handleKitchenAppliancesChange");
 
         }
     },
@@ -121,6 +122,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             var texture = "wood-stairs.jpg";
 
             //TODO improve this; just done enough to get it working
+            //TODO not rely on the fragile name
             if (newMaterial) {
                 switch (newMaterial.name) {
                 case "FSC Teak":
@@ -141,6 +143,22 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             }
 
             staircaseMaterial.image = texture;
+        }
+    },
+
+    handleKitchenAppliancesChange: {
+        value: function (newApplianceValue) {
+            var appliancesMaterial = this.templateObjects.appliancesMaterial,
+                opacity = 1;
+
+            //TODO not rely on the fragile name
+            if (!newApplianceValue || "No appliances installed" === newApplianceValue.name) {
+                opacity = 0;
+            }
+
+            console.log(newApplianceValue);
+
+            appliancesMaterial.opacity = opacity;
         }
     },
 
