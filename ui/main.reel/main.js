@@ -146,14 +146,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     handleWindowCoatingChange: {
         value: function (newCoatingValue) {
-            newCoatingValue = 1 - (newCoatingValue/100); //TODO not hardcode this, fit to some reasonable curve
+            newCoatingValue = 1 - (newCoatingValue/2400); //TODO not hardcode this, fit to some reasonable curve
             var backgroundMaterial = this.templateObjects.backgroundMaterial;
-
-            console.log(newCoatingValue);
-
-            //TODO improve this; just done enough to get a change drawn
-            //TODO change some tinting, not necessarily the opacity
-            backgroundMaterial.opacity = newCoatingValue;
+            backgroundMaterial.filterColor = [newCoatingValue, 1, newCoatingValue, 1];
         }
     },
 
