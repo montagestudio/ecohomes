@@ -67,18 +67,6 @@
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('laundry')"}
             }
         },
-        "material1": {
-            "prototype": "glTF-webgl-viewer/runtime/material",
-            "properties": {
-                "id": "option01",
-                "image": "dark-stairs.jpg",
-                "opacity": "1",
-                "scene": {"@": "roomScene"}
-            },
-            "bindings": {
-                "filterColor": {"<-": "[1, 1, 1, 0]"}
-            }
-        },
         "overview": {
             "prototype": "ui/overview.reel",
             "properties": {
@@ -127,6 +115,18 @@
             },
             "bindings": {
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('solarPanels')"}
+            }
+        },
+        "staircaseMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "escalier",
+                "image": "dark-stairs.jpg",
+                "opacity": "1",
+                "scene": {"@": "roomScene"}
+            },
+            "bindings": {
+                "filterColor": {"<-": "[1, 1, 1, 0]"}
             }
         },
         "staircasePanel": {

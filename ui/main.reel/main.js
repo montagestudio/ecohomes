@@ -78,6 +78,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             viewpointMap.set("counters", this.templateObjects.counterViewpoint);
             viewpointMap.set("window", this.templateObjects.windowViewpoint);
 
+            //React to options that should alter the scene
+            this.addPathChangeListener("configuration.configurationMap.get('staircase').optionMap.get('material')._selectedOption", this, "handleStaircaseMaterialChange");
+
         }
     },
 
@@ -102,6 +105,35 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                 roomView.viewPoint = rideViewpoint;
                 roomView.play();
             }
+        }
+    },
+
+    handleStaircaseMaterialChange: {
+        value: function (newMaterial) {
+            var staircaseMaterial = this.templateObjects.staircaseMaterial;
+            var texture = "wood-stairs.jpg";
+
+            //TODO improve this; just done enough to get it working
+            if (newMaterial) {
+                switch (newMaterial.name) {
+                case "FSC Teak":
+                    texture = "wood-stairs.jpg";
+                    break;
+                case "Dark Ash":
+                    texture = "dark-stairs.jpg";
+                    break;
+                case "Dark Walnut":
+                    texture = "walnut-stairs.jpg";
+                    break;
+                case "Powder Coated Metal":
+                    texture = "bold-stairs.jpg";
+                    break;
+                default:
+                    texture = "";
+                }
+            }
+
+            staircaseMaterial.image = texture;
         }
     }
 });
