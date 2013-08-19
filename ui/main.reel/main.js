@@ -135,5 +135,20 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
             staircaseMaterial.image = texture;
         }
+    },
+
+    handleAction: {
+        value: function (evt) {
+            var panelKey = evt.detail ? evt.detail.get('panelKey') : void 0,
+                panelIndex;
+
+            if (panelKey) {
+                panelIndex = this.cards.indexOf(panelKey);
+
+                if (panelIndex > -1) {
+                    this.templateObjects.panelFlow.scrollToPanel(panelIndex);
+                }
+            }
+        }
     }
 });

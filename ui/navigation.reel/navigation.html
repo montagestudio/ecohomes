@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/navigation.reel",
+            "properties": {
+                "element": {"#": "Navigation"}
+            }
+        },
+        "panelList": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "repetition"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.panels"}
+            }
+        },
+        "panelName": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "panelName"}
+            },
+            "bindings": {
+                "label": {"<-": "@panelList.objectAtCurrentIteration"},
+                "detail.get('panelKey')": {"<-": "@panelList.objectAtCurrentIteration"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="Navigation" class="Navigation">
+        <ul data-montage-id="repetition">
+            <li>
+                <button data-montage-id="panelName"></button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

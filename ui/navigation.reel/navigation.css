@@ -1,0 +1,15 @@
+.Navigation {
+    background-color: hsl(0,0%,95%);
+    border-right: 1px solid hsl(0,0%,97%);
+    -webkit-user-select: none;
+}
+
+.Navigation ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.Navigation li {
+    padding-left: 0;
+    margin-left: 0;
+}
