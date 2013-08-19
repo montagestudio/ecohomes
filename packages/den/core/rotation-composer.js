@@ -56,7 +56,7 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
             this._translateComposer = new TranslateComposer();
             this._translateComposer.hasMomentum = false;
             this._translateComposer.hasBouncing = false;
-       }
+        }
     },
 
     // Load/unload

@@ -24,16 +24,16 @@ exports.Den = Component.specialize(/** @lends Den# */ {
         },
         set: function (value) {
             switch (value) {
-                case "am":
-                    this._icon = "ui/den.reel/day.png";
-                    break;
-                case "pm":
-                    this._icon = "ui/den.reel/night.png";
-                    break;
-                default:
-                    this._icon = null;
-                    break;
-            };
+            case "am":
+                this._icon = "ui/den.reel/day.png";
+                break;
+            case "pm":
+                this._icon = "ui/den.reel/night.png";
+                break;
+            default:
+                this._icon = null;
+                break;
+            }
             this._needsUpdateIcon = true;
             this.needsDraw = true;
         }
@@ -136,7 +136,7 @@ exports.Den = Component.specialize(/** @lends Den# */ {
 
     handleRotateEnd: {
         value: function(event) {
-            this.desiredTemperature = Math.floor(this.desiredTemperature) + .5;
+            this.desiredTemperature = Math.floor(this.desiredTemperature) + 0.5;
             this._isRotating = false;
             this.needsDraw = true;
         }
@@ -217,14 +217,14 @@ exports.Den = Component.specialize(/** @lends Den# */ {
             }
             if (!this._isRotating) {
                 if (this.ambientTemperature < this.desiredTemperature) {
-                    this.ambientTemperature += time * .001 * this.heatingRate;
+                    this.ambientTemperature += time * 0.001 * this.heatingRate;
                     if (this.ambientTemperature > this.desiredTemperature) {
                         this.ambientTemperature = this.desiredTemperature;
                     }
                     this.needsDraw = true;
                 } else {
                     if (this.desiredTemperature < this.ambientTemperature) {
-                        this.ambientTemperature -= time * .001 * this.coolingRate;
+                        this.ambientTemperature -= time * 0.001 * this.coolingRate;
                         if (this.ambientTemperature < this.desiredTemperature) {
                             this.ambientTemperature = this.desiredTemperature;
                         }

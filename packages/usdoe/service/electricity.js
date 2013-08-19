@@ -14,8 +14,8 @@ exports.Electricity = Montage.specialize({
      */
     getAverageAnnualSpending: {
         value: function(zipCode) {
-            return (this.getKwhPrice(zipCode) * this._getAnnualConsumption(zipCode))
-                / (this._getAnnualConsumers(zipCode) * 100);
+            return (this.getKwhPrice(zipCode) * this._getAnnualConsumption(zipCode)) /
+                (this._getAnnualConsumers(zipCode) * 100);
         }
     },
 
@@ -24,8 +24,8 @@ exports.Electricity = Montage.specialize({
      */
     getAverageAnnualConsumption: {
         value: function(zipCode) {
-            return this._getAnnualConsumption(zipCode)
-                / this._getAnnualConsumers(zipCode);
+            return this._getAnnualConsumption(zipCode) /
+                this._getAnnualConsumers(zipCode);
         }
     },
 

@@ -115,7 +115,7 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
                                 ],
                                 "nextDensity": 1,
                                 "previousDensity": 1,
-                                "opacity": .4
+                                "opacity": 0.4
                             },
                             {
                                 "knotPosition": [
@@ -150,7 +150,7 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
                                 ],
                                 "nextDensity": 1,
                                 "previousDensity": 1,
-                                "opacity": .4
+                                "opacity": 0.4
                             }
                         ],
                         "units": {

@@ -21,7 +21,7 @@ exports.ConfigurationChoice= ConfigurationOption.specialize(/** @lends Configura
                 "price": {"<-": "_selectedOption.price ?? 0"},
                 "value": {"<-": "_selectedOption.value"},
                 "chosen": {"<-": "options.selection.length == 1"}
-            })
+            });
         }
     },
 
