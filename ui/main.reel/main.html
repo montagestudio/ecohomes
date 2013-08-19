@@ -36,6 +36,18 @@
                 "scene": {"@": "roomScene"}
             }
         },
+        "hvacMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "option01",
+                "image": "",
+                "opacity": "0",
+                "scene": {"@": "roomScene"}
+            },
+            "bindings": {
+                "filterColor": {"<-": "[1, 1, 1, 0]"}
+            }
+        },
         "introductionPanel": {
             "prototype": "ui/cards/introduction.reel",
             "properties": {
@@ -124,9 +136,6 @@
                 "image": "dark-stairs.jpg",
                 "opacity": "1",
                 "scene": {"@": "roomScene"}
-            },
-            "bindings": {
-                "filterColor": {"<-": "[1, 1, 1, 0]"}
             }
         },
         "staircasePanel": {
