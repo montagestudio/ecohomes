@@ -1,6 +1,5 @@
 .Navigation {
     background-color: hsl(0,0%,95%);
-    border-right: 1px solid hsl(0,0%,80%);
     -webkit-user-select: none;
 }
 
@@ -22,7 +21,7 @@
 }
 
 .Navigation-listItem:first-child .Navigation-button {
-	border-top: 1px solid hsla(0,0%,0%,.06);
+	border-top: 1px solid hsl(0,0%,80%);
 }
 
 .Navigation-button {
@@ -33,7 +32,7 @@
 	margin: 0;
 	padding: 40px 0 12px 0; /* Space for icon */
 	border: none;
-	border-bottom: 1px solid hsla(0,0%,0%,.06);
+	border-bottom: 1px solid hsl(0,0%,80%);
 	border-radius: 0;
 	font-size: 11px;
 	color: hsla(0,0%,0%,.5);

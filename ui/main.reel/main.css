@@ -1,17 +1,29 @@
 .Main {
-    display: -webkit-flex; /* new */
     display: -webkit-box; /* old: iOS6 */
+    display: -webkit-flex; /* new */
     height: 100%;
 }
 
+/* Default Nexus 10 */
 .Main-navigation {
     height: 100%;
     width: 100px;
+    border-right: 1px solid hsl(0,0%,80%);
 }
 
-@media only screen and (device-aspect-ratio: 3/4) and (orientation : landscape) {
+/* Targets iPad */
+@media (max-width: 1150px) {
     .Main-navigation {
         display: none;
+    }
+}
+
+/* Targets Desktop */
+@media (min-width: 1300px) {
+    .Main-navigation {
+        -webkit-order: 3;
+        border-right: none;
+        border-left: 1px solid hsl(0,0%,80%);
     }
 }
 
