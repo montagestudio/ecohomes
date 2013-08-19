@@ -14,7 +14,8 @@
     "prototype": "den/montage/core/meta/property-blueprint",
     "properties": {
       "name": "configuration",
-      "blueprint": {"@": "root"}
+      "blueprint": {"@": "root"},
+      "valueType": "object"
     }
   },
   "root": {
