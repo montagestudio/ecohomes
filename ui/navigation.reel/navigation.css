@@ -57,6 +57,7 @@
 	height: 48px;
 	background: transparent url(../../assets/images/nav-icons.svg) no-repeat;
 	background-size: 48px auto;
+	background-position: center 48px; /* no icon by default */
 }
 
 .Navigation-listItem:nth-child(1) .Navigation-button:before { background-position: center 0; }
