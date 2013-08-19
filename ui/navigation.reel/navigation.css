@@ -5,8 +5,8 @@
 
 .Navigation-list {
 	display: -webkit-box;
-	-webkit-box-orientation: vertical;
-	-webkit-box-align: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
 	-webkit-justify-content: center;
