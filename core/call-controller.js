@@ -16,7 +16,7 @@ exports.CallController = Montage.specialize({
             });
 
             callNow = new State().init({
-                callingNow: callingNow,
+
 
                 call: function(actionName, stateChart, owner) {
                     this.gotoState('callingNow');
@@ -36,7 +36,7 @@ exports.CallController = Montage.specialize({
 
 
             callLater = new State().init({
-                callingLater: callingLater,
+
 
                 call: function(actionName, stateChart, owner) {
                     this.gotoState('calling');
@@ -50,10 +50,14 @@ exports.CallController = Montage.specialize({
             rootState = new State().init({
                 initialSubstate: 'callNow',
                 callNow: callNow,
-                callLater: callLater
+                callingNow: callingNow,
+                callLater: callLater,
+                callingLater: callingLater
             });
             this._stateChart = new StateChart().initWithState(rootState);
             this._stateChart.delegate = this;
+
+            this.defineBinding("currentState", {"<-": "_stateChart.currentState.name"})
         }
     },
 

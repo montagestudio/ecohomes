@@ -24,6 +24,8 @@ exports.CallBack = Component.specialize(/** @lends CallBack# */ {
             this.templateObjects =  {
                 callController: this.callController
             }
+            this.defineBinding("currentState", {"<-": "_stateChart.currentState.name"})
+
         }
     },
 
