@@ -82,6 +82,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             this.addPathChangeListener("configuration.configurationMap.get('staircase').optionMap.get('material')._selectedOption", this, "handleStaircaseMaterialChange");
             this.addPathChangeListener("configuration.configurationMap.get('window').optionMap.get('coating').value", this, "handleWindowCoatingChange");
             this.addPathChangeListener("configuration.configurationMap.get('kitchen').optionMap.get('appliances')._selectedOption", this, "handleKitchenAppliancesChange");
+            this.addPathChangeListener("configuration.configurationMap.get('counters').optionMap.get('material')._selectedOption", this, "handleCountertopMaterialChange");
 
         }
     },
@@ -159,6 +160,35 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             console.log(newApplianceValue);
 
             appliancesMaterial.opacity = opacity;
+        }
+    },
+
+    handleCountertopMaterialChange: {
+        value: function (newMaterial) {
+            var countertopMaterial = this.templateObjects.countertopMaterial;
+            var texture = "7_cuisineVRayCompleteMap.jpg";
+
+            //TODO improve this; just done enough to get it working
+            //TODO not rely on the fragile name
+            if (newMaterial) {
+                switch (newMaterial.name) {
+                    case "Black Quartz":
+                        break;
+                    case "Paper Composite":
+                        texture = "paper-counters.jpg";
+                        break;
+                    case "Bamboo":
+                        texture = "bamboo-counters.jpg";
+                        break;
+                    case "Cement and Fly Ash":
+                        texture = "cement-counters.jpg";
+                        break;
+                    default:
+                        texture = "";
+                }
+            }
+
+            countertopMaterial.image = texture;
         }
     },
 
