@@ -1,15 +1,70 @@
 .Navigation {
     background-color: hsl(0,0%,95%);
-    border-right: 1px solid hsl(0,0%,97%);
+    border-right: 1px solid hsl(0,0%,80%);
     -webkit-user-select: none;
 }
 
-.Navigation ul {
+.Navigation-list {
+	display: -webkit-box;
+	-webkit-box-orientation: vertical;
+	-webkit-box-align: center;
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	-webkit-justify-content: center;
+	height: 100%;
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
-.Navigation li {
-    padding-left: 0;
-    margin-left: 0;
+.Navigation-listItem {
+    padding: 0;
+    margin: 0;
 }
+
+.Navigation-listItem:first-child .Navigation-button {
+	border-top: 1px solid hsla(0,0%,0%,.06);
+}
+
+.Navigation-button {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 40px 0 12px 0; /* Space for icon */
+	border: none;
+	border-bottom: 1px solid hsla(0,0%,0%,.06);
+	border-radius: 0;
+	font-size: 11px;
+	color: hsla(0,0%,0%,.5);
+}
+
+.Navigation-button:hover {
+	background-color: hsl(0, 0%, 98%);
+}
+
+.Navigation-button.montage--active,
+.Navigation-listItem--selected .Navigation-button {
+	background-color: hsl(0, 0%, 90%);
+}
+
+.Navigation-button:before {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 48px;
+	background: transparent url(../../assets/images/nav-icons.svg) no-repeat;
+	background-size: 48px auto;
+}
+
+.Navigation-listItem:nth-child(1) .Navigation-button:before { background-position: center 0; }
+.Navigation-listItem:nth-child(2) .Navigation-button:before { background-position: center -48px; }
+.Navigation-listItem:nth-child(3) .Navigation-button:before { background-position: center -96px; }
+.Navigation-listItem:nth-child(4) .Navigation-button:before { background-position: center -144px; }
+.Navigation-listItem:nth-child(5) .Navigation-button:before { background-position: center -192px; }
+.Navigation-listItem:nth-child(6) .Navigation-button:before { background-position: center -240px; }
+.Navigation-listItem:nth-child(7) .Navigation-button:before { background-position: center -288px; }
+.Navigation-listItem:nth-child(8) .Navigation-button:before { background-position: center -336px; }
