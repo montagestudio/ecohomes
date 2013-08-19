@@ -42,7 +42,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     },
 
     cards: {
-        value: ["introduction", "staircase", "kitchen", "counters", "laundry", "window", "thermostat", "solarPanels"]
+        value: ["introduction", "staircase", "thermostat", "kitchen", "counters", "laundry", "window", "solarPanels", "callBack"]
     },
 
     panelIdViewpointMap: {

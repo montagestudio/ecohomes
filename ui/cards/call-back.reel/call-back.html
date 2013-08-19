@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="call-back.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/cards/call-back.reel",
+            "properties": {
+                "element": {"#": "CallBack"}
+            }
+        },
+        "callController": {
+            "prototype": "core/call-controller"
+        },
+        "callingNow": {
+            "prototype": "ui/call-back/calling-now.reel",
+            "properties": {
+                "element": {"#": "callingNow"},
+                "controller": {"@": "callController"}
+            }
+        },
+        "card": {
+            "prototype": "ui/card.reel",
+            "properties": {
+                "element": {"#": "card"}
+            }
+        },
+        "hero": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "hero"},
+                "src": "callback.png"
+            }
+        },
+        "later": {
+            "prototype": "ui/call-back/later.reel",
+            "properties": {
+                "element": {"#": "callLater"},
+                "controller": {"@": "callController"}
+            }
+        },
+        "callNow": {
+            "prototype": "ui/call-back/now.reel",
+            "properties": {
+                "element": {"#": "callNow"},
+                "controller": {"@": "callController"}
+            }
+        },
+        "callingLater": {
+            "prototype": "ui/call-back/calling-later.reel",
+            "properties": {
+                "element": {"#": "callingLater"},
+                "controller": {"@": "callController"}
+            }
+        },
+        "steps": {
+            "prototype": "montage/ui/substitution.reel",
+            "properties": {
+                "element": {"#": "steps"}
+            },
+            "bindings": {
+                "switchValue": {"<-": "@owner.currentStep"}
+            }
+        },
+        "title": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Callback"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="CallBack" class="CallBack">
+        <div data-montage-id="card">
+            <header class="Card-header">
+                <img data-montage-id="hero" class="Card-hero" src="">
+                <h1 data-montage-id="title" class="Card-title"></h1>
+            </header>
+            <section class="Card-content">
+                <div data-montage-id="steps">
+                    <div data-arg="callNow" data-montage-id="callNow"></div>
+                    <div data-arg="callingNow" data-montage-id="callingNow"></div>
+                    <div data-arg="callLater" data-montage-id="callLater"></div>
+                    <div data-arg="callingLater" data-montage-id="callingLater"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

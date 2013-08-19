@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="now.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/call-back/now.reel",
+            "properties": {
+                "element": {"#": "Now"}
+            }
+        },
+        "call": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "call"},
+                "enabled": true,
+                "label": "Call Now"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "callLater": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "callLater"},
+                "enabled": true,
+                "label": "Call Later"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "number": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "number"},
+                "placeholder": "Text"
+            },
+            "bindings": {
+                "value": {"<->": "@owner.controller.phoneNumber"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="Now" class="Now">
+        <p>
+            Have an agent call you back now.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="Card-option-labelArea">
+                            Phone Number:
+                        </span>
+                    </td>
+                    <td>
+                        <div data-montage-id="number"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        <div data-montage-id="call"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        <button data-montage-id="callLater"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
