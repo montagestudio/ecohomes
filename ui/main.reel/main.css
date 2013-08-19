@@ -21,6 +21,7 @@
 /* Targets Desktop */
 @media (min-width: 1300px) {
     .Main-navigation {
+        -webkit-box-ordinal-group: 3;
         -webkit-order: 3;
         border-right: none;
         border-left: 1px solid hsl(0,0%,80%);
