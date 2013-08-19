@@ -87,19 +87,18 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             var rideViewpoint = this.templateObjects.rideViewpoint;
             var panelId = this.cards[index];
 
-            //TODO don't even bother playing iof the viewpoint has not changed
             if (panelId) {
                 var preferredViewpoint = this.panelIdViewpointMap.get(panelId);
 
                 if (preferredViewpoint) {
                     roomView.pause();
                     roomView.viewPoint = preferredViewpoint;
-                } else {
+                } else if (rideViewpoint !== roomView.viewPoint) {
                     roomView.viewPoint = rideViewpoint;
                     roomView.play();
                 }
 
-            } else {
+            } else if (rideViewpoint !== roomView.viewPoint) {
                 roomView.viewPoint = rideViewpoint;
                 roomView.play();
             }
