@@ -10,8 +10,9 @@ exports.SolarPanelsConfigurationSet = ConfigurationSet.specialize({
 
             var optionMap = this.optionMap;
             optionMap.set("solar-panel", new ConfigurationChoice().init(
-                new ConfigurationOption().init("Solar Photovoltaic System", 299),
-                new ConfigurationOption().init("Solar Thermal System", 249)
+                new ConfigurationOption().init("No Solar Panels", 0),
+                new ConfigurationOption().init("Solar Photovoltaic System", 15999),
+                new ConfigurationOption().init("Solar Thermal System", 13499)
             ));
         }
     }

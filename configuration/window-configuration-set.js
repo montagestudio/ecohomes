@@ -11,6 +11,7 @@ exports.WindowConfigurationSet = ConfigurationSet.specialize({
 
             var optionMap = this.optionMap;
             optionMap.set("glass", new ConfigurationChoice().init(
+                new ConfigurationOption().init("Single-pane EcoGlass", 0),
                 new ConfigurationOption().init("Dual-pane EcoGlass", 5999),
                 new ConfigurationOption().init("Triple-pane EcoGlass", 9999)
             ));
