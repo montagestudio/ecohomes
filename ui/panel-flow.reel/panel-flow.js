@@ -105,7 +105,27 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
                             {
                                 "knotPosition": [
                                     0,
+                                    -this.__rowHeight * 30,
+                                    -100
+                                ],
+                                "nextHandlerPosition": [
                                     0,
+                                    -this.__rowHeight * 20,
+                                    -100
+                                ],
+                                "nextDensity": 40,
+                                "previousDensity": 40,
+                                "opacity": 0
+                            },
+                            {
+                                "knotPosition": [
+                                    0,
+                                    0,
+                                    -40
+                                ],
+                                "previousHandlerPosition": [
+                                    0,
+                                    -this.__rowHeight * 10,
                                     -40
                                 ],
                                 "nextHandlerPosition": [
@@ -115,7 +135,7 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
                                 ],
                                 "nextDensity": 1,
                                 "previousDensity": 1,
-                                "opacity": 0.4
+                                "opacity": .4
                             },
                             {
                                 "knotPosition": [
@@ -148,16 +168,36 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
                                     this.__rowHeight * 5 / 3,
                                     -40
                                 ],
+                                "nextHandlerPosition": [
+                                    0,
+                                    this.__rowHeight * 12,
+                                    -100
+                                ],
                                 "nextDensity": 1,
                                 "previousDensity": 1,
-                                "opacity": 0.4
+                                "opacity": .4
+                            },
+                            {
+                                "knotPosition": [
+                                    0,
+                                    this.__rowHeight * 32,
+                                    -100
+                                ],
+                                "previousHandlerPosition": [
+                                    0,
+                                    this.__rowHeight * 22,
+                                    -100
+                                ],
+                                "nextDensity": 40,
+                                "previousDensity": 40,
+                                "opacity": 0
                             }
                         ],
                         "units": {
                             "opacity": ""
                         },
-                        "headOffset": 1,
-                        "tailOffset": 1
+                        "headOffset": 21.5,
+                        "tailOffset": 21.5
                     }
                 ];
                 this.flow.cameraTargetPoint = [
@@ -171,7 +211,7 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
                     this.__height / 2
                 ];
                 this.flow.cameraFov = 90;
-                this.flow.boundingBoxSize = [1, this.__rowHeight * 2, 0];
+                this.flow.boundingBoxSize = [1, this.__rowHeight * 40, 0];
             }
         }
     },
