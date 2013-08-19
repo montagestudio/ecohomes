@@ -150,16 +150,18 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     handleKitchenAppliancesChange: {
         value: function (newApplianceValue) {
             var appliancesMaterial = this.templateObjects.appliancesMaterial,
+                appliancesNode = this.templateObjects.appliancesNode,
                 opacity = 1;
+                hidden = false;
 
             //TODO not rely on the fragile name
             if (!newApplianceValue || "No appliances installed" === newApplianceValue.name) {
                 opacity = 0;
+                hidden = true;
             }
 
-            console.log(newApplianceValue);
-
             appliancesMaterial.opacity = opacity;
+            appliancesNode.hidden = hidden;
         }
     },
 
