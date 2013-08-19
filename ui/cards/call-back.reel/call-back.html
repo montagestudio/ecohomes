@@ -14,6 +14,13 @@
         "callController": {
             "prototype": "core/call-controller"
         },
+        "callingLater": {
+            "prototype": "ui/call-back/calling-later.reel",
+            "properties": {
+                "element": {"#": "callingLater"},
+                "controller": {"@": "callController"}
+            }
+        },
         "callingNow": {
             "prototype": "ui/call-back/calling-now.reel",
             "properties": {
@@ -21,10 +28,41 @@
                 "controller": {"@": "callController"}
             }
         },
+        "callNow": {
+            "prototype": "ui/call-back/now.reel",
+            "properties": {
+                "element": {"#": "callNow"},
+                "controller": {"@": "callController"}
+            }
+        },
         "card": {
             "prototype": "ui/card.reel",
             "properties": {
                 "element": {"#": "card"}
+            }
+        },
+        "errorMessage": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "errorMessage"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@errors.currentIteration.content.message"}
+            }
+        },
+        "errors": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "errors"},
+                "content": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            "bindings": {
+                "content": {"<-": "@callController.errors"}
             }
         },
         "hero": {
@@ -38,20 +76,6 @@
             "prototype": "ui/call-back/later.reel",
             "properties": {
                 "element": {"#": "callLater"},
-                "controller": {"@": "callController"}
-            }
-        },
-        "callNow": {
-            "prototype": "ui/call-back/now.reel",
-            "properties": {
-                "element": {"#": "callNow"},
-                "controller": {"@": "callController"}
-            }
-        },
-        "callingLater": {
-            "prototype": "ui/call-back/calling-later.reel",
-            "properties": {
-                "element": {"#": "callingLater"},
                 "controller": {"@": "callController"}
             }
         },
@@ -81,6 +105,9 @@
                 <img data-montage-id="hero" class="Card-hero" src="">
                 <h1 data-montage-id="title" class="Card-title"></h1>
             </header>
+            <ul data-montage-id="errors">
+                <li data-montage-id="errorMessage"></li>
+            </ul>
             <section class="Card-content">
                 <div data-montage-id="steps">
                     <div data-arg="callNow" data-montage-id="callNow"></div>

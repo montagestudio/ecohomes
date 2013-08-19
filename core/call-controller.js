@@ -57,6 +57,8 @@ exports.CallController = Montage.specialize({
             this._stateChart = new StateChart().initWithState(rootState);
             this._stateChart.delegate = this;
 
+            this.errors = [];
+            // doesn't work since the statechart doesn't
             this.defineBinding("currentState", {"<-": "_stateChart.currentState.name"})
         }
     },
@@ -69,6 +71,21 @@ exports.CallController = Montage.specialize({
         value: function(stateChart, prevState, nextState) {
             this.callDelegateMethod("stateDidChange", this, nextState.name);
             console.log("nextState", nextState.name)
+        }
+    },
+
+    stateChartShouldGoFromStateToState: {
+        value: function(stateChart, prevState, nextState) {
+            this.clearErrors();
+            if(nextState.name === "callingNow") {
+                if(! this.validatePhoneNumber()) {
+                    this.errors.push({
+                        message: "Phone number not valid"
+                    });
+                    return false;
+                }
+
+            }
         }
     },
 
@@ -90,6 +107,25 @@ exports.CallController = Montage.specialize({
         }
     },
 
+    clearErrors: {
+        value: function() {
+            this.errors.clear();
+        }
+    },
+
+    validatePhoneNumber: {
+        value: function() {
+            return (this.phoneNumber != null) && this.phoneNumber.length > 0
+        }
+    },
+
+    errors: {
+        value: null
+    },
+
+    phoneNumber: {
+        value: null
+    },
 
     identifier: {
         value: "callController"
