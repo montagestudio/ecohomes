@@ -86,6 +86,7 @@ exports.CallController = Montage.specialize({
                 }
 
             }
+            return true;
         }
     },
 
