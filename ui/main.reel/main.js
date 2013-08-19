@@ -80,6 +80,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
             //React to options that should alter the scene
             this.addPathChangeListener("configuration.configurationMap.get('staircase').optionMap.get('material')._selectedOption", this, "handleStaircaseMaterialChange");
+            this.addPathChangeListener("configuration.configurationMap.get('window').optionMap.get('coating').value", this, "handleWindowCoatingChange");
 
         }
     },
@@ -140,6 +141,19 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             }
 
             staircaseMaterial.image = texture;
+        }
+    },
+
+    handleWindowCoatingChange: {
+        value: function (newCoatingValue) {
+            newCoatingValue = 1 - (newCoatingValue/100); //TODO not hardcode this, fit to some reasonable curve
+            var backgroundMaterial = this.templateObjects.backgroundMaterial;
+
+            console.log(newCoatingValue);
+
+            //TODO improve this; just done enough to get a change drawn
+            //TODO change some tinting, not necessarily the opacity
+            backgroundMaterial.opacity = newCoatingValue;
         }
     },
 
