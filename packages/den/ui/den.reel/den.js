@@ -86,7 +86,8 @@ exports.Den = Component.specialize(/** @lends Den# */ {
     enterDocument: {
         value: function (firstTime) {
             if (firstTime) {
-                this.element.addEventListener("touchstart", this, false);
+                this.activationArea.addEventListener("touchstart", this, false);
+                this.activationArea.addEventListener("mousedown", this, false);
             }
         }
     },
@@ -99,7 +100,19 @@ exports.Den = Component.specialize(/** @lends Den# */ {
                     pageY: 151 + boundingRect.top
                 };
             this._rotateComposer.center = center;
-            this.element.removeEventListener("touchstart", this, false);
+            this.activationArea.removeEventListener("touchstart", this, false);
+        }
+    },
+
+    handleMousedown: {
+        value: function () {
+            var boundingRect = this.element.getBoundingClientRect(),
+                center = {
+                    pageX: 174 + boundingRect.left,
+                    pageY: 151 + boundingRect.top
+                };
+            this._rotateComposer.center = center;
+            this.activationArea.removeEventListener("mousedown", this, false);
         }
     },
 

@@ -20,7 +20,8 @@
                 "rightBlueBar": {"#": "rightBlueBar"},
                 "rightDigit": {"#": "rightDigit"},
                 "rightRedBar": {"#": "rightRedBar"},
-                "whiteBar": {"#": "whiteBar"}
+                "whiteBar": {"#": "whiteBar"},
+                "activationArea": {"#": "activationArea"}
             }
         },
         "pressComposer": {
@@ -39,6 +40,7 @@
             "prototype": "core/rotation-composer",
             "properties": {
                 "component": {"@": "owner"},
+                "element": {"#": "activationArea"},
                 "unit": "degrees"
             },
             "listeners": [
@@ -57,6 +59,7 @@
 </head>
 <body>
     <div data-montage-id="Den" class="Den">
+        <div data-montage-id="activationArea" class="Den-activation-area"></div>
         <div data-montage-id="leftRedBar" class="Den-left-red-bar"></div>
         <div data-montage-id="rightRedBar" class="Den-right-red-bar"></div>
         <div data-montage-id="leftBlueBar" class="Den-left-blue-bar"></div>
