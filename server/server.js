@@ -12,6 +12,7 @@ var argv = require('optimist')
     .argv;
 
 var environment = argv.env || "development";
+var port = argv.p || 8085;
 
 var CONFIG = require("./config/" + environment + ".js");
 var accountSid = CONFIG.accountSid;
@@ -63,9 +64,9 @@ require("joey")
         });
 
 })
-.listen(8085)
+.listen(port)
 .then(function () {
-    console.log("Listening on 8085 in", environment);
+    console.log("Listening on", port, "in", environment);
 })
 .done();
 
