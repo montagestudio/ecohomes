@@ -12,6 +12,9 @@
             "prototype": "ui/main.reel",
             "properties": {
                 "element": {"#": "main"}
+            },
+            "bindings": {
+                "classList.has('Main--showNavigation')": {"<-": "showNav"}
             }
         },
         "appliancesMaterial": {
@@ -141,6 +144,15 @@
                 }
             ]
         },
+        "navToggle": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "navToggle"}
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.showNav"}
+            }
+        },
         "overview": {
             "prototype": "ui/overview.reel",
             "properties": {
@@ -254,12 +266,6 @@
             "properties": {
                 "id": "node-LookAtWindow",
                 "scene": {"@": "roomScene"}
-            }
-        },
-        "navToggle": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "navToggle"}
             }
         }
     }

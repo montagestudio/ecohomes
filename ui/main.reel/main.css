@@ -24,6 +24,10 @@
     -webkit-transform: translateZ(0); /* Force button to own HW layer */
 }
 
+.Main .Main-navToggle.montage-Checkbox--checked {
+    background-image: none;
+}
+
 .Main-navToggle:before {
     content: "";
     pointer-events: none;

@@ -18,6 +18,14 @@
       "valueType": "object"
     }
   },
+  "blueprint_unnamed_showNav": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "showNav",
+      "blueprint": {"@": "root"},
+      "valueType": "boolean"
+    }
+  },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
@@ -27,12 +35,14 @@
       },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
-        {"@": "blueprint_unnamed_configuration"}
+        {"@": "blueprint_unnamed_configuration"},
+        {"@": "blueprint_unnamed_showNav"}
       ],
       "propertyBlueprintGroups": {
         "default": [],
         "Main": [
-          {"@": "blueprint_unnamed_configuration"}
+          {"@": "blueprint_unnamed_configuration"},
+          {"@": "blueprint_unnamed_showNav"}
         ]
       },
       "module": {
