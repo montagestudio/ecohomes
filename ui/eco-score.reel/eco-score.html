@@ -17,12 +17,12 @@
         "cost-graph": {
             "prototype": "usdoe/ui/cost-graph.reel",
             "properties": {
-                "element": {"#": "cost-graph"},
-                "max": 1000
+                "element": {"#": "cost-graph"}
             },
             "bindings": {
                 "average": {"<-": "@owner.baseSavings"},
-                "consumption": {"<-": "@owner.ecoSavings"}
+                "consumption": {"<-": "@owner.ecoSavings"},
+                "max": {"<-": "@owner.maxSavings"}
             }
         },
         "grade": {

@@ -18,7 +18,7 @@ exports.EcoScore = Component.specialize(/** @lends EcoScore# */ {
             this.defineBindings({
                 "baseSavings": {"<-": "(averageConsumption - baseConsumption) * kwhPrice / 100"},
                 "ecoSavings": {"<-": "(averageConsumption - ecoConsumption) * kwhPrice / 100"},
-                "maxSavings": {"<-": "(maxConsumption - ecoConsumption) * kwhPrice / 100"}
+                "maxSavings": {"<-": "(maxConsumption - averageConsumption) * kwhPrice / 100"}
             });
         }
     },
@@ -81,8 +81,8 @@ exports.EcoScore = Component.specialize(/** @lends EcoScore# */ {
         value: Map({
             "Average": 0,
             "Good": 1,
-            "Excellent": 500,
-            "Perfect": 1000
+            "Excellent": 185,
+            "Perfect": 369
         })
     }
 });
