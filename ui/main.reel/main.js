@@ -109,10 +109,10 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function (panelIndex) {
             var roomView = this.templateObjects.roomView;
             var rideViewpoint = this.templateObjects.rideViewpoint;
-            var panelId = this.cards[panelIndex];
+            var panelEntry = this.cards[panelIndex];
 
-            if (panelId) {
-                var preferredViewpoint = this.panelIdViewpointMap.get(panelId);
+            if (panelEntry) {
+                var preferredViewpoint = this.panelIdViewpointMap.get(panelEntry.panelKey);
 
                 if (preferredViewpoint) {
                     roomView.pause();
