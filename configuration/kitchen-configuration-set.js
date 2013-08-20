@@ -15,7 +15,7 @@ exports.KitchenConfigurationSet = ConfigurationSet.specialize({
                 new ConfigurationOption().init("Electro", 7999, 100),
                 new ConfigurationOption().init("MH", 4999, 70),
                 new ConfigurationOption().init("Vortex", 3199, 50),
-                new ConfigurationOption().init("No appliances installed", 0)
+                new ConfigurationOption().init("None", 0)
             ));
 
         }
