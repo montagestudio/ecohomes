@@ -289,6 +289,12 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
         }
     },
 
+    didTranslateStart: {
+        value: function () {
+            this.dispatchEventNamed("flowTranslateStart", true, false);
+        }
+    },
+
     didTranslateEnd: {
         value: function () {
             if (this._currentPanel !== Math.round(this.scroll)) {

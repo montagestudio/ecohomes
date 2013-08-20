@@ -35,6 +35,12 @@
                 "scene": {"@": "roomScene"}
             }
         },
+        "callBack": {
+            "prototype": "ui/cards/call-back.reel",
+            "properties": {
+                "element": {"#": "callBack"}
+            }
+        },
         "configurationPanels": {
             "prototype": "montage/ui/substitution.reel",
             "properties": {
@@ -65,6 +71,13 @@
             "properties": {
                 "id": "node-LookAtBar",
                 "scene": {"@": "roomScene"}
+            }
+        },
+        "flowTranslateStartListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "pause",
+                "handler": {"@": "roomView"}
             }
         },
         "hvacMaterial": {
@@ -141,7 +154,13 @@
             },
             "bindings": {
                 "content": {"<-": "@owner.cards"}
-            }
+            },
+            "listeners": [
+                {
+                    "type": "flowTranslateStart",
+                    "listener": {"@": "flowTranslateStartListener"}
+                }
+            ]
         },
         "rideViewpoint": {
             "prototype": "glTF-webgl-viewer/runtime/node",
@@ -233,14 +252,8 @@
                 "id": "node-LookAtWindow",
                 "scene": {"@": "roomScene"}
             }
-        },
-        "callBack": {
-            "prototype": "ui/cards/call-back.reel",
-            "properties": {
-                "element": {"#": "callBack"}
-            }
         }
-}
+    }
     </script>
 </head>
 <body>
