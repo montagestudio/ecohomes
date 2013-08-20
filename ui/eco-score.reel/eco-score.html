@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="eco-score.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/eco-score.reel",
+            "properties": {
+                "element": {"#": "ecoScore"}
+            },
+            "bindings": {
+                "grade": {"<-": "@owner.gradeLevels.entries().filter{this[1] <= (@owner.ecoSavings - @owner.baseSavings)}.max{this[1]}[0]"}
+            }
+        },
+        "cost-graph": {
+            "prototype": "usdoe/ui/cost-graph.reel",
+            "properties": {
+                "element": {"#": "cost-graph"},
+                "max": 1000
+            },
+            "bindings": {
+                "average": {"<-": "@owner.baseSavings"},
+                "consumption": {"<-": "@owner.ecoSavings"}
+            }
+        },
+        "grade": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "grade"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.grade"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="ecoScore" class="EcoScore">
+        <span data-montage-id="grade"></span>
+        <div data-montage-id="cost-graph" class="EcoScore-costGraph"></div>
+    </div>
+</body>
+</html>
