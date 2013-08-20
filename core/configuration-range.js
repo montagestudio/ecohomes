@@ -15,11 +15,12 @@ exports.ConfigurationRange = ConfigurationOption.specialize(/** @lends Configura
     },
 
     init: {
-        value: function(name, minValue, maxValue, value, priceFunction) {
+        value: function(name, minValue, maxValue, value, priceFunction, consumptionSavingsFunction) {
             this.name = name;
             this.minValue = minValue;
             this.maxValue = maxValue;
             this._priceFunction = priceFunction;
+            this._consumptionSavingsFunction = consumptionSavingsFunction;
 
             this.addPathChangeListener("value", this, "handleValueChange");
             this.value = value;
@@ -32,9 +33,18 @@ exports.ConfigurationRange = ConfigurationOption.specialize(/** @lends Configura
         value: true
     },
 
+    _priceFunction: {
+        value: null
+    },
+
+    _consumptionSavingsFunction: {
+        value: null
+    },
+
     handleValueChange: {
         value: function(value) {
             this.price = this._priceFunction(value);
+            this.consumptionSavings = this._consumptionSavingsFunction(value);
         }
     }
 });

@@ -16,9 +16,10 @@ exports.ConfigurationOption = Montage.specialize(/** @lends ConfigurationOption#
     },
 
     init: {
-        value: function (name, price, value) {
+        value: function (name, price, consumptionSavings, value) {
             this.name = name;
             this.price = price;
+            this.consumptionSavings = consumptionSavings;
             this.value = value;
 
             return this;
@@ -30,6 +31,10 @@ exports.ConfigurationOption = Montage.specialize(/** @lends ConfigurationOption#
     },
 
     price: {
+        value: 0
+    },
+
+    consumptionSavings: {
         value: 0
     },
 

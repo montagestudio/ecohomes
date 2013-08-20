@@ -20,6 +20,7 @@ exports.ConfigurationChoice= ConfigurationOption.specialize(/** @lends Configura
                 // into NaN when that happens.
                 "price": {"<-": "_selectedOption.price ?? 0"},
                 "value": {"<-": "_selectedOption.value"},
+                "consumptionSavings": {"<-": "_selectedOption.consumptionSavings ?? 0"},
                 "chosen": {"<-": "options.selection.length == 1"}
             });
         }

@@ -33,7 +33,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             configurationMap.set("counters", new CountertopsConfigurationSet());
             configurationMap.set("solarPanels", new SolarPanelsConfigurationSet());
 
-            this.configuration = new Configuration().init(628000, configurationMap);
+            this.configuration = new Configuration().init(628000, 6000, configurationMap);
 
             // NOTE Even panels with no configuration options can have preferred viewpoints
             // this is why the viewpoint is related to panels, not configuration sets
