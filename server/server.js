@@ -52,7 +52,9 @@ require("joey")
 
     $("initiateCall")
         .method("POST")
-        .contentType("text/xml")
+        .trap(function (response) {
+            response.headers["content-type"] = "text/xml";
+        })
         .contentApp(function (request) {
             var response = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<Response>\n" +
