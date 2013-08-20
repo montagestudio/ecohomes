@@ -26,7 +26,10 @@ require("joey")
 
     $("contact")
         .method("POST")
-        .contentType("text/plain")
+        .trap(function (response) {
+            response.headers["Access-Control-Allow-Origin"] = "*";
+            response.headers["Access-Control-Allow-Headers"] = "X-Requested-With";
+        })
         .contentApp(function (request) {
             return request.body.read().then(function (body) {
                 var params = QS.parse(body.toString("utf-8"));
