@@ -1,0 +1,42 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "den/montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "den/montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_configurationMap": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configurationMap",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "den/montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/summary.reel/summary.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_configurationMap"}
+      ],
+      "propertyBlueprintGroups": {
+        "Summary": [
+          {"@": "blueprint_unnamed_configurationMap"}
+        ]
+      },
+      "module": {
+        "%": "ui/summary.reel"
+      },
+      "exportName": "Summary"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="summary.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/summary.reel",
+            "properties": {
+                "element": {"#": "summary"}
+            },
+            "bindings": {
+                "optionGroups": {"<-": "configurationMap.entries().filter{this[1].optionMap.values().filter{chosen}.length > 0}.map{this[1]}"}
+            }
+        },
+        "numberConverter": {
+            "prototype": "montage/core/converter/number-converter",
+            "properties": {
+                "decimals": 0,
+                "shorten": false
+            }
+        },
+        "optionGroup": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "optionGroup"},
+                "content": []
+            },
+            "bindings": {
+                "content": {"<-": "@owner.optionGroups"}
+            }
+        },
+        "optionGroupName": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "optionGroupName"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@optionGroup.objectAtCurrentIteration.name"}
+            }
+        },
+        "optionName": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "optionName"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@options.objectAtCurrentIteration.name"}
+            }
+        },
+        "optionPrice": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "optionPrice"},
+                "converter": {"@": "numberConverter"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@options.objectAtCurrentIteration.price"}
+            }
+        },
+        "options": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "options"},
+                "content": []
+            },
+            "bindings": {
+                "content": {"<-": "@optionGroup.objectAtCurrentIteration.optionMap.entries().map{this[1]}.filter{price > 0}"}
+            }
+        },
+        "total": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "total"},
+                "converter": {"@": "numberConverter"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.optionGroups.sum{optionMap.entries().sum{this[1].price}}"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="summary" class="Summary">
+        <ul data-montage-id="optionGroup" class="Summary-optionGroup">
+            <li class="Summary-optionGroupItem">
+                <p data-montage-id="optionGroupName" class="Summary-optionGroupName"></p>
+                <ul data-montage-id="options" class="Summary-options">
+                    <li class="Summary-option">
+                        <span data-montage-id="optionName" class="Summary-optionName"></span>
+                        <span data-montage-id="optionPrice" class="Summary-optionPrice"></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div data-montage-id="total" class="Summary-total"></div>
+    </div>
+</body>
+</html>
