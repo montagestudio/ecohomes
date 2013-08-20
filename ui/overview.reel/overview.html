@@ -40,11 +40,22 @@
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "text"},
-                "converter": {"@": "numberConverter"},
-                "value": "Total"
+                "value": "Total",
+                "converter": {
+                    "@": "currencyConverter"
+                }
             },
             "bindings": {
                 "value": {"<-": "@owner.configuration.totalPrice"}
+            }
+        },
+        "currencyConverter": {
+            "prototype": "montage/core/converter/currency-converter",
+            "properties": {
+                "shorten": false,
+                "decimals": 0,
+                "currency": "$",
+                "showCurrencyBeforeNumber": true
             }
         }
     }
@@ -58,7 +69,6 @@
         <section class="Overview-totals">
             <div data-montage-id="ecoScore" class="Overview-ecoScore"></div>
             <span>
-                $
                 <em data-montage-id="text"></em>
             </span>
         </section>

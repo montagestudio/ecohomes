@@ -35,14 +35,24 @@
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "price"},
-                "value": "Text"
+                "value": "Text",
+                "converter": {"@": "currencyConverter"}
             },
             "bindings": {
                 "value": {
-                    "<-": "\"$\" + @owner.configurationOption.price"
+                    "<-": "@owner.configurationOption.price"
                 }
             }
+        },
+        "currencyConverter": {
+            "prototype": "montage/core/converter/currency-converter",
+            "properties": {
+                "shorten": false,
+                "decimals": 0,
+                "showCurrencyBeforeNumber": true
+            }
         }
+
     }
     </script>
 </head>
