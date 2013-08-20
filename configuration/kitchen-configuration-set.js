@@ -9,6 +9,8 @@ exports.KitchenConfigurationSet = ConfigurationSet.specialize({
             this.super();
 
             var optionMap = this.optionMap;
+
+            this.name = "Kitchen";
             optionMap.set("appliances", new ConfigurationChoice().init(
                 new ConfigurationOption().init("Gütersloh", 10999, 160),
                 new ConfigurationOption().init("Norse", 8999, 130),

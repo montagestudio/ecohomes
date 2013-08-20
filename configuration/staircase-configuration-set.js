@@ -9,6 +9,8 @@ exports.StaircaseConfigurationSet = ConfigurationSet.specialize({
             this.super();
 
             var optionMap = this.optionMap;
+
+            this.name = "Staircase";
             optionMap.set("material", new ConfigurationChoice().init(
                 new ConfigurationOption().init("FSC Teak", 4999),
                 new ConfigurationOption().init("Dark Walnut", 3699),

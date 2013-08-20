@@ -8,6 +8,8 @@ exports.LaundryConfigurationSet = ConfigurationSet.specialize({
             this.super();
 
             var optionMap = this.optionMap;
+
+            this.name = "Laundry";
             optionMap.set("washer", new ConfigurationOption().init("EcoWash", 1099, 130));
             optionMap.set("dryer", new ConfigurationOption().init("EcoDry", 1199, 160));
         }

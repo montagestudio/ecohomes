@@ -25,12 +25,12 @@ exports.ConfigurationRange = ConfigurationOption.specialize(/** @lends Configura
             this.addPathChangeListener("value", this, "handleValueChange");
             this.value = value;
 
+            this.defineBindings({
+                "chosen": {"<-": "value > 0"}
+            });
+
             return this;
         }
-    },
-
-    chosen: {
-        value: true
     },
 
     _priceFunction: {

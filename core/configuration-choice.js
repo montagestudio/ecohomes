@@ -15,13 +15,15 @@ exports.ConfigurationChoice= ConfigurationOption.specialize(/** @lends Configura
             this.options = new RangeController();
             this.defineBindings({
                 "_selectedOption": {"<-": "options.selection[0]"},
+                "name": {"<-": "_selectedOption.name"},
                 // the ?? 0 is needed to avoid the .price being something other
                 // than number, the binding the sums all the prices gets stuck
                 // into NaN when that happens.
                 "price": {"<-": "_selectedOption.price ?? 0"},
                 "value": {"<-": "_selectedOption.value"},
                 "consumptionSavings": {"<-": "_selectedOption.consumptionSavings ?? 0"},
-                "chosen": {"<-": "options.selection.length == 1"}
+                // filter{this} removes undefined values from the selection
+                "chosen": {"<-": "options.selection.filter{this}.length == 1"}
             });
         }
     },

@@ -9,13 +9,14 @@ exports.CountertopsConfigurationSet = ConfigurationSet.specialize({
             this.super();
 
             var optionMap = this.optionMap;
+
+            this.name = "Kitchen Counters";
             optionMap.set("material", new ConfigurationChoice().init(
                 new ConfigurationOption().init("Black Quartz", 5400),
                 new ConfigurationOption().init("Cement and Fly Ash", 4599),
                 new ConfigurationOption().init("Bamboo", 3199),
                 new ConfigurationOption().init("Paper Composite", 2799)
             ));
-
         }
     }
 

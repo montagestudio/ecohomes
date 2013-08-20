@@ -8,6 +8,8 @@ exports.ThermostatConfigurationSet = ConfigurationSet.specialize({
             this.super();
 
             var optionMap = this.optionMap;
+
+            this.name = "Thermostat";
             optionMap.set("thermostat", new ConfigurationOption().init("Smart Thermostat", 299, 800));
         }
     }

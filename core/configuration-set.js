@@ -19,5 +19,9 @@ exports.ConfigurationSet = Montage.specialize(/** @lends ConfigurationSet# */ {
 
     optionMap: {
         value: null
+    },
+
+    name: {
+        value: null
     }
 });

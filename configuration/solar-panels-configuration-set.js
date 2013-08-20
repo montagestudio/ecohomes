@@ -9,6 +9,8 @@ exports.SolarPanelsConfigurationSet = ConfigurationSet.specialize({
             this.super();
 
             var optionMap = this.optionMap;
+
+            this.name = "Solar Panels";
             optionMap.set("solar-panel", new ConfigurationChoice().init(
                 new ConfigurationOption().init("Solar Photovoltaic System", 15999, 750),
                 new ConfigurationOption().init("Solar Thermal System", 13499, 650),
