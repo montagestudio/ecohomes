@@ -155,3 +155,28 @@
         hsla(0,0%,20%,0.1) 7%,
         hsla(0,0%,20%,0) 14%);
 }
+
+
+/* Screen size adapting -------------------------- */
+
+/* Portrait */
+@media (max-width: 1000px) {
+    .Main {
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+    }
+
+    .Main-viewport {
+        -webkit-box-flex: 1; /* old: iOS6 */
+        -webkit-flex: 1; /* new */
+        height: auto;
+    }
+
+    .Main-configuration {
+        -webkit-box-flex: 1; /* old: iOS6 */
+        -webkit-flex: 1; /* new */
+        height: auto;
+        min-height: 460px;
+    }
+}
+

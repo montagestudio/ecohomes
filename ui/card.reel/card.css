@@ -100,3 +100,25 @@
 .debug .Card * {
     outline: 1px solid red;
 }
+
+/* Portrait */
+
+@media (max-width: 1000px) {
+    
+    .Card {
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+    }
+
+    .Card-content {
+        padding: 40px;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+    }
+
+    .Card-header {
+        width: 340px;
+        padding-top: 40px;
+    }
+
+}

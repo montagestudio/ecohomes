@@ -1,3 +1,11 @@
 .Staircase {
 
 }
+
+@media (max-width: 1000px) {
+    
+    .Staircase .Card-hero {
+        width: 340px;
+    }
+
+}
