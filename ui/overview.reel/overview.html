@@ -29,10 +29,20 @@
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "text"},
-                "value": "Total"
+                "value": "Total",
+                "converter": {
+                    "@": "numberConverter"
+                }
             },
             "bindings": {
                 "value": {"<-": "@owner.configuration.totalPrice"}
+            }
+        },
+        "numberConverter": {
+            "prototype": "montage/core/converter/number-converter",
+            "properties": {
+                "shorten": false,
+                "decimals": 0
             }
         }
     }
