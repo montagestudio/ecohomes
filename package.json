@@ -4,7 +4,7 @@
     "dependencies": {
         "montage": "git://github.com/montagejs/montage.git#ccd960d71b1e56d5886bddb02e75eadc01dd1bcb",
         "digit": "~0.3.1",
-        "glTF-webgl-viewer": "git+ssh://git@github.com:fabrobinet/glTF-webgl-viewer.git#e9be64a63091e96b76531e3561226ae1327a3571"
+        "glTF-webgl-viewer": "git+ssh://git@github.com:fabrobinet/glTF-webgl-viewer.git#0bb885a380cba4f7976b46ccdea5c60280433791"
     },
     "mappings": {
         "amazon": {
