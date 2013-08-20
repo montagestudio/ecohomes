@@ -12,10 +12,12 @@
             }
         },
         "ecoScore": {
-            "prototype": "digit/ui/image.reel",
+            "prototype": "ui/eco-score.reel",
             "properties": {
                 "element": {"#": "ecoScore"},
-                "src": "eco.png"
+                "baseConsumption": 6000,
+                "ecoConsumption": 5200,
+                "maxConsumption": 10000
             }
         },
         "logo": {
@@ -54,11 +56,7 @@
             <img data-montage-id="logo" class="Overview-logo">
         </header>
         <section class="Overview-totals">
-            <!--TODO replace with live component-->
-            <div class="Overview-ecoScore">
-                Good
-                <img data-montage-id="ecoScore" class="Overview-ecoBars">
-            </div>
+            <div data-montage-id="ecoScore" class="Overview-ecoScore"></div>
             <span>
                 $
                 <em data-montage-id="text"></em>
