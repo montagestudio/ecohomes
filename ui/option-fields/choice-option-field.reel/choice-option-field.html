@@ -50,12 +50,21 @@
                 "prototype": "montage/ui/text.reel",
                 "properties": {
                     "element": {"#": "price"},
-                    "value": "Text"
+                    "value": "Text",
+                    "converter": {"@": "currencyConverter"}
                 },
                 "bindings": {
                     "value": {
-                        "<-": "\"$\" + @repetition.objectAtCurrentIteration.price"
+                        "<-": "@repetition.objectAtCurrentIteration.price"
                     }
+                }
+            },
+            "currencyConverter": {
+                "prototype": "montage/core/converter/currency-converter",
+                "properties": {
+                    "shorten": false,
+                    "decimals": 0,
+                    "showCurrencyBeforeNumber": true
                 }
             }
         }
