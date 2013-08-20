@@ -32,7 +32,7 @@ exports.CallController = Montage.specialize({
 
             callLater = new State().init({
                 call: function(actionName, stateChart, owner) {
-                    this.gotoState('calling');
+                    this.gotoState('callingLater');
                 },
                 now: function(actionName, stateChart, owner) {
                     this.gotoState('callNow');
