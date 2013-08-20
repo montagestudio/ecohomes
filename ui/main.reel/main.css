@@ -48,6 +48,8 @@
 
 .Main-room {
     position: relative;
+    overflow: hidden;
+    max-height: 100%;
 }
 
 .Main-colladaView canvas {
