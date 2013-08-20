@@ -4,6 +4,9 @@
     height: 100%;
 }
 
+
+/* Nav -------------------------- */
+
 /* Default Nexus 10 */
 .Main-navigation {
     height: 100%;
@@ -28,25 +31,8 @@
     }
 }
 
-.Main-panel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-}
 
-.Main-configuration {
-    position: relative;
-    -webkit-flex: 1; /* new */
-    -webkit-box-flex: 1; /* old: iOS6 */
-    height: 100%;
-}
-
-.Main-cards {
-    list-style: none;
-}
+/* 3D -------------------------- */
 
 .Main-viewport {
     display: -webkit-box;
@@ -73,6 +59,29 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+
+/* Config -------------------------- */
+
+.Main-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.Main-configuration {
+    position: relative;
+    -webkit-flex: 1; /* new */
+    -webkit-box-flex: 1; /* old: iOS6 */
+    height: 100%;
+}
+
+.Main-cards {
+    list-style: none;
 }
 
 .Main .PanelFlow-flow {
