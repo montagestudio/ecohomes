@@ -26,8 +26,8 @@
                 "element": {"#": "panelName"}
             },
             "bindings": {
-                "label": {"<-": "@panelList.objectAtCurrentIteration"},
-                "detail.get('panelKey')": {"<-": "@panelList.objectAtCurrentIteration"}
+                "label": {"<-": "@panelList.objectAtCurrentIteration.label"},
+                "detail.get('panelKey')": {"<-": "@panelList.objectAtCurrentIteration.panelKey"}
             }
         }
     }

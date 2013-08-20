@@ -38,11 +38,23 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             // NOTE Even panels with no configuration options can have preferred viewpoints
             // this is why the viewpoint is related to panels, not configuration sets
             this.panelIdViewpointMap = new Map();
+
+            this.cards = [
+                {panelKey: "introduction", label: "Introduction"},
+                {panelKey: "staircase", label: "Staircase"},
+                {panelKey: "thermostat", label: "Thermostat"},
+                {panelKey: "kitchen", label: "Kitchen"},
+                {panelKey: "counters", label: "Countertop"},
+                {panelKey: "laundry", label: "Laundry"},
+                {panelKey: "window", label: "Windows"},
+                {panelKey: "solarPanels", label: "Solar Panels"},
+                {panelKey: "callBack", label: "Contact"}
+            ]
         }
     },
 
     cards: {
-        value: ["introduction", "staircase", "thermostat", "kitchen", "counters", "laundry", "window", "solarPanels", "callBack"]
+        value: null
     },
 
     panelIdViewpointMap: {
@@ -208,7 +220,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                 panelIndex;
 
             if (panelKey) {
-                panelIndex = this.cards.indexOf(panelKey);
+                panelIndex = this.cards.map(function (card) {
+                    return card.panelKey;
+                }).indexOf(panelKey);
 
                 if (panelIndex > -1) {
                     this.templateObjects.panelFlow.scrollToPanel(panelIndex);
