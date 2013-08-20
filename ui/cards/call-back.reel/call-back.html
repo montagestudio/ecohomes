@@ -86,6 +86,15 @@
                 "switchValue": {"<-": "@owner.currentStep"}
             }
         },
+        "summary": {
+            "prototype": "ui/summary.reel",
+            "properties": {
+                "element": {"#": "summary"}
+            },
+            "bindings": {
+                "configurationMap": {"<-": "@owner.configurationMap"}
+            }
+        },
         "title": {
             "prototype": "montage/ui/text.reel",
             "properties": {
@@ -107,6 +116,7 @@
                 <li data-montage-id="errorMessage"></li>
             </ul>
             <section class="Card-content">
+                <div data-montage-id="summary"></div>
                 <div data-montage-id="steps">
                     <div data-arg="callNow" data-montage-id="callNow"></div>
                     <div data-arg="callingNow" data-montage-id="callingNow"></div>
