@@ -15,9 +15,11 @@
             "prototype": "ui/eco-score.reel",
             "properties": {
                 "element": {"#": "ecoScore"},
-                "baseConsumption": 6000,
-                "ecoConsumption": 5200,
                 "maxConsumption": 10000
+            },
+            "bindings": {
+                "baseConsumption": {"<-": "@owner.configuration.baseConsumption"},
+                "ecoConsumption": {"<-": "@owner.configuration.totalConsumption"}
             }
         },
         "logo": {
@@ -27,24 +29,22 @@
                 "src": "../../assets/images/logo.png"
             }
         },
+        "numberConverter": {
+            "prototype": "montage/core/converter/number-converter",
+            "properties": {
+                "decimals": 0,
+                "shorten": false
+            }
+        },
         "total": {
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "text"},
-                "value": "Total",
-                "converter": {
-                    "@": "numberConverter"
-                }
+                "converter": {"@": "numberConverter"},
+                "value": "Total"
             },
             "bindings": {
                 "value": {"<-": "@owner.configuration.totalPrice"}
-            }
-        },
-        "numberConverter": {
-            "prototype": "montage/core/converter/number-converter",
-            "properties": {
-                "shorten": false,
-                "decimals": 0
             }
         }
     }
