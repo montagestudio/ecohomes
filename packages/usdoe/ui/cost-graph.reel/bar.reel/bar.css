@@ -1,18 +1,18 @@
 .usdoe-Bar {
     position: relative;
-    width: 100px;
-    height: 200px;
+    width: 100%;
+    height: 15px;
 }
 
 .usdoe-Bar-level {
     position: absolute;
     left: 0;
-    right: 0;
+    top: 0;
     bottom: 0;
-    -webkit-transition: height 400ms ease-in;
-    -moz-transition: height 400ms ease-in;
-    -ms-transition: height 400ms ease-in;
-    transition: height 400ms ease-in;
+    -webkit-transition: width 400ms ease-in;
+    -moz-transition: width 400ms ease-in;
+    -ms-transition: width 400ms ease-in;
+    transition: width 400ms ease-in;
     background-color: blue;
     text-align: center;
 }

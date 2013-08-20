@@ -51,49 +51,35 @@ exports.Bar = Component.specialize(/** @lends Bar# */ {
         value: null
     },
 
-    _valueElement: {
-        value: null
-    },
-
     _levelElement: {
         value: null
     },
 
-    _height: {
-        value: null
-    },
-
-    _valueHeight: {
-        value: null
-    },
-
-    _levelHeight: {
+    _width: {
         value: null
     },
 
     willDraw: {
         value: function() {
-            this._height = this.element.offsetHeight;
-            this._valueHeight = this._valueElement.offsetHeight;
-            this._levelHeight = this._levelElement.offsetHeight;
+            this._width = this.element.offsetWidth;
         }
     },
 
     draw: {
         value: function() {
             var totalAvailable,
-                levelHeight;
+                levelWidth;
 
-            // Wait until the value and the label are drawn,
-            // and the Bar styles have been applied so we can measure them.
-            if (this._height == 0 || (this._value && this._valueHeight === 0)) {
+            // Wait until the Bar styles have been applied so we can measure
+            // them.
+            if (this._width == 0) {
                 this.needsDraw = true;
             } else {
-                totalAvailable = this._height - this._valueHeight;
-                levelHeight = Math.min(
+                totalAvailable = this._width;
+                levelWidth = Math.min(
                     Math.floor((this._value / this._maxValue) * totalAvailable),
                     totalAvailable);
-                this._levelElement.style.height = levelHeight + "px";
+                this._levelElement.style.width = levelWidth + "px";
             }
         }
     }

@@ -10,17 +10,25 @@
 .usdoe-CostGraph {
     display: inline-block;
     position: relative;
-    width: 244px;
+    width: 75px;
+    height: 45px;
+    border-left: 2px solid #ebede8;
+    font-size: 0;
+    line-height: 0;
 }
 
 .usdoe-CostGraph .usdoe-Bar {
     display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 5px;
     margin-bottom: 0;
 }
 
-.usdoe-CostGraph-base {
-    margin: 0;
-    border-top: 1px solid blue;
+.usdoe-CostGraph-costBar .usdoe-Bar-level {
+    background-color: gray;
+    border: 1px solid darkgray;
+}
+
+.usdoe-CostGraph-consumptionBar .usdoe-Bar-level {
+    background-color: green;
+    border: 1px solid darkgreen;
 }
