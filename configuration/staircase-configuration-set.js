@@ -10,10 +10,10 @@ exports.StaircaseConfigurationSet = ConfigurationSet.specialize({
 
             var optionMap = this.optionMap;
             optionMap.set("material", new ConfigurationChoice().init(
-                new ConfigurationOption().init("FSC Teak", 14000),
-                new ConfigurationOption().init("Dark Walnut", 12000),
-                new ConfigurationOption().init("Dark Ash", 10000),
-                new ConfigurationOption().init("Powder Coated Metal", 8000)
+                new ConfigurationOption().init("FSC Teak", 4999),
+                new ConfigurationOption().init("Dark Walnut", 3699),
+                new ConfigurationOption().init("Dark Ash", 1799),
+                new ConfigurationOption().init("Powder Coated Metal", 1985)
             ));
         }
     }
