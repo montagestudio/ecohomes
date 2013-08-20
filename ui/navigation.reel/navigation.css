@@ -11,8 +11,9 @@
 	-webkit-flex-direction: column;
 	-webkit-justify-content: center;
 	height: 100%;
-    list-style: none;
+    margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .Navigation-listItem {
