@@ -252,12 +252,19 @@
                 "id": "node-LookAtWindow",
                 "scene": {"@": "roomScene"}
             }
+        },
+        "navToggle": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "navToggle"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" class="Main">
+        <button data-montage-id="navToggle" class="Main-navToggle">Menu</button>
         <section class="Main-navigation" data-montage-id="navigation"></section>
         <section class="Main-viewport" data-montage-skin="light">
             <div class="Main-room">

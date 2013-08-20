@@ -25,7 +25,7 @@
 	border-top: 1px solid hsl(0,0%,80%);
 }
 
-.Navigation-button {
+.Navigation-button.digit-Button {
 	display: block;
 	position: relative;
 	width: 100%;
@@ -39,13 +39,13 @@
 	color: hsla(0,0%,0%,.5);
 }
 
-.Navigation-button:hover {
-	background-color: hsl(0, 0%, 98%);
+.Navigation-button.digit-Button:hover {
+	background-color: hsl(0,0%,98%);
 }
 
-.Navigation-button.montage--active,
-.Navigation-listItem--selected .Navigation-button {
-	background-color: hsl(0, 0%, 90%);
+.Navigation-button.digit-Button.montage--active,
+.Navigation-listItem--selected .Navigation-button.digit-Button {
+	background-color: hsl(0,0%,90%);
 }
 
 .Navigation-button:before {
