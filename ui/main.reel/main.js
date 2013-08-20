@@ -155,7 +155,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                 hidden = false;
 
             //TODO not rely on the fragile name
-            if (!newApplianceValue || "No appliances installed" === newApplianceValue.name) {
+            if (!newApplianceValue || "None" === newApplianceValue.name) {
                 opacity = 0;
                 hidden = true;
             }
