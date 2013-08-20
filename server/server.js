@@ -2,6 +2,7 @@
 
 var QS = require("qs");
 var Q = require("q");
+Q.longStackSupport = true
 
 var argv = require('optimist')
     .usage("node server.js [--env=development|production]")
