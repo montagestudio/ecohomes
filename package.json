@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "dependencies": {
         "montage": "git://github.com/montagejs/montage.git#960cb6664931cbfdacfa1f38cf595857a2fc2dd4",
-        "digit": "~0.3.1",
+        "digit": "git://github.com/montagejs/digit.git#080614a04d747b3cfb7ab074f96679918fa7b58c",
         "glTF-webgl-viewer": "git+ssh://git@github.com:fabrobinet/glTF-webgl-viewer.git#0bb885a380cba4f7976b46ccdea5c60280433791"
     },
     "mappings": {
