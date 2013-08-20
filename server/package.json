@@ -1,0 +1,11 @@
+{
+  "name": "call-back",
+  "version": "0.0.0",
+  "dependencies": {
+    "twilio": "~1.1.4",
+    "joey": "~1.2.0",
+    "q": "~0.9.6",
+    "qs": "~0.6.5",
+    "optimist": "~0.6.0"
+  }
+}
