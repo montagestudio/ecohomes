@@ -63,10 +63,10 @@
 
 .Navigation-listItem:nth-child(1) .Navigation-button:before { background-position: center 0; }
 .Navigation-listItem:nth-child(2) .Navigation-button:before { background-position: center -48px; }
-.Navigation-listItem:nth-child(3) .Navigation-button:before { background-position: center -96px; }
-.Navigation-listItem:nth-child(4) .Navigation-button:before { background-position: center -144px; }
-.Navigation-listItem:nth-child(5) .Navigation-button:before { background-position: center -192px; }
-.Navigation-listItem:nth-child(6) .Navigation-button:before { background-position: center -240px; }
-.Navigation-listItem:nth-child(7) .Navigation-button:before { background-position: center -288px; }
+.Navigation-listItem:nth-child(3) .Navigation-button:before { background-position: center -288px; }
+.Navigation-listItem:nth-child(4) .Navigation-button:before { background-position: center -96px; }
+.Navigation-listItem:nth-child(5) .Navigation-button:before { background-position: center -144px; }
+.Navigation-listItem:nth-child(6) .Navigation-button:before { background-position: center -192px; }
+.Navigation-listItem:nth-child(7) .Navigation-button:before { background-position: center -240px; }
 .Navigation-listItem:nth-child(8) .Navigation-button:before { background-position: center -336px; }
 .Navigation-listItem:nth-child(9) .Navigation-button:before { background-position: center -384px; }
