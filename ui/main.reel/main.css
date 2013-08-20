@@ -132,9 +132,10 @@
 
 .Main-configuration {
     position: relative;
-    -webkit-flex: 1; /* new */
     -webkit-box-flex: 1; /* old: iOS6 */
+    -webkit-flex: 1; /* new */
     height: 100%;
+    min-height: 300px; /* Might fix empty flow issue */
 }
 
 .Main-cards {
