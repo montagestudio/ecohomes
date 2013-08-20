@@ -1,4 +1,5 @@
 var Montage = require("montage").Montage;
+var Promise = require("montage/core/promise").Promise;
 var StateChart = require("montage/core/state-chart").StateChart;
 var State = require("montage/core/state-chart").State;
 
@@ -6,29 +7,23 @@ exports.CallController = Montage.specialize({
 
     constructor: {
         value: function CallController() {
+            var callController = this;
+
             var rootState, callNow, callLater, calling, callingNow, callingLater;
 
-            callingNow = new State().init({
-
-                cancel: function(actionName, stateChart, owner) {
-                    this.gotoState('callNow');
-                }
-            });
-
             callNow = new State().init({
-
-
                 call: function(actionName, stateChart, owner) {
                     this.gotoState('callingNow');
                 },
-
                 later: function(actionName, stateChart, owner) {
                     this.gotoState('callLater');
                 }
             });
 
-            callingLater = new State().init({
-
+            callingNow = new State().init({
+                enterState: function() {
+                    callController.makeContactCall().done();
+                },
                 cancel: function(actionName, stateChart, owner) {
                     this.gotoState('callNow');
                 }
@@ -36,13 +31,16 @@ exports.CallController = Montage.specialize({
 
 
             callLater = new State().init({
-
-
                 call: function(actionName, stateChart, owner) {
                     this.gotoState('calling');
                 },
-
                 now: function(actionName, stateChart, owner) {
+                    this.gotoState('callNow');
+                }
+            });
+
+            callingLater = new State().init({
+                cancel: function(actionName, stateChart, owner) {
                     this.gotoState('callNow');
                 }
             });
@@ -54,6 +52,7 @@ exports.CallController = Montage.specialize({
                 callLater: callLater,
                 callingLater: callingLater
             });
+
             this._stateChart = new StateChart().initWithState(rootState);
             this._stateChart.delegate = this;
 
@@ -108,6 +107,39 @@ exports.CallController = Montage.specialize({
         }
     },
 
+    makeContactCall: {
+        value: function() {
+            return this._post("http://audition.montagejs.org/api/contact", ["to=" + this.phoneNumber], 5000);
+        }
+    },
+
+    _post: {
+        value: function(url, data, timeout) {
+            var pendingTimeout;
+            var response = Promise.defer();
+            var request = new XMLHttpRequest();
+            request.open("POST", url, true);
+            request.onreadystatechange = function () {
+                if (request.readyState === 4) {
+                    if (request.status === 200) {
+                        if(pendingTimeout) {
+                            clearTimeout(pendingTimeout);
+                        }
+                        response.resolve(request.responseText);
+                    } else {
+                        response.reject("HTTP " + request.status + " for " + path);
+                    }
+                }
+            };
+            timeout && (pendingTimeout = setTimeout(response.reject, timeout));
+
+            request.setRequestHeader("Content-Type", "application\/x-www-form-urlencoded");
+            request.send(data.join("&"));
+            return response.promise;
+        }
+    },
+
+
     clearErrors: {
         value: function() {
             this.errors.clear();
@@ -116,7 +148,7 @@ exports.CallController = Montage.specialize({
 
     validatePhoneNumber: {
         value: function() {
-            return (this.phoneNumber != null) && this.phoneNumber.length > 0
+            return (this.phoneNumber != null) && this.phoneNumber.length === 10
         }
     },
 
@@ -131,9 +163,6 @@ exports.CallController = Montage.specialize({
     identifier: {
         value: "callController"
     }
-
-//
-
 
 });
 
