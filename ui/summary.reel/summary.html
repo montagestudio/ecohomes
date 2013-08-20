@@ -11,7 +11,18 @@
                 "element": {"#": "summary"}
             },
             "bindings": {
-                "optionGroups": {"<-": "configurationMap.entries().filter{this[1].optionMap.values().filter{chosen}.length > 0}.map{this[1]}"}
+                "optionGroups": {"<-": "configuration.configurationMap.entries().filter{this[1].optionMap.values().filter{chosen}.length > 0}.map{this[1]}"}
+            }
+        },
+        "basePrice": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "basePrice"},
+                "converter": {"@": "numberConverter"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.configuration.basePrice"}
             }
         },
         "numberConverter": {
@@ -80,7 +91,7 @@
                 "value": "Text"
             },
             "bindings": {
-                "value": {"<-": "@owner.optionGroups.sum{optionMap.entries().sum{this[1].price}}"}
+                "value": {"<-": "@owner.configuration.totalPrice"}
             }
         }
     }
@@ -88,6 +99,12 @@
 </head>
 <body>
     <div data-montage-id="summary" class="Summary">
+        <div class="Summary-option Summary-optionGroupItem">
+            <span class="Summary-optionGroupName">
+                Base
+            </span>
+            <span data-montage-id="basePrice" class="Summary-optionPrice"></span>
+        </div>
         <ul data-montage-id="optionGroup" class="Summary-optionGroup">
             <li class="Summary-optionGroupItem">
                 <p data-montage-id="optionGroupName" class="Summary-optionGroupName"></p>

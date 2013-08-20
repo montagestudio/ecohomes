@@ -10,11 +10,12 @@
       }
     }
   },
-  "blueprint_unnamed_configurationMap": {
+  "blueprint_unnamed_configuration": {
     "prototype": "den/montage/core/meta/property-blueprint",
     "properties": {
-      "name": "configurationMap",
-      "blueprint": {"@": "root"}
+      "name": "configuration",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
     }
   },
   "root": {
@@ -26,11 +27,11 @@
       },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
-        {"@": "blueprint_unnamed_configurationMap"}
+        {"@": "blueprint_unnamed_configuration"}
       ],
       "propertyBlueprintGroups": {
         "Summary": [
-          {"@": "blueprint_unnamed_configurationMap"}
+          {"@": "blueprint_unnamed_configuration"}
         ]
       },
       "module": {
