@@ -12,6 +12,9 @@
     font-size: 20px;
     text-shadow: 0 2px 2px hsl(0,0%,20%);
 
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .Overview-logo {
