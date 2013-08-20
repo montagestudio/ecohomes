@@ -41,13 +41,7 @@ require("joey")
 
                 var client = require('twilio')(accountSid, authToken);
 
-                return makeCall(client, toNumber, fromNumber, appEntryUrl).then(
-                    function (success) {
-                        return "SUCCESS"
-                    },
-                    function (failure) {
-                        return failure;
-                    })
+                return makeCall(client, toNumber, fromNumber, appEntryUrl).thenResolve("SUCCESS");
             });
         });
 
@@ -90,9 +84,10 @@ function makeCall(client, to, from, url) {
 
     console.log("call", to, from, url);
 
-    return Q.nfcall(client.makeCall, {
+    return Q(client).ninvoke("makeCall", {
         to: to,
         from: from,
         url: url
     });
+
 }
