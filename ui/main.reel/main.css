@@ -15,11 +15,30 @@
     position: absolute;
     z-index: 2;
     margin: 0;
-    top: 12px;
-    right: 12px;
+    top: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
     background-color: hsla(0,0%,100%,.2);
     border-color: hsla(0,0%,0%,.2);
     -webkit-transform: translateZ(0); /* Force button to own HW layer */
+}
+
+.Main-navToggle:before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: transparent url(../../assets/images/toggle-icons.svg) no-repeat;
+    background-size: 48px auto;
+    background-position: center 0; /* no icon by default */
+}
+
+.Main--showNavigation .Main-navToggle:before {
+    background-position: center -48px;
 }
 
 .Main-navToggle.montage--active {
