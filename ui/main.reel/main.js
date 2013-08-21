@@ -138,7 +138,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             //TODO not rely on the fragile name
             if (newMaterial) {
                 switch (newMaterial.name) {
-                case "FSC Teak":
+                case "FSC Pine":
                     texture = "wood-stairs.jpg";
                     break;
                 case "Dark Ash":
