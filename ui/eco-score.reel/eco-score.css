@@ -1,9 +1,32 @@
 .EcoScore {
-    line-height: 45px;
     display: -webkit-box;
     -webkit-box-pack: center;
     display: -webkit-flex;
     -webkit-justify-content: center;
+}
+
+.EcoScore-header {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    text-align: center;
+}
+
+.EcoScore-title {
+    margin: 0;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "HelveticaNeue-Light";
+    letter-spacing: 0.1em;
+}
+
+.EcoScore-grade {
+    color: hsl(71,56%,54%);
 }
 
 .EcoScore-costGraph {
