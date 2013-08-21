@@ -5,3 +5,17 @@
 .EcoScore-costGraph {
     display: inline-block;
 }
+
+.EcoScore usdoe-Bar {
+    height: 41px;
+}
+
+.EcoScore .usdoe-Bar-level {
+    border-image: url(eco.png) 3 fill;
+    border-width: 3px;
+    background: none;
+}
+
+.EcoScore .usdoe-CostGraph-costBar .usdoe-Bar-level {
+    -webkit-filter: grayscale(1);
+}
