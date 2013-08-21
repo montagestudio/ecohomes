@@ -109,7 +109,7 @@ exports.CallController = Montage.specialize({
 
     makeContactCall: {
         value: function() {
-            return this._post("http://audition.montagejs.org/api/contact", ["to=" + this.phoneNumber], 5000);
+            return this._post("http://audition.montagejs.org/api/contact", ["to=" + this._normalizedPhoneNumber], 5000);
         }
     },
 
@@ -146,9 +146,17 @@ exports.CallController = Montage.specialize({
         }
     },
 
+    _phoneNumberRegex: {
+        value: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+    },
+
     validatePhoneNumber: {
         value: function() {
-            return (this.phoneNumber != null) && this.phoneNumber.length === 10
+            if ((this.phoneNumber != null) && this._phoneNumberRegex.test(this.phoneNumber)) {
+                this._normalizedPhoneNumber = this.phoneNumber.replace(this._phoneNumberRegex, "$1$2$3");
+                return true;
+            }
+            return (this.phoneNumber != null) && this._phoneNumberRegex.test(this.phoneNumber)
         }
     },
 
@@ -157,6 +165,10 @@ exports.CallController = Montage.specialize({
     },
 
     phoneNumber: {
+        value: null
+    },
+
+    _normalizedPhoneNumber: {
         value: null
     },
 
