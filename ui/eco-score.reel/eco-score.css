@@ -1,9 +1,14 @@
 .EcoScore {
     line-height: 45px;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
 }
 
 .EcoScore-costGraph {
     display: inline-block;
+    margin-left: 8px;
 }
 
 .EcoScore usdoe-Bar {
