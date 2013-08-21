@@ -1,17 +1,17 @@
 /**
- * @module ./boolean-option-field.reel
+ * @module ./option-field.reel
  * @requires montage/ui/component
  */
 var Component = require("montage/ui/component").Component,
     PressComposer = require("montage/composer/press-composer").PressComposer;
 
 /**
- * @class BooleanOptionField
+ * @class OptionField
  * @extends Component
  */
-exports.BooleanOptionField = Component.specialize(/** @lends BooleanOptionField# */ {
+exports.OptionField = Component.specialize(/** @lends OptionField# */ {
     constructor: {
-        value: function BooleanOptionField() {
+        value: function OptionField() {
             this.super();
 
             this._pressComposer = new PressComposer();
@@ -26,9 +26,9 @@ exports.BooleanOptionField = Component.specialize(/** @lends BooleanOptionField#
 
     handlePress: {
         value: function() {
-            var chosenCheckbox = this.templateObjects.chosenCheckbox;
+            var chosenRadioButton = this.templateObjects.chosenRadioButton;
 
-            chosenCheckbox.checked = !chosenCheckbox.checked;
+            chosenRadioButton.checked = !chosenRadioButton.checked;
         }
     }
 });

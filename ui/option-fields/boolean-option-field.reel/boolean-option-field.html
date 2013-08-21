@@ -8,7 +8,8 @@
         "owner": {
             "prototype": "ui/option-fields/boolean-option-field.reel",
             "properties": {
-                "element": {"#": "BooleanOptionField"}
+                "element": {"#": "BooleanOptionField"},
+                "labelAreaElement": {"#": "labelArea"}
             }
         },
         "chosenCheckbox": {
@@ -59,7 +60,7 @@
 <body>
     <div data-montage-id="BooleanOptionField" class="Card-option--booleanField BooleanOptionField">
         <input type="checkbox" data-montage-id="chosenCheckbox">
-        <div class="Card-option-labelArea">
+        <div class="Card-option-labelArea" data-montage-id="labelArea">
             <strong class="Card-option-label" data-montage-id="name"></strong>
             <span class="Card-option-price" data-montage-id="price"></span>
         </div>

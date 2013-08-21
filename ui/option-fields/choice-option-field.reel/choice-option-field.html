@@ -26,45 +26,14 @@
                     "contentController": {"<-": "@owner.configurationOption.options"}
                 }
             },
-            "chosenCheckbox": {
-                "prototype": "digit/ui/radio-button.reel",
+            "optionField": {
+                "prototype": "./option-field.reel",
                 "properties": {
-                    "element": {"#": "chosenRadioButton"},
+                    "element": {"#": "optionField"},
                     "radioButtonController": {"@": "radioButtonController"}
                 },
                 "bindings": {
-                    "value": {"<-": "@repetition.objectAtCurrentIteration"}
-                }
-            },
-            "name": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "name"},
-                    "value": "Text"
-                },
-                "bindings": {
-                    "value": {"<-": "@repetition.objectAtCurrentIteration.name"}
-                }
-            },
-            "price": {
-                "prototype": "montage/ui/text.reel",
-                "properties": {
-                    "element": {"#": "price"},
-                    "value": "Text",
-                    "converter": {"@": "currencyConverter"}
-                },
-                "bindings": {
-                    "value": {
-                        "<-": "@repetition.objectAtCurrentIteration.price"
-                    }
-                }
-            },
-            "currencyConverter": {
-                "prototype": "montage/core/converter/currency-converter",
-                "properties": {
-                    "shorten": false,
-                    "decimals": 0,
-                    "showCurrencyBeforeNumber": true
+                    "option": {"<-": "@repetition.objectAtCurrentIteration"}
                 }
             }
         }
@@ -73,13 +42,7 @@
 <body>
 <div data-montage-id="choiceOptionField" class="ChoiceOptionField">
     <div data-montage-id="repetition">
-        <div class="Card-option--choiceField">
-            <input type="radio" data-montage-id="chosenRadioButton">
-            <div class="Card-option-labelArea">
-                <strong class="Card-option-label" data-montage-id="name"></strong>
-                <span class="Card-option-price" data-montage-id="price"></span>
-            </div>
-        </div>
+        <div data-montage-id="optionField"></div>
     </div>
 </div>
 </body>
