@@ -5,6 +5,7 @@
 */
 var Montage = require("montage").Montage,
     Component = require("montage/ui/component").Component,
+    KeyComposer = require("montage/composer/key-composer").KeyComposer,
     observeProperty = require("montage/frb/observers").observeProperty;
 
 /**
@@ -14,11 +15,29 @@ var Montage = require("montage").Montage,
 */
 exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.reel".PanelFlow# */ {
 
+    handleKeydown: {
+        value: function(event) {
+            var code = event.keyCode || event.which,
+                strollTo = null;
+
+            if (code === 38) {
+                this.scrollToPanel(Math.floor(this.flow.scroll - 1));
+                event.preventDefault();
+            } else {
+                if (code === 40) {
+                    this.scrollToPanel(Math.ceil(this.flow.scroll + 1));
+                    event.preventDefault();
+                }
+            }
+        }
+    },
+
     enterDocument: {
         value: function(firstTime) {
             var self = this;
 
             if (firstTime) {
+                document.addEventListener("keydown", this, false);
                 window.addEventListener("resize", function () {
                     self.needsDraw = true;
                 }, false);
