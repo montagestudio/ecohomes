@@ -73,8 +73,6 @@
         -webkit-transition: -webkit-transform .2s;
     }
 
-    /* .Main-navToggle:hover + .Main-navigation,
-    .Main-navigation:hover, */
     .Main--showNavigation .Main-navigation {
         -webkit-transform: translate3d(0,0,0);
     }
