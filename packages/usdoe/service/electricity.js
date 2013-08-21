@@ -1,6 +1,6 @@
 // Data retrieved from http://www.eia.gov/electricity/sales_revenue_price/pdf/table5_a.pdf
 var Montage = require("montage").Montage,
-    data = require("./data.json");
+    data = {};
 
 exports.Electricity = Montage.specialize({
     constructor: {
@@ -34,12 +34,14 @@ exports.Electricity = Montage.specialize({
      */
     getKwhPrice: {
         value: function(zipCode) {
+            return 14.78;
             return data.kwhPrice[this._getStateByZipCode(zipCode)];
         }
     },
 
     _getAnnualConsumers: {
         value: function(zipCode) {
+            return 13002980;
             return data.consumers[this._getStateByZipCode(zipCode)];
         }
     },
@@ -49,12 +51,15 @@ exports.Electricity = Montage.specialize({
      */
     _getAnnualConsumption: {
         value: function(zipCode) {
+            return 88472275920;
             return data.consumption[this._getStateByZipCode(zipCode)];
         }
     },
     
     _getStateByZipCode: {
         value: function(zipCode) {
+            return "California";
+
             var zipPrefix = Math.floor(zipCode / 100),
                 stateNames = Object.keys(data.zipPrefixByState),
                 states = data.zipPrefixByState,
