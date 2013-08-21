@@ -5,6 +5,7 @@
 var Component = require("montage/ui/component").Component;
 var Configuration = require("core/configuration").Configuration;
 var Map = require("montage/collections/map");
+var Introduction = require("ui/cards/introduction.reel").Introduction;
 
 var StaircaseConfigurationSet = require("configuration/staircase-configuration-set").StaircaseConfigurationSet;
 var ThermostatConfigurationSet = require("configuration/thermostat-configuration-set").ThermostatConfigurationSet;
@@ -96,6 +97,8 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             this.addPathChangeListener("configuration.configurationMap.get('kitchen').optionMap.get('appliances')._selectedOption", this, "handleKitchenAppliancesChange");
             this.addPathChangeListener("configuration.configurationMap.get('counters').optionMap.get('material')._selectedOption", this, "handleCountertopMaterialChange");
 
+            //Start the room ride animation once the introduction slide has shown
+            this.addEventListener("firstDraw", this);
         }
     },
 
@@ -115,6 +118,12 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                 var preferredViewpoint = this.panelIdViewpointMap.get(panelEntry.panelKey);
 
                 if (preferredViewpoint) {
+
+                    if (this._autoActivateRideTimeout) {
+                        clearTimeout(this._autoActivateRideTimeout);
+                        this._autoActivateRideTimeout = null;
+                    }
+
                     roomView.pause();
                     roomView.viewPoint = preferredViewpoint;
                 } else if (rideViewpoint !== roomView.viewPoint) {
@@ -228,6 +237,24 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                     this.templateObjects.panelFlow.scrollToPanel(panelIndex);
                     this.changeViewpoint(panelIndex);
                 }
+            }
+        }
+    },
+
+    _autoActivateRideTimeout: {
+        value: null
+    },
+
+    handleFirstDraw: {
+        value: function (evt) {
+            if (evt.target instanceof Introduction) {
+                this.removeEventListener("firstDraw", this);
+                var self = this;
+
+                this._autoActivateRideTimeout = setTimeout(function () {
+                    self._autoActivateRideTimeout = null;
+                    self.templateObjects.roomView.play();
+                }, 2200);
             }
         }
     }
