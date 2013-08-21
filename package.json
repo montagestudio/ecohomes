@@ -2,7 +2,7 @@
     "name": "den",
     "version": "0.1.0",
     "dependencies": {
-        "montage": "git://github.com/montagejs/montage.git#960cb6664931cbfdacfa1f38cf595857a2fc2dd4",
+        "montage": "git://github.com/montagejs/montage.git#4edaf482a29a1a2bd24e7229cc5c1ce6a7a4c85b",
         "digit": "git://github.com/montagejs/digit.git#0d2fbfc3112bdfa5a1dacadbc50868bb435e39e4",
         "glTF-webgl-viewer": "git+ssh://git@github.com:fabrobinet/glTF-webgl-viewer.git#0bb885a380cba4f7976b46ccdea5c60280433791"
     },
