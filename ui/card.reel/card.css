@@ -97,6 +97,12 @@
     color: hsla(0,0%,15%)
 }
 
+.Card--disclaimer {
+    font-family: "HelveticaNeue-Light";
+    line-height: 14px;
+    font-size: 12px;
+}
+
 .debug .Card * {
     outline: 1px solid red;
 }
