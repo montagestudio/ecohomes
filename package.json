@@ -1,5 +1,5 @@
 {
-    "name": "den",
+    "name": "eco-home",
     "version": "0.1.0",
     "dependencies": {
         "montage": "git://github.com/montagejs/montage.git#4edaf482a29a1a2bd24e7229cc5c1ce6a7a4c85b",
@@ -23,5 +23,7 @@
     "exclude": [
         "run-tests.html",
         "test"
-    ]
+    ],
+    "bundle": ["ui/main.reel"],
+    "shard": 1
 }
