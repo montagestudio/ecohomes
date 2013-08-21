@@ -2,7 +2,6 @@
     position: relative;
     width: 346px;
     height: 346px;
-    -webkit-filter: blur(0.0001px);
 }
 .Den-activation-area {
     position: absolute;
