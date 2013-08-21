@@ -243,6 +243,17 @@
                 "scene": {"@": "roomScene"}
             }
         },
+        "substitutionDelay": {
+            "prototype": "core/substitution-delay",
+            "properties": {
+                "enabled": true,
+                "delay": 500,
+                "excluded": ["introduction"]
+            },
+            "bindings": {
+                "switchValues": {"<-": "@owner.cards"}
+            }
+        },
         "thermostatPanel": {
             "prototype": "ui/cards/thermostat.reel",
             "properties": {
