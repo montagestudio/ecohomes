@@ -87,11 +87,19 @@
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "total"},
-                "converter": {"@": "numberConverter"},
+                "converter": {"@": "currencyConverter"},
                 "value": "Text"
             },
             "bindings": {
                 "value": {"<-": "@owner.configuration.totalPrice"}
+            }
+        },
+        "currencyConverter": {
+            "prototype": "montage/core/converter/currency-converter",
+            "properties": {
+                "shorten": false,
+                "decimals": 0,
+                "showCurrencyBeforeNumber": true
             }
         }
     }
@@ -99,24 +107,30 @@
 </head>
 <body>
     <div data-montage-id="summary" class="Summary">
-        <div class="Summary-option Summary-optionGroupItem">
-            <span class="Summary-optionGroupName">
-                Base
-            </span>
-            <span data-montage-id="basePrice" class="Summary-optionPrice"></span>
-        </div>
         <ul data-montage-id="optionGroup" class="Summary-optionGroup">
             <li class="Summary-optionGroupItem">
                 <p data-montage-id="optionGroupName" class="Summary-optionGroupName"></p>
                 <ul data-montage-id="options" class="Summary-options">
                     <li class="Summary-option">
                         <span data-montage-id="optionName" class="Summary-optionName"></span>
-                        <span data-montage-id="optionPrice" class="Summary-optionPrice"></span>
+                        <span data-montage-id="optionPrice" class="Summary-optionPrice Summary--price"></span>
                     </li>
                 </ul>
             </li>
         </ul>
-        <div data-montage-id="total" class="Summary-total"></div>
+        <div class="Summary-option Summary-optionGroupItem">
+            <span class="Summary-optionGroupName">
+                Options
+            </span>
+            <span data-montage-id="optionsPricePrice" class="Summary-optionPrice Summary--price"></span>
+        </div>
+        <div class="Summary-option Summary-optionGroupItem">
+            <span class="Summary-optionGroupName">
+                Base
+            </span>
+            <span data-montage-id="basePrice" class="Summary-optionPrice Summary--price"></span>
+        </div>
+        <div data-montage-id="total" class="Summary-total Summary--price"></div>
     </div>
 </body>
 </html>

@@ -34,8 +34,20 @@
 .Summary-total {
     text-align: right;
     border-top: 1px solid #c6c6c6;
+    padding-top: 5px;
 }
 
 .Summary-optionGroupItem {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.Summary--price {
+    display: block;
+    font-family: "HelveticaNeue-Light";
+    font-size: 16px;
+    color: hsla(0,0%,15%)
+}
+
+.Summary-total.Summary--price {
+    font-weight: bold;
 }
