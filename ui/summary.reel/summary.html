@@ -88,7 +88,7 @@
                 "content": []
             },
             "bindings": {
-                "content": {"<-": "@optionGroup.objectAtCurrentIteration.optionMap.entries().map{this[1]}.filter{price > 0}"}
+                "content": {"<-": "@optionGroup.objectAtCurrentIteration.optionMap.entries().map{this[1]}.filter{price > 0 && chosen}"}
             }
         },
         "optionsSubtotal": {
