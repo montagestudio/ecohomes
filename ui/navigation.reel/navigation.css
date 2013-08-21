@@ -70,3 +70,40 @@
 .Navigation-listItem:nth-child(7) .Navigation-button:before { background-position: center -240px; }
 .Navigation-listItem:nth-child(8) .Navigation-button:before { background-position: center -336px; }
 .Navigation-listItem:nth-child(9) .Navigation-button:before { background-position: center -384px; }
+
+
+/* Portrait */
+
+@media (max-width: 1000px) {
+    .Navigation-list {
+    	-webkit-box-orient: horizontal;
+    	-webkit-box-pack: start;
+    	-webkit-flex-direction: row;
+    	-webkit-justify-content: flex-start;
+    	height: auto;
+    	margin-right: 100px; /* Space for toggle */
+    }
+    
+    .Navigation-listItem {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+    }
+
+    .Navigation-listItem:first-child .Navigation-button {
+        border-left: 1px solid hsl(0,0%,80%);
+    }
+    
+    .Navigation-button.digit-Button {
+        font-size: 0;
+        color: transparent;
+        width: 100%;
+        height: 100px;
+        padding: 40px 20px 10px 20px;
+        border: none;
+        border-right: 1px solid hsl(0,0%,80%);
+    }
+    
+    .Navigation-button:before {
+        top: 24px;
+    }
+}
