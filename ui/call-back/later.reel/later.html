@@ -15,7 +15,7 @@
             "properties": {
                 "element": {"#": "call"},
                 "enabled": true,
-                "label": "Call Now"
+                "label": "Call Later"
             },
             "listeners": [
                 {
@@ -24,12 +24,12 @@
                 }
             ]
         },
-        "callLater": {
+        "callNow": {
             "prototype": "digit/ui/button.reel",
             "properties": {
-                "element": {"#": "callLater"},
+                "element": {"#": "callNow"},
                 "enabled": true,
-                "label": "Call Later"
+                "label": "Call Now"
             },
             "listeners": [
                 {
@@ -73,7 +73,7 @@
 
                     </td>
                     <td>
-                        <button data-montage-id="callLater"></button>
+                        <div data-montage-id="call"></div>
                     </td>
                 </tr>
                 <tr>
@@ -81,7 +81,7 @@
 
                     </td>
                     <td>
-                        <div data-montage-id="call"></div>
+                        <button data-montage-id="callNow"></button>
                     </td>
                 </tr>
             </tbody>

@@ -21,9 +21,9 @@ exports.Later = Component.specialize(/** @lends Later# */ {
         }
     },
 
-    handleCallLaterAction: {
+    handleCallNowAction: {
         value: function() {
-            this.controller.later()
+            this.controller.now()
         }
     },
 
