@@ -12,11 +12,17 @@ exports.WindowConfigurationSet = ConfigurationSet.specialize({
             var optionMap = this.optionMap;
 
             this.name = "Window";
-            optionMap.set("glass", new ConfigurationChoice().init(
+
+            var defaultGlass = new ConfigurationOption().init("Single-pane Glass", 0, 0);
+            var glassChoice = new ConfigurationChoice().init(
                 new ConfigurationOption().init("Triple-pane EcoGlass+", 8999, 320),
                 new ConfigurationOption().init("Dual-pane EcoGlass", 5999, 200),
-                new ConfigurationOption().init("Single-pane Glass", 0, 0)
-            ));
+                defaultGlass);
+
+            glassChoice.options.select(defaultGlass);
+
+            optionMap.set("glass", glassChoice);
+
             optionMap.set("coating", new ConfigurationRange().init("UV Coating Strength", 0, 100, 0, function(value) {
                 return Math.round(value * 21.5);
             }, function(value) {

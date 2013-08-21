@@ -11,13 +11,17 @@ exports.KitchenConfigurationSet = ConfigurationSet.specialize({
             var optionMap = this.optionMap;
 
             this.name = "Kitchen";
-            optionMap.set("appliances", new ConfigurationChoice().init(
+
+            var defaultAppliances = new ConfigurationOption().init("None", 0);
+            var applianceChoice = new ConfigurationChoice().init(
                 new ConfigurationOption().init("Gütersloh", 10999, 160),
                 new ConfigurationOption().init("Norse", 8999, 130),
                 new ConfigurationOption().init("Vortex", 6999, 100),
-                new ConfigurationOption().init("None", 0)
-            ));
+                defaultAppliances);
 
+            applianceChoice.options.select(defaultAppliances);
+
+            optionMap.set("appliances", applianceChoice);
         }
     }
 
