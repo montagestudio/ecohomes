@@ -13,13 +13,14 @@
 .Main-navToggle {
     display: none;
     position: absolute;
-    z-index: 2;
+    z-index: 11;
     margin: 0;
     top: 25px;
     right: 25px;
     width: 48px;
     height: 48px;
     background-color: hsla(0,0%,100%,.2);
+    border-radius: 24px;
     border-color: hsla(0,0%,0%,.2);
     -webkit-transform: translateZ(0); /* Force button to own HW layer */
 }
@@ -46,7 +47,7 @@
 }
 
 .Main-navToggle.montage--active {
-    background-color: hsla(0,0%,100%,.5);
+    background-color: hsla(0,0%,0%,.1);
 }
 
 /* Default Nexus 10 */
@@ -67,7 +68,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        z-index: 1;
+        z-index: 10;
         border-left: 1px solid hsl(0,0%,80%);
         -webkit-transform: translate3d(100%,0,0);
         -webkit-transition: -webkit-transform .2s;
