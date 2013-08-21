@@ -33,7 +33,13 @@
             },
             "bindings": {
                 "value": {"<->": "@owner.controller.phoneNumber"}
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
         }
     }
     </script>

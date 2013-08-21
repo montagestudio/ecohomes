@@ -32,7 +32,7 @@ exports.Now = Component.specialize(/** @lends Now# */ {
         value: null
     },
 
-    handleCallAction: {
+    handleAction: {
         value: function() {
             this.controller.call()
         }
