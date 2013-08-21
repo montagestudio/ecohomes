@@ -14,14 +14,16 @@
     "prototype": "den/montage/core/meta/property-blueprint",
     "properties": {
       "name": "configuration",
-      "blueprint": {"@": "root"},
-      "valueType": "object"
+      "blueprint": {"@": "root"}
     }
   },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
+      "blueprintModule": {
+        "%": "ui/cards/countertops.reel/countertops.meta"
+      },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
         {"@": "blueprint_unnamed_configuration"}
