@@ -8,7 +8,8 @@
         "owner": {
             "properties": {
                 "element": {"#": "panel-flow"},
-                "flow": {"@": "flow"}
+                "flow": {"@": "flow"},
+                "nextPageElement": {"#": "nextPageIndicator"}
             },
             "bindings": {
                 "scroll": {"<->": "@flow.scroll"},
@@ -57,6 +58,7 @@
         <div data-montage-id="flow" class="PanelFlow-flow">
             <div data-param="*"></div>
         </div>
+        <div data-montage-id="nextPageIndicator" class="PanelFlow-nextPage"></div>
     </div>
 </body>
 </html>

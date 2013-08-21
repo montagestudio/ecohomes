@@ -216,6 +216,18 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
         }
     },
 
+    _hideNext: {
+        value: false
+    },
+
+    draw: {
+        value: function () {
+            if (this._hideNext) {
+                this.nextPageElement.classList.add("hidden");
+            }
+        }
+    },
+
     _content: {
         value: null
     },
@@ -292,6 +304,8 @@ exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.r
     didTranslateStart: {
         value: function () {
             this.dispatchEventNamed("flowTranslateStart", true, false);
+            this._hideNext = true;
+            this.needsDraw = true;
         }
     },
 
