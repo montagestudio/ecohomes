@@ -119,16 +119,17 @@
     
     .Card {
         -webkit-box-orient: horizontal;
+        -webkit-box-align: center;
         -webkit-flex-direction: row;
+        -webkit-align-items: center;
     }
 
     .Card-content {
         -webkit-box-flex: 1;
-        -webkit-flex: 1;
+        width: 50%;
     }
 
     .Card-content:first-child {
-        width: 346px;
         margin-right: 40px;
     }
 

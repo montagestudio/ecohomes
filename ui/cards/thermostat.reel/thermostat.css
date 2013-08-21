@@ -2,6 +2,6 @@
     
 }
 
-.Card-hero.Thermostat-den {
-    max-width: 346px;
+.Card-content--thermostat {
+    min-width: 346px;
 }
