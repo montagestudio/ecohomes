@@ -14,21 +14,32 @@
     "prototype": "den/montage/core/meta/property-blueprint",
     "properties": {
       "name": "panels",
-      "blueprint": {"@": "root"},
-      "valueType": "object"
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_currentPanel": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "currentPanel",
+      "blueprint": {"@": "root"}
     }
   },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
+      "blueprintModule": {
+        "%": "ui/navigation.reel/navigation.meta"
+      },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
-        {"@": "blueprint_unnamed_panels"}
+        {"@": "blueprint_unnamed_panels"},
+        {"@": "blueprint_unnamed_currentPanel"}
       ],
       "propertyBlueprintGroups": {
         "Navigation": [
-          {"@": "blueprint_unnamed_panels"}
+          {"@": "blueprint_unnamed_panels"},
+          {"@": "blueprint_unnamed_currentPanel"}
         ]
       },
       "module": {

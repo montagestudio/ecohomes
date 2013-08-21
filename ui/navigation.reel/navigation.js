@@ -13,5 +13,15 @@ exports.Navigation = Component.specialize(/** @lends Navigation# */ {
         value: function Navigation() {
             this.super();
         }
+    },
+
+    currentPanel: {
+        value: null
+    },
+
+    handleAction: {
+        value: function(event) {
+            this.currentPanel = event.detail.get("index");
+        }
     }
 });

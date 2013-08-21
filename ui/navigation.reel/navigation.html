@@ -26,9 +26,18 @@
                 "element": {"#": "panelName"}
             },
             "bindings": {
-                "label": {"<-": "@panelList.objectAtCurrentIteration.label"},
-                "detail.get('panelKey')": {"<-": "@panelList.objectAtCurrentIteration.panelKey"}
-            }
+                "classList.has('Navigation-button--selected')": {"<-": "@panelList.currentIteration.index == @owner.currentPanel"},
+                "detail.get('index')": {"<-": "@panelList.currentIteration.index"},
+                "detail.get('panelKey')": {"<-": "@panelList.objectAtCurrentIteration.panelKey"},
+                "label": {"<-": "@panelList.objectAtCurrentIteration.label"}
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         }
     }
     </script>

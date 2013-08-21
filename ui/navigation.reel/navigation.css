@@ -39,12 +39,14 @@
 	color: hsla(0,0%,0%,.5);
 }
 
-.Navigation-button.digit-Button:hover {
-	background-color: hsl(0,0%,98%);
-}
+/* It seems that Chrome on Android sets the :hover at times.. need to investigate
+ more */
+/*.Navigation-button.digit-Button:hover {*/
+	/*background-color: hsl(0,0%,98%);*/
+/*}*/
 
 .Navigation-button.digit-Button.montage--active,
-.Navigation-listItem--selected .Navigation-button.digit-Button {
+.Navigation-button--selected.digit-Button {
 	background-color: hsl(0,0%,90%);
 }
 
