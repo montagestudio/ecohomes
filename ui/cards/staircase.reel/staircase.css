@@ -1,11 +1,3 @@
-.Staircase .Card-header {
-    background-image: none;
-}
-
-@media (max-width: 1000px) {
+.Staircase {
     
-    .Staircase .Card-hero {
-        width: 340px;
-    }
-
 }

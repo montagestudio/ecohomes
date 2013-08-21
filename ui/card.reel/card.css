@@ -1,6 +1,7 @@
 .Card {
     position: relative;
     box-sizing: border-box;
+    padding: 40px;
     
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -8,34 +9,42 @@
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
-
+    
     background-color: hsl(0,0%,95%);
     border-left: 1px solid hsl(0,0%,97%);
     -webkit-user-select: none;
 }
 
+
+/* Header ------------------------------------------- */
+
 .Card-hero {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
     -webkit-user-drag: none;
 }
 
-.Card-header {
-    background-image: -webkit-linear-gradient(bottom,
-        hsla(0,0%,98%,0) 0%,
-        hsla(0,0%,85%,0.4) 10%,
-        hsla(0,0%,70%,0) 40%);
-}
 
 .Card-title {
-    padding-bottom: 0.4em;
+    margin: 0 0 .6em 0;
+    padding: .4em 0;
     border-bottom: 1px solid hsla(0,0%,70%,0.2);
-    margin: 0 0 0 40px;
 }
 
+.Card-description {
+    margin: 0 0 1em 0;
+}
+
+
+/* Content ------------------------------------------- */
+
 .Card-content {
-    padding: 40px;
-    padding-top: 0;
+    -webkit-margin-collapse: separate; /* Don't collapse margins */
+}
+
+.Card-content p {
+    margin: 0 0 .6em 0;
 }
 
 .Card-optionGrid {
@@ -55,12 +64,9 @@
 .Card-option--booleanField,
 .Card-option--choiceField {
     display: block;
-
     display: -webkit-box;
-
     display: -webkit-flex;
     -webkit-flex: 1 0 50%;
-
     padding: 5px 10px;
 }
 
@@ -117,14 +123,13 @@
     }
 
     .Card-content {
-        padding: 40px;
         -webkit-box-flex: 1;
         -webkit-flex: 1;
     }
 
-    .Card-header {
-        width: 340px;
-        padding-top: 40px;
+    .Card-content:first-child {
+        width: 346px;
+        margin-right: 40px;
     }
 
 }

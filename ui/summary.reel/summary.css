@@ -12,7 +12,7 @@
     margin: 0;
     font-weight: bold;
     font-size: 14px;
-    color: hsl(0,0%,45%);
+    color: hsl(0,0%,50%);
 }
 
 .Summary-option {
@@ -27,6 +27,10 @@
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
+}
+
+.Summary-optionName {
+    font-size: 14px;
 }
 
 .Summary-optionPrice {
