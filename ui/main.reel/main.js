@@ -180,16 +180,16 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     handleCountertopMaterialChange: {
         value: function (newMaterial) {
             var countertopMaterial = this.templateObjects.countertopMaterial;
-            var texture = "7_cuisineVRayCompleteMap.jpg";
+            var texture = "paper-counters.jpg";
 
             //TODO improve this; just done enough to get it working
             //TODO not rely on the fragile name
             if (newMaterial) {
                 switch (newMaterial.name) {
                     case "Black Quartz":
+                        texture = "7_cuisineVRayCompleteMap.jpg";
                         break;
                     case "Paper Composite":
-                        texture = "paper-counters.jpg";
                         break;
                     case "Bamboo":
                         texture = "bamboo-counters.jpg";

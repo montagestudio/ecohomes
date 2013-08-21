@@ -15,7 +15,7 @@ exports.CountertopsConfigurationSet = ConfigurationSet.specialize({
                 new ConfigurationOption().init("Black Quartz", 5400),
                 new ConfigurationOption().init("Cement and Fly Ash", 4599),
                 new ConfigurationOption().init("Bamboo", 3199),
-                new ConfigurationOption().init("Paper Composite", 2799)
+                new ConfigurationOption().init("Paper Composite", 0)
             ));
         }
     }
