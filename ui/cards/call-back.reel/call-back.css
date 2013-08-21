@@ -10,7 +10,8 @@
     margin-top: 8px;
 }
 
-.CallBack--actionButton.digit-Button {
+.CallBack--actionButton.digit-Button,
+.CallBack--cancelButton.digit-Button {
     width: 100%;
     border-color: hsl(71,56%,54%);
     border-width: 3px;
@@ -18,6 +19,18 @@
     background-size: 100% 100%;
 }
 
-.CallBack--actionButton.digit-Button.montage--active {
+.CallBack--actionButton.digit-Button.montage--active,
+.CallBack--cancelButton.digit-Button.montage--active {
     background-color: hsl(71,56%,68%);
+}
+
+.CallBack--cancelButton {
+    -webkit-filter: hue-rotate(285deg);
+}
+
+.CallBack--activity {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    padding: 10px;
 }
