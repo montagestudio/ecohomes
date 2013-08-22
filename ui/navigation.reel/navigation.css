@@ -1,5 +1,5 @@
 .Navigation {
-    background-color: hsl(0,0%,95%);
+    background-color: hsl(0,0%,90%);
     -webkit-user-select: none;
 }
 
@@ -37,6 +37,7 @@
 	border-radius: 0;
 	font-size: 11px;
 	color: hsla(0,0%,0%,.5);
+    background-color: hsl(0,0%,90%);
 }
 
 /* It seems that Chrome on Android sets the :hover at times.. need to investigate
@@ -47,7 +48,7 @@
 
 .Navigation-button.digit-Button.montage--active,
 .Navigation-button--selected.digit-Button {
-	background-color: hsl(0,0%,90%);
+	background-color: hsl(0,0%,95%);
 }
 
 .Navigation-button:before {
