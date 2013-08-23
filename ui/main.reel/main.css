@@ -63,25 +63,34 @@
 /* 3D -------------------------- */
 
 .Main-viewport {
+    position: relative;
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-box-pack: center;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
-    height: 100%;
     background-color: hsl(0,0%,95%);
     z-index: 2;
 }
 
 .Main-room {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
-    max-height: 100%;
 }
 
 .Main-colladaView canvas {
+    position: absolute;
     display: block; /* Removes bottom gap */
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
 }
 
 .Main-overview {
@@ -94,6 +103,14 @@
 
 /* Config -------------------------- */
 
+.Main-configuration {
+    position: relative;
+    -webkit-box-flex: 1; /* old: iOS6 */
+    -webkit-flex: 1; /* new */
+    height: 100%;
+    min-height: 300px; /* Might fix empty flow issue */
+}
+
 .Main-panel {
     position: absolute;
     top: 0;
@@ -101,14 +118,6 @@
     right: 0;
     bottom: 0;
     overflow: hidden;
-}
-
-.Main-configuration {
-    position: relative;
-    -webkit-box-flex: 1; /* old: iOS6 */
-    -webkit-flex: 1; /* new */
-    height: 100%;
-    min-height: 300px; /* Might fix empty flow issue */
 }
 
 .Main-cards {
