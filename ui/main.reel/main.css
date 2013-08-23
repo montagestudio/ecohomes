@@ -10,7 +10,7 @@
 
 /* Nav Toggle -------------------------- */
 
-.Main-navToggle {
+.Main-navToggle.digit-Checkbox {
     display: none;
     position: absolute;
     z-index: 11;
@@ -25,7 +25,7 @@
     -webkit-transform: translateZ(0); /* Force button to own HW layer */
 }
 
-.Main .Main-navToggle.montage-Checkbox--checked {
+.Main-navToggle.digit-Checkbox.montage-Checkbox--checked {
     background-image: none;
 }
 
@@ -140,7 +140,7 @@
 
 /* Targets iPad */
 @media (max-width: 1150px) {
-    .Main-navToggle {
+    .Main-navToggle.digit-Checkbox {
         display: block;
     }
 
