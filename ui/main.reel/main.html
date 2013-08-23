@@ -11,7 +11,8 @@
         "owner": {
             "prototype": "ui/main.reel",
             "properties": {
-                "element": {"#": "main"}
+                "element": {"#": "main"},
+                "viewPortElement": {"#": "viewPort"}
             },
             "bindings": {
                 "classList.has('Main--showNavigation')": {"<-": "showNav"}
@@ -289,7 +290,7 @@
     <div data-montage-id="main" class="Main">
         <button data-montage-id="navToggle" class="Main-navToggle"></button>
         <section class="Main-navigation" data-montage-id="navigation"></section>
-        <section class="Main-viewport" data-montage-skin="light">
+        <section class="Main-viewport" data-montage-skin="light" data-montage-id="viewPort">
             <div class="Main-room">
                 <div data-montage-id="roomView" class="Main-colladaView"></div>
                 <div data-montage-id="overview" class="Main-overview"></div>

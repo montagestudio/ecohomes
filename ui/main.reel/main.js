@@ -66,6 +66,14 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: null
     },
 
+    _resize: {
+        value: false
+    },
+
+    _roomSize: {
+        value: null
+    },
+
     templateDidLoad: {
         value: function() {
             var view = this.templateObjects.roomView,
@@ -99,6 +107,35 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
             //Start the room ride animation once the introduction slide has shown
             this.addEventListener("firstDraw", this);
+        }
+    },
+
+    enterDocument: {
+        value: function(firstTime) {
+            if (firstTime) {
+                this.element.ownerDocument.defaultView.addEventListener("resize", this, false);
+            }
+        }
+    },
+
+    willDraw: {
+        value: function() {
+            if (this._resize) {
+                this._roomSize = {
+                    width: this.viewPortElement.offsetWidth,
+                    height: this.viewPortElement.offsetHeight
+                };
+            }
+        }
+    },
+
+    draw: {
+        value: function() {
+            if (this._resize) {
+                this._resize = false;
+                this.templateObjects.roomView.width = this._roomSize.width;
+                this.templateObjects.roomView.height = this._roomSize.height;
+            }
         }
     },
 
@@ -256,6 +293,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                     self.templateObjects.roomView.play();
                 }, 2200);
             }
+        }
+    },
+
+    handleResize: {
+        value: function() {
+            this._resize = true;
+            this.needsDraw = true;
         }
     }
 });
