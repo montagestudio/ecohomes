@@ -74,6 +74,12 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             view.width = newWidth;
             view.height = newHeight;
 
+            // Use this object to track roomSize as a result of resizing
+            this._roomSize = {
+                width: null,
+                height: null,
+            };
+
             // NOTE Even panels with no configuration options can have preferred viewpoints
             // this is why the viewpoint is related to panels, not configuration sets
             this.cards = [
@@ -113,10 +119,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     willDraw: {
         value: function() {
             if (this._resize) {
-                this._roomSize = {
-                    width: this.viewPortElement.offsetWidth,
-                    height: this.viewPortElement.offsetHeight
-                };
+                var roomSize = this._roomSize;
+                roomSize.width = this.viewPortElement.offsetWidth;
+                roomSize.height = this.viewPortElement.offsetHeight;
             }
         }
     },
@@ -125,8 +130,11 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function() {
             if (this._resize) {
                 this._resize = false;
-                this.templateObjects.roomView.width = this._roomSize.width;
-                this.templateObjects.roomView.height = this._roomSize.height;
+                var roomView = this.templateObjects.roomView,
+                    roomSize = this._roomSize;
+
+                roomView.width = roomSize.width;
+                roomView.height = roomSize.height;
             }
         }
     },
