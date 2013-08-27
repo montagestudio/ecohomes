@@ -17,6 +17,14 @@ exports.PanelFlow = Component.specialize({
     constructor: {
         value: function PanelFlow () {
             this.super();
+
+            this.defineBinding("flow.content", {"<-": "content"});
+
+            // Only use a contentController if content is not defined
+            this.defineBinding("content.defined() ? null : flow.contentController", {
+                "<-": "contentController"
+            });
+
         }
     },
 
@@ -252,36 +260,12 @@ exports.PanelFlow = Component.specialize({
         }
     },
 
-    _content: {
-        value: null
-    },
-
     content: {
-        set: function(value) {
-            this._content = value;
-            this.defineBinding("flow.content", {
-                "<-": "content"
-            });
-        },
-        get: function() {
-            return this._content;
-        }
-    },
-
-    _contentController: {
         value: null
     },
 
     contentController: {
-        set: function(value) {
-            this._contentController = value;
-            this.defineBinding("flow.contentController", {
-                "<-": "contentController"
-            });
-        },
-        get: function() {
-            return this._contentController;
-        }
+        value: null
     },
 
     observeProperty: {
