@@ -35,22 +35,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             configurationMap.set("solarPanels", new SolarPanelsConfigurationSet());
 
             this.configuration = new Configuration().init(628000, 6000, configurationMap);
-
-            // NOTE Even panels with no configuration options can have preferred viewpoints
-            // this is why the viewpoint is related to panels, not configuration sets
-            this.panelIdViewpointMap = new Map();
-
-            this.cards = [
-                {panelKey: "introduction", label: "Introduction"},
-                {panelKey: "staircase", label: "Staircase"},
-                {panelKey: "thermostat", label: "Thermostat"},
-                {panelKey: "kitchen", label: "Kitchen"},
-                {panelKey: "counters", label: "Countertop"},
-                {panelKey: "laundry", label: "Laundry"},
-                {panelKey: "window", label: "Windows"},
-                {panelKey: "solarPanels", label: "Solar Panels"},
-                {panelKey: "callBack", label: "Contact"}
-            ]
         }
     },
 
@@ -76,7 +60,8 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     templateDidLoad: {
         value: function() {
-            var view = this.templateObjects.roomView,
+            var templateObjects = this.templateObjects,
+                view = templateObjects.roomView,
                 originalWidth = view.width / view.scaleFactor,
                 originalHeight = view.height / view.scaleFactor,
                 newWidth = window.innerHeight * originalWidth / originalHeight,
@@ -89,15 +74,22 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             view.width = newWidth;
             view.height = newHeight;
 
+            // NOTE Even panels with no configuration options can have preferred viewpoints
+            // this is why the viewpoint is related to panels, not configuration sets
+            this.cards = [
+                {panelKey: "introduction", label: "Introduction"},
+                {panelKey: "staircase", label: "Staircase", viewpoint: templateObjects.staircaseViewpoint},
+                {panelKey: "thermostat", label: "Thermostat"},
+                {panelKey: "kitchen", label: "Kitchen", viewpoint: templateObjects.kitchenViewpoint},
+                {panelKey: "counters", label: "Countertop", viewpoint: templateObjects.counterViewpoint},
+                {panelKey: "laundry", label: "Laundry"},
+                {panelKey: "window", label: "Windows", viewpoint: templateObjects.windowViewpoint},
+                {panelKey: "solarPanels", label: "Solar Panels"},
+                {panelKey: "callBack", label: "Contact"}
+            ];
+
             //React to the current panel changing
             this.addPathChangeListener("templateObjects.panelFlow.currentPanel", this, "handlePanelIndexChange");
-
-            //Specify preferred cameras for specific panels
-            var viewpointMap = this.panelIdViewpointMap;
-            viewpointMap.set("staircase", this.templateObjects.staircaseViewpoint);
-            viewpointMap.set("kitchen", this.templateObjects.kitchenViewpoint);
-            viewpointMap.set("counters", this.templateObjects.counterViewpoint);
-            viewpointMap.set("window", this.templateObjects.windowViewpoint);
 
             //React to options that should alter the scene
             this.addPathChangeListener("configuration.configurationMap.get('staircase').optionMap.get('material')._selectedOption", this, "handleStaircaseMaterialChange");
@@ -152,7 +144,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             var panelEntry = this.cards[panelIndex];
 
             if (panelEntry) {
-                var preferredViewpoint = this.panelIdViewpointMap.get(panelEntry.panelKey);
+                var preferredViewpoint = panelEntry.viewpoint;
 
                 if (preferredViewpoint) {
 
