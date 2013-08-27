@@ -3,8 +3,7 @@
     @requires montage
     @requires montage/ui/component
 */
-var Montage = require("montage").Montage,
-    Component = require("montage/ui/component").Component,
+var Component = require("montage/ui/component").Component,
     KeyComposer = require("montage/composer/key-composer").KeyComposer,
     observeProperty = require("montage/frb/observers").observeProperty;
 
@@ -13,7 +12,13 @@ var Montage = require("montage").Montage,
     @class module:"ui/panel-flow.reel".PanelFlow
     @extends module:montage/ui/component.Component
 */
-exports.PanelFlow = Montage.create(Component, /** @lends module:"ui/panel-flow.reel".PanelFlow# */ {
+exports.PanelFlow = Component.specialize({
+
+    constructor: {
+        value: function PanelFlow () {
+            this.super();
+        }
+    },
 
     handleKeydown: {
         value: function(event) {
