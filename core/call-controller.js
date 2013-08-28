@@ -58,7 +58,7 @@ exports.CallController = Montage.specialize({
 
             this.errors = [];
             // doesn't work since the statechart doesn't
-            this.defineBinding("currentState", {"<-": "_stateChart.currentState.name"})
+            this.defineBinding("currentState", {"<-": "_stateChart.currentState.name"});
         }
     },
 
@@ -69,7 +69,7 @@ exports.CallController = Montage.specialize({
     stateChartWillGoFromStateToState: {
         value: function(stateChart, prevState, nextState) {
             this.callDelegateMethod("stateDidChange", this, nextState.name);
-            console.log("nextState", nextState.name)
+            console.log("nextState", nextState.name);
         }
     },
 
@@ -127,7 +127,7 @@ exports.CallController = Montage.specialize({
                         }
                         response.resolve(request.responseText);
                     } else {
-                        response.reject("HTTP " + request.status + " for " + path);
+                        response.reject("HTTP " + request.status + " for " + url);
                     }
                 }
             };
@@ -156,7 +156,7 @@ exports.CallController = Montage.specialize({
                 this._normalizedPhoneNumber = this.phoneNumber.replace(this._phoneNumberRegex, "$1$2$3");
                 return true;
             }
-            return (this.phoneNumber != null) && this._phoneNumberRegex.test(this.phoneNumber)
+            return (this.phoneNumber != null) && this._phoneNumberRegex.test(this.phoneNumber);
         }
     },
 

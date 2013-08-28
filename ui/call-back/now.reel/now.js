@@ -34,13 +34,13 @@ exports.Now = Component.specialize(/** @lends Now# */ {
 
     handleAction: {
         value: function() {
-            this.controller.call()
+            this.controller.call();
         }
     },
 
     handleCallLaterAction: {
         value: function() {
-            this.controller.later()
+            this.controller.later();
         }
     }
 

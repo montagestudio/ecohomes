@@ -2,12 +2,12 @@
 
 var QS = require("qs");
 var Q = require("q");
-Q.longStackSupport = true
+Q.longStackSupport = true;
 
 var argv = require('optimist')
     .usage("node server.js [--env=development|production]")
     .check(function(argv) {
-        return (!argv.env || ["development", "production"].indexOf(argv.env) > -1)
+        return (!argv.env || ["development", "production"].indexOf(argv.env) > -1);
     })
     .argv;
 

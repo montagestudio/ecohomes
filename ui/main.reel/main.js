@@ -77,7 +77,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             // Use this object to track roomSize as a result of resizing
             this._roomSize = {
                 width: null,
-                height: null,
+                height: null
             };
 
             // NOTE Even panels with no configuration options can have preferred viewpoints
@@ -209,7 +209,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function (newApplianceValue) {
             var appliancesMaterial = this.templateObjects.appliancesMaterial,
                 appliancesNode = this.templateObjects.appliancesNode,
-                opacity = 1;
+                opacity = 1,
                 hidden = false;
 
             //TODO not rely on the fragile name
@@ -232,19 +232,19 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             //TODO not rely on the fragile name
             if (newMaterial) {
                 switch (newMaterial.name) {
-                    case "Black Quartz":
-                        texture = "7_cuisineVRayCompleteMap.jpg";
-                        break;
-                    case "Paper Composite":
-                        break;
-                    case "Bamboo":
-                        texture = "bamboo-counters.jpg";
-                        break;
-                    case "Cement and Fly Ash":
-                        texture = "cement-counters.jpg";
-                        break;
-                    default:
-                        texture = "";
+                case "Black Quartz":
+                    texture = "7_cuisineVRayCompleteMap.jpg";
+                    break;
+                case "Paper Composite":
+                    break;
+                case "Bamboo":
+                    texture = "bamboo-counters.jpg";
+                    break;
+                case "Cement and Fly Ash":
+                    texture = "cement-counters.jpg";
+                    break;
+                default:
+                    texture = "";
                 }
             }
 

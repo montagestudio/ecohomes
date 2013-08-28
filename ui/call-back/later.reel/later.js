@@ -17,13 +17,13 @@ exports.Later = Component.specialize(/** @lends Later# */ {
 
     handleCallAction: {
         value: function() {
-            this.controller.call()
+            this.controller.call();
         }
     },
 
     handleCallNowAction: {
         value: function() {
-            this.controller.now()
+            this.controller.now();
         }
     },
 

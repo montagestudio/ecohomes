@@ -167,7 +167,7 @@ exports.PanelFlow = Component.specialize({
                                 ],
                                 "nextDensity": 1,
                                 "previousDensity": 1,
-                                "opacity": .4
+                                "opacity": 0.4
                             },
                             {
                                 "knotPosition": [
@@ -207,7 +207,7 @@ exports.PanelFlow = Component.specialize({
                                 ],
                                 "nextDensity": 1,
                                 "previousDensity": 1,
-                                "opacity": .4
+                                "opacity": 0.4
                             },
                             {
                                 "knotPosition": [

@@ -60,7 +60,7 @@ exports.SubstitutionDelay = Montage.specialize(/** @lends SubstitutionDelay# */ 
                         return delaySwitchValue;
                     }
                 }
-            }
+            };
         }
     },
 

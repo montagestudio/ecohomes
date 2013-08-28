@@ -21,7 +21,7 @@ exports.CallingLater = Component.specialize(/** @lends CallingLater# */ {
 
     handleCancelAction: {
         value: function() {
-            this.controller.cancel()
+            this.controller.cancel();
         }
     }
 });
