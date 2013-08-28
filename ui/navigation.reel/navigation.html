@@ -11,6 +11,15 @@
                 "element": {"#": "Navigation"}
             }
         },
+        "navItem": {
+            "prototype": "ui/navigation.reel/nav-item.reel",
+            "properties": {
+                "element": {"#": "navItem1"}
+            },
+            "bindings": {
+                "panelKey": {"<-": "@panelList.objectAtCurrentIteration.panelKey"}
+            }
+        },
         "panelList": {
             "prototype": "montage/ui/repetition.reel",
             "properties": {
@@ -45,7 +54,7 @@
 <body>
     <div data-montage-id="Navigation" class="Navigation">
         <ul data-montage-id="repetition" class="Navigation-list">
-            <li class="Navigation-listItem">
+            <li class="Navigation-listItem" data-montage-id="navItem1">
                 <button data-montage-id="panelName" class="Navigation-button"></button>
             </li>
         </ul>
