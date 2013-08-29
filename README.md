@@ -7,12 +7,19 @@ history will be truncated prior to posting. Regardless, please keep confidential
 
 Installation
 ------------
+1. Install git
+2. Install nodejs (http://nodejs.org)
 
-1. Install nodejs (http://nodejs.org)
-2. After cloning this repository, `cd den-demo`
-3. Run `npm install`
-4. Browse to your clone as served by your local system e.g. http://localhost:8081/den-demo
-5. Throughout the course of development run `npm update` to fetch the latest dependencies
+Autopilot Everything:
+3. `sudo npm install minit -g && git clone git@github.com:declarativ/den-demo.git && cd den-demo && npm install && minit serve`
+4. Open the url reported by the previous command in a browser
+
+Manual Installation:
+3. After cloning this repository, `cd den-demo`
+4. Run `npm install`
+5. Browse to your clone as served by your local system e.g. http://localhost:8081/den-demo
+
+Throughout the course of development run `npm update` to fetch the latest dependencies
 
 NOTE: Prior to running `npm update` **remove glTF-webgl-viewer from node_modules**, (`rm -rf node_modules/gltf-webgli-viewer`
 
