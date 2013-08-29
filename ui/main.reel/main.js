@@ -293,6 +293,10 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                     self.templateObjects.roomView.play();
                 }, 2200);
             }
+            
+            // Temp fix for initial canvas size
+            this._resize = true;
+            this.needsDraw = true;
         }
     },
 
