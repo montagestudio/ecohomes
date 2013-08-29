@@ -86,11 +86,7 @@
 }
 
 .Main-colladaView canvas {
-    position: absolute;
     display: block; /* Removes bottom gap */
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
 }
 
 .Main-overview {
