@@ -60,19 +60,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     templateDidLoad: {
         value: function() {
-            var templateObjects = this.templateObjects,
-                view = templateObjects.roomView,
-                originalWidth = view.width / view.scaleFactor,
-                originalHeight = view.height / view.scaleFactor,
-                newWidth = window.innerHeight * originalWidth / originalHeight,
-                newHeight = window.innerHeight;
-
-            if (window.innerWidth <= 1024) {
-                newWidth -= 100;
-            }
-
-            view.width = newWidth;
-            view.height = newHeight;
+            var templateObjects = this.templateObjects;
 
             // Use this object to track roomSize as a result of resizing
             this._roomSize = {
