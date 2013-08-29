@@ -11,10 +11,12 @@ Installation
 2. Install nodejs (http://nodejs.org)
 
 Autopilot Everything:
+
 3. `sudo npm install minit -g && git clone git@github.com:declarativ/den-demo.git && cd den-demo && npm install && minit serve`
 4. Open the url reported by the previous command in a browser
 
 Manual Installation:
+
 3. After cloning this repository, `cd den-demo`
 4. Run `npm install`
 5. Browse to your clone as served by your local system e.g. http://localhost:8081/den-demo
