@@ -23,7 +23,7 @@ Manual Installation:
 
 Throughout the course of development run `npm update` to fetch the latest dependencies
 
-NOTE: Prior to running `npm update` **remove glTF-webgl-viewer from node_modules**, (`rm -rf node_modules/gltf-webgli-viewer`
+NOTE: Prior to running `npm update` **remove glTF-webgl-viewer from node_modules**, (`rm -rf node_modules/glTF-webgl-viewer`)
 
 Contributing
 ------------
