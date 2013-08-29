@@ -87,6 +87,7 @@
     display: -webkit-flex;
     -webkit-flex-direction: column;
     padding-left: 8px;
+    cursor: pointer;
 }
 
 .Card-option-label {
