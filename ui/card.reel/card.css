@@ -113,9 +113,9 @@
     outline: 1px solid red;
 }
 
-/* Portrait */
 
-@media (max-width: 1000px) {
+/* Portrait */
+@media (orientation: portrait) {
     
     .Card {
         -webkit-box-orient: horizontal;
