@@ -13,9 +13,6 @@
             "properties": {
                 "element": {"#": "main"},
                 "viewPortElement": {"#": "viewPort"}
-            },
-            "bindings": {
-                "classList.has('Main--showNavigation')": {"<-": "showNav"}
             }
         },
         "appliancesMaterial": {
@@ -146,15 +143,6 @@
                 }
             ]
         },
-        "navToggle": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "navToggle"}
-            },
-            "bindings": {
-                "checked": {"<->": "@owner.showNav"}
-            }
-        },
         "overview": {
             "prototype": "ui/overview.reel",
             "properties": {
@@ -195,7 +183,7 @@
         "roomView": {
             "prototype": "glTF-webgl-viewer/ui/view.reel",
             "properties": {
-                "element": {"#": "roomView"},
+                
                 "height": "768",
                 "scene": {"@": "roomScene"},
                 "viewPoint": {"@": "rideViewpoint"},
@@ -310,7 +298,6 @@
             </ul>
         </section>
         <section class="Main-navigation" data-montage-id="navigation"></section>
-        <button data-montage-id="navToggle" class="Main-navToggle"></button>
     </div>
 </body>
 </html>

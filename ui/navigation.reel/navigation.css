@@ -1,8 +1,23 @@
 .Navigation {
-    -webkit-user-select: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 10;
     border-left: 1px solid hsl(0,0%,80%);
     background-color: hsl(0,0%,90%);
+    -webkit-user-select: none;
+    -webkit-transform: translate3d(100%,0,0);
+    -webkit-transition: -webkit-transform .2s;
 }
+
+.Navigation.Navigation--show {
+    -webkit-transform: translate3d(0,0,0);
+}
+
+
+/* Nav List ------------------------------ */
 
 .Navigation-list {
 	display: -webkit-box;
@@ -76,15 +91,92 @@
 .NavItem--callBack .Navigation-button:before { background-position: center -384px; }
 
 
+
+/* Nav Toggle -------------------------- */
+
+.Navigation-toggle.digit-Checkbox {
+    display: block;
+    position: absolute;
+    z-index: 11;
+    margin: 0;
+    top: 25px;
+    right: 125px;
+    width: 48px;
+    height: 48px;
+    background-color: hsla(0,0%,100%,.2);
+    border-radius: 24px;
+    border-color: hsla(0,0%,0%,.2);
+    -webkit-transform: translateZ(0); /* Force button to own HW layer */
+}
+
+.Navigation-toggle.digit-Checkbox.montage-Checkbox--checked {
+    background-image: none;
+}
+
+.Navigation-toggle:before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: transparent url(../../assets/images/toggle-icons.svg) no-repeat;
+    background-size: 48px auto;
+    background-position: center 0; /* no icon by default */
+}
+
+.Navigation--show .Navigation-toggle:before {
+    background-position: center -48px;
+}
+
+.Navigation-toggle.montage--active {
+    background-color: hsla(0,0%,0%,.1);
+}
+
+
+/* Responsive Nav */
+
+@media (min-width: 1150px) and (orientation: landscape) { /* Show nav on wider screens */
+    
+    .Navigation {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        height: 100%;
+        -webkit-transition: none;
+        -webkit-transform: none;
+    }
+    
+    .Navigation-toggle.digit-Checkbox {
+        display: none;
+    }
+    
+}
+
+
 /* Portrait */
 @media (orientation: portrait) {
+    
+    .Navigation {
+        width: auto;
+        height: 100px;
+        border: none;
+        border-bottom: 1px solid hsl(0,0%,80%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        -webkit-transform: translate3d(0,-100%,0);
+    }
+    
     .Navigation-list {
     	-webkit-box-orient: horizontal;
     	-webkit-box-pack: start;
     	-webkit-flex-direction: row;
     	-webkit-justify-content: flex-start;
     	height: auto;
-    	margin-right: 100px; /* Space for toggle */
     }
     
     .Navigation-listItem {
@@ -109,4 +201,10 @@
     .Navigation-button:before {
         top: 24px;
     }
+    
+    .Navigation-toggle.digit-Checkbox {
+        top: 125px;
+        right: 25px;
+    }
+    
 }

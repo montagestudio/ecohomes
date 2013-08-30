@@ -8,67 +8,6 @@
 }
 
 
-/* Nav Toggle -------------------------- */
-
-.Main-navToggle.digit-Checkbox {
-    display: block;
-    position: absolute;
-    z-index: 11;
-    margin: 0;
-    top: 25px;
-    right: 25px;
-    width: 48px;
-    height: 48px;
-    background-color: hsla(0,0%,100%,.2);
-    border-radius: 24px;
-    border-color: hsla(0,0%,0%,.2);
-    -webkit-transform: translateZ(0); /* Force button to own HW layer */
-}
-
-.Main-navToggle.digit-Checkbox.montage-Checkbox--checked {
-    background-image: none;
-}
-
-.Main-navToggle:before {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 48px;
-    background: transparent url(../../assets/images/toggle-icons.svg) no-repeat;
-    background-size: 48px auto;
-    background-position: center 0; /* no icon by default */
-}
-
-.Main--showNavigation .Main-navToggle:before {
-    background-position: center -48px;
-}
-
-.Main-navToggle.montage--active {
-    background-color: hsla(0,0%,0%,.1);
-}
-
-
-/* Nav -------------------------- */
-
-.Main-navigation {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100px;
-    z-index: 10;
-    -webkit-transform: translate3d(100%,0,0);
-    -webkit-transition: -webkit-transform .2s;
-}
-
-.Main--showNavigation .Main-navigation {
-    -webkit-transform: translate3d(0,0,0);
-}
-
-
 /* 3D -------------------------- */
 
 .Main-viewport {
@@ -139,42 +78,12 @@
 }
 
 
-/* Screen size adapting -------------------------- */
+/* Portrait -------------------------- */
 
-@media (min-width: 1150px) and (orientation: landscape) { /* Show nav on wider screens */
-
-    .Main-navToggle.digit-Checkbox {
-        display: none;
-    }
-    
-    .Main-navigation {
-        position: relative;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        height: 100%;
-        -webkit-transition: none;
-        -webkit-transform: none;
-    }
-    
-}
-
-@media (orientation: portrait) { /* Portrait */
+@media (orientation: portrait) {
     .Main {
         -webkit-box-orient: vertical;
         -webkit-flex-direction: column;
-    }
-    
-    .Main-navigation {
-        width: auto;
-        height: 100px;
-        border: none;
-        border-bottom: 1px solid hsl(0,0%,80%);
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: auto;
-        -webkit-transform: translate3d(0,-100%,0);
     }
     
     .Main-viewport {

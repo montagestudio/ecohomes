@@ -9,6 +9,9 @@
             "prototype": "ui/navigation.reel",
             "properties": {
                 "element": {"#": "Navigation"}
+            },
+            "bindings": {
+                "classList.has('Navigation--show')": {"<-": "showNav"}
             }
         },
         "navItem": {
@@ -47,6 +50,15 @@
                     "listener": {"@": "owner"}
                 }
             ]
+        },
+        "navToggle": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "navToggle"}
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.showNav"}
+            }
         }
     }
     </script>
@@ -58,6 +70,7 @@
                 <button data-montage-id="panelName" class="Navigation-button"></button>
             </li>
         </ul>
+        <button data-montage-id="navToggle" class="Navigation-toggle"></button>
     </div>
 </body>
 </html>
