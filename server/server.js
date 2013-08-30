@@ -2,6 +2,10 @@
 
 var QS = require("qs");
 var Q = require("q");
+var Connection = require("q-connection");
+var Joey = require("joey");
+var SocketServer = require("websocket.io");
+
 Q.longStackSupport = true;
 
 var argv = require('optimist')
@@ -11,40 +15,29 @@ var argv = require('optimist')
     })
     .argv;
 
-var environment = argv.env || "development";
+var environment = argv.env || process.env.CALL_BACK_ENV || "development";
 var port = argv.p || 80;
 
 var CONFIG = require("./config/" + environment + ".js");
 var accountSid = CONFIG.accountSid;
 var authToken = CONFIG.authToken;
 var fromNumber = CONFIG.fromNumber;
-var appEntryUrl = CONFIG.appEntryUrl;
+var appEntryUrl = CONFIG.appUrl + "/initiateCall";
+var callEndedUrl = CONFIG.appUrl + "/callEnded";
 
-require("joey")
+var callIntervals = {};
+
+
+
+var CallsClient = require("./calls").client(accountSid, authToken, fromNumber, appEntryUrl, callEndedUrl);
+
+
+
+Joey
 .log()
 .error()
 .favicon()
 .route(function ($) {
-
-    $("contact")
-        .method("POST")
-        .trap(function (response) {
-            response.headers["Access-Control-Allow-Origin"] = "*";
-            response.headers["Access-Control-Allow-Headers"] = "X-Requested-With";
-        })
-        .contentApp(function (request) {
-            return request.body.read().then(function (body) {
-                var params = QS.parse(body.toString("utf-8"));
-
-                //TODO format to number
-                var toNumber = "+1" + params.to;
-                //TODO store/passalong configuration information
-
-                var client = require('twilio')(accountSid, authToken);
-
-                return makeCall(client, toNumber, fromNumber, appEntryUrl).thenResolve("SUCCESS");
-            });
-        });
 
     $("initiateCall")
         .method("POST")
@@ -52,6 +45,7 @@ require("joey")
             response.headers["content-type"] = "text/xml";
         })
         .contentApp(function (request) {
+            console.log("CALL STARTED");
             var response = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<Response>\n" +
                     "<Say voice=\"woman\">Please leave a message after the tone.</Say>\n" +
@@ -63,6 +57,27 @@ require("joey")
             return response;
         });
 
+    $("callEnded")
+        .method("POST")
+        .trap(function (response) {
+            response.headers["content-type"] = "text/xml";
+        })
+        .contentApp(function (request) {
+            return request.body.read().then(function (body) {
+                var params = QS.parse(body.toString("utf-8"));
+
+                console.log("CALL ENDED", params.CallSid);
+
+                CallsClient.callEnded(params.CallSid);
+
+
+
+                console.log("status", params.CallStatus);
+                console.log("CallDuration", params.CallDuration);
+                return "status";
+            });
+       });
+
 })
 .listen(port)
 .then(function () {
@@ -70,25 +85,41 @@ require("joey")
 })
 .done();
 
-function sendSMS(client, to, from, body) {
 
-    console.log("sms", to, from, body);
 
-    return Q.nfcall(client.sendSms, {
-        to: to,
-        from: from,
-        body: body
-    });
+var wsServer;
+var wsCapabilities = {
+    calls: Q.master(CallsClient),
+
+    kill: function () {
+        process.exit();
+    }
+};
+
+function startWSServer(port) {
+    // Initialize the Websocket server, open only to local connections
+    Joey.blah() // logs, errors, etc
+    .notFound() // no content
+    .listen(port, "") // listen on any port but only accept local connections
+//        .trap(function (response) {
+//            response.headers["Access-Control-Allow-Origin"] = "*";
+//            response.headers["Access-Control-Allow-Headers"] = "X-Requested-With";
+//        })
+    .then(function (server) {
+        var address,
+            socketServer;
+
+        wsServer = server;
+        address = server.node.address();
+
+        socketServer = SocketServer.attach(server.node);
+        socketServer.on("connection", function (connection) {
+            Connection(connection, wsCapabilities);
+        });
+
+        global.nodePort = address.port;
+        console.log("Websocket Server running on " + global.nodePort);
+    })
+    .done();
 }
-
-function makeCall(client, to, from, url) {
-
-    console.log("call", to, from, url);
-
-    return Q(client).ninvoke("makeCall", {
-        to: to,
-        from: from,
-        url: url
-    });
-
-}
+startWSServer(8086);
