@@ -3,6 +3,12 @@ var Promise = require("montage/core/promise").Promise;
 var StateChart = require("montage/core/state-chart").StateChart;
 var State = require("montage/core/state-chart").State;
 
+var Connection = require("q-connection");
+var adaptConnection = require("q-connection/adapt");
+
+
+Promise.longStackSupport = true;
+
 exports.CallController = Montage.specialize({
 
     constructor: {
@@ -25,7 +31,9 @@ exports.CallController = Montage.specialize({
                     callController.makeContactCall().done();
                 },
                 cancel: function(actionName, stateChart, owner) {
-                    this.gotoState('callNow');
+                    callController.cancelCall().then(function () {
+                        this.gotoState('callNow');
+                    }.bind(this)).done();
                 }
             });
 
@@ -107,11 +115,36 @@ exports.CallController = Montage.specialize({
         }
     },
 
+    _currentCall: {
+        value: null
+    },
+
     makeContactCall: {
         value: function() {
-            return this._post("http://audition.nodejitsu.com/contact", ["to=" + this._normalizedPhoneNumber], 5000);
+            var controller = this;
+            return this.backend.get("calls").invoke("makeCall", this._normalizedPhoneNumber).then(function (call) {
+                console.log("makeCall", call);
+                controller._currentCall = call;
+            });
+//            var calls = this.backend.get("calls");
+//            debugger
+//            return calls;
+
+            //return this._post("http://localhost:8085/contact", ["to=" + this._normalizedPhoneNumber], 5000);
         }
     },
+    
+    cancelCall: {
+        value: function() {
+            if (this._currentCall) {
+                console.log("cancelCall", this._currentCall);
+                return this._currentCall.invoke("cancel");
+            } else {
+                console.error("No call to cancel.")
+            }
+        }
+    },
+    
 
     _post: {
         value: function(url, data, timeout) {
@@ -165,7 +198,7 @@ exports.CallController = Montage.specialize({
     },
 
     phoneNumber: {
-        value: null
+        value: "4085406044"
     },
 
     _normalizedPhoneNumber: {
@@ -174,6 +207,25 @@ exports.CallController = Montage.specialize({
 
     identifier: {
         value: "callController"
+    },
+
+    _backend: {
+        value: null
+    },
+
+    backend: {
+        get: function () {
+            if (this._backend == null) {
+                var connection = adaptConnection(new WebSocket("ws://localhost:8086"));
+                connection.closed.then(function () {
+                    this._backend = null;
+                });
+
+                this._backend = Connection(connection);
+            }
+
+            return this._backend;
+        }
     }
 
 });

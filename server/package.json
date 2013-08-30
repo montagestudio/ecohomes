@@ -1,12 +1,14 @@
 {
   "name": "call-back",
-  "version": "0.0.0-1",
+  "version": "0.0.0-11",
   "dependencies": {
     "twilio": "~1.1.4",
     "joey": "~1.2.0",
     "q": "~0.9.6",
     "qs": "~0.6.5",
-    "optimist": "~0.6.0"
+    "optimist": "~0.6.0",
+    "q-connection": "0.5.3",
+    "websocket.io": "0.2.x"
   },
   "subdomain": "audition",
   "scripts": {
