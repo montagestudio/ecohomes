@@ -12,7 +12,7 @@ var argv = require('optimist')
     .argv;
 
 var environment = argv.env || "development";
-var port = argv.p || 8085;
+var port = argv.p || 80;
 
 var CONFIG = require("./config/" + environment + ".js");
 var accountSid = CONFIG.accountSid;
