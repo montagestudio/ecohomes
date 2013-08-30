@@ -109,7 +109,7 @@ exports.CallController = Montage.specialize({
 
     makeContactCall: {
         value: function() {
-            return this._post("http://audition.montagejs.org/api/contact", ["to=" + this._normalizedPhoneNumber], 5000);
+            return this._post("http://audition.nodejitsu.com/contact", ["to=" + this._normalizedPhoneNumber], 5000);
         }
     },
 
