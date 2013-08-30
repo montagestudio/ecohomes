@@ -204,7 +204,8 @@
     
     .Navigation-toggle.digit-Checkbox {
         top: 125px;
-        left: 25px;
+        right: 25px;
+        left: auto;
     }
     
 }

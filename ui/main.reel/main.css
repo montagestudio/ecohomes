@@ -68,7 +68,7 @@
 }
 
 .Main .PanelFlow-flow {
-    border-right: 1px solid hsl(0, 0%, 61%);
+    border-left: 1px solid hsl(0, 0%, 61%);
 
     background-color: hsl(0, 0%, 27%);
     background-image: -webkit-linear-gradient(top,
