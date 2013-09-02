@@ -56,3 +56,37 @@ body {
 .montage-app-loading .montage-Indexloader {
 	visibility: visible;
 }
+
+
+/* Debug ---------------------------------------- */
+
+.debug-Grid {
+    position: relative;
+}
+
+.debug-Grid:after,
+.debug-Grid--padded:after {
+    content: "";
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: -webkit-repeating-linear-gradient( left,
+        hsla(0,100%,50%, 0)  0px,
+        hsla(0,100%,50%, 0) 10px,
+        hsla(0,100%,50%,.1) 10px,
+        hsla(0,100%,50%,.1) 54px,
+        hsla(0,100%,50%, 0) 54px,
+        hsla(0,100%,50%, 0) 64px
+    );
+}
+
+.debug-Grid--padded:after {
+    border: 34px solid hsla(0,100%,50%,0);
+    background-clip: content-box;
+}
+
+
