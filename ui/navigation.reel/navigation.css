@@ -3,10 +3,17 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 100px;
+    width: 140px;
     z-index: 10;
-    border-right: 1px solid hsl(0,0%,80%);
-    background-color: hsl(0,0%,90%);
+    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    
+    background-color: #f5f5f5;
     -webkit-user-select: none;
     -webkit-transform: translate3d(-100%,0,0);
     -webkit-transition: -webkit-transform .2s;
@@ -20,53 +27,54 @@
 /* Nav List ------------------------------ */
 
 .Navigation-list {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-box-pack: center;
-	display: -webkit-flex;
-	-webkit-flex-direction: column;
-	-webkit-justify-content: center;
-	height: 100%;
+	max-height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .Navigation-listItem {
     padding: 0;
     margin: 0;
-}
-
-.Navigation-listItem:first-child .Navigation-button {
-	border-top: 1px solid hsl(0,0%,80%);
+    height: 70px;
 }
 
 .Navigation-button.digit-Button {
 	display: block;
 	position: relative;
 	width: 100%;
-	height: auto;
+	height: 70px;
 	margin: 0;
-	padding: 40px 0 12px 0; /* Space for icon */
 	border: none;
-	border-bottom: 1px solid hsl(0,0%,80%);
 	border-radius: 0;
-	font-size: 11px;
-	color: hsla(0,0%,0%,.5);
-    background-color: hsl(0,0%,90%);
+	font-size: 17px;
+	color: #666;
+	font-family: "HelveticaNeue-CondensedBold";
+	text-shadow: 0 1px 0 white;
+	background-color: inherit;
 }
 
-/* It seems that Chrome on Android sets the :hover at times.. need to investigate
- more */
-/*.Navigation-button.digit-Button:hover {*/
-	/*background-color: hsl(0,0%,98%);*/
-/*}*/
-
-.Navigation-button.digit-Button.montage--active,
-.Navigation-button--selected.digit-Button {
-	background-color: hsl(0,0%,95%);
+.Navigation-button.digit-Button.montage--active {
+	background-color: hsl(0,0%,90%);
 }
 
+.Navigation-button--selected.digit-Button:after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	top: 24px;
+	right: 0;
+	border: 10px solid hsla(0,0%,0%,.1);
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	box-sizing: border-box;
+	-webkit-transform: rotate(-45deg) scale(1);
+	-webkit-transform-origin: right 0;
+}
+
+/*
 .Navigation-button:before {
 	content: "";
 	pointer-events: none;
@@ -77,7 +85,21 @@
 	height: 48px;
 	background: transparent url(../../assets/images/nav-icons.svg) no-repeat;
 	background-size: 48px auto;
-	background-position: center 48px; /* no icon by default */
+	background-position: center 48px; /* no icon by default *!/
+}
+
+/*
+.Navigation-button:before {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 48px;
+	background: transparent url(../../assets/images/nav-icons.svg) no-repeat;
+	background-size: 48px auto;
+	background-position: center 48px; /* no icon by default *!/
 }
 
 .NavItem--introduction .Navigation-button:before { background-position: center 0; }
@@ -89,7 +111,7 @@
 .NavItem--window .Navigation-button:before { background-position: center -240px; }
 .NavItem--solarPanels .Navigation-button:before { background-position: center -336px; }
 .NavItem--callBack .Navigation-button:before { background-position: center -384px; }
-
+*/
 
 
 /* Nav Toggle -------------------------- */
@@ -100,7 +122,7 @@
     z-index: 11;
     margin: 0;
     top: 25px;
-    left: 125px;
+    left: 165px; /* 140 + 25 padding */
     width: 48px;
     height: 48px;
     background-color: hsla(0,0%,100%,.2);
@@ -137,7 +159,7 @@
 
 /* Responsive Nav */
 
-@media (min-width: 1150px) and (orientation: landscape) { /* Show nav on wider screens */
+@media (min-width: 1200px) and (orientation: landscape) { /* Show nav on wider screens */
     
     .Navigation {
         position: relative;
