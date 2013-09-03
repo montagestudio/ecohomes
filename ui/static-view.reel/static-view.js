@@ -13,5 +13,17 @@ exports.StaticView = Component.specialize(/** @lends StaticView# */ {
         value: function StaticView() {
             this.super();
         }
+    },
+
+    staircaseSrc: {
+        value: "../../assets/static/staircase.png"
+    },
+
+    countertopSrc: {
+        value: "../../assets/static/countertop-paper.png"
+    },
+
+    kitchenSrc: {
+        value: "../../assets/static/kitchen.png"
     }
 });

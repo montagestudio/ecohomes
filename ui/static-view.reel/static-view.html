@@ -6,8 +6,36 @@
     <script type="text/montage-serialization">
     {
         "owner": {
+            "prototype": "ui/static-view.reel",
             "properties": {
                 "element": {"#": "staticView"}
+            }
+        },
+        "countertop": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "countertop"}
+            },
+            "bindings": {
+                "src": {"<-": "@owner.countertopSrc"}
+            }
+        },
+        "kitchen": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "kitchen"}
+            },
+            "bindings": {
+                "src": {"<-": "@owner.kitchenSrc"}
+            }
+        },
+        "staircase": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "staircase"}
+            },
+            "bindings": {
+                "src": {"<-": "@owner.staircaseSrc"}
             }
         }
     }
@@ -15,6 +43,9 @@
 </head>
 <body>
     <div data-montage-id="staticView" class="StaticView">
+        <img data-montage-id="staircase" class="StaticView-optionImage">
+        <img data-montage-id="countertop" class="StaticView-optionImage">
+        <img data-montage-id="kitchen" class="StaticView-optionImage">
     </div>
 </body>
 </html>

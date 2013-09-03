@@ -1,0 +1,57 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_staircaseSrc": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "staircaseSrc",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_countertopSrc": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "countertopSrc",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_kitchenSrc": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "kitchenSrc",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_staircaseSrc"},
+        {"@": "blueprint_unnamed_countertopSrc"},
+        {"@": "blueprint_unnamed_kitchenSrc"}
+      ],
+      "propertyBlueprintGroups": {
+        "StaticView": [
+          {"@": "blueprint_unnamed_staircaseSrc"},
+          {"@": "blueprint_unnamed_countertopSrc"},
+          {"@": "blueprint_unnamed_kitchenSrc"}
+        ]
+      },
+      "module": {
+        "%": "ui/static-view.reel"
+      },
+      "exportName": "StaticView"
+    }
+  }
+}
