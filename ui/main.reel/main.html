@@ -233,6 +233,12 @@
                 "scene": {"@": "roomScene"}
             }
         },
+        "staticView": {
+            "prototype": "ui/static-view.reel",
+            "properties": {
+                "element": {"#": "staticView"}
+            }
+        },
         "substitutionDelay": {
             "prototype": "core/substitution-delay",
             "properties": {
@@ -253,6 +259,15 @@
             },
             "bindings": {
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('thermostat')"}
+            }
+        },
+        "viewSubstitution": {
+            "prototype": "montage/ui/substitution.reel",
+            "properties": {
+                "element": {"#": "viewSubstitution"}
+            },
+            "bindings": {
+                "switchValue": {"<-": "@owner.viewKey"}
             }
         },
         "windowPanel": {
@@ -279,7 +294,10 @@
         <section class="Main-navigation" data-montage-id="navigation"></section>
         <section class="Main-viewport" data-montage-skin="light" data-montage-id="viewPort">
             <div class="Main-room">
-                <div data-montage-id="roomView" class="Main-colladaView"></div>
+                <div data-montage-id="viewSubstitution">
+                    <div data-arg="static" data-montage-id="staticView"></div>
+                    <div data-arg="webgl" data-montage-id="roomView" class="Main-colladaView"></div>
+                </div>
                 <div data-montage-id="overview" class="Main-overview"></div>
             </div>
         </section>

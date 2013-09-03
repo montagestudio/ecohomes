@@ -58,9 +58,20 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: null
     },
 
+    viewKey: {
+        value: null
+    },
+
     templateDidLoad: {
         value: function() {
             var templateObjects = this.templateObjects;
+
+            // Adjust view in response to WebGL availability
+            var webGLOptions = {premultipliedAlpha: false, antialias: true, preserveDrawingBuffer: false};
+            var canvas = document.createElement("canvas");
+            var webGLContext =  canvas.getContext("experimental-webgl", webGLOptions) ||
+                canvas.getContext("webgl", webGLOptions);
+            this.viewKey = webGLContext ? "webgl" : "static";
 
             // Use this object to track roomSize as a result of resizing
             this._roomSize = {
