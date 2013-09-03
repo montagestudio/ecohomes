@@ -27,7 +27,7 @@ NOTE: Prior to running `npm update` **remove glTF-webgl-viewer from node_modules
 
 Contributing
 ------------
-- Run `jshint` on your code to ensure it conforms to Filament standards
+- Run `jshint` on your code to ensure it conforms to our standards
 
 - Make sure all commit messages follow the 50 character subject/72 character
 body [formatting used throughout git](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) 
