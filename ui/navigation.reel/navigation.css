@@ -57,21 +57,30 @@
 }
 
 .Navigation-button.digit-Button.montage--active {
-	background-color: hsl(0,0%,90%);
+	background-color: #e4e98c;
 }
 
-.Navigation-button--selected.digit-Button:after {
-	content: "";
-	pointer-events: none;
-	position: absolute;
-	top: 24px;
-	right: 0;
-	border: 10px solid hsla(0,0%,0%,.1);
-	border-right-color: transparent;
-	border-bottom-color: transparent;
-	box-sizing: border-box;
-	-webkit-transform: rotate(-45deg) scale(1);
-	-webkit-transform-origin: right 0;
+/*.Navigation-button--selected.Navigation-button {
+	background: #e4e98c;
+	border-left: 4px solid #e4e98c;
+}*/
+
+.Navigation-button:after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 12px;
+    height: 36px;
+    top: 16px;
+    left: 0;
+    background: url(../../assets/images/nav-arrow.svg) no-repeat center;
+    -webkit-transform: scaleX(0);
+    -webkit-transform-origin: left center;
+    -webkit-transition: -webkit-transform .3s;
+}
+
+.Navigation-button--selected.Navigation-button:after {
+	-webkit-transform: scaleX(1);
 }
 
 /*
