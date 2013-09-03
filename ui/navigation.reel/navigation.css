@@ -60,12 +60,11 @@
 	background-color: #e4e98c;
 }
 
-/*.Navigation-button--selected.Navigation-button {
+.Navigation-button--selected.Navigation-button {
 	background: #e4e98c;
-	border-left: 4px solid #e4e98c;
-}*/
+}
 
-.Navigation-button:after {
+/*.Navigation-button:after {
     content: "";
     pointer-events: none;
     position: absolute;
@@ -81,7 +80,7 @@
 
 .Navigation-button--selected.Navigation-button:after {
 	-webkit-transform: scaleX(1);
-}
+}*/
 
 /*
 .Navigation-button:before {
@@ -192,9 +191,7 @@
     
     .Navigation {
         width: auto;
-        height: 100px;
-        border: none;
-        border-bottom: 1px solid hsl(0,0%,80%);
+        height: 70px;
         top: 0;
         left: 0;
         right: 0;
@@ -203,8 +200,10 @@
     }
     
     .Navigation-list {
+        display: -webkit-box;
     	-webkit-box-orient: horizontal;
     	-webkit-box-pack: start;
+    	display: -webkit-flex;
     	-webkit-flex-direction: row;
     	-webkit-justify-content: flex-start;
     	height: auto;
@@ -214,29 +213,14 @@
         -webkit-box-flex: 1;
         -webkit-flex: 1;
     }
-
-    .Navigation-listItem:first-child .Navigation-button {
-        border-left: 1px solid hsl(0,0%,80%);
-    }
     
     .Navigation-button.digit-Button {
-        font-size: 0;
-        color: transparent;
-        width: 100%;
-        height: 100px;
-        padding: 40px 20px 10px 20px;
-        border: none;
-        border-right: 1px solid hsl(0,0%,80%);
-    }
-    
-    .Navigation-button:before {
-        top: 24px;
+        padding: 0 6px;
     }
     
     .Navigation-toggle.digit-Checkbox {
-        top: 125px;
-        right: 25px;
-        left: auto;
+        top: 95px;
+        left: 25px;
     }
     
 }
