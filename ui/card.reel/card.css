@@ -127,6 +127,12 @@
         -webkit-box-align: center;
         -webkit-flex-direction: row;
         -webkit-align-items: center;
+        padding: 20px;
+    }
+
+    .Card-hero {
+        margin-bottom: 1em;
+        max-height: 120px;
     }
 
     .Card-content {
@@ -135,7 +141,7 @@
     }
 
     .Card-content:first-child {
-        margin-right: 40px;
+        margin-right: 20px;
     }
 
 }
