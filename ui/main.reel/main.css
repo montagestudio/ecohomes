@@ -79,6 +79,7 @@
 /* Portrait -------------------------- */
 
 @media (orientation: portrait) {
+    
     .Main {
         -webkit-box-orient: vertical;
         -webkit-flex-direction: column;
@@ -95,17 +96,4 @@
         min-height: 0;
     }
     
-    .Main-overview {
-        bottom: auto;
-        top: 0;
-        right: 120px; /* space for the toggle button */
-    }
-    
-    .Main .PanelFlow {
-        border-top: 1px solid hsl(0, 0%, 61%);
-    }
-    
-    .Main .PanelFlow-flow {
-        border-left: none;
-    }
 }
