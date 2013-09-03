@@ -97,19 +97,6 @@ exports.PanelFlow = Component.specialize({
         }
     },
 
-    __scroll: {
-        value: 0
-    },
-
-    _scroll: {
-        get: function () {
-            return this.__scroll;
-        },
-        set: function (value) {
-            this.__scroll = value;
-        }
-    },
-
     __firstIteration: {
         value: null
     },
