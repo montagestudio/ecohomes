@@ -13,7 +13,7 @@
     background-size: auto 100%;
 }
 
-.StaticView-optionImage {
+.StaticView .ConfigPreview {
     -webkit-flex: 1 1;
     border: 5px solid white;
     border-width: 0 0 5px 5px;
@@ -21,7 +21,53 @@
     min-height: 100px;
 }
 
-.StaticView .StaticView-optionImage:first-child
+.StaticView .ConfigPreview:first-child
 {
     border-left-width: 0;
+}
+
+
+
+/* Staircase Configuration */
+.StaticView .ConfigPreview--staircase-pine {
+    background-image: url(../../assets/static/staircase-pine.png);
+}
+
+.StaticView .ConfigPreview--staircase-ash {
+    background-image: url(../../assets/static/staircase-ash.png);
+}
+
+.StaticView .ConfigPreview--staircase-walnut {
+    background-image: url(../../assets/static/staircase-walnut.png);
+}
+
+.StaticView .ConfigPreview--staircase-bold {
+    background-image: url(../../assets/static/staircase-bold.png);
+}
+
+/* Countertop Configuration */
+
+.StaticView .ConfigPreview--countertop-paper {
+    background-image: url(../../assets/static/countertop-paper.png);
+}
+
+.StaticView .ConfigPreview--countertop-bamboo {
+    background-image: url(../../assets/static/countertop-bamboo.png);
+}
+
+.StaticView .ConfigPreview--countertop-cement {
+    background-image: url(../../assets/static/countertop-cement.png);
+}
+
+.StaticView .ConfigPreview--countertop-quartz {
+    background-image: url(../../assets/static/countertop-quartz.png);
+}
+
+/* Kitchen Configuration */
+.StaticView .ConfigPreview--kitchen {
+    background-image: url(../../assets/static/kitchen.png);
+}
+
+.StaticView .ConfigPreview--kitchen-appliances {
+    background-image: url(../../assets/static/kitchen-appliances.png);
 }

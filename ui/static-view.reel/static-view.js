@@ -24,21 +24,10 @@ exports.StaticView = Component.specialize(/** @lends StaticView# */ {
         }
     },
 
-    staircaseSrc: {
-        value: "../../assets/static/staircase-pine.png"
-    },
-
-    countertopSrc: {
-        value: "../../assets/static/countertop-paper.png"
-    },
-
-    kitchenSrc: {
-        value: "../../assets/static/kitchen.png"
-    },
-
     handleStaircaseMaterialChange: {
         value: function (newMaterial) {
-            var image = "staircase-pine.png";
+            var staircasePreview = this.templateObjects.staircase;
+            var className = "ConfigPreview--staircase-pine";
 
             //TODO improve this; just done enough to get it working
             //TODO not rely on the fragile name
@@ -47,62 +36,63 @@ exports.StaticView = Component.specialize(/** @lends StaticView# */ {
                     case "FSC Pine":
                         break;
                     case "Dark Ash":
-                        image = "staircase-ash.png";
+                        className = "ConfigPreview--staircase-ash";
                         break;
                     case "Dark Walnut":
-                        image = "staircase-walnut.png";
+                        className = "ConfigPreview--staircase-walnut";
                         break;
                     case "Powder Coated Metal":
-                        image = "staircase-bold.png";
+                        className = "ConfigPreview--staircase-bold";
                         break;
                     default:
-                        image = "";
+                        className = "";
                 }
             }
 
-            this.staircaseSrc = image ? require.location + "assets/static/" + image : image;
+            staircasePreview.className = className;
         }
     },
 
     handleKitchenAppliancesChange: {
         value: function (newApplianceValue) {
-
-            var image = "kitchen.png"
+            var kitchenPreview = this.templateObjects.kitchen;
+            var className = "ConfigPreview--kitchen";
 
             if (newApplianceValue && "None" !== newApplianceValue.name) {
-                image = "kitchen-appliances.png";
+                className = "ConfigPreview--kitchen-appliances";
             }
 
-            this.kitchenSrc = image ? require.location + "assets/static/" + image : image;
+            kitchenPreview.className = className;
 
         }
     },
 
     handleCountertopMaterialChange: {
         value: function (newMaterial) {
-            var image = "countertop-paper.png";
+            var countertopPreview = this.templateObjects.countertop;
+            var className = "ConfigPreview--countertop-paper";
 
             //TODO improve this; just done enough to get it working
             //TODO not rely on the fragile name
             if (newMaterial) {
                 switch (newMaterial.name) {
                     case "Black Quartz":
-                        image = "countertop-quartz.png";
+                        className = "ConfigPreview--countertop-quartz";
                         break;
                     case "Paper Composite":
                         break;
                     case "Bamboo":
-                        image = "countertop-bamboo.png";
+                        className = "ConfigPreview--countertop-bamboo";
                         break;
                     case "Cement and Fly Ash":
-                        image = "countertop-cement.png";
+                        className = "ConfigPreview--countertop-cement";
                         break;
                     default:
-                        image = "";
+                        className = "";
                 }
             }
 
-            this.countertopSrc = image ? require.location + "assets/static/" + image : image;
+            countertopPreview.className = className;
         }
     }
 });

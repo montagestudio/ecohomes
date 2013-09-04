@@ -12,30 +12,21 @@
             }
         },
         "countertop": {
-            "prototype": "digit/ui/image.reel",
+            "prototype": "./config-preview.reel",
             "properties": {
                 "element": {"#": "countertop"}
-            },
-            "bindings": {
-                "src": {"<-": "@owner.countertopSrc"}
             }
         },
         "kitchen": {
-            "prototype": "digit/ui/image.reel",
+            "prototype": "./config-preview.reel",
             "properties": {
                 "element": {"#": "kitchen"}
-            },
-            "bindings": {
-                "src": {"<-": "@owner.kitchenSrc"}
             }
         },
         "staircase": {
-            "prototype": "digit/ui/image.reel",
+            "prototype": "./config-preview.reel",
             "properties": {
                 "element": {"#": "staircase"}
-            },
-            "bindings": {
-                "src": {"<-": "@owner.staircaseSrc"}
             }
         }
     }
@@ -43,9 +34,9 @@
 </head>
 <body>
     <div data-montage-id="staticView" class="StaticView">
-        <img data-montage-id="staircase" class="StaticView-optionImage">
-        <img data-montage-id="countertop" class="StaticView-optionImage">
-        <img data-montage-id="kitchen" class="StaticView-optionImage">
+        <div data-montage-id="staircase"></div>
+        <div data-montage-id="countertop"></div>
+        <div data-montage-id="kitchen"></div>
     </div>
 </body>
 </html>
