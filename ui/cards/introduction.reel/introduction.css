@@ -1,3 +1,13 @@
-.Introduction {
+.Introduction .Card-logo {
+    margin-bottom: 2em;
+    height: 100px;
+}
+
+/* Portrait */
+@media (orientation: portrait) {
+    
+    .Introduction .Card-logo {
+        display: none;
+    }
 
 }
