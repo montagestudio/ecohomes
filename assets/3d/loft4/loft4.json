@@ -562,9 +562,9 @@
             "count": 2142,
             "max": [
                 2.06551e-42,
-                3.68935e+19,
+                1.0842e-19,
                 2.06692e-42,
-                3.68935e+19
+                1.0842e-19
             ],
             "min": [
                 0,
@@ -709,9 +709,9 @@
             "count": 165,
             "max": [
                 3.36312e-43,
-                3.68935e+19,
+                1.0842e-19,
                 3.39114e-43,
-                3.68935e+19
+                1.0842e-19
             ],
             "min": [
                 0,
@@ -1437,13 +1437,13 @@
         "camera_0": {
             "projection": "perspective",
             "xfov": 54.4322,
-            "zfar": 157480,
+            "zfar": 1700,
             "znear": 1
         },
         "camera_1": {
             "projection": "perspective",
             "xfov": 54.4322,
-            "zfar": 157480,
+            "zfar": 1700,
             "znear": 1
         },
         "camera_2": {
@@ -1474,7 +1474,7 @@
             "projection": "perspective",
             "xfov": 53.4322,
             "zfar": 1700,
-            "znear":1
+            "znear": 1
         },
         "camera_7": {
             "projection": "perspective",
@@ -1496,6 +1496,24 @@
         }
     },
     "images": {
+        "image_c00": {
+            "path": "cubemap_c00.jpg"
+        },
+        "image_c01": {
+            "path": "cubemap_c01.jpg"
+        },
+        "image_c02": {
+            "path": "cubemap_c02.jpg"
+        },
+        "image_c03": {
+            "path": "cubemap_c03.jpg"
+        },
+        "image_c04": {
+            "path": "cubemap_c04.jpg"
+        },
+        "image_c05": {
+            "path": "cubemap_c05.jpg"
+        },
         "image_0": {
             "path": "images/0_escalierVRayCompleteMap.jpg"
         },
@@ -1530,7 +1548,7 @@
             "path": "images/18_cubemap_blur_c00.jpg"
         },
         "image_19": {
-            "path": "images/19_bar_dessus_cementVRayCompleteMap.tga"
+            "path": "images/19_bar_dessus_cementVRayCompleteMap.jpg"
         },
         "image_2": {
             "path": "images/2_tableFauteuilVRayCompleteMap.jpg"
@@ -1569,7 +1587,7 @@
             "path": "images/3_tableFauteuil_specular.jpg"
         },
         "image_30": {
-            "path": "images/30_maisonVRayDiffuseFilterMap.tga"
+            "path": "images/30_maisonVRayDiffuseFilterMap.jpg"
         },
         "image_31": {
             "path": "images/31_background.jpg"
@@ -1998,7 +2016,7 @@
                     },
                     {
                         "parameter": "reflective",
-                        "value": "texture_image_18"
+                        "value": "texture_cube_0"
                     },
                     {
                         "parameter": "shininess",
@@ -2336,7 +2354,7 @@
                     },
                     {
                         "parameter": "reflective",
-                        "value": "texture_image_4"
+                        "value": "texture_cube_0"
                     },
                     {
                         "parameter": "shininess",
@@ -2377,7 +2395,7 @@
                     },
                     {
                         "parameter": "reflective",
-                        "value": "texture_image_18"
+                        "value": "texture_cube_0"
                     },
                     {
                         "parameter": "shininess",
@@ -2451,7 +2469,7 @@
                     },
                     {
                         "parameter": "reflective",
-                        "value": "texture_image_4"
+                        "value": "texture_cube_0"
                     },
                     {
                         "parameter": "shininess",
@@ -2558,7 +2576,7 @@
                     },
                     {
                         "parameter": "reflective",
-                        "value": "texture_image_4"
+                        "value": "texture_cube_0"
                     },
                     {
                         "parameter": "shininess",
@@ -2906,7 +2924,6 @@
                     "material": "lampes",
                     "primitive": "TRIANGLES",
                     "semantics": {
-                        "COLOR": "attribute_261",
                         "NORMAL": "attribute_257",
                         "POSITION": "attribute_255",
                         "TEXCOORD_0": "attribute_259"
@@ -2977,7 +2994,6 @@
                     "material": "Feuille01",
                     "primitive": "TRIANGLES",
                     "semantics": {
-                        "COLOR": "attribute_333",
                         "NORMAL": "attribute_329",
                         "POSITION": "attribute_327",
                         "TEXCOORD_0": "attribute_331"
@@ -4046,6 +4062,7 @@
                         },
                         "program": "program_0",
                         "uniforms": {
+                            "u_ambient": "ambient",
                             "u_diffuse": "diffuse",
                             "u_filterColor": "filterColor",
                             "u_normalMatrix": "normalMatrix",
@@ -4094,6 +4111,9 @@
                     "type": "FLOAT_MAT4"
                 },
                 "reflective": {
+                    "type": "SAMPLER_CUBE"
+                },
+                "specular": {
                     "type": "SAMPLER_2D"
                 },
                 "texcoord0": {
@@ -4119,11 +4139,13 @@
                         },
                         "program": "program_1",
                         "uniforms": {
+                            "u_ambient": "ambient",
                             "u_diffuse": "diffuse",
                             "u_filterColor": "filterColor",
                             "u_normalMatrix": "normalMatrix",
                             "u_projectionMatrix": "projectionMatrix",
                             "u_reflective": "reflective",
+                            "u_specular": "specular",
                             "u_transparency": "transparency",
                             "u_worldViewMatrix": "worldViewMatrix"
                         }
@@ -4190,6 +4212,7 @@
                         },
                         "program": "program_2",
                         "uniforms": {
+                            "u_ambient": "ambient",
                             "u_diffuse": "diffuse",
                             "u_filterColor": "filterColor",
                             "u_normalMatrix": "normalMatrix",
@@ -4437,6 +4460,14 @@
             "sampler": "sampler_0",
             "source": "image_9",
             "target": "TEXTURE_2D"
+        },
+        "texture_cube_0": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "sources": ["image_c00", "image_c01", "image_c02", "image_c03", "image_c04", "image_c05"],
+            "target": "TEXTURE_CUBE"
         }
+
     }
 }
