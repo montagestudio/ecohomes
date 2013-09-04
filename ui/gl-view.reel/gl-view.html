@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="gl-view.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "prototype": "ui/gl-view.reel",
+            "properties": {
+                "element": {"#": "glView"}
+            }
+        },
+        "appliancesMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "material_0_1_0-effect",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "appliancesNode": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-fridge",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "backgroundMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "background",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "countertopMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "cuisine",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "counterViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-LookAtBar",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "hvacMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "option01",
+                "image": "",
+                "opacity": "0",
+                "scene": {"@": "roomScene"}
+            },
+            "bindings": {
+                "filterColor": {"<-": "[1, 1, 1, 0]"}
+            }
+        },
+        "kitchenViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-LookAtFridge",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "rideViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-camera001",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "roomScene": {
+            "prototype": "glTF-webgl-viewer/runtime/scene",
+            "properties": {
+                "path": "assets/3d/loft2/loft3.json"
+            }
+        },
+        "roomView": {
+            "prototype": "glTF-webgl-viewer/ui/view.reel",
+            "properties": {
+                "element": {"#": "roomView"},
+                "height": "768",
+                "scene": {"@": "roomScene"},
+                "viewPoint": {"@": "rideViewpoint"},
+                "width": "674"
+            }
+        },
+        "staircaseMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "escalier",
+                "image": "dark-stairs.jpg",
+                "opacity": "1",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "staircaseViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-LookAtStairs",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "stairsMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "escalier",
+                "image": "wood-stairs.jpg",
+                "opacity": "1",
+                "scene": {"@": "roomScene"}
+            }
+        },
+        "windowViewpoint": {
+            "prototype": "glTF-webgl-viewer/runtime/node",
+            "properties": {
+                "id": "node-LookAtWindow",
+                "scene": {"@": "roomScene"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="glView" class="GlView">
+        <div data-montage-id="roomView" class="Main-colladaView"></div>
+    </div>
+</body>
+</html>

@@ -15,27 +15,6 @@
                 "viewPortElement": {"#": "viewPort"}
             }
         },
-        "appliancesMaterial": {
-            "prototype": "glTF-webgl-viewer/runtime/material",
-            "properties": {
-                "id": "material_0_1_0-effect",
-                "scene": {"@": "roomScene"}
-            }
-        },
-        "appliancesNode": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
-            "properties": {
-                "id": "node-fridge",
-                "scene": {"@": "roomScene"}
-            }
-        },
-        "backgroundMaterial": {
-            "prototype": "glTF-webgl-viewer/runtime/material",
-            "properties": {
-                "id": "background",
-                "scene": {"@": "roomScene"}
-            }
-        },
         "callBack": {
             "prototype": "ui/cards/call-back.reel",
             "properties": {
@@ -63,37 +42,21 @@
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('counters')"}
             }
         },
-        "countertopMaterial": {
-            "prototype": "glTF-webgl-viewer/runtime/material",
-            "properties": {
-                "id": "cuisine",
-                "scene": {"@": "roomScene"}
-            }
-        },
-        "counterViewpoint": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
-            "properties": {
-                "id": "node-LookAtBar",
-                "scene": {"@": "roomScene"}
-            }
-        },
         "flowTranslateStartListener": {
             "prototype": "montage/core/event/action-event-listener",
             "properties": {
                 "action": "pause",
-                "handler": {"@": "roomView"}
+                "handler": {"@": "glView"}
             }
         },
-        "hvacMaterial": {
-            "prototype": "glTF-webgl-viewer/runtime/material",
+        "glView": {
+            "prototype": "ui/gl-view.reel",
             "properties": {
-                "id": "option01",
-                "image": "",
-                "opacity": "0",
-                "scene": {"@": "roomScene"}
+                "element": {"#": "glView"}
             },
             "bindings": {
-                "filterColor": {"<-": "[1, 1, 1, 0]"}
+                "configuration": {"<-": "@owner.configuration"},
+                "currentPanel": {"<-": "@owner.currentPanel"}
             }
         },
         "introductionPanel": {
@@ -109,13 +72,6 @@
             },
             "bindings": {
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('kitchen')"}
-            }
-        },
-        "kitchenViewpoint": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
-            "properties": {
-                "id": "node-LookAtFridge",
-                "scene": {"@": "roomScene"}
             }
         },
         "laundryPanel": {
@@ -167,29 +123,6 @@
                 }
             ]
         },
-        "rideViewpoint": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
-            "properties": {
-                "id": "node-camera001",
-                "scene": {"@": "roomScene"}
-            }
-        },
-        "roomScene": {
-            "prototype": "glTF-webgl-viewer/runtime/scene",
-            "properties": {
-                "path": "assets/3d/loft2/loft3.json"
-            }
-        },
-        "roomView": {
-            "prototype": "glTF-webgl-viewer/ui/view.reel",
-            "properties": {
-                "element": {"#": "roomView"},
-                "height": "768",
-                "scene": {"@": "roomScene"},
-                "viewPoint": {"@": "rideViewpoint"},
-                "width": "674"
-            }
-        },
         "solarPanels": {
             "prototype": "ui/cards/solar-panels.reel",
             "properties": {
@@ -199,15 +132,6 @@
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('solarPanels')"}
             }
         },
-        "staircaseMaterial": {
-            "prototype": "glTF-webgl-viewer/runtime/material",
-            "properties": {
-                "id": "escalier",
-                "image": "dark-stairs.jpg",
-                "opacity": "1",
-                "scene": {"@": "roomScene"}
-            }
-        },
         "staircasePanel": {
             "prototype": "ui/cards/staircase.reel",
             "properties": {
@@ -215,22 +139,6 @@
             },
             "bindings": {
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('staircase')"}
-            }
-        },
-        "staircaseViewpoint": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
-            "properties": {
-                "id": "node-LookAtStairs",
-                "scene": {"@": "roomScene"}
-            }
-        },
-        "stairsMaterial": {
-            "prototype": "glTF-webgl-viewer/runtime/material",
-            "properties": {
-                "id": "escalier",
-                "image": "wood-stairs.jpg",
-                "opacity": "1",
-                "scene": {"@": "roomScene"}
             }
         },
         "staticView": {
@@ -278,13 +186,6 @@
             "bindings": {
                 "configurationSet": {"<-": "@owner.configuration.configurationMap.get('window')"}
             }
-        },
-        "windowViewpoint": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
-            "properties": {
-                "id": "node-LookAtWindow",
-                "scene": {"@": "roomScene"}
-            }
         }
     }
     </script>
@@ -296,7 +197,7 @@
             <div class="Main-room">
                 <div data-montage-id="viewSubstitution">
                     <div data-arg="static" data-montage-id="staticView"></div>
-                    <div data-arg="webgl" data-montage-id="roomView" class="Main-colladaView"></div>
+                    <div data-arg="webgl" data-montage-id="glView"></div>
                 </div>
                 <div data-montage-id="overview" class="Main-overview"></div>
             </div>

@@ -1,0 +1,51 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "den/montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_currentPanel": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "currentPanel",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_configuration": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configuration",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "den/montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/gl-view.reel/gl-view.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_currentPanel"},
+        {"@": "blueprint_unnamed_configuration"}
+      ],
+      "propertyBlueprintGroups": {
+        "GlView": [
+          {"@": "blueprint_unnamed_currentPanel"},
+          {"@": "blueprint_unnamed_configuration"}
+        ]
+      },
+      "module": {
+        "%": "ui/gl-view.reel"
+      },
+      "exportName": "GlView"
+    }
+  }
+}

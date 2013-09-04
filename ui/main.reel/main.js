@@ -35,6 +35,18 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             configurationMap.set("solarPanels", new SolarPanelsConfigurationSet());
 
             this.configuration = new Configuration().init(628000, 6000, configurationMap);
+
+            this.cards = [
+                {panelKey: "introduction", label: "Introduction"},
+                {panelKey: "staircase", label: "Staircase"},
+                {panelKey: "thermostat", label: "Thermostat"},
+                {panelKey: "kitchen", label: "Kitchen"},
+                {panelKey: "counters", label: "Countertop"},
+                {panelKey: "laundry", label: "Laundry"},
+                {panelKey: "window", label: "Windows"},
+                {panelKey: "solarPanels", label: "Solar Panels"},
+                {panelKey: "callBack", label: "Contact"}
+            ];
         }
     },
 
@@ -42,7 +54,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: null
     },
 
-    panelIdViewpointMap: {
+    currentPanel: {
         value: null
     },
 
@@ -58,20 +70,39 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: null
     },
 
+    _supportsWebGL: {
+        value: null
+    },
+
+    supportsWebGL: {
+        get: function () {
+
+            if (null === this._supportsWebGL) {
+                var webGLOptions = {premultipliedAlpha: false, antialias: true, preserveDrawingBuffer: false};
+                var canvas = document.createElement("canvas");
+                var webGLContext =  canvas.getContext("experimental-webgl", webGLOptions) ||
+                    canvas.getContext("webgl", webGLOptions);
+                this._supportsWebGL = !!webGLContext;
+            }
+
+            return this._supportsWebGL;
+        }
+    },
+
     viewKey: {
+        value: null
+    },
+
+    sceneView: {
         value: null
     },
 
     templateDidLoad: {
         value: function() {
-            var templateObjects = this.templateObjects;
+            this.defineBinding("sceneView", {"<-": "viewKey == 'webgl' ? templateObjects.glView : templateObjects.staticView"});
 
-            // Adjust view in response to WebGL availability
-            var webGLOptions = {premultipliedAlpha: false, antialias: true, preserveDrawingBuffer: false};
-            var canvas = document.createElement("canvas");
-            var webGLContext =  canvas.getContext("experimental-webgl", webGLOptions) ||
-                canvas.getContext("webgl", webGLOptions);
-            this.viewKey = webGLContext ? "webgl" : "static";
+            //Set initial view to be webgl if possible
+            this.viewKey = this.supportsWebGL ? "webgl" : "static";
 
             // Use this object to track roomSize as a result of resizing
             this._roomSize = {
@@ -79,28 +110,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                 height: null
             };
 
-            // NOTE Even panels with no configuration options can have preferred viewpoints
-            // this is why the viewpoint is related to panels, not configuration sets
-            this.cards = [
-                {panelKey: "introduction", label: "Introduction"},
-                {panelKey: "staircase", label: "Staircase", viewpoint: templateObjects.staircaseViewpoint},
-                {panelKey: "thermostat", label: "Thermostat"},
-                {panelKey: "kitchen", label: "Kitchen", viewpoint: templateObjects.kitchenViewpoint},
-                {panelKey: "counters", label: "Countertop", viewpoint: templateObjects.counterViewpoint},
-                {panelKey: "laundry", label: "Laundry"},
-                {panelKey: "window", label: "Windows", viewpoint: templateObjects.windowViewpoint},
-                {panelKey: "solarPanels", label: "Solar Panels"},
-                {panelKey: "callBack", label: "Contact"}
-            ];
-
-            //React to the current panel changing
-            this.addPathChangeListener("templateObjects.panelFlow.currentPanel", this, "handlePanelIndexChange");
-
-            //React to options that should alter the scene
-            this.addPathChangeListener("configuration.configurationMap.get('staircase').optionMap.get('material')._selectedOption", this, "handleStaircaseMaterialChange");
-            this.addPathChangeListener("configuration.configurationMap.get('window').optionMap.get('coating').value", this, "handleWindowCoatingChange");
-            this.addPathChangeListener("configuration.configurationMap.get('kitchen').optionMap.get('appliances')._selectedOption", this, "handleKitchenAppliancesChange");
-            this.addPathChangeListener("configuration.configurationMap.get('counters').optionMap.get('material')._selectedOption", this, "handleCountertopMaterialChange");
+            this.defineBinding("currentPanel", {"<-": "cards[templateObjects.panelFlow.currentPanel]"});
 
             //Start the room ride animation once the introduction slide has shown
             this.addEventListener("firstDraw", this);
@@ -129,133 +139,12 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function() {
             if (this._resize) {
                 this._resize = false;
-                var roomView = this.templateObjects.roomView,
+                var roomView = this.sceneView,
                     roomSize = this._roomSize;
 
                 roomView.width = roomSize.width;
                 roomView.height = roomSize.height;
             }
-        }
-    },
-
-    handlePanelIndexChange: {
-        value: function (panelIndex) {
-            this.changeViewpoint(panelIndex);
-        }
-    },
-
-    changeViewpoint: {
-        value: function (panelIndex) {
-            var roomView = this.templateObjects.roomView;
-            var rideViewpoint = this.templateObjects.rideViewpoint;
-            var panelEntry = this.cards[panelIndex];
-
-            if (panelEntry) {
-                var preferredViewpoint = panelEntry.viewpoint;
-
-                if (preferredViewpoint) {
-
-                    if (this._autoActivateRideTimeout) {
-                        clearTimeout(this._autoActivateRideTimeout);
-                        this._autoActivateRideTimeout = null;
-                    }
-
-                    roomView.pause();
-                    roomView.viewPoint = preferredViewpoint;
-                } else if (rideViewpoint !== roomView.viewPoint) {
-                    roomView.viewPoint = rideViewpoint;
-                    roomView.play();
-                }
-
-            } else if (rideViewpoint !== roomView.viewPoint) {
-                roomView.viewPoint = rideViewpoint;
-                roomView.play();
-            }
-        }
-    },
-
-    handleStaircaseMaterialChange: {
-        value: function (newMaterial) {
-            var staircaseMaterial = this.templateObjects.staircaseMaterial;
-            var texture = "wood-stairs.jpg";
-
-            //TODO improve this; just done enough to get it working
-            //TODO not rely on the fragile name
-            if (newMaterial) {
-                switch (newMaterial.name) {
-                case "FSC Pine":
-                    texture = "wood-stairs.jpg";
-                    break;
-                case "Dark Ash":
-                    texture = "dark-stairs.jpg";
-                    break;
-                case "Dark Walnut":
-                    texture = "walnut-stairs.jpg";
-                    break;
-                case "Powder Coated Metal":
-                    texture = "bold-stairs.jpg";
-                    break;
-                default:
-                    texture = "";
-                }
-            }
-
-            staircaseMaterial.image = texture;
-        }
-    },
-
-    handleKitchenAppliancesChange: {
-        value: function (newApplianceValue) {
-            var appliancesMaterial = this.templateObjects.appliancesMaterial,
-                appliancesNode = this.templateObjects.appliancesNode,
-                opacity = 1,
-                hidden = false;
-
-            //TODO not rely on the fragile name
-            if (!newApplianceValue || "None" === newApplianceValue.name) {
-                opacity = 0;
-                hidden = true;
-            }
-
-            appliancesMaterial.opacity = opacity;
-            appliancesNode.hidden = hidden;
-        }
-    },
-
-    handleCountertopMaterialChange: {
-        value: function (newMaterial) {
-            var countertopMaterial = this.templateObjects.countertopMaterial;
-            var texture = "paper-counters.jpg";
-
-            //TODO improve this; just done enough to get it working
-            //TODO not rely on the fragile name
-            if (newMaterial) {
-                switch (newMaterial.name) {
-                case "Black Quartz":
-                    texture = "7_cuisineVRayCompleteMap.jpg";
-                    break;
-                case "Paper Composite":
-                    break;
-                case "Bamboo":
-                    texture = "bamboo-counters.jpg";
-                    break;
-                case "Cement and Fly Ash":
-                    texture = "cement-counters.jpg";
-                    break;
-                default:
-                    texture = "";
-                }
-            }
-
-            countertopMaterial.image = texture;
-        }
-    },
-
-    handleWindowCoatingChange: {
-        value: function (newCoatingValue) {
-            newCoatingValue = 1 - (newCoatingValue/2400); //TODO not hardcode this, fit to some reasonable curve
-            var backgroundMaterial = this.templateObjects.backgroundMaterial;
-            backgroundMaterial.filterColor = [newCoatingValue, 1, newCoatingValue, 1];
         }
     },
 
@@ -265,13 +154,15 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                 panelIndex;
 
             if (panelKey) {
+                //TODO improve this (I have it, I'm just trying not to mix improvements and refactoring)
                 panelIndex = this.cards.map(function (card) {
                     return card.panelKey;
                 }).indexOf(panelKey);
 
                 if (panelIndex > -1) {
                     this.templateObjects.panelFlow.scrollToPanel(panelIndex);
-                    this.changeViewpoint(panelIndex);
+                    //Update this as quickly as possible, don't wait for scrolling
+                    this.currentPanel = this.cards[panelIndex];
                 }
             }
         }
@@ -289,7 +180,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
                 this._autoActivateRideTimeout = setTimeout(function () {
                     self._autoActivateRideTimeout = null;
-                    self.templateObjects.roomView.play();
+                    if (self.sceneView && typeof self.sceneView.play === "function") {
+                        self.sceneView.play();
+                    }
                 }, 2200);
             }
             
