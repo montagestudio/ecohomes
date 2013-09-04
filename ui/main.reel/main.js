@@ -62,7 +62,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: null
     },
 
-    _resize: {
+    _hasBeenResized: {
         value: false
     },
 
@@ -115,11 +115,11 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     willDraw: {
         value: function() {
-            if (this._resize) {
+            if (this._hasBeenResized) {
                 var roomView = this.sceneView;
                 roomView.width = this.viewPortElement.offsetWidth;
                 roomView.height = this.viewPortElement.offsetHeight;
-                this._resize = false;
+                this._hasBeenResized = false;
             }
         }
     },
@@ -163,14 +163,14 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             }
             
             // Temp fix for initial canvas size
-            this._resize = true;
+            this._hasBeenResized = true;
             this.needsDraw = true;
         }
     },
 
     handleResize: {
         value: function() {
-            this._resize = true;
+            this._hasBeenResized = true;
             this.needsDraw = true;
         }
     }
