@@ -9,8 +9,22 @@ body {
     color: #222;
     margin: 0px;
     height: 100%;
+    min-width: 500px;
+    min-height: 440px;
 }
 
+/* Landscape */
+@media (orientation: landscape) {
+    body {
+        min-width: 880px;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        min-height: 560px;
+    }
+}
 
 
 /* Indexloader */
