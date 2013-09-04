@@ -38,7 +38,8 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
                 staircase: templateObjects.staircaseViewpoint,
                 kitchen: templateObjects.kitchenViewpoint,
                 counters: templateObjects.counterViewpoint,
-                window: templateObjects.windowViewpoint
+                window: templateObjects.windowViewpoint,
+                laundry: templateObjects.laundryViewpoint
             });
 
             // React to changes in the configuration
@@ -46,9 +47,25 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
             this.addPathChangeListener("configuration.configurationMap.get('window').optionMap.get('coating').value", this, "handleWindowCoatingChange");
             this.addPathChangeListener("configuration.configurationMap.get('kitchen').optionMap.get('appliances')._selectedOption", this, "handleKitchenAppliancesChange");
             this.addPathChangeListener("configuration.configurationMap.get('counters').optionMap.get('material')._selectedOption", this, "handleCountertopMaterialChange");
+            this.addPathChangeListener("configuration.configurationMap.get('laundry').optionMap.get('washer').chosen", this, "handleWasherChange");
+            this.addPathChangeListener("configuration.configurationMap.get('laundry').optionMap.get('dryer').chosen", this, "handleDryerChange");
 
             //React to the currentPanel changing
             this.addPathChangeListener("currentPanel", this, "handleCurrentPanelChange");
+        }
+    },
+
+    handleWasherChange: {
+        value: function (washerChosen) {
+            var washerNode = this.templateObjects.washerNode;
+            washerNode.hidden = !washerChosen;
+        }
+    },
+
+    handleDryerChange: {
+        value: function (dryerChosen) {
+            var dryerNode = this.templateObjects.dryerNode;
+            dryerNode.hidden = !dryerChosen;
         }
     },
 
