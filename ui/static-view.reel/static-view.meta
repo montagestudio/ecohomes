@@ -1,6 +1,6 @@
 {
   "blueprint_component_reference": {
-    "prototype": "montage/core/meta/blueprint-reference",
+    "prototype": "den/montage/core/meta/blueprint-reference",
     "properties": {
       "valueReference": {
         "blueprintName": "Component",
@@ -11,41 +11,53 @@
     }
   },
   "blueprint_unnamed_staircaseSrc": {
-    "prototype": "montage/core/meta/property-blueprint",
+    "prototype": "den/montage/core/meta/property-blueprint",
     "properties": {
       "name": "staircaseSrc",
       "blueprint": {"@": "root"}
     }
   },
   "blueprint_unnamed_countertopSrc": {
-    "prototype": "montage/core/meta/property-blueprint",
+    "prototype": "den/montage/core/meta/property-blueprint",
     "properties": {
       "name": "countertopSrc",
       "blueprint": {"@": "root"}
     }
   },
   "blueprint_unnamed_kitchenSrc": {
-    "prototype": "montage/core/meta/property-blueprint",
+    "prototype": "den/montage/core/meta/property-blueprint",
     "properties": {
       "name": "kitchenSrc",
       "blueprint": {"@": "root"}
     }
   },
+  "blueprint_unnamed_configuration": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configuration",
+      "blueprint": {"@": "root"}
+    }
+  },
   "root": {
-    "prototype": "montage/core/meta/module-blueprint",
+    "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
+      "blueprintModule": {
+        "%": "ui/static-view.reel/static-view.meta"
+      },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
         {"@": "blueprint_unnamed_staircaseSrc"},
         {"@": "blueprint_unnamed_countertopSrc"},
-        {"@": "blueprint_unnamed_kitchenSrc"}
+        {"@": "blueprint_unnamed_kitchenSrc"},
+        {"@": "blueprint_unnamed_configuration"}
       ],
       "propertyBlueprintGroups": {
         "StaticView": [
           {"@": "blueprint_unnamed_staircaseSrc"},
           {"@": "blueprint_unnamed_countertopSrc"},
-          {"@": "blueprint_unnamed_kitchenSrc"}
+          {"@": "blueprint_unnamed_kitchenSrc"},
+          {"@": "blueprint_unnamed_configuration"}
         ]
       },
       "module": {

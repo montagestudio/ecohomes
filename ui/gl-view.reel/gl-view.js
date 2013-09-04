@@ -169,13 +169,17 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
 
     play: {
         value: function () {
-            this.templateObjects.roomView.play();
+            if (this.templateObjects && this.templateObjects.roomView) {
+                this.templateObjects.roomView.play();
+            }
         }
     },
 
     pause: {
         value: function () {
-            this.templateObjects.roomView.pause();
+            if (this.templateObjects && this.templateObjects.roomView) {
+                this.templateObjects.roomView.pause();
+            }
         }
     }
 
