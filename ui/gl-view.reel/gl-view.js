@@ -101,19 +101,31 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
 
     handleKitchenAppliancesChange: {
         value: function (newApplianceValue) {
-            var appliancesMaterial = this.templateObjects.appliancesMaterial,
-                appliancesNode = this.templateObjects.appliancesNode,
-                opacity = 1,
-                hidden = false;
+            var guterslohNode = this.templateObjects.guterslohAppliancesNode,
+                norseNode = this.templateObjects.norseAppliancesNode,
+                vortexNode = this.templateObjects.vortexAppliancesNode,
+                showGutersloh = false,
+                showNorse = false,
+                showVortex = false;
 
-            //TODO not rely on the fragile name
-            if (!newApplianceValue || "None" === newApplianceValue.name) {
-                opacity = 0;
-                hidden = true;
+            if (newApplianceValue) {
+                switch(newApplianceValue.name) {
+                case "Gütersloh":
+                    showGutersloh = true;
+                    break;
+                case "Norse":
+                    showNorse = true;
+                    break;
+                case "Vortex":
+                    showVortex = true;
+                    break;
+                }
             }
 
-            appliancesMaterial.opacity = opacity;
-            appliancesNode.hidden = hidden;
+            guterslohNode.hidden = !showGutersloh;
+            norseNode.hidden = !showNorse;
+            vortexNode.hidden = !showVortex;
+
         }
     },
 
