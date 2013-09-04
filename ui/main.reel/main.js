@@ -51,13 +51,27 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     },
 
     cards: {
+    /**
+     * The collection of panel entry objects in order, as described by simple
+     * `panelKey` property specifying the switchValue to provide to the
+     * viewSubstitution to show the expected panel, and a `label` property
+     * specifying the human friendly label of the panel.
+     */
         value: null
     },
 
+    /**
+     * The panelEntry for the configurationPanel that is currently
+     * front-most
+     */
     currentPanel: {
         value: null
     },
 
+    /**
+     * The current configuration provided for customization
+     * and some visual representation
+     */
     configuration: {
         value: null
     },
@@ -70,6 +84,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: null
     },
 
+    /**
+     * Whether or not the current user agent supports WebGL
+     */
     supportsWebGL: {
         get: function () {
 
@@ -85,10 +102,19 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         }
     },
 
+    /**
+     * The key that specifies the sceneView to show representing
+     * the model being configured. The available keys are used as
+     * switchValues in the viewSubstitution
+     */
     viewKey: {
         value: null
     },
 
+    /**
+     * The current component in the main viewport area, typically
+     * representative of the model being configured
+     */
     sceneView: {
         value: null
     },
