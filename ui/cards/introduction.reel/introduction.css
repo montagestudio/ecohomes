@@ -3,6 +3,19 @@
     height: 100px;
 }
 
+/* Landscape + small height */
+@media (max-height: 600px ) and (orientation: landscape) {
+    
+    .Introduction .Card-logo {
+        margin-bottom: 0;
+        height: 90px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+}
+
 /* Portrait */
 @media (orientation: portrait) {
     

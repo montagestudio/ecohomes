@@ -1,3 +1,15 @@
 .Kitchen {
     
 }
+
+/* Landscape + small height */
+@media (max-height: 600px ) and (orientation: landscape) {
+    
+    .Kitchen .Card-hero {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 60px;
+        margin: 0;
+    }
+}

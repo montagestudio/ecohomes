@@ -100,6 +100,8 @@
 }
 
 .Card-option-label {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
     display: block;
     font-weight: normal;
     line-height: 24px;
@@ -109,7 +111,8 @@
     display: block;
     font-size: 16px;
     line-height: 24px;
-    color: hsl(0,0%,15%)
+    color: hsl(0,0%,15%);
+    white-space: nowrap;
 }
 
 .Card--disclaimer {

@@ -1,3 +1,19 @@
 .Countertops {
 
 }
+
+/* Landscape + small height */
+@media (max-height: 600px ) and (orientation: landscape) {
+    
+    .Countertops .Card-title {
+        width: 170px;
+    }
+
+    .Countertops .Card-hero {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 120px;
+        margin: 0;
+    }
+}

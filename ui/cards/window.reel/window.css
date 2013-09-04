@@ -1,3 +1,15 @@
 .Window {
 
 }
+
+/* Landscape + small height */
+@media (max-height: 600px ) and (orientation: landscape) {
+    
+    .Window .Card-hero {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        height: 100px;
+        margin: 0;
+    }
+}
