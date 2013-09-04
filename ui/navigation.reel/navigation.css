@@ -129,7 +129,7 @@
     right: -68px; /* width 48 + 20 margin */
     width: 48px;
     height: 48px;
-    background-color: hsla(0,0%,100%,.2);
+    background-color: hsla(0,0%,100%,.4);
     border-radius: 24px;
     border-color: hsla(0,0%,0%,.2);
     -webkit-transform: translateZ(0); /* Force button to own HW layer */
