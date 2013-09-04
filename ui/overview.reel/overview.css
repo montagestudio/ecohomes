@@ -36,4 +36,5 @@
 .Overview-price {
     font-family: "HelveticaNeue-Light";
     font-size: 33px;
+    white-space: nowrap;
 }
