@@ -2,6 +2,14 @@
 
 }
 
+.CallBack .Card-hero {
+    display: none;
+}
+
+.CallBack .Card-title {
+    margin-bottom: 10px;
+}
+
 .CallBack-controls {
     margin-top: 8px;
 }
@@ -29,4 +37,50 @@
     text-align: center;
     display: block;
     padding: 10px;
+}
+
+.CallBack-errors {
+    margin: 10px 0 0 0;
+}
+
+/* Landscape + small height */
+@media (max-height: 660px ) and (orientation: landscape) {
+    
+    .Summary-optionName {
+        display: none;
+    }
+    
+    .Summary-optionPrice {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+    }
+}
+
+@media (max-height: 580px ) and (orientation: landscape) {
+    
+    .CallBack .Card {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .CallBack .Card-description {
+        display: none;
+    }
+    
+    .Summary-optionGroupItem {
+        margin-bottom: 0;
+    }
+}
+
+/* Portrait */
+@media (orientation: portrait) {
+    
+    .Summary-optionName {
+        display: none;
+    }
+    
+    .Summary-optionPrice {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+    }
 }

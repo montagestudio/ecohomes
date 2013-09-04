@@ -2,6 +2,9 @@
 .Summary-options {
     list-style: none;
     margin: 0;
+    padding: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
 }
 
 .Summary-optionGroup {
@@ -9,10 +12,20 @@
 }
 
 .Summary-optionGroupName {
-    margin: 0;
     font-weight: bold;
     font-size: 14px;
     color: hsl(0,0%,50%);
+    width: 120px;
+}
+
+.Card-content .Summary-optionGroupName {
+    margin: 0 20px 0 0;
+}
+
+.Summary-subtotals .Summary-optionGroupName {
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
 }
 
 .Summary-option {
@@ -20,8 +33,8 @@
     display: -webkit-flex;
 }
 
-.Summary-optionName,
-.Summary-optionPrice {
+.Summary-optionName {
+    display: block;
     -webkit-box-flex: 1; /* old: iOS6 */
     -webkit-flex: 1;
     -moz-flex: 1;
@@ -38,16 +51,19 @@
 }
 
 .Summary-subtotals {
-    border: 1px solid #c6c6c6;
+    padding-top: 4px;
+    border: 1px solid #E0E0E0;
     border-width: 1px 0;
 }
 
 .Summary-total {
     text-align: right;
-    padding-top: 5px;
+    padding: 4px 0 10px 0;
 }
 
 .Summary-optionGroupItem {
+    display: -webkit-box;
+    display: -webkit-flex;
     margin-bottom: 5px;
 }
 
