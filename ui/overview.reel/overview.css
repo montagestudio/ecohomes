@@ -7,7 +7,7 @@
     -webkit-align-items: center;
     
     height: 90px;
-    padding: 0 44px;
+    padding: 10px 44px;
 
     color: #fff;
     font-size: 20px;
@@ -16,10 +16,6 @@
     pointer-events: none;
     -webkit-user-select: none;
     user-select: none;
-}
-
-.Overview-logo {
-    height: 68px;
 }
 
 .Overview-totals {
