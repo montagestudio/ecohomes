@@ -66,10 +66,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: false
     },
 
-    _roomSize: {
-        value: null
-    },
-
     _supportsWebGL: {
         value: null
     },
@@ -104,12 +100,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             //Set initial view to be webgl if possible
             this.viewKey = this.supportsWebGL ? "webgl" : "static";
 
-            // Use this object to track roomSize as a result of resizing
-            this._roomSize = {
-                width: null,
-                height: null
-            };
-
             this.defineBinding("currentPanel", {"<-": "cards[templateObjects.panelFlow.currentPanel]"});
 
             //Start the room ride animation once the introduction slide has shown
@@ -128,22 +118,10 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     willDraw: {
         value: function() {
             if (this._resize) {
-                var roomSize = this._roomSize;
-                roomSize.width = this.viewPortElement.offsetWidth;
-                roomSize.height = this.viewPortElement.offsetHeight;
-            }
-        }
-    },
-
-    draw: {
-        value: function() {
-            if (this._resize) {
+                var roomView = this.sceneView;
+                roomView.width = this.viewPortElement.offsetWidth;
+                roomView.height = this.viewPortElement.offsetHeight;
                 this._resize = false;
-                var roomView = this.sceneView,
-                    roomSize = this._roomSize;
-
-                roomView.width = roomSize.width;
-                roomView.height = roomSize.height;
             }
         }
     },
