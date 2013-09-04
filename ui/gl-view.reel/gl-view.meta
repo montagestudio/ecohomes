@@ -24,6 +24,20 @@
       "blueprint": {"@": "root"}
     }
   },
+  "blueprint_unnamed_width": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "width",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_height": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "height",
+      "blueprint": {"@": "root"}
+    }
+  },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
@@ -34,12 +48,16 @@
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
         {"@": "blueprint_unnamed_currentPanel"},
-        {"@": "blueprint_unnamed_configuration"}
+        {"@": "blueprint_unnamed_configuration"},
+        {"@": "blueprint_unnamed_width"},
+        {"@": "blueprint_unnamed_height"}
       ],
       "propertyBlueprintGroups": {
         "GlView": [
           {"@": "blueprint_unnamed_currentPanel"},
-          {"@": "blueprint_unnamed_configuration"}
+          {"@": "blueprint_unnamed_configuration"},
+          {"@": "blueprint_unnamed_width"},
+          {"@": "blueprint_unnamed_height"}
         ]
       },
       "module": {
