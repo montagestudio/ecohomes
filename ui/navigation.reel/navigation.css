@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 140px;
+    width: 160px;
     z-index: 10;
     
     display: -webkit-box;
@@ -27,60 +27,56 @@
 /* Nav List ------------------------------ */
 
 .Navigation-list {
-	max-height: 100%;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	max-height: 700px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 .Navigation-listItem {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
     padding: 0;
     margin: 0;
-    height: 70px;
 }
 
 .Navigation-button.digit-Button {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
 	display: block;
 	position: relative;
 	width: 100%;
-	height: 70px;
+	height: 100%;
 	margin: 0;
+	padding: 0 30px;
 	border: none;
 	border-radius: 0;
 	font-size: 17px;
-	color: #666;
-	font-family: "HelveticaNeue-CondensedBold";
+	text-align: left;
+	color: #999;
+	font-family: "HelveticaNeue-CondensedBold", "Roboto Condensed";
+	font-weight: bold;
 	text-shadow: 0 1px 0 white;
 	background-color: inherit;
 }
 
 .Navigation-button.digit-Button.montage--active {
-	background-color: #e4e98c;
+	background-color: hsla(0,0%,0%,.1);
 }
 
 .Navigation-button--selected.Navigation-button {
-	background: #e4e98c;
+	color: #333;
 }
-
-/*.Navigation-button:after {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    width: 12px;
-    height: 36px;
-    top: 16px;
-    left: 0;
-    background: url(../../assets/images/nav-arrow.svg) no-repeat center;
-    -webkit-transform: scaleX(0);
-    -webkit-transform-origin: left center;
-    -webkit-transition: -webkit-transform .3s;
-}
-
-.Navigation-button--selected.Navigation-button:after {
-	-webkit-transform: scaleX(1);
-}*/
 
 /*
 .Navigation-button:before {
@@ -129,8 +125,8 @@
     position: absolute;
     z-index: 11;
     margin: 0;
-    top: 25px;
-    left: 165px; /* 140 + 25 padding */
+    top: 20px;
+    right: -68px; /* width 48 + 20 margin */
     width: 48px;
     height: 48px;
     background-color: hsla(0,0%,100%,.2);
@@ -187,7 +183,7 @@
 
 
 /* Portrait */
-@media (orientation: portrait) {
+/*@media (orientation: portrait) {
     
     .Navigation {
         width: auto;
@@ -223,4 +219,4 @@
         left: 25px;
     }
     
-}
+}*/
