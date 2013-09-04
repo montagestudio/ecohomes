@@ -4,25 +4,29 @@
     right: 0;
     bottom: 0;
     left: 0;
-
+    
+    display: -webkit-box;
     display: -webkit-flex;
 
     background-image: url(../../assets/static/scene.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
 }
 
 .StaticView .ConfigPreview {
+    -webkit-box-flex: 1;
     -webkit-flex: 1 1;
     border: 5px solid white;
     border-width: 0 0 5px 5px;
     height: 30%;
     min-height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.StaticView .ConfigPreview:first-child
-{
+.StaticView .ConfigPreview:first-child {
     border-left-width: 0;
 }
 
