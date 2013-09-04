@@ -98,8 +98,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             //Set initial view to be webgl if possible
             this.viewKey = this.supportsWebGL ? "webgl" : "static";
 
-            this.defineBinding("currentPanel", {"<-": "cards[templateObjects.panelFlow.currentPanel]"});
-
             //Start the room ride animation once the introduction slide has shown
             this.addEventListener("firstDraw", this);
         }
