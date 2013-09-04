@@ -1,0 +1,4134 @@
+{
+    "animations": {
+        "animation_0": {
+            "channels": [
+                {
+                    "sampler": "animation_0_translation_sampler",
+                    "target": {
+                        "id": "node-camera001",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_0_rotation_sampler",
+                    "target": {
+                        "id": "node-camera001",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_0_scale_sampler",
+                    "target": {
+                        "id": "node-camera001",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 0,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 9616,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 19232,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 2404,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_0_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_0_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_0_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_1": {
+            "channels": [
+                {
+                    "sampler": "animation_1_translation_sampler",
+                    "target": {
+                        "id": "node-camera002",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_1_rotation_sampler",
+                    "target": {
+                        "id": "node-camera002",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_1_scale_sampler",
+                    "target": {
+                        "id": "node-camera002",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 26444,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 36060,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 45676,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 28848,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_1_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_1_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_1_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_2": {
+            "channels": [
+                {
+                    "sampler": "animation_2_translation_sampler",
+                    "target": {
+                        "id": "node-camera003",
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": "animation_2_rotation_sampler",
+                    "target": {
+                        "id": "node-camera003",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_2_scale_sampler",
+                    "target": {
+                        "id": "node-camera003",
+                        "path": "scale"
+                    }
+                }
+            ],
+            "count": 601,
+            "parameters": {
+                "TIME": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 52888,
+                    "count": 601,
+                    "type": "FLOAT"
+                },
+                "rotation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 62504,
+                    "count": 601,
+                    "type": "FLOAT_VEC4"
+                },
+                "scale": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 72120,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                },
+                "translation": {
+                    "bufferView": "bufferView_717",
+                    "byteOffset": 55292,
+                    "count": 601,
+                    "type": "FLOAT_VEC3"
+                }
+            },
+            "samplers": {
+                "animation_2_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_2_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_2_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        }
+    },
+    "asset": {
+        "generator": "collada2gltf@eac16986df49a59712e1cc54b84aa63d20ec5749"
+    },
+    "attributes": {
+        "attribute_104": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 218304,
+            "byteStride": 12,
+            "count": 966,
+            "max": [
+                0.27857,
+                1.88942,
+                0.985165
+            ],
+            "min": [
+                -8.34379,
+                -4.51583,
+                -0.00170013
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_106": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 229896,
+            "byteStride": 12,
+            "count": 966,
+            "max": [
+                0.999048,
+                0.999048,
+                1
+            ],
+            "min": [
+                -0.939693,
+                -0.999048,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_108": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 241488,
+            "byteStride": 8,
+            "count": 966,
+            "max": [
+                0.986505,
+                0.991887
+            ],
+            "min": [
+                0.00799759,
+                0.00876433
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_131": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 249216,
+            "byteStride": 12,
+            "count": 243,
+            "max": [
+                0.643547,
+                0.714868,
+                0.423114
+            ],
+            "min": [
+                -0.839453,
+                -0.714868,
+                -0.295933
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_133": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 252132,
+            "byteStride": 12,
+            "count": 243,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -0.999989,
+                -1,
+                -0.0142805
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_135": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 255048,
+            "byteStride": 8,
+            "count": 243,
+            "max": [
+                0.995213,
+                0.996094
+            ],
+            "min": [
+                0.00390625,
+                0.0189784
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_167": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 256992,
+            "byteStride": 12,
+            "count": 2004,
+            "max": [
+                1.11975,
+                1.81943,
+                0.434725
+            ],
+            "min": [
+                -1.18446,
+                -0.367938,
+                -0.434725
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_169": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 281040,
+            "byteStride": 12,
+            "count": 2004,
+            "max": [
+                1,
+                1,
+                0.999544
+            ],
+            "min": [
+                -1,
+                -1,
+                -0.999128
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_171": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 305088,
+            "byteStride": 8,
+            "count": 2004,
+            "max": [
+                0.988129,
+                0.99151
+            ],
+            "min": [
+                0.00799395,
+                0.00798261
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_173": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 321120,
+            "byteStride": 8,
+            "count": 2004,
+            "max": [
+                0.114495,
+                1.02928
+            ],
+            "min": [
+                -0.503566,
+                0.435987
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_196": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 337152,
+            "byteStride": 12,
+            "count": 150,
+            "max": [
+                8.72161,
+                13.9476,
+                0.600001
+            ],
+            "min": [
+                -0.019107,
+                -0.888725,
+                -0.6
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_198": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 338952,
+            "byteStride": 12,
+            "count": 150,
+            "max": [
+                1,
+                0.999999,
+                1
+            ],
+            "min": [
+                -1,
+                -0.999999,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_200": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 340752,
+            "byteStride": 8,
+            "count": 150,
+            "max": [
+                0.94287,
+                0.995216
+            ],
+            "min": [
+                0.00408902,
+                0.00408882
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_223": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 341952,
+            "byteStride": 12,
+            "count": 2472,
+            "max": [
+                0.156854,
+                1.49988,
+                2.2
+            ],
+            "min": [
+                -0.143982,
+                -1.50474,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_225": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 371616,
+            "byteStride": 12,
+            "count": 2472,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_227": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 401280,
+            "byteStride": 8,
+            "count": 2472,
+            "max": [
+                0.993372,
+                0.996037
+            ],
+            "min": [
+                0.00412602,
+                0.00411558
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_23": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "count": 2826,
+            "max": [
+                0.700301,
+                1.52816,
+                1.77037
+            ],
+            "min": [
+                -0.789456,
+                -9.76677,
+                -2.38742
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_25": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 33912,
+            "byteStride": 12,
+            "count": 2826,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_255": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 421056,
+            "byteStride": 12,
+            "count": 2346,
+            "max": [
+                0.273165,
+                9.7182,
+                0.704949
+            ],
+            "min": [
+                -5.58283,
+                -3.09639,
+                -2.29505
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_257": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 449208,
+            "byteStride": 12,
+            "count": 2346,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_259": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 477360,
+            "byteStride": 8,
+            "count": 2346,
+            "max": [
+                0.996062,
+                0.996004
+            ],
+            "min": [
+                0.0039965,
+                0.00814182
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_261": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 496128,
+            "byteStride": 16,
+            "count": 2346,
+            "max": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "type": "FLOAT_VEC4"
+        },
+        "attribute_27": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 67824,
+            "byteStride": 8,
+            "count": 2826,
+            "max": [
+                0.995829,
+                0.995752
+            ],
+            "min": [
+                0.00417019,
+                0.00847858
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_293": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 533664,
+            "byteStride": 12,
+            "count": 108,
+            "max": [
+                0.360519,
+                0.20616,
+                1.24093
+            ],
+            "min": [
+                -0.244325,
+                -0.252416,
+                0.469573
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_295": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 534960,
+            "byteStride": 12,
+            "count": 108,
+            "max": [
+                0.943445,
+                0.967504,
+                4.11959e-07
+            ],
+            "min": [
+                -0.937566,
+                -0.962982,
+                -3.74909e-07
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_297": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 536256,
+            "byteStride": 8,
+            "count": 108,
+            "max": [
+                0.999834,
+                0.898276
+            ],
+            "min": [
+                -0.000469741,
+                0.000499606
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_299": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 537120,
+            "byteStride": 8,
+            "count": 108,
+            "max": [
+                0.987926,
+                0.741956
+            ],
+            "min": [
+                0.00619711,
+                0.0130094
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_327": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 537984,
+            "byteStride": 12,
+            "count": 165,
+            "max": [
+                0.296454,
+                0.258987,
+                0.405743
+            ],
+            "min": [
+                -0.222097,
+                -0.315864,
+                -0.0922229
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_329": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 539964,
+            "byteStride": 12,
+            "count": 165,
+            "max": [
+                1,
+                0.984808,
+                0.92367
+            ],
+            "min": [
+                -1,
+                -0.984808,
+                -0.246093
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_331": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 541944,
+            "byteStride": 8,
+            "count": 165,
+            "max": [
+                1.07892,
+                0.849421
+            ],
+            "min": [
+                -0.87772,
+                -0.00439298
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_333": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 543264,
+            "byteStride": 16,
+            "count": 165,
+            "max": [
+                0,
+                1.58456e+29,
+                0,
+                1.58456e+29
+            ],
+            "min": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "type": "FLOAT_VEC4"
+        },
+        "attribute_356": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 545904,
+            "byteStride": 12,
+            "count": 12,
+            "max": [
+                3.31861,
+                0.0194731,
+                0.000902342
+            ],
+            "min": [
+                -3.31861,
+                -0.0194731,
+                -0.000902342
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_358": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 546048,
+            "byteStride": 12,
+            "count": 12,
+            "max": [
+                4.19467e-09,
+                0.287331,
+                1
+            ],
+            "min": [
+                -3.86706e-09,
+                -0.287355,
+                0.957824
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_360": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 546192,
+            "byteStride": 8,
+            "count": 12,
+            "max": [
+                1,
+                1
+            ],
+            "min": [
+                0,
+                0
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_383": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 546288,
+            "byteStride": 12,
+            "count": 2466,
+            "max": [
+                1.63154,
+                3.91296,
+                0.354198
+            ],
+            "min": [
+                -2.71051,
+                -0.55081,
+                -0.354198
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_385": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 575880,
+            "byteStride": 12,
+            "count": 2466,
+            "max": [
+                0.99592,
+                0.999463,
+                1
+            ],
+            "min": [
+                -0.997061,
+                -0.999462,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_387": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 605472,
+            "byteStride": 8,
+            "count": 2466,
+            "max": [
+                0.995794,
+                0.995702
+            ],
+            "min": [
+                0.00398112,
+                0.0400295
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_410": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 625200,
+            "byteStride": 12,
+            "count": 1386,
+            "max": [
+                2.45949,
+                3.34225,
+                2.61906
+            ],
+            "min": [
+                -0.9726,
+                -1.3027,
+                -0.438054
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_412": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 641832,
+            "byteStride": 12,
+            "count": 1386,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_414": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 658464,
+            "byteStride": 8,
+            "count": 1386,
+            "max": [
+                0.961443,
+                0.998031
+            ],
+            "min": [
+                0.0022694,
+                0.00208431
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_437": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 669552,
+            "byteStride": 12,
+            "count": 72,
+            "max": [
+                1.21245,
+                0.332873,
+                0.578585
+            ],
+            "min": [
+                -2.29045,
+                -4.38288,
+                0.54384
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_439": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 670416,
+            "byteStride": 12,
+            "count": 72,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_441": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 671280,
+            "byteStride": 8,
+            "count": 72,
+            "max": [
+                0.994107,
+                0.995217
+            ],
+            "min": [
+                0.00198672,
+                0.109703
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_484": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 671856,
+            "byteStride": 12,
+            "count": 864,
+            "max": [
+                0.703215,
+                1.38449,
+                1.46395
+            ],
+            "min": [
+                -0.971522,
+                -1.18051,
+                -0.438054
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_486": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 682224,
+            "byteStride": 12,
+            "count": 864,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_488": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 692592,
+            "byteStride": 8,
+            "count": 864,
+            "max": [
+                0.995505,
+                0.996065
+            ],
+            "min": [
+                0.00402252,
+                0.00458378
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_50": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 90432,
+            "byteStride": 12,
+            "count": 2808,
+            "max": [
+                0.345537,
+                0.306412,
+                0.624861
+            ],
+            "min": [
+                -0.345537,
+                -1.30142,
+                -0.624861
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_52": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 124128,
+            "byteStride": 12,
+            "count": 2808,
+            "max": [
+                0.999723,
+                0.999843,
+                1
+            ],
+            "min": [
+                -1,
+                -0.999987,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_531": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 699504,
+            "byteStride": 12,
+            "count": 42,
+            "max": [
+                0.421983,
+                0.348952,
+                0.507536
+            ],
+            "min": [
+                -0.422397,
+                -0.399812,
+                -0.424425
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_533": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 700008,
+            "byteStride": 12,
+            "count": 42,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -2.80962e-15,
+                -1,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_535": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 700512,
+            "byteStride": 8,
+            "count": 42,
+            "max": [
+                0.993129,
+                0.995338
+            ],
+            "min": [
+                0.00422513,
+                0.00443178
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_54": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 157824,
+            "byteStride": 8,
+            "count": 2808,
+            "max": [
+                0.97267,
+                0.991794
+            ],
+            "min": [
+                0.00787843,
+                0.00974452
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_578": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 700848,
+            "byteStride": 12,
+            "count": 42,
+            "max": [
+                0.416814,
+                0.379539,
+                0.509335
+            ],
+            "min": [
+                -0.422397,
+                -0.349308,
+                -0.424425
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_580": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 701352,
+            "byteStride": 12,
+            "count": 42,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -3.55123e-08,
+                -1,
+                0
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_582": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 701856,
+            "byteStride": 8,
+            "count": 42,
+            "max": [
+                0.991272,
+                0.995702
+            ],
+            "min": [
+                0.00392599,
+                0.00481248
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_605": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 702192,
+            "byteStride": 12,
+            "count": 384,
+            "max": [
+                -4.37741,
+                3.71754,
+                2.4
+            ],
+            "min": [
+                -5.32347,
+                2.38435,
+                0.400001
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_607": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 706800,
+            "byteStride": 12,
+            "count": 384,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_609": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 711408,
+            "byteStride": 8,
+            "count": 384,
+            "max": [
+                0.995502,
+                0.996094
+            ],
+            "min": [
+                0.00390625,
+                0.153245
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_632": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 714480,
+            "byteStride": 12,
+            "count": 2316,
+            "max": [
+                4.48741,
+                8.616,
+                7.46141
+            ],
+            "min": [
+                -4.48741,
+                -8.68671,
+                0.400001
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_634": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 742272,
+            "byteStride": 12,
+            "count": 2316,
+            "max": [
+                1,
+                1,
+                1
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_636": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 770064,
+            "byteStride": 8,
+            "count": 2316,
+            "max": [
+                0.998046,
+                0.997995
+            ],
+            "min": [
+                0.00195434,
+                0.00930172
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_659": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 788592,
+            "byteStride": 12,
+            "count": 117,
+            "max": [
+                4.76837e-07,
+                13.2716,
+                20.8763
+            ],
+            "min": [
+                -8.11696,
+                -13.6432,
+                1.12476
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_661": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 789996,
+            "byteStride": 12,
+            "count": 117,
+            "max": [
+                2.34983e-07,
+                1,
+                0.98982
+            ],
+            "min": [
+                -1,
+                -1,
+                -1
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_663": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 791400,
+            "byteStride": 8,
+            "count": 117,
+            "max": [
+                0.825892,
+                0.995148
+            ],
+            "min": [
+                0.00418754,
+                0.0041191
+            ],
+            "type": "FLOAT_VEC2"
+        },
+        "attribute_77": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 180288,
+            "byteStride": 12,
+            "count": 1188,
+            "max": [
+                0.684026,
+                0.721006,
+                0.279774
+            ],
+            "min": [
+                -0.684026,
+                -0.721006,
+                -0.210656
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_79": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 194544,
+            "byteStride": 12,
+            "count": 1188,
+            "max": [
+                0.998951,
+                0.996195,
+                1
+            ],
+            "min": [
+                -0.996195,
+                -0.996195,
+                -0.887966
+            ],
+            "type": "FLOAT_VEC3"
+        },
+        "attribute_81": {
+            "bufferView": "bufferView_715",
+            "byteOffset": 208800,
+            "byteStride": 8,
+            "count": 1188,
+            "max": [
+                0.983162,
+                0.992062
+            ],
+            "min": [
+                0.00844271,
+                0.0084427
+            ],
+            "type": "FLOAT_VEC2"
+        }
+    },
+    "bufferViews": {
+        "bufferView_715": {
+            "buffer": "loft4.bin",
+            "byteLength": 792336,
+            "byteOffset": 0,
+            "target": "ARRAY_BUFFER"
+        },
+        "bufferView_716": {
+            "buffer": "loft4.bin",
+            "byteLength": 45966,
+            "byteOffset": 792336,
+            "target": "ELEMENT_ARRAY_BUFFER"
+        },
+        "bufferView_717": {
+            "buffer": "loft4.bin",
+            "byteLength": 79332,
+            "byteOffset": 838302
+        }
+    },
+    "buffers": {
+        "loft4.bin": {
+            "byteLength": 917634,
+            "path": "loft4.bin"
+        }
+    },
+    "cameras": {
+        "camera_0": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_1": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_2": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_3": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_4": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_5": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_6": {
+            "projection": "perspective",
+            "xfov": 53.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_7": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_8": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        },
+        "camera_9": {
+            "projection": "perspective",
+            "xfov": 54.4322,
+            "zfar": 1700,
+            "znear": 1
+        }
+    },
+    "images": {
+        "image_0": {
+            "path": "images/0_escalierVRayCompleteMap.jpg"
+        },
+        "image_1": {
+            "path": "images/1_chaiseBarVRayCompleteMap.jpg"
+        },
+        "image_10": {
+            "path": "images/10_bibliotheque_lowVRayCompleteMap.jpg"
+        },
+        "image_11": {
+            "path": "images/11_lampeCanape001VRayCompleteMap.jpg"
+        },
+        "image_12": {
+            "path": "images/12_Youka_leaves.png"
+        },
+        "image_13": {
+            "path": "images/13_Arbuste01_Diff.PNG"
+        },
+        "image_14": {
+            "path": "images/14_plintheVRayCompleteMap.jpg"
+        },
+        "image_15": {
+            "path": "images/15_fauteuil001VRayCompleteMap.jpg"
+        },
+        "image_16": {
+            "path": "images/16_cuisineVRayCompleteMap.jpg"
+        },
+        "image_17": {
+            "path": "images/17_cuisine_specular.JPG"
+        },
+        "image_18": {
+            "path": "images/18_cubemap_blur_c00.jpg"
+        },
+        "image_19": {
+            "path": "images/19_bar_dessus_cementVRayCompleteMap.tga"
+        },
+        "image_2": {
+            "path": "images/2_tableFauteuilVRayCompleteMap.jpg"
+        },
+        "image_20": {
+            "path": "images/20_PlaqueFourFridge_01VRayCompleteMap.JPG"
+        },
+        "image_21": {
+            "path": "images/21_fridge_shadows.PNG"
+        },
+        "image_22": {
+            "path": "images/22_SecheLingeVRayCompleteMap.JPG"
+        },
+        "image_23": {
+            "path": "images/23_dryer_shadows.png"
+        },
+        "image_24": {
+            "path": "images/24_machineAlaverVRayCompleteMap.JPG"
+        },
+        "image_25": {
+            "path": "images/25_washer_shadows.png"
+        },
+        "image_26": {
+            "path": "images/26_laundryVRayCompleteMap.JPG"
+        },
+        "image_27": {
+            "path": "images/27_maisonVRayCompleteMap.jpg"
+        },
+        "image_28": {
+            "path": "images/28_maisonVRayDiffuseFilterMap.tga"
+        },
+        "image_29": {
+            "path": "images/29_background.jpg"
+        },
+        "image_3": {
+            "path": "images/3_tableFauteuil_specular.jpg"
+        },
+        "image_4": {
+            "path": "images/4_cubemap_c00.jpg"
+        },
+        "image_5": {
+            "path": "images/5_tableHifiVRayCompleteMap.jpg"
+        },
+        "image_6": {
+            "path": "images/6_tableCuisineVRayCompleteMap.jpg"
+        },
+        "image_7": {
+            "path": "images/7_chaiseCuisineVRayCompleteMap.jpg"
+        },
+        "image_8": {
+            "path": "images/8_photo02VRayCompleteMap.jpg"
+        },
+        "image_9": {
+            "path": "images/9_white.jpg"
+        }
+    },
+    "indices": {
+        "indices_102": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 13644,
+            "count": 966,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_129": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 15576,
+            "count": 243,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_165": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 16062,
+            "count": 2004,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_194": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 20070,
+            "count": 150,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_21": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 0,
+            "count": 2826,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_221": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 20370,
+            "count": 2472,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_253": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 25314,
+            "count": 2346,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_291": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 30006,
+            "count": 108,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_325": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 30222,
+            "count": 165,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_354": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 30552,
+            "count": 18,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_381": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 30588,
+            "count": 2466,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_408": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 35520,
+            "count": 1386,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_435": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 38292,
+            "count": 72,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_479": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 38436,
+            "count": 852,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_48": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 5652,
+            "count": 2808,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_482": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 40140,
+            "count": 12,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_526": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 40164,
+            "count": 24,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_529": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 40212,
+            "count": 18,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_573": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 40248,
+            "count": 24,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_576": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 40296,
+            "count": 18,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_603": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 40332,
+            "count": 384,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_630": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 41100,
+            "count": 2316,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_657": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 45732,
+            "count": 117,
+            "type": "UNSIGNED_SHORT"
+        },
+        "indices_75": {
+            "bufferView": "bufferView_716",
+            "byteOffset": 11268,
+            "count": 1188,
+            "type": "UNSIGNED_SHORT"
+        }
+    },
+    "lights": {
+        "EnvironmentAmbientLight": {
+            "ambient": {
+                "color": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "id": "EnvironmentAmbientLight",
+            "type": "ambient"
+        }
+    },
+    "materials": {
+        "Feuille01": {
+            "instanceTechnique": {
+                "technique": "technique3",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_13"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_13"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "Feuille01"
+        },
+        "Material__6602": {
+            "instanceTechnique": {
+                "technique": "technique3",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_23"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_23"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "Material__6602"
+        },
+        "background": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_29"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_29"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "background"
+        },
+        "bibliotheque": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_10"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_10"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "bibliotheque"
+        },
+        "chaiseCuisine": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_7"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_7"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "chaiseCuisine"
+        },
+        "chaisebar": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_1"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_1"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "chaisebar"
+        },
+        "cuisine": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_16"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_16"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "reflective",
+                        "value": "texture_image_18"
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": "texture_image_17"
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "cuisine"
+        },
+        "dryer": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_22"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_22"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "dryer"
+        },
+        "escalier": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_0"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_0"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "escalier"
+        },
+        "fauteuils": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_15"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_15"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "fauteuils"
+        },
+        "fridge01": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_20"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_20"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "fridge01"
+        },
+        "fridge_shadows": {
+            "instanceTechnique": {
+                "technique": "technique3",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_21"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_21"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "fridge_shadows"
+        },
+        "hihi": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_5"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_5"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "hihi"
+        },
+        "lampes": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_11"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_11"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "lampes"
+        },
+        "laundry": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_26"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_26"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "reflective",
+                        "value": "texture_image_4"
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": "texture_image_9"
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "laundry"
+        },
+        "maison": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_27"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_27"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "reflective",
+                        "value": "texture_image_18"
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": "texture_image_28"
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "maison"
+        },
+        "ombreWasher": {
+            "instanceTechnique": {
+                "technique": "technique3",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_25"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_25"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "ombreWasher"
+        },
+        "photos": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_8"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_8"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "reflective",
+                        "value": "texture_image_4"
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": "texture_image_9"
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "photos"
+        },
+        "plinthe": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_14"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_14"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "plinthe"
+        },
+        "tableCuisine": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_6"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_6"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "tableCuisine"
+        },
+        "tableFauteuil": {
+            "instanceTechnique": {
+                "technique": "technique2",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_2"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_2"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "reflective",
+                        "value": "texture_image_4"
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "specular",
+                        "value": "texture_image_3"
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "tableFauteuil"
+        },
+        "top_cement": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_19"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_19"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "top_cement"
+        },
+        "washer": {
+            "instanceTechnique": {
+                "technique": "technique1",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_24"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_24"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "washer"
+        },
+        "yuka_leaves": {
+            "instanceTechnique": {
+                "technique": "technique3",
+                "values": [
+                    {
+                        "parameter": "ambient",
+                        "value": "texture_image_12"
+                    },
+                    {
+                        "parameter": "diffuse",
+                        "value": "texture_image_12"
+                    },
+                    {
+                        "parameter": "filterColor",
+                        "value": [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "parameter": "shininess",
+                        "value": 0
+                    },
+                    {
+                        "parameter": "transparency",
+                        "value": 1
+                    }
+                ]
+            },
+            "name": "yuka_leaves"
+        }
+    },
+    "meshes": {
+        "geom-PlaqueFourFridge_01": {
+            "name": "PlaqueFourFridge_01",
+            "primitives": [
+                {
+                    "indices": "indices_479",
+                    "material": "fridge01",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_486",
+                        "POSITION": "attribute_484",
+                        "TEXCOORD_0": "attribute_488"
+                    }
+                },
+                {
+                    "indices": "indices_482",
+                    "material": "fridge_shadows",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_486",
+                        "POSITION": "attribute_484",
+                        "TEXCOORD_0": "attribute_488"
+                    }
+                }
+            ]
+        },
+        "geom-SecheLinge": {
+            "name": "SecheLinge",
+            "primitives": [
+                {
+                    "indices": "indices_526",
+                    "material": "dryer",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_533",
+                        "POSITION": "attribute_531",
+                        "TEXCOORD_0": "attribute_535"
+                    }
+                },
+                {
+                    "indices": "indices_529",
+                    "material": "Material__6602",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_533",
+                        "POSITION": "attribute_531",
+                        "TEXCOORD_0": "attribute_535"
+                    }
+                }
+            ]
+        },
+        "geom-background": {
+            "name": "background",
+            "primitives": [
+                {
+                    "indices": "indices_657",
+                    "material": "background",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_661",
+                        "POSITION": "attribute_659",
+                        "TEXCOORD_0": "attribute_663"
+                    }
+                }
+            ]
+        },
+        "geom-bar_top": {
+            "name": "bar_top",
+            "primitives": [
+                {
+                    "indices": "indices_435",
+                    "material": "top_cement",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_439",
+                        "POSITION": "attribute_437",
+                        "TEXCOORD_0": "attribute_441"
+                    }
+                }
+            ]
+        },
+        "geom-bibliotheque_low": {
+            "name": "bibliotheque_low",
+            "primitives": [
+                {
+                    "indices": "indices_221",
+                    "material": "bibliotheque",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_225",
+                        "POSITION": "attribute_223",
+                        "TEXCOORD_0": "attribute_227"
+                    }
+                }
+            ]
+        },
+        "geom-chaiseBar": {
+            "name": "chaiseBar",
+            "primitives": [
+                {
+                    "indices": "indices_48",
+                    "material": "chaisebar",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_52",
+                        "POSITION": "attribute_50",
+                        "TEXCOORD_0": "attribute_54"
+                    }
+                }
+            ]
+        },
+        "geom-chaiseCuisine": {
+            "name": "chaiseCuisine",
+            "primitives": [
+                {
+                    "indices": "indices_165",
+                    "material": "chaiseCuisine",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_169",
+                        "POSITION": "attribute_167",
+                        "TEXCOORD_0": "attribute_171",
+                        "TEXCOORD_1": "attribute_173"
+                    }
+                }
+            ]
+        },
+        "geom-cuisine": {
+            "name": "cuisine",
+            "primitives": [
+                {
+                    "indices": "indices_408",
+                    "material": "cuisine",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_412",
+                        "POSITION": "attribute_410",
+                        "TEXCOORD_0": "attribute_414"
+                    }
+                }
+            ]
+        },
+        "geom-escalier": {
+            "name": "escalier",
+            "primitives": [
+                {
+                    "indices": "indices_21",
+                    "material": "escalier",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_25",
+                        "POSITION": "attribute_23",
+                        "TEXCOORD_0": "attribute_27"
+                    }
+                }
+            ]
+        },
+        "geom-fauteuil001": {
+            "name": "fauteuil001",
+            "primitives": [
+                {
+                    "indices": "indices_381",
+                    "material": "fauteuils",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_385",
+                        "POSITION": "attribute_383",
+                        "TEXCOORD_0": "attribute_387"
+                    }
+                }
+            ]
+        },
+        "geom-lampeCanape001": {
+            "name": "lampeCanape001",
+            "primitives": [
+                {
+                    "indices": "indices_253",
+                    "material": "lampes",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_257",
+                        "POSITION": "attribute_255",
+                        "TEXCOORD_0": "attribute_259"
+                    }
+                }
+            ]
+        },
+        "geom-laundry": {
+            "name": "laundry",
+            "primitives": [
+                {
+                    "indices": "indices_603",
+                    "material": "laundry",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_607",
+                        "POSITION": "attribute_605",
+                        "TEXCOORD_0": "attribute_609"
+                    }
+                }
+            ]
+        },
+        "geom-machineAlaver": {
+            "name": "machineAlaver",
+            "primitives": [
+                {
+                    "indices": "indices_573",
+                    "material": "washer",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_580",
+                        "POSITION": "attribute_578",
+                        "TEXCOORD_0": "attribute_582"
+                    }
+                },
+                {
+                    "indices": "indices_576",
+                    "material": "ombreWasher",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_580",
+                        "POSITION": "attribute_578",
+                        "TEXCOORD_0": "attribute_582"
+                    }
+                }
+            ]
+        },
+        "geom-maison": {
+            "name": "maison",
+            "primitives": [
+                {
+                    "indices": "indices_630",
+                    "material": "maison",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_634",
+                        "POSITION": "attribute_632",
+                        "TEXCOORD_0": "attribute_636"
+                    }
+                }
+            ]
+        },
+        "geom-palmier_alpha": {
+            "name": "palmier_alpha",
+            "primitives": [
+                {
+                    "indices": "indices_325",
+                    "material": "Feuille01",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_329",
+                        "POSITION": "attribute_327",
+                        "TEXCOORD_0": "attribute_331"
+                    }
+                }
+            ]
+        },
+        "geom-photo02": {
+            "name": "photo02",
+            "primitives": [
+                {
+                    "indices": "indices_194",
+                    "material": "photos",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_198",
+                        "POSITION": "attribute_196",
+                        "TEXCOORD_0": "attribute_200"
+                    }
+                }
+            ]
+        },
+        "geom-plinthe": {
+            "name": "plinthe",
+            "primitives": [
+                {
+                    "indices": "indices_354",
+                    "material": "plinthe",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_358",
+                        "POSITION": "attribute_356",
+                        "TEXCOORD_0": "attribute_360"
+                    }
+                }
+            ]
+        },
+        "geom-tableCuisine": {
+            "name": "tableCuisine",
+            "primitives": [
+                {
+                    "indices": "indices_129",
+                    "material": "tableCuisine",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_133",
+                        "POSITION": "attribute_131",
+                        "TEXCOORD_0": "attribute_135"
+                    }
+                }
+            ]
+        },
+        "geom-tableFauteuil": {
+            "name": "tableFauteuil",
+            "primitives": [
+                {
+                    "indices": "indices_75",
+                    "material": "tableFauteuil",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_79",
+                        "POSITION": "attribute_77",
+                        "TEXCOORD_0": "attribute_81"
+                    }
+                }
+            ]
+        },
+        "geom-tableHifi": {
+            "name": "tableHifi",
+            "primitives": [
+                {
+                    "indices": "indices_102",
+                    "material": "hihi",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_106",
+                        "POSITION": "attribute_104",
+                        "TEXCOORD_0": "attribute_108"
+                    }
+                }
+            ]
+        },
+        "geom-yuka_alpha": {
+            "name": "yuka_alpha",
+            "primitives": [
+                {
+                    "indices": "indices_291",
+                    "material": "yuka_leaves",
+                    "primitive": "TRIANGLES",
+                    "semantics": {
+                        "NORMAL": "attribute_295",
+                        "POSITION": "attribute_293",
+                        "TEXCOORD_0": "attribute_297",
+                        "TEXCOORD_1": "attribute_299"
+                    }
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "node-LookAtKitchen": {
+            "camera": "camera_9",
+            "children": [],
+            "name": "LookAtKitchen",
+            "rotation": [
+                0.237989,
+                0.68679,
+                0.68679,
+                2.67431
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                123.943,
+                -167.583,
+                55.1181
+            ]
+        },
+        "node-LookAtLaundry": {
+            "camera": "camera_4",
+            "children": [],
+            "name": "LookAtLaundry",
+            "rotation": [
+                0.529507,
+                0.599842,
+                0.599842,
+                2.16764
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                135.375,
+                -198.517,
+                55.1181
+            ]
+        },
+        "node-LookAtBar": {
+            "camera": "camera_5",
+            "children": [],
+            "name": "LookAtBar",
+            "rotation": [
+                -0.21157,
+                0.6911,
+                0.6911,
+                3.55858
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                82.6552,
+                -149.372,
+                73.7601
+            ]
+        },
+        "node-LookAtBooks": {
+            "camera": "camera_0",
+            "children": [],
+            "name": "LookAtBooks",
+            "rotation": [
+                -0.57735,
+                0.57735,
+                0.57735,
+                4.18879
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                202.157,
+                -401.491,
+                51.1811
+            ]
+        },
+        "node-LookAtLivingRoom": {
+            "camera": "camera_2",
+            "children": [],
+            "name": "LookAtLivingRoom",
+            "rotation": [
+                0.772419,
+                -0.449093,
+                -0.449093,
+                1.8262
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                45.8913,
+                -635.432,
+                47.2441
+            ]
+        },
+        "node-LookAtStairs": {
+            "camera": "camera_3",
+            "children": [],
+            "name": "LookAtStairs",
+            "rotation": [
+                0.930091,
+                0.25974,
+                0.25974,
+                1.64321
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                312.154,
+                -475.543,
+                59.0551
+            ]
+        },
+        "node-LookAtWindow": {
+            "camera": "camera_1",
+            "children": [],
+            "name": "LookAtWindow",
+            "rotation": [
+                -0.224279,
+                0.689093,
+                0.689093,
+                3.58285
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                39.2606,
+                -403.331,
+                55.1181
+            ]
+        },
+        "node-PlaqueFourFridge_01": {
+            "children": [],
+            "meshes": [
+                "geom-PlaqueFourFridge_01"
+            ],
+            "name": "PlaqueFourFridge_01",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                41.3717,
+                -291.619,
+                17.2462
+            ]
+        },
+        "node-SecheLinge": {
+            "children": [],
+            "meshes": [
+                "geom-SecheLinge"
+            ],
+            "name": "SecheLinge",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                -17.4503,
+                -200.056,
+                16.7096
+            ]
+        },
+        "node-background": {
+            "children": [
+                "node_33"
+            ],
+            "name": "background",
+            "rotation": [
+                0,
+                1,
+                0,
+                1.5708
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                179.277,
+                -346.855,
+                159.783
+            ]
+        },
+        "node-bar_top": {
+            "children": [
+                "node_16"
+            ],
+            "name": "bar_top",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                72.035,
+                -250.077,
+                43.526
+            ]
+        },
+        "node-bibliotheque_low": {
+            "children": [],
+            "meshes": [
+                "geom-bibliotheque_low"
+            ],
+            "name": "bibliotheque_low",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                339.778,
+                -401.528,
+                0
+            ]
+        },
+        "node-camera001": {
+            "camera": "camera_6",
+            "children": [],
+            "name": "camera001",
+            "rotation": [
+                0.782707,
+                -0.444729,
+                -0.435415,
+                1.83379
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                21.1525,
+                -655.165,
+                61.2538
+            ]
+        },
+        "node-camera002": {
+            "camera": "camera_7",
+            "children": [],
+            "name": "camera002",
+            "rotation": [
+                0.80827,
+                0.427805,
+                0.404577,
+                1.83631
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                294.593,
+                -410.61,
+                62.9921
+            ]
+        },
+        "node-camera003": {
+            "camera": "camera_8",
+            "children": [],
+            "name": "camera003",
+            "rotation": [
+                0.4428,
+                0.630843,
+                0.637154,
+                2.3005
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                301.477,
+                -55.5437,
+                62.9921
+            ]
+        },
+        "node-chaiseBar": {
+            "children": [],
+            "meshes": [
+                "geom-chaiseBar"
+            ],
+            "name": "chaiseBar",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                157.197,
+                -246.148,
+                24.6008
+            ]
+        },
+        "node-chaiseCuisine": {
+            "children": [],
+            "meshes": [
+                "geom-chaiseCuisine"
+            ],
+            "name": "chaiseCuisine",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                136.185,
+                -95.3746,
+                17.1152
+            ]
+        },
+        "node-cuisine": {
+            "children": [],
+            "meshes": [
+                "geom-cuisine"
+            ],
+            "name": "cuisine",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                41.3717,
+                -291.619,
+                17.2462
+            ]
+        },
+        "node-escalier": {
+            "children": [],
+            "meshes": [
+                "geom-escalier"
+            ],
+            "name": "escalier",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                207.816,
+                -282,
+                93.9927
+            ]
+        },
+        "node-fauteuil001": {
+            "children": [],
+            "meshes": [
+                "geom-fauteuil001"
+            ],
+            "name": "fauteuil001",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                208.838,
+                -614.611,
+                13.9867
+            ]
+        },
+        "node-lampeCanape001": {
+            "children": [],
+            "meshes": [
+                "geom-lampeCanape001"
+            ],
+            "name": "lampeCanape001",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                238.755,
+                -443.876,
+                90.3564
+            ]
+        },
+        "node-laundry": {
+            "children": [
+                "node_21"
+            ],
+            "name": "laundry",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                -15.543,
+                -212.081,
+                39.3701
+            ]
+        },
+        "node-machineAlaver": {
+            "children": [],
+            "meshes": [
+                "geom-machineAlaver"
+            ],
+            "name": "machineAlaver",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                -17.4503,
+                -224.186,
+                16.7096
+            ]
+        },
+        "node-maison": {
+            "children": [],
+            "meshes": [
+                "geom-maison"
+            ],
+            "name": "maison",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                175.419,
+                -332.125,
+                -15.7481
+            ]
+        },
+        "node-palmier_alpha": {
+            "children": [],
+            "meshes": [
+                "geom-palmier_alpha"
+            ],
+            "name": "palmier_alpha",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                135.088,
+                -66.7657,
+                36.9207
+            ]
+        },
+        "node-photo02": {
+            "children": [],
+            "meshes": [
+                "geom-photo02"
+            ],
+            "name": "photo02",
+            "rotation": [
+                -1,
+                0,
+                0,
+                1.76313e-07
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                4.18437,
+                -573.709,
+                61.4312
+            ]
+        },
+        "node-plinthe": {
+            "children": [],
+            "meshes": [
+                "geom-plinthe"
+            ],
+            "name": "plinthe",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                217.473,
+                -160.809,
+                0.0355253
+            ]
+        },
+        "node-tableCuisine": {
+            "children": [],
+            "meshes": [
+                "geom-tableCuisine"
+            ],
+            "name": "tableCuisine",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                139.09,
+                -67.7682,
+                11.6453
+            ]
+        },
+        "node-tableFauteuil": {
+            "children": [],
+            "meshes": [
+                "geom-tableFauteuil"
+            ],
+            "name": "tableFauteuil",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                187.087,
+                -545.988,
+                8.16871
+            ]
+        },
+        "node-tableHifi": {
+            "children": [],
+            "meshes": [
+                "geom-tableHifi"
+            ],
+            "name": "tableHifi",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                332.696,
+                -483.035,
+                0.0240296
+            ]
+        },
+        "node-yuka_alpha": {
+            "children": [],
+            "meshes": [
+                "geom-yuka_alpha"
+            ],
+            "name": "yuka_alpha",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                39.3701,
+                39.3701,
+                39.3701
+            ],
+            "translation": [
+                174.669,
+                -461.364,
+                0.0652685
+            ]
+        },
+        "node_0": {
+            "children": [],
+            "lights": [
+                "EnvironmentAmbientLight"
+            ],
+            "name": "EnvironmentAmbientLight",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                0,
+                0,
+                0
+            ]
+        },
+        "node_16": {
+            "children": [],
+            "meshes": [
+                "geom-bar_top"
+            ],
+            "name": "",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                0.539002,
+                2.02501,
+                -0.561212
+            ]
+        },
+        "node_21": {
+            "children": [],
+            "meshes": [
+                "geom-laundry"
+            ],
+            "name": "",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                4.85044,
+                -3.05095,
+                -1.4
+            ]
+        },
+        "node_33": {
+            "children": [],
+            "meshes": [
+                "geom-background"
+            ],
+            "name": "",
+            "rotation": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ],
+            "translation": [
+                4.05848,
+                0.185799,
+                -11.0005
+            ]
+        }
+    },
+    "profile": "WebGL 1.0",
+    "programs": {
+        "program_0": {
+            "fragmentShader": "loft40FS",
+            "vertexShader": "loft40VS"
+        },
+        "program_1": {
+            "fragmentShader": "loft42FS",
+            "vertexShader": "loft42VS"
+        },
+        "program_2": {
+            "fragmentShader": "loft44FS",
+            "vertexShader": "loft44VS"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": "LINEAR",
+            "minFilter": "LINEAR",
+            "wrapS": "REPEAT",
+            "wrapT": "REPEAT"
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_0",
+                "node-escalier",
+                "node-chaiseBar",
+                "node-tableFauteuil",
+                "node-tableHifi",
+                "node-tableCuisine",
+                "node-chaiseCuisine",
+                "node-photo02",
+                "node-bibliotheque_low",
+                "node-lampeCanape001",
+                "node-yuka_alpha",
+                "node-palmier_alpha",
+                "node-plinthe",
+                "node-fauteuil001",
+                "node-cuisine",
+                "node-bar_top",
+                "node-PlaqueFourFridge_01",
+                "node-SecheLinge",
+                "node-machineAlaver",
+                "node-laundry",
+                "node-LookAtBooks",
+                "node-LookAtWindow",
+                "node-LookAtLivingRoom",
+                "node-LookAtStairs",
+                "node-LookAtLaundry",
+                "node-LookAtBar",
+                "node-camera001",
+                "node-camera002",
+                "node-camera003",
+                "node-maison",
+                "node-background",
+                "node-LookAtKitchen"
+            ]
+        }
+    },
+    "shaders": {
+        "loft40FS": {
+            "path": "loft40FS.glsl"
+        },
+        "loft40VS": {
+            "path": "loft40VS.glsl"
+        },
+        "loft42FS": {
+            "path": "loft42FS.glsl"
+        },
+        "loft42VS": {
+            "path": "loft42VS.glsl"
+        },
+        "loft44FS": {
+            "path": "loft44FS.glsl"
+        },
+        "loft44VS": {
+            "path": "loft44VS.glsl"
+        }
+    },
+    "skins": {},
+    "techniques": {
+        "technique1": {
+            "parameters": {
+                "diffuse": {
+                    "type": "SAMPLER_2D"
+                },
+                "filterColor": {
+                    "type": "FLOAT_VEC4",
+                    "value": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "normal": {
+                    "semantic": "NORMAL",
+                    "type": "FLOAT_VEC3"
+                },
+                "normalMatrix": {
+                    "semantic": "WORLDVIEWINVERSETRANSPOSE",
+                    "type": "FLOAT_MAT3"
+                },
+                "position": {
+                    "semantic": "POSITION",
+                    "type": "FLOAT_VEC3"
+                },
+                "projectionMatrix": {
+                    "semantic": "PROJECTION",
+                    "type": "FLOAT_MAT4"
+                },
+                "texcoord0": {
+                    "semantic": "TEXCOORD_0",
+                    "type": "FLOAT_VEC2"
+                },
+                "transparency": {
+                    "type": "FLOAT"
+                },
+                "worldViewMatrix": {
+                    "semantic": "WORLDVIEW",
+                    "type": "FLOAT_MAT4"
+                }
+            },
+            "pass": "defaultPass",
+            "passes": {
+                "defaultPass": {
+                    "instanceProgram": {
+                        "attributes": {
+                            "a_normal": "normal",
+                            "a_position": "position",
+                            "a_texcoord0": "texcoord0"
+                        },
+                        "program": "program_0",
+                        "uniforms": {
+                            "u_diffuse": "diffuse",
+                            "u_filterColor": "filterColor",
+                            "u_normalMatrix": "normalMatrix",
+                            "u_projectionMatrix": "projectionMatrix",
+                            "u_transparency": "transparency",
+                            "u_worldViewMatrix": "worldViewMatrix"
+                        }
+                    },
+                    "states": {
+                        "blendEnable": false,
+                        "cullFaceEnable": true,
+                        "depthMask": true,
+                        "depthTestEnable": true
+                    }
+                }
+            }
+        },
+        "technique2": {
+            "parameters": {
+                "diffuse": {
+                    "type": "SAMPLER_2D"
+                },
+                "filterColor": {
+                    "type": "FLOAT_VEC4",
+                    "value": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "normal": {
+                    "semantic": "NORMAL",
+                    "type": "FLOAT_VEC3"
+                },
+                "normalMatrix": {
+                    "semantic": "WORLDVIEWINVERSETRANSPOSE",
+                    "type": "FLOAT_MAT3"
+                },
+                "position": {
+                    "semantic": "POSITION",
+                    "type": "FLOAT_VEC3"
+                },
+                "projectionMatrix": {
+                    "semantic": "PROJECTION",
+                    "type": "FLOAT_MAT4"
+                },
+                "reflective": {
+                    "type": "SAMPLER_2D"
+                },
+                "texcoord0": {
+                    "semantic": "TEXCOORD_0",
+                    "type": "FLOAT_VEC2"
+                },
+                "transparency": {
+                    "type": "FLOAT"
+                },
+                "worldViewMatrix": {
+                    "semantic": "WORLDVIEW",
+                    "type": "FLOAT_MAT4"
+                }
+            },
+            "pass": "defaultPass",
+            "passes": {
+                "defaultPass": {
+                    "instanceProgram": {
+                        "attributes": {
+                            "a_normal": "normal",
+                            "a_position": "position",
+                            "a_texcoord0": "texcoord0"
+                        },
+                        "program": "program_1",
+                        "uniforms": {
+                            "u_diffuse": "diffuse",
+                            "u_filterColor": "filterColor",
+                            "u_normalMatrix": "normalMatrix",
+                            "u_projectionMatrix": "projectionMatrix",
+                            "u_reflective": "reflective",
+                            "u_transparency": "transparency",
+                            "u_worldViewMatrix": "worldViewMatrix"
+                        }
+                    },
+                    "states": {
+                        "blendEnable": false,
+                        "cullFaceEnable": true,
+                        "depthMask": true,
+                        "depthTestEnable": true
+                    }
+                }
+            }
+        },
+        "technique3": {
+            "parameters": {
+                "diffuse": {
+                    "type": "SAMPLER_2D"
+                },
+                "filterColor": {
+                    "type": "FLOAT_VEC4",
+                    "value": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "normal": {
+                    "semantic": "NORMAL",
+                    "type": "FLOAT_VEC3"
+                },
+                "normalMatrix": {
+                    "semantic": "WORLDVIEWINVERSETRANSPOSE",
+                    "type": "FLOAT_MAT3"
+                },
+                "position": {
+                    "semantic": "POSITION",
+                    "type": "FLOAT_VEC3"
+                },
+                "projectionMatrix": {
+                    "semantic": "PROJECTION",
+                    "type": "FLOAT_MAT4"
+                },
+                "texcoord0": {
+                    "semantic": "TEXCOORD_0",
+                    "type": "FLOAT_VEC2"
+                },
+                "transparency": {
+                    "type": "FLOAT"
+                },
+                "worldViewMatrix": {
+                    "semantic": "WORLDVIEW",
+                    "type": "FLOAT_MAT4"
+                }
+            },
+            "pass": "defaultPass",
+            "passes": {
+                "defaultPass": {
+                    "instanceProgram": {
+                        "attributes": {
+                            "a_normal": "normal",
+                            "a_position": "position",
+                            "a_texcoord0": "texcoord0"
+                        },
+                        "program": "program_2",
+                        "uniforms": {
+                            "u_diffuse": "diffuse",
+                            "u_filterColor": "filterColor",
+                            "u_normalMatrix": "normalMatrix",
+                            "u_projectionMatrix": "projectionMatrix",
+                            "u_transparency": "transparency",
+                            "u_worldViewMatrix": "worldViewMatrix"
+                        }
+                    },
+                    "states": {
+                        "blendEnable": true,
+                        "blendEquation": "FUNC_ADD",
+                        "blendFunc": {
+                            "dfactor": "ONE_MINUS_SRC_ALPHA",
+                            "sfactor": "SRC_ALPHA"
+                        },
+                        "cullFaceEnable": true,
+                        "depthMask": false,
+                        "depthTestEnable": true
+                    }
+                }
+            }
+        }
+    },
+    "textures": {
+        "texture_image_0": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_0",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_1": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_1",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_10": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_10",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_11": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_11",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_12": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_12",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_13": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_13",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_14": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_14",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_15": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_15",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_16": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_16",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_17": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_17",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_18": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_18",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_19": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_19",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_2": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_2",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_20": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_20",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_21": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_21",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_22": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_22",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_23": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_23",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_24": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_24",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_25": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_25",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_26": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_26",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_27": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_27",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_28": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_28",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_29": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_29",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_3": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_3",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_4": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_4",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_5": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_5",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_6": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_6",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_7": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_7",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_8": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_8",
+            "target": "TEXTURE_2D"
+        },
+        "texture_image_9": {
+            "format": "RGBA",
+            "internalFormat": "RGBA",
+            "sampler": "sampler_0",
+            "source": "image_9",
+            "target": "TEXTURE_2D"
+        }
+    }
+}

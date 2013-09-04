@@ -103,22 +103,22 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
     handleCountertopMaterialChange: {
         value: function (newMaterial) {
             var countertopMaterial = this.templateObjects.countertopMaterial;
-            var texture = "paper-counters.jpg";
+            var texture = "bar_dessus_paper.jpg";
 
             //TODO improve this; just done enough to get it working
             //TODO not rely on the fragile name
             if (newMaterial) {
                 switch (newMaterial.name) {
                     case "Black Quartz":
-                        texture = "7_cuisineVRayCompleteMap.jpg";
+                        texture = "bar_dessus_black.jpg";
                         break;
                     case "Paper Composite":
                         break;
                     case "Bamboo":
-                        texture = "bamboo-counters.jpg";
+                        texture = "bar_dessus_bamboo.jpg";
                         break;
                     case "Cement and Fly Ash":
-                        texture = "cement-counters.jpg";
+                        texture = "bar_dessus_cement.jpg";
                         break;
                     default:
                         texture = "";
