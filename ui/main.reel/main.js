@@ -95,8 +95,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     templateDidLoad: {
         value: function() {
-            this.defineBinding("sceneView", {"<-": "viewKey == 'webgl' ? templateObjects.glView : templateObjects.staticView"});
-
             //Set initial view to be webgl if possible
             this.viewKey = this.supportsWebGL ? "webgl" : "static";
 
