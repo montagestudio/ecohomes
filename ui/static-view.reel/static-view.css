@@ -4,14 +4,16 @@
     right: 0;
     bottom: 0;
     left: 0;
-    
-    display: -webkit-box;
-    display: -webkit-flex;
 
     background-image: url(../../assets/static/scene.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.StaticView-swatches {
+    display: -webkit-box;
+    display: -webkit-flex;
 }
 
 .StaticView .ConfigPreview {
@@ -30,6 +32,22 @@
     border-left-width: 0;
 }
 
+.StaticView-webglNotice {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    display: block;
+    color: hsl(0,0%,100%);
+    text-shadow: 0 2px 2px hsla(0, 0%, 10%, 0.5);
+    text-align: center;
+    font-weight: normal;
+}
+
+.StaticView-webglNotice a {
+    text-decoration: none;
+    color: hsl(210,60%,77%);
+}
 
 
 /* Staircase Configuration */
