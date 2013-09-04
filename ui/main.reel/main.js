@@ -151,18 +151,24 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     handleAction: {
         value: function (evt) {
             var panelKey = evt.detail ? evt.detail.get('panelKey') : void 0,
-                panelIndex;
+                panelIndex,
+                panels = this.cards,
+                iPanel,
+                panelToShow;
 
             if (panelKey) {
-                //TODO improve this (I have it, I'm just trying not to mix improvements and refactoring)
-                panelIndex = this.cards.map(function (card) {
-                    return card.panelKey;
-                }).indexOf(panelKey);
+
+                for (panelIndex = 0; (!panelToShow && (iPanel = panels[panelIndex])); panelIndex++) {
+                    if (panelKey === iPanel.panelKey) {
+                        panelToShow = iPanel;
+                        break;
+                    }
+                }
 
                 if (panelIndex > -1) {
                     this.templateObjects.panelFlow.scrollToPanel(panelIndex);
                     //Update this as quickly as possible, don't wait for scrolling
-                    this.currentPanel = this.cards[panelIndex];
+                    this.currentPanel = panelToShow;
                 }
             }
         }
