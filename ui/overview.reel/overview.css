@@ -6,8 +6,8 @@
     -webkit-justify-content: space-between;
     -webkit-align-items: center;
     
-    height: 90px;
-    padding: 10px 44px;
+    height: 70px;
+    padding: 10px 30px;
 
     color: #fff;
     font-size: 20px;
@@ -18,17 +18,12 @@
     user-select: none;
 }
 
-.Overview-totals {
-    display: -webkit-box;
-    -webkit-box-pack: end;
-    -webkit-box-align: center;
-    display: -webkit-flex;
-    -webkit-justify-content: flex-end;
-    -webkit-align-items: center;
+.Overview-logo {
+    height: 60px;
 }
 
-.Overview-ecoScore {
-    margin-right: 1em;
+.Overview-score {
+    margin-left: 40px;
 }
 
 .Overview-ecoBars {
