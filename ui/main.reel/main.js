@@ -50,13 +50,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         }
     },
 
-    cards: {
     /**
      * The collection of panel entry objects in order, as described by simple
      * `panelKey` property specifying the switchValue to provide to the
      * viewSubstitution to show the expected panel, and a `label` property
      * specifying the human friendly label of the panel.
      */
+    cards: {
         value: null
     },
 
