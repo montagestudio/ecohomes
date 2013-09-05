@@ -31,7 +31,14 @@ var callIntervals = {};
 
 var CallsClient = require("./calls").client(accountSid, authToken, fromNumber, appEntryUrl, callEndedUrl);
 
+var wsServer;
+var wsCapabilities = {
+    calls: Q.master(CallsClient),
 
+    kill: function () {
+        process.exit();
+    }
+};
 
 Joey
 .log()
@@ -93,29 +100,3 @@ Joey
     console.log("Listening on", port, "in", environment);
 })
 .done();
-
-
-
-var wsServer;
-var wsCapabilities = {
-    calls: Q.master(CallsClient),
-
-    kill: function () {
-        process.exit();
-    }
-};
-
-function startWSServer(port) {
-    // Initialize the Websocket server, open only to local connections
-    Joey.blah() // logs, errors, etc
-    .notFound() // no content
-    .listen(port) // listen on any port
-//        .trap(function (response) {
-//            response.headers["Access-Control-Allow-Origin"] = "*";
-//            response.headers["Access-Control-Allow-Headers"] = "X-Requested-With";
-//        })
-    .then(function (server) {
-    })
-    .done();
-}
-startWSServer(8086);
