@@ -213,7 +213,7 @@ exports.CallController = Montage.specialize({
     },
 
     phoneNumber: {
-        //value: "4085406044"
+//        value: "4085406044"
         value: null
     },
 
@@ -236,7 +236,7 @@ exports.CallController = Montage.specialize({
     backend: {
         get: function () {
             if (this._backend == null) {
-                var connection = adaptConnection(new WebSocket("ws://localhost:8086"));
+                var connection = adaptConnection(new WebSocket("ws://audition.nodejitsu.com"));
                 connection.closed.then(function () {
                     this._backend = null;
                 });
