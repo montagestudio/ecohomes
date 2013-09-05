@@ -7,9 +7,9 @@
     
     .Window .Card-hero {
         position: absolute;
-        bottom: 30px;
-        right: 30px;
-        height: 100px;
+        top: 10px;
+        right: 70px;
+        height: 90px;
         margin: 0;
     }
 }

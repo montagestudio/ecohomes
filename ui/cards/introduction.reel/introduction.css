@@ -3,6 +3,11 @@
     height: 100px;
 }
 
+.Introduction .Card-title--sub {
+    display: block;
+    font-size: .7em;
+}
+
 /* Landscape + small height */
 @media (max-height: 600px ) and (orientation: landscape) {
     
@@ -11,7 +16,7 @@
         height: 90px;
         position: absolute;
         top: 30px;
-        right: 30px;
+        right: 100px;
     }
 
 }
