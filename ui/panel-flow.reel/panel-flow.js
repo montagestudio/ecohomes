@@ -51,9 +51,6 @@ exports.PanelFlow = Component.specialize({
 
             if (firstTime) {
                 document.addEventListener("keydown", this, false);
-                window.addEventListener("resize", function () {
-                    self.needsDraw = true;
-                }, false);
             }
         }
     },
