@@ -28,7 +28,9 @@ exports.OptionField = Component.specialize(/** @lends OptionField# */ {
         value: function() {
             var chosenRadioButton = this.templateObjects.chosenRadioButton;
 
-            chosenRadioButton.checked = !chosenRadioButton.checked;
+            if (!chosenRadioButton.checked) {
+                chosenRadioButton.checked = true;
+            }
         }
     }
 });
