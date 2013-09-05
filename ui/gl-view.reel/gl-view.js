@@ -15,6 +15,10 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
         value: null
     },
 
+    _rideViewpoints: {
+        value: null
+    },
+
     constructor: {
         value: function GlView() {
             this.super();
@@ -41,6 +45,12 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
                 window: templateObjects.windowViewpoint,
                 laundry: templateObjects.laundryViewpoint
             });
+
+            //Note which viewpoints are part of the automated ride
+            var rideViews = this._rideViewpoints = new Map();
+            rideViews.set(this.templateObjects.rideViewpoint.id,  this.templateObjects.rideViewpoint);
+            rideViews.set(this.templateObjects.rideViewpoint2.id, this.templateObjects.rideViewpoint2);
+            rideViews.set(this.templateObjects.rideViewpoint3.id, this.templateObjects.rideViewpoint3);
 
             // React to changes in the configuration
             this.addPathChangeListener("configuration.configurationMap.get('staircase').optionMap.get('material')._selectedOption", this, "handleStaircaseMaterialChange");
@@ -168,14 +178,15 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
 
     handleCurrentPanelChange: {
         value: function (panelEntry) {
-            var roomView = this.templateObjects.roomView;
-            var rideViewpoint = this.templateObjects.rideViewpoint;
+            var roomView = this.templateObjects.roomView,
+                rideViewpoints = this._rideViewpoints,
+                isOnRideCamera = rideViewpoints.has(roomView.viewPoint.id),
+                shouldResumeRide = false;
 
             if (panelEntry) {
                 var preferredViewpoint = this._panelKeyViewpointMap.get(panelEntry.panelKey);
 
                 if (preferredViewpoint) {
-
                     if (this._autoActivateRideTimeout) {
                         clearTimeout(this._autoActivateRideTimeout);
                         this._autoActivateRideTimeout = null;
@@ -183,13 +194,21 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
 
                     roomView.pause();
                     roomView.viewPoint = preferredViewpoint;
-                } else if (rideViewpoint !== roomView.viewPoint) {
-                    roomView.viewPoint = rideViewpoint;
-                    roomView.play();
+                } else {
+                    shouldResumeRide = true;
                 }
 
-            } else if (rideViewpoint !== roomView.viewPoint) {
-                roomView.viewPoint = rideViewpoint;
+            } else {
+                shouldResumeRide = true;
+            }
+
+            if (shouldResumeRide) {
+                if (!isOnRideCamera) {
+                    roomView.viewPoint = rideViewpoint;
+                }
+
+                //Ensure we play as we're on the ride, and the ride may have been paused
+                //as a direct result of changing panels
                 roomView.play();
             }
 
