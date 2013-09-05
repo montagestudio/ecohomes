@@ -38,13 +38,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
             this.cards = [
                 {panelKey: "introduction", label: "Introduction"},
-                {panelKey: "staircase", label: "Staircase"},
                 {panelKey: "thermostat", label: "Thermostat"},
-                {panelKey: "kitchen", label: "Kitchen"},
+                {panelKey: "solarPanels", label: "Solar Panels"},
                 {panelKey: "counters", label: "Countertop"},
+                {panelKey: "kitchen", label: "Kitchen"},
                 {panelKey: "laundry", label: "Laundry"},
                 {panelKey: "window", label: "Windows"},
-                {panelKey: "solarPanels", label: "Solar Panels"},
+                {panelKey: "staircase", label: "Staircase"},
                 {panelKey: "callBack", label: "Contact"}
             ];
         }
