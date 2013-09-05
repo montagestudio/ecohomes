@@ -11,6 +11,16 @@
                 "element": {"#": "Calling"}
             }
         },
+        "callStatus": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "callStatus"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.controller.callStatus"}
+            }
+        },
         "cancel": {
             "prototype": "digit/ui/button.reel",
             "properties": {
@@ -30,7 +40,7 @@
 </head>
 <body>
     <div data-montage-id="Calling" class="Calling">
-        <strong class="CallBack--activity">Calling…</strong>
+        <strong class="CallBack--activity" data-montage-id="callStatus"></strong>
         <section class="CallBack-controls">
             <button data-montage-id="button" class="CallBack--cancelButton"></button>
         </section>

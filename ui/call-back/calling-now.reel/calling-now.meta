@@ -21,6 +21,9 @@
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
+      "blueprintModule": {
+        "%": "ui/call-back/calling-now.reel/calling-now.meta"
+      },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
         {"@": "blueprint_unnamed_controller"}
