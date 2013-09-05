@@ -10,5 +10,6 @@ vec4 diffuse = vec4(0., 0., 0., 1.);
 diffuse = texture2D(u_diffuse, v_texcoord0);
 color.xyz += diffuse.xyz;
 color = vec4(color.rgb * diffuse.a, diffuse.a * u_transparency);
+color *= u_filterColor;
 gl_FragColor = color;
 }

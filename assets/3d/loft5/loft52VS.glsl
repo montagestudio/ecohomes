@@ -12,7 +12,7 @@ void main(void) {
 vec4 pos = u_worldViewMatrix * vec4(a_position,1.0);
 v_normal = normalize(u_normalMatrix * a_normal);
 v_texcoord0 = a_texcoord0;
-vec3 normalizedVert = normalize(-vec3(pos));
+vec3 normalizedVert = normalize(-pos.xyz);
 v_reflect = reflect(normalizedVert, v_normal);
 gl_Position = u_projectionMatrix * pos;
 }
