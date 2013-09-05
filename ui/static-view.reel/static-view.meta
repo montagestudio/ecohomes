@@ -10,31 +10,17 @@
       }
     }
   },
-  "blueprint_unnamed_staircaseSrc": {
-    "prototype": "den/montage/core/meta/property-blueprint",
-    "properties": {
-      "name": "staircaseSrc",
-      "blueprint": {"@": "root"}
-    }
-  },
-  "blueprint_unnamed_countertopSrc": {
-    "prototype": "den/montage/core/meta/property-blueprint",
-    "properties": {
-      "name": "countertopSrc",
-      "blueprint": {"@": "root"}
-    }
-  },
-  "blueprint_unnamed_kitchenSrc": {
-    "prototype": "den/montage/core/meta/property-blueprint",
-    "properties": {
-      "name": "kitchenSrc",
-      "blueprint": {"@": "root"}
-    }
-  },
   "blueprint_unnamed_configuration": {
     "prototype": "den/montage/core/meta/property-blueprint",
     "properties": {
       "name": "configuration",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_currentPanel": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "currentPanel",
       "blueprint": {"@": "root"}
     }
   },
@@ -47,17 +33,13 @@
       },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
-        {"@": "blueprint_unnamed_staircaseSrc"},
-        {"@": "blueprint_unnamed_countertopSrc"},
-        {"@": "blueprint_unnamed_kitchenSrc"},
-        {"@": "blueprint_unnamed_configuration"}
+        {"@": "blueprint_unnamed_configuration"},
+        {"@": "blueprint_unnamed_currentPanel"}
       ],
       "propertyBlueprintGroups": {
         "StaticView": [
-          {"@": "blueprint_unnamed_staircaseSrc"},
-          {"@": "blueprint_unnamed_countertopSrc"},
-          {"@": "blueprint_unnamed_kitchenSrc"},
-          {"@": "blueprint_unnamed_configuration"}
+          {"@": "blueprint_unnamed_configuration"},
+          {"@": "blueprint_unnamed_currentPanel"}
         ]
       },
       "module": {

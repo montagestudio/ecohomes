@@ -5,7 +5,7 @@
     bottom: 0;
     left: 0;
 
-    background-image: url(../../assets/static/scene.png);
+    background-image: url(../../assets/static/ride-viewpoint.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -26,6 +26,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-color: white;
 }
 
 .StaticView .ConfigPreview:first-child {
@@ -49,6 +50,26 @@
     color: hsl(210,60%,77%);
 }
 
+/* Viewpoints */
+.StaticView--counters {
+    background-image: url(../../assets/static/countertop-viewpoint.png);
+}
+
+.StaticView--kitchen {
+    background-image: url(../../assets/static/kitchen-viewpoint.png);
+}
+
+.StaticView--laundry {
+    background-image: url(../../assets/static/laundry-viewpoint.png);
+}
+
+.StaticView--staircase {
+    background-image: url(../../assets/static/staircase-viewpoint.png);
+}
+
+.StaticView--windows {
+    background-image: url(../../assets/static/windows-viewpoint.png);
+}
 
 /* Staircase Configuration */
 .StaticView .ConfigPreview--staircase-pine {
@@ -90,6 +111,14 @@
     background-image: url(../../assets/static/kitchen.png);
 }
 
-.StaticView .ConfigPreview--kitchen-appliances {
-    background-image: url(../../assets/static/kitchen-appliances.png);
+.StaticView .ConfigPreview--kitchen-gutersloh {
+    background-image: url(../../assets/static/kitchen-gutersloh.png);
+}
+
+.StaticView .ConfigPreview--kitchen-norse {
+    background-image: url(../../assets/static/kitchen-norse.png);
+}
+
+.StaticView .ConfigPreview--kitchen-vortex {
+    background-image: url(../../assets/static/kitchen-vortex.png);
 }

@@ -9,6 +9,11 @@ var Component = require("montage/ui/component").Component;
  * @extends Component
  */
 exports.StaticView = Component.specialize(/** @lends StaticView# */ {
+
+    currentPanel: {
+        value: null
+    },
+
     constructor: {
         value: function StaticView() {
             this.super();
@@ -21,6 +26,25 @@ exports.StaticView = Component.specialize(/** @lends StaticView# */ {
             this.addPathChangeListener("configuration.configurationMap.get('staircase').optionMap.get('material')._selectedOption", this, "handleStaircaseMaterialChange");
             this.addPathChangeListener("configuration.configurationMap.get('kitchen').optionMap.get('appliances')._selectedOption", this, "handleKitchenAppliancesChange");
             this.addPathChangeListener("configuration.configurationMap.get('counters').optionMap.get('material')._selectedOption", this, "handleCountertopMaterialChange");
+
+            //React to the currentPanel changing
+            this.addPathChangeListener("currentPanel", this, "handleCurrentPanelChange");
+        }
+    },
+
+    _currentViewpointClassName: {
+        value: null
+    },
+
+    handleCurrentPanelChange: {
+        value: function (newPanel) {
+
+            if (this._currentViewpointClassName) {
+                this.classList.remove(this._currentViewpointClassName);
+            }
+
+            this._currentViewpointClassName = "StaticView--" + newPanel.panelKey;
+            this.classList.add(this._currentViewpointClassName);
         }
     },
 
@@ -58,8 +82,18 @@ exports.StaticView = Component.specialize(/** @lends StaticView# */ {
             var kitchenPreview = this.templateObjects.kitchen;
             var className = "ConfigPreview--kitchen";
 
-            if (newApplianceValue && "None" !== newApplianceValue.name) {
-                className = "ConfigPreview--kitchen-appliances";
+            if (newApplianceValue) {
+                switch (newApplianceValue.name) {
+                    case "Gütersloh":
+                        className = "ConfigPreview--kitchen-gutersloh";
+                        break;
+                    case "Norse":
+                        className = "ConfigPreview--kitchen-norse";
+                        break;
+                    case "Vortex":
+                        className = "ConfigPreview--kitchen-vortex";
+                        break;
+                }
             }
 
             kitchenPreview.className = className;
