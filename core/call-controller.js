@@ -31,10 +31,9 @@ exports.CallController = Montage.specialize({
                     callController.makeContactCall().done();
                 },
                 cancel: function(actionName, stateChart, owner) {
-                    callController.cancelCall().then(function () {
-                        console.log("cancelCall, returning to callNow state");
-                        this.gotoState('callNow');
-                    }.bind(this)).done();
+                    callController.cancelCall().done();
+                    console.log("cancelCall, returning to callNow state");
+                    this.gotoState('callNow');
                 },
                 end: function(actionName, stateChart, owner) {
                     this.gotoState('callNow');
