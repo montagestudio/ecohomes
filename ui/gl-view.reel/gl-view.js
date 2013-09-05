@@ -179,6 +179,7 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
     handleCurrentPanelChange: {
         value: function (panelEntry) {
             var roomView = this.templateObjects.roomView,
+                rideViewpoint = this.templateObjects.rideViewpoint,
                 rideViewpoints = this._rideViewpoints,
                 isOnRideCamera = rideViewpoints.has(roomView.viewPoint.id),
                 shouldResumeRide = false;
