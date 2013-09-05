@@ -214,7 +214,8 @@ exports.CallController = Montage.specialize({
     },
 
     phoneNumber: {
-        value: "4085406044"
+        //value: "4085406044"
+        value: null
     },
 
     callStatus: {
