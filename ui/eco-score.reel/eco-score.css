@@ -12,21 +12,21 @@
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
-    text-align: center;
+    text-align: right;
 }
 
 .EcoScore-title {
     margin: 0;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: normal;
-    text-transform: uppercase;
-    font-family: "HelveticaNeue-Light";
-    letter-spacing: 0.1em;
 }
 
 .EcoScore-grade {
-    color: hsl(71,56%,54%);
+    display: block;
+    color: #BAD662;
+    min-width: 90px;
+    line-height: 20px;
 }
 
 .EcoScore-costGraph {
@@ -39,13 +39,10 @@
 }
 
 .EcoScore .usdoe-Bar-level {
-    border: 2px solid hsl(71,56%,54%);
-    border-left-width: 0;
-
-    background: url(eco.png);
-    background-position: -4px;
+    background: #BAD662;
+    border: none;
 }
 
 .EcoScore .usdoe-CostGraph-costBar .usdoe-Bar-level {
-    -webkit-filter: grayscale(1);
+    background: #999;
 }
