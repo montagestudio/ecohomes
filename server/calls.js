@@ -31,6 +31,7 @@ exports.client = function (accountSid, authToken, fromNumber, appEntryUrl, callE
             console.log("This call\'s unique ID is: " + twilioCall.sid);
             console.log("This call was created at: " + twilioCall.dateCreated);
             var currentStatus = "";
+            var intervalCount = 0;
             callIntervals[twilioCall.sid] = setInterval(function () {
                 twilioClient.getCall(twilioCall.sid, function(error, twilioCall) {
                     console.log(twilioCall.status);
@@ -46,6 +47,11 @@ exports.client = function (accountSid, authToken, fromNumber, appEntryUrl, callE
                     }
 
                 })
+                if (intervalCount > 120) {
+                    clearInterval(callIntervals[twilioCall.sid])
+                } else {
+                    intervalCount++;
+                }
             }, 500);
             console.log("makeCall setInterval", twilioCall.sid, callIntervals[twilioCall.sid]);
 
