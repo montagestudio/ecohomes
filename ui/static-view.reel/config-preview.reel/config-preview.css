@@ -1,3 +1,12 @@
 .ConfigPreview {
-
+    position: relative;
+}
+.ConfigPreview-label{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    color: white;
+    text-shadow: 0 2px 2px hsla(0,0%,0%,0.5);
+    font-size: 16px;
 }

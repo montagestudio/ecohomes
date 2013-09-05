@@ -6,14 +6,27 @@
     <script type="text/montage-serialization">
     {
         "owner": {
+            "prototype": "ui/static-view.reel/config-preview.reel",
             "properties": {
                 "element": {"#": "configPreview"}
+            }
+        },
+        "label": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.label"}
             }
         }
     }
     </script>
 </head>
 <body>
-    <div data-montage-id="configPreview" class="ConfigPreview"></div>
+    <div data-montage-id="configPreview" class="ConfigPreview">
+        <h1 data-montage-id="text" class="ConfigPreview-label"></h1>
+    </div>
 </body>
 </html>
