@@ -32,6 +32,7 @@ exports.CallController = Montage.specialize({
                 },
                 cancel: function(actionName, stateChart, owner) {
                     callController.cancelCall().then(function () {
+                        console.log("cancelCall, returning to callNow state");
                         this.gotoState('callNow');
                     }.bind(this)).done();
                 },
