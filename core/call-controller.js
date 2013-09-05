@@ -34,6 +34,9 @@ exports.CallController = Montage.specialize({
                     callController.cancelCall().then(function () {
                         this.gotoState('callNow');
                     }.bind(this)).done();
+                },
+                end: function(actionName, stateChart, owner) {
+                    this.gotoState('callNow');
                 }
             });
 
@@ -114,6 +117,12 @@ exports.CallController = Montage.specialize({
             this._stateChart.performAction("cancel");
         }
     },
+    
+    callEnded: {
+        value: function() {
+            this._stateChart.performAction("end");
+        }
+    },
 
     _currentCall: {
         value: null
@@ -122,7 +131,13 @@ exports.CallController = Montage.specialize({
     makeContactCall: {
         value: function() {
             var controller = this;
-            return this.backend.get("calls").invoke("makeCall", this._normalizedPhoneNumber).then(function (call) {
+            return this.backend.get("calls").invoke("makeCall", this._normalizedPhoneNumber,function (status) {
+                    console.log("callStatus", status);
+                    this.callStatus = status;
+                }.bind(this), function () {
+                    console.log("callEnded...");
+                    this.callEnded()
+                }.bind(this)).then(function (call) {
                 console.log("makeCall", call);
                 controller._currentCall = call;
             });
@@ -199,6 +214,10 @@ exports.CallController = Montage.specialize({
 
     phoneNumber: {
         value: "4085406044"
+    },
+
+    callStatus: {
+        value: ""
     },
 
     _normalizedPhoneNumber: {

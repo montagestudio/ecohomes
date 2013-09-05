@@ -24,23 +24,30 @@ exports.client = function (accountSid, authToken, fromNumber, appEntryUrl, callE
     var calls =  {};
     var callIntervals = {};
 
-    client.makeCall = function (toNumber) {
+    client.makeCall = function (toNumber, updateCallback, callEnded) {
         return makeCall(twilioClient, toNumber, fromNumber, appEntryUrl).then(function (twilioCall) {
             var call = new Call(client, twilioCall.sid);
 
             console.log("This call\'s unique ID is: " + twilioCall.sid);
             console.log("This call was created at: " + twilioCall.dateCreated);
-
+            var currentStatus = "";
             callIntervals[twilioCall.sid] = setInterval(function () {
                 twilioClient.getCall(twilioCall.sid, function(error, twilioCall) {
                     console.log(twilioCall.status);
-                    if (twilioCall.status === "completed") {
-                        client.callEnded(twilioCall.sid);
-                    } else {
-                        call.statusUpdate(twilioCall.status);
+                    if(currentStatus !== twilioCall.status) {
+                        currentStatus = twilioCall.status;
+                        if (currentStatus === "completed" || currentStatus === "busy" || currentStatus === "no-answer") {
+                            client.callEnded(currentStatus);
+                            console.log("callEnded callback");
+                            callEnded();
+                        }
+                        console.log("update callback");
+                        updateCallback(currentStatus)
                     }
+
                 })
             }, 500);
+            console.log("makeCall setInterval", twilioCall.sid, callIntervals[twilioCall.sid]);
 
 //            var socket = new WebSocket("ws://example.com");
 //            var remote = Connection(socket, local);
@@ -54,10 +61,12 @@ exports.client = function (accountSid, authToken, fromNumber, appEntryUrl, callE
     };
 
     client.callEnded = function (callSid) {
+        console.log("callEnded");
         var call = calls[callSid];
         if (call != null) {
             call.ended();
         }
+        console.log("callEnded clearInterval", callSid, callIntervals[callSid]);
         clearInterval(callIntervals[callSid])
     };
 
