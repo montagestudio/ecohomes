@@ -108,7 +108,8 @@
 
 /* Kitchen Configuration */
 .StaticView .ConfigPreview--kitchen {
-    background-image: url(../../assets/static/kitchen.png);
+    background-image: none;
+    background-color: hsl(0,0%,80%);
 }
 
 .StaticView .ConfigPreview--kitchen-gutersloh {
