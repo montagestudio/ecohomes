@@ -41,10 +41,12 @@ exports.StaticView = Component.specialize(/** @lends StaticView# */ {
 
             if (this._currentViewpointClassName) {
                 this.classList.remove(this._currentViewpointClassName);
+                this._currentViewpointClassName = null;
             }
-
-            this._currentViewpointClassName = "StaticView--" + newPanel.panelKey;
-            this.classList.add(this._currentViewpointClassName);
+            if (newPanel) {
+                this._currentViewpointClassName = "StaticView--" + newPanel.panelKey;
+                this.classList.add(this._currentViewpointClassName);
+            }
         }
     },
 
