@@ -108,9 +108,11 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function() {
             if (this._hasBeenResized) {
                 var roomView = this.sceneView;
-                roomView.width = this.viewPortElement.offsetWidth;
-                roomView.height = this.viewPortElement.offsetHeight;
-                this._hasBeenResized = false;
+                if (this.sceneView) {
+                    roomView.width = this.viewPortElement.offsetWidth;
+                    roomView.height = this.viewPortElement.offsetHeight;
+                    this._hasBeenResized = false;
+                }
             }
         }
     },
