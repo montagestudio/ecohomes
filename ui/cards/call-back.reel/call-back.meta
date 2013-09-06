@@ -18,6 +18,14 @@
       "valueType": "object"
     }
   },
+  "blueprint_unnamed_orderedPanelKeys": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "orderedPanelKeys",
+      "blueprint": {"@": "root"},
+      "cardinality": -1
+    }
+  },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
@@ -27,11 +35,13 @@
       },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
-        {"@": "blueprint_unnamed_configuration"}
+        {"@": "blueprint_unnamed_configuration"},
+        {"@": "blueprint_unnamed_orderedPanelKeys"}
       ],
       "propertyBlueprintGroups": {
         "CallBack": [
-          {"@": "blueprint_unnamed_configuration"}
+          {"@": "blueprint_unnamed_configuration"},
+          {"@": "blueprint_unnamed_orderedPanelKeys"}
         ]
       },
       "module": {

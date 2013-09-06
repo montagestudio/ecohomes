@@ -11,7 +11,7 @@
                 "element": {"#": "summary"}
             },
             "bindings": {
-                "optionGroups": {"<-": "configuration.configurationMap.entries().filter{this[1].optionMap.values().filter{chosen}.length > 0}.map{this[1]}"}
+                "optionGroups": {"<-": "orderedPanelKeys.map{$configuration.configurationMap.get(this)}.filter{}.filter{this.optionMap.values().filter{chosen && price > 0}.length > 0}"}
             }
         },
         "basePrice": {
