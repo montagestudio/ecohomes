@@ -3,17 +3,7 @@
  * @requires montage/ui/component
  */
 var Component = require("montage/ui/component").Component;
-var Configuration = require("core/configuration").Configuration;
-var Map = require("montage/collections/map");
 var Introduction = require("ui/cards/introduction.reel").Introduction;
-
-var StaircaseConfigurationSet = require("configuration/staircase-configuration-set").StaircaseConfigurationSet;
-var ThermostatConfigurationSet = require("configuration/thermostat-configuration-set").ThermostatConfigurationSet;
-var KitchenConfigurationSet = require("configuration/kitchen-configuration-set").KitchenConfigurationSet;
-var LaundryConfigurationSet = require("configuration/laundry-configuration-set").LaundryConfigurationSet;
-var CountertopsConfigurationSet = require("configuration/countertops-configuration-set").CountertopsConfigurationSet;
-var SolarPanelsConfigurationSet = require("configuration/solar-panels-configuration-set").SolarPanelsConfigurationSet;
-var WindowConfigurationSet = require("configuration/window-configuration-set").WindowConfigurationSet;
 
 /**
  * @class Main
@@ -24,47 +14,24 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     constructor: {
         value: function Main() {
             this.super();
-
-            var configurationMap = new Map();
-            configurationMap.set("staircase", new StaircaseConfigurationSet());
-            configurationMap.set("thermostat", new ThermostatConfigurationSet());
-            configurationMap.set("kitchen", new KitchenConfigurationSet());
-            configurationMap.set("laundry", new LaundryConfigurationSet());
-            configurationMap.set("window", new WindowConfigurationSet());
-            configurationMap.set("counters", new CountertopsConfigurationSet());
-            configurationMap.set("solarPanels", new SolarPanelsConfigurationSet());
-
-            this.configuration = new Configuration().init(628000, 6000, configurationMap);
-
-            this.cards = [
-                {panelKey: "introduction", label: "Introduction"},
-                {panelKey: "thermostat", label: "Thermostat"},
-                {panelKey: "solarPanels", label: "Solar Panels"},
-                {panelKey: "counters", label: "Countertop"},
-                {panelKey: "kitchen", label: "Kitchen"},
-                {panelKey: "laundry", label: "Laundry"},
-                {panelKey: "window", label: "Windows"},
-                {panelKey: "staircase", label: "Staircase"},
-                {panelKey: "callBack", label: "Contact"}
-            ];
         }
     },
 
     /**
-     * The collection of panel entry objects in order, as described by simple
+     * The collection of panel descriptors objects in order, as described by simple
      * `panelKey` property specifying the switchValue to provide to the
      * viewSubstitution to show the expected panel, and a `label` property
      * specifying the human friendly label of the panel.
      */
-    cards: {
+    panelDescriptors: {
         value: null
     },
 
     /**
-     * The panelEntry for the configurationPanel that is currently
+     * The panelKey for the configurationPanel that is currently
      * front-most
      */
-    currentPanel: {
+    currentPanelKey: {
         value: null
     },
 
@@ -152,7 +119,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function (evt) {
             var panelKey = evt.detail ? evt.detail.get('panelKey') : void 0,
                 panelIndex,
-                panels = this.cards,
+                panels = this.panelDescriptors,
                 iPanel,
                 panelToShow;
 

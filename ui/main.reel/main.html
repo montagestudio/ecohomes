@@ -12,12 +12,53 @@
             "prototype": "ui/main.reel",
             "properties": {
                 "element": {"#": "main"},
+                "panelDescriptors": [
+                    {
+                        "panelKey": "introduction",
+                        "label": "Introduction"
+                    },
+                    {
+                        "panelKey": "thermostat",
+                        "label": "Thermostat"
+                    },
+                    {
+                        "panelKey": "solarPanels",
+                        "label": "Solar Panels"
+                    },
+                    {
+                        "panelKey": "counters",
+                        "label": "Countertop"
+                    },
+                    {
+                        "panelKey": "kitchen",
+                        "label": "Kitchen"
+                    },
+                    {
+                        "panelKey": "laundry",
+                        "label": "Laundry"
+                    },
+                    {
+                        "panelKey": "window",
+                        "label": "Windows"
+                    },
+                    {
+                        "panelKey": "staircase",
+                        "label": "Staircase"
+                    },
+                    {
+                        "panelKey": "callBack",
+                        "label": "Contact"
+                    }
+                ],
                 "viewPortElement": {"#": "viewPort"}
             },
             "bindings": {
-                "currentPanel": {"<-": "cards[@panelFlow.currentPanel]"},
+                "currentPanel": {"<-": "panelDescriptors[@panelFlow.currentPanelIndex]"},
                 "sceneView": {"<-": "@viewSubstitution.childComponents.0"}
             }
+        },
+        "application": {
+            "prototype": "montage/core/application"
         },
         "callBack": {
             "prototype": "ui/cards/call-back.reel",
@@ -25,7 +66,7 @@
                 "element": {"#": "callBack"}
             },
             "bindings": {
-                "configuration": {"<-": "@owner.configuration"}
+                "configuration": {"<-": "@application.configuration"}
             }
         },
         "configurationPanels": {
@@ -43,7 +84,7 @@
                 "element": {"#": "countersPanel"}
             },
             "bindings": {
-                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('counters')"}
+                "configurationSet": {"<-": "@application.configuration.configurationMap.get('counters')"}
             }
         },
         "flowTranslateStartListener": {
@@ -59,7 +100,7 @@
                 "element": {"#": "glView"}
             },
             "bindings": {
-                "configuration": {"<-": "@owner.configuration"},
+                "configuration": {"<-": "@application.configuration"},
                 "currentPanel": {"<-": "@owner.currentPanel"}
             }
         },
@@ -75,7 +116,7 @@
                 "element": {"#": "kitchenPanel"}
             },
             "bindings": {
-                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('kitchen')"}
+                "configurationSet": {"<-": "@application.configuration.configurationMap.get('kitchen')"}
             }
         },
         "laundryPanel": {
@@ -84,7 +125,7 @@
                 "element": {"#": "laundryPanel"}
             },
             "bindings": {
-                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('laundry')"}
+                "configurationSet": {"<-": "@application.configuration.configurationMap.get('laundry')"}
             }
         },
         "navigation": {
@@ -93,8 +134,9 @@
                 "element": {"#": "navigation"}
             },
             "bindings": {
-                "currentPanel": {"<-": "@panelFlow.currentPanel"},
-                "panels": {"<-": "@owner.cards"}
+                "configuration": {"<-": "@application.configuration"},
+                "currentPanelIndex": {"<-": "@panelFlow.currentPanelIndex"},
+                "panelDescriptors": {"<-": "@owner.panelDescriptors"}
             },
             "listeners": [
                 {
@@ -109,7 +151,7 @@
                 "element": {"#": "overview"}
             },
             "bindings": {
-                "configuration": {"<-": "@owner.configuration"}
+                "configuration": {"<-": "@application.configuration"}
             }
         },
         "panelFlow": {
@@ -118,7 +160,7 @@
                 "element": {"#": "panelFlow"}
             },
             "bindings": {
-                "content": {"<-": "@owner.cards"}
+                "content": {"<-": "@owner.panelDescriptors"}
             },
             "listeners": [
                 {
@@ -133,7 +175,7 @@
                 "element": {"#": "solarPanels"}
             },
             "bindings": {
-                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('solarPanels')"}
+                "configurationSet": {"<-": "@application.configuration.configurationMap.get('solarPanels')"}
             }
         },
         "staircasePanel": {
@@ -142,7 +184,7 @@
                 "element": {"#": "staircasePanel"}
             },
             "bindings": {
-                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('staircase')"}
+                "configurationSet": {"<-": "@application.configuration.configurationMap.get('staircase')"}
             }
         },
         "staticView": {
@@ -151,7 +193,7 @@
                 "element": {"#": "staticView"}
             },
             "bindings": {
-                "configuration": {"<-": "@owner.configuration"},
+                "configuration": {"<-": "@application.configuration"},
                 "currentPanel": {"<-": "@owner.currentPanel"}
             }
         },
@@ -165,7 +207,7 @@
                 ]
             },
             "bindings": {
-                "switchValues": {"<-": "@owner.cards.map{panelKey}"}
+                "switchValues": {"<-": "@owner.panelDescriptors.map{panelKey}"}
             }
         },
         "thermostatPanel": {
@@ -174,7 +216,7 @@
                 "element": {"#": "thermostatPanel"}
             },
             "bindings": {
-                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('thermostat')"}
+                "configurationSet": {"<-": "@application.configuration.configurationMap.get('thermostat')"}
             }
         },
         "viewSubstitution": {
@@ -192,7 +234,7 @@
                 "element": {"#": "windowPanel"}
             },
             "bindings": {
-                "configurationSet": {"<-": "@owner.configuration.configurationMap.get('window')"}
+                "configurationSet": {"<-": "@application.configuration.configurationMap.get('window')"}
             }
         }
     }

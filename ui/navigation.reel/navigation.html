@@ -23,13 +23,22 @@
                 "panelKey": {"<-": "@panelList.objectAtCurrentIteration.panelKey"}
             }
         },
+        "navToggle": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "navToggle"}
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.showNav"}
+            }
+        },
         "panelList": {
             "prototype": "montage/ui/repetition.reel",
             "properties": {
                 "element": {"#": "repetition"}
             },
             "bindings": {
-                "content": {"<-": "@owner.panels"}
+                "content": {"<-": "@owner.panelDescriptors"}
             }
         },
         "panelName": {
@@ -38,7 +47,7 @@
                 "element": {"#": "panelName"}
             },
             "bindings": {
-                "classList.has('Navigation-button--selected')": {"<-": "@panelList.currentIteration.index == @owner.currentPanel"},
+                "classList.has('Navigation-button--selected')": {"<-": "@panelList.currentIteration.index == @owner.currentPanelIndex"},
                 "detail.get('index')": {"<-": "@panelList.currentIteration.index"},
                 "detail.get('panelKey')": {"<-": "@panelList.objectAtCurrentIteration.panelKey"},
                 "label": {"<-": "@panelList.objectAtCurrentIteration.label"}
@@ -50,15 +59,6 @@
                     "listener": {"@": "owner"}
                 }
             ]
-        },
-        "navToggle": {
-            "prototype": "digit/ui/checkbox.reel",
-            "properties": {
-                "element": {"#": "navToggle"}
-            },
-            "bindings": {
-                "checked": {"<->": "@owner.showNav"}
-            }
         }
     }
     </script>

@@ -15,13 +15,21 @@ exports.Navigation = Component.specialize(/** @lends Navigation# */ {
         }
     },
 
-    currentPanel: {
+    panelDescriptors: {
+        value: null
+    },
+
+    currentPanelIndex: {
+        value: null
+    },
+
+    configuration: {
         value: null
     },
 
     handleAction: {
         value: function(event) {
-            this.currentPanel = event.detail.get("index");
+            this.currentPanelIndex = event.detail.get("index");
         }
     }
 });

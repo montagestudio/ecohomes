@@ -33,6 +33,14 @@
       "blueprint": {"@": "root"}
     }
   },
+  "blueprint_unnamed_panelDescriptors": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "panelDescriptors",
+      "blueprint": {"@": "root"},
+      "cardinality": -1
+    }
+  },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
@@ -44,14 +52,16 @@
       "propertyBlueprints": [
         {"@": "blueprint_unnamed_configuration"},
         {"@": "blueprint_unnamed_showNav"},
-        {"@": "blueprint_unnamed_viewKey"}
+        {"@": "blueprint_unnamed_viewKey"},
+        {"@": "blueprint_unnamed_panelDescriptors"}
       ],
       "propertyBlueprintGroups": {
         "default": [],
         "Main": [
           {"@": "blueprint_unnamed_configuration"},
           {"@": "blueprint_unnamed_showNav"},
-          {"@": "blueprint_unnamed_viewKey"}
+          {"@": "blueprint_unnamed_viewKey"},
+          {"@": "blueprint_unnamed_panelDescriptors"}
         ]
       },
       "module": {

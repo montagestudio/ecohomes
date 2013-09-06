@@ -274,22 +274,22 @@ exports.PanelFlow = Component.specialize({
         },
         set: function (value) {
             this._scroll = value;
-            if (this.currentPanel === null) {
+            if (this.currentPanelIndex === null) {
                 this.didTranslateEnd();
             }
         }
     },
 
-    _currentPanel: {
+    _currentPanelIndex: {
         value: null
     },
 
-    currentPanel: {
+    currentPanelIndex: {
         get: function () {
-            return this._currentPanel;
+            return this._currentPanelIndex;
         },
         set: function (value) {
-            this._currentPanel = value;
+            this._currentPanelIndex = value;
         }
     },
 
@@ -303,8 +303,8 @@ exports.PanelFlow = Component.specialize({
 
     didTranslateEnd: {
         value: function () {
-            if (this._currentPanel !== Math.round(this.scroll)) {
-                this.currentPanel = Math.round(this.scroll);
+            if (this._currentPanelIndex !== Math.round(this.scroll)) {
+                this.currentPanelIndex = Math.round(this.scroll);
             }
         }
     },
