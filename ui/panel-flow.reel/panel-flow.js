@@ -51,6 +51,7 @@ exports.PanelFlow = Component.specialize({
 
             if (firstTime) {
                 document.addEventListener("keydown", this, false);
+                this._originalFlowPaths = this.flow.paths;
             }
         }
     },
@@ -110,112 +111,50 @@ exports.PanelFlow = Component.specialize({
 
     willDraw: {
         value: function () {
+            var paths = [],
+                knot,
+                jPath,
+                i, j, k, l;
+
             if ((typeof this.__firstIteration !== "undefined") && (this.__firstIteration !== null)) {
                 this._width = this.element.clientWidth;
                 this._height = this.element.clientHeight;
                 this._rowHeight = this.__firstIteration.firstElement.clientHeight + 20;
                 this.flow.linearScrollingVector = [0, (-500 * this.__rowHeight) / this.__height];
-                this.flow.paths = [
-                    {
-                        "knots": [
-                            {
-                                "knotPosition": [
-                                    0,
-                                    -this.__rowHeight * 30,
-                                    -100
-                                ],
-                                "nextHandlerPosition": [
-                                    0,
-                                    -this.__rowHeight * 20,
-                                    -100
-                                ],
-                                "nextDensity": 40,
-                                "previousDensity": 40,
-                                "opacity": 0
-                            },
-                            {
-                                "knotPosition": [
-                                    0,
-                                    0,
-                                    -40
-                                ],
-                                "previousHandlerPosition": [
-                                    0,
-                                    -this.__rowHeight * 10,
-                                    -40
-                                ],
-                                "nextHandlerPosition": [
-                                    0,
-                                    this.__rowHeight / 3,
-                                    -40
-                                ],
-                                "nextDensity": 1,
-                                "previousDensity": 1,
-                                "opacity": 0.4
-                            },
-                            {
-                                "knotPosition": [
-                                    0,
-                                    this.__rowHeight,
-                                    0
-                                ],
-                                "previousHandlerPosition": [
-                                    0,
-                                    this.__rowHeight * 2 / 3,
-                                    0
-                                ],
-                                "nextHandlerPosition": [
-                                    0,
-                                    this.__rowHeight * 4 / 3,
-                                    0
-                                ],
-                                "nextDensity": 1,
-                                "previousDensity": 1,
-                                "opacity": 1.6
-                            },
-                            {
-                                "knotPosition": [
-                                    0,
-                                    this.__rowHeight * 2,
-                                    -40
-                                ],
-                                "previousHandlerPosition": [
-                                    0,
-                                    this.__rowHeight * 5 / 3,
-                                    -40
-                                ],
-                                "nextHandlerPosition": [
-                                    0,
-                                    this.__rowHeight * 12,
-                                    -100
-                                ],
-                                "nextDensity": 1,
-                                "previousDensity": 1,
-                                "opacity": 0.4
-                            },
-                            {
-                                "knotPosition": [
-                                    0,
-                                    this.__rowHeight * 32,
-                                    -100
-                                ],
-                                "previousHandlerPosition": [
-                                    0,
-                                    this.__rowHeight * 22,
-                                    -100
-                                ],
-                                "nextDensity": 40,
-                                "previousDensity": 40,
-                                "opacity": 0
+                for (j = 0; j < this._originalFlowPaths.length; j++) {
+                    jPath = this._originalFlowPaths[j];
+                    paths.push({});
+                    for (i in jPath) {
+                        if (jPath.hasOwnProperty(i)) {
+                            if (i === "knots") {
+                                paths[j].knots = [];
+                                for (k = 0; k < jPath[i].length; k++) {
+                                    paths[j].knots.push(knot = {});
+                                    for (l in jPath[i][k]) {
+                                        if (jPath[i][k].hasOwnProperty(l)) {
+                                            switch (l) {
+                                                case "knotPosition":
+                                                case "nextHandlerPosition":
+                                                case "previousHandlerPosition":
+                                                    knot[l] = [
+                                                        jPath[i][k][l][0],
+                                                        jPath[i][k][l][1] * this.__rowHeight / 300,
+                                                        jPath[i][k][l][2]
+                                                    ];
+                                                    break;
+                                                default:
+                                                    knot[l] = jPath[i][k][l];
+                                            }
+                                        }
+                                    }
+                                }
+                            } else {
+                                paths[j][i] = jPath[i];
                             }
-                        ],
-                        "units": {
-                            "opacity": ""
-                        },
-                        "headOffset": 21.5,
-                        "tailOffset": 21.5
+                        }
                     }
-                ];
+                }
+                this.flow.paths = paths;
                 this.flow.cameraTargetPoint = [
                     0,
                     this.__rowHeight,
