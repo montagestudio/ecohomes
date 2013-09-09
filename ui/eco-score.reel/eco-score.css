@@ -1,17 +1,22 @@
 .EcoScore {
     display: -webkit-box;
-    -webkit-box-pack: center;
     display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .EcoScore-header {
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-pack: center;
     display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
+    justify-content: center;
     text-align: right;
 }
 

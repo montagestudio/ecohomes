@@ -5,6 +5,7 @@
     padding: 0;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+    flex: 1;
 }
 
 .Summary-optionGroup {
@@ -26,19 +27,19 @@
     display: block;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+    flex: 1;
 }
 
 .Summary-option {
-    display: -webkit-box; /* old: iOS6 */
+    display: -webkit-box;
     display: -webkit-flex;
+    display: flex;
 }
 
 .Summary-optionName {
     display: block;
-    -webkit-box-flex: 1; /* old: iOS6 */
+    -webkit-box-flex: 1;
     -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
     flex: 1;
 }
 
@@ -64,12 +65,13 @@
 .Summary-optionGroupItem {
     display: -webkit-box;
     display: -webkit-flex;
+    display: flex;
     margin-bottom: 5px;
 }
 
 .Summary--price {
     display: block;
-    font-family: "HelveticaNeue-Light";
+    font-family: "HelveticaNeue-Light", inherit;
     font-size: 16px;
     color: hsla(0,0%,15%)
 }

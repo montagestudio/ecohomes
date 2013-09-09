@@ -1,21 +1,27 @@
 .Card {
     position: relative;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 30px;
     
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-pack: center;
     display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
+    justify-content: center;
     
     font-size: 18px;
     line-height: 1.3;
     color: #666;
-
     background-color: #fff;
     -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;    
 }
 
 
@@ -52,11 +58,6 @@
     margin: 0 0 1em 0;
 }
 
-.Card-optionGrid {
-    display: -webkit-flex;
-    -webkit-flex-flow: row wrap;
-}
-
 .Card-optionThumbnail {
     display: inline-block;
     border: 2px solid white;
@@ -68,10 +69,11 @@
 
 .Card-option--booleanField,
 .Card-option--choiceField {
-    display: block;
     display: -webkit-box;
     display: -webkit-flex;
+    display: flex;
     -webkit-flex: 1 0 50%;
+    flex: 1 0 50%;
     padding: 6px 10px;
 }
 
@@ -79,6 +81,7 @@
     display: block;
     margin-top: 20px;
     -webkit-flex: 1 0 50%;
+    flex: 1 0 50%;
     padding: 5px 10px;
 }
 
@@ -89,19 +92,22 @@
 .Card-option-labelArea {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+    flex: 1;
     display: -webkit-box;
-    -webkit-box-pack: justify;
     display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
+    justify-content: space-between;
     padding-left: 12px;
     cursor: pointer;
-    
     -webkit-tap-highlight-color: transparent;
 }
 
 .Card-option-label {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+    flex: 1;
     display: block;
     font-weight: normal;
     line-height: 24px;
@@ -131,9 +137,11 @@
     
     .Card {
         -webkit-box-orient: horizontal;
-        -webkit-box-align: center;
         -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
         -webkit-align-items: center;
+        align-items: center;
     }
 
     .Card-hero {

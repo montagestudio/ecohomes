@@ -30,6 +30,7 @@
 
 .CallBack--cancelButton {
     -webkit-filter: hue-rotate(285deg);
+    filter: hue-rotate(285deg);
 }
 
 .CallBack--activity {
@@ -53,6 +54,7 @@
     .Summary-optionPrice {
         -webkit-box-flex: 1;
         -webkit-flex: 1;
+        flex: 1;
     }
 }
 
@@ -82,5 +84,13 @@
     .Summary-optionPrice {
         -webkit-box-flex: 1;
         -webkit-flex: 1;
+        flex: 1;
     }
+}
+
+
+/* FF fix */
+
+.digit-TextField {
+    -moz-box-sizing: border-box;
 }

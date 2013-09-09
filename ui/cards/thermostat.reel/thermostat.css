@@ -15,9 +15,10 @@
     }
     
     .Thermostat-den {
-        -webkit-transform: scale(.6);
         position: absolute;
         top: -50px;
+        -webkit-transform: scale(.6);
+        transform: scale(.6);
     }
 }
 
