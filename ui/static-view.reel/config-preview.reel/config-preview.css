@@ -4,9 +4,13 @@
 .ConfigPreview-label{
     display: block;
     position: absolute;
-    bottom: 0;
-    left: 1em;
-    color: white;
-    text-shadow: 0 2px 2px hsla(0,0%,0%,0.5);
+    margin: 0;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Droid Serif', serif;
+    font-weight: normal;
     font-size: 16px;
+    line-height: 1;
+    text-shadow: 0 2px 2px hsla(0,0%,0%,0.4);
+    color: white;
 }
