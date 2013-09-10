@@ -73,6 +73,10 @@ exports.CallController = Montage.specialize({
         }
     },
 
+    server: {
+        value: "localhost:8085"
+    },
+
     _stateChart: {
         value: null
     },
@@ -229,6 +233,31 @@ exports.CallController = Montage.specialize({
         value: "callController"
     },
 
+    alive: {
+        value: function() {
+            var pendingTimeout;
+            var timeout = 500;
+            var response = Promise.defer();
+            var request = new XMLHttpRequest();
+            request.open("GET", "http://"+this.server+"/alive", true);
+            request.onreadystatechange = function () {
+                if (request.readyState === 4) {
+                    if (request.status === 200) {
+                        if(pendingTimeout) {
+                            clearTimeout(pendingTimeout);
+                        }
+                        response.resolve(request.responseText);
+                    } else {
+                        response.reject("HTTP " + request.status + " for " + "http://"+this.server+"/alive");
+                    }
+                }
+            };
+            pendingTimeout = setTimeout(response.reject, timeout - 50);
+            request.send();
+            return response.promise.timeout(timeout);
+        }
+    },
+
     _backend: {
         value: null
     },
@@ -236,7 +265,7 @@ exports.CallController = Montage.specialize({
     backend: {
         get: function () {
             if (this._backend == null) {
-                var connection = adaptConnection(new WebSocket("ws://audition.nodejitsu.com"));
+                var connection = adaptConnection(new WebSocket("ws://"+this.server));
                 connection.closed.then(function () {
                     this._backend = null;
                 });

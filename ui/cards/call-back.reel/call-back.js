@@ -27,8 +27,20 @@ exports.CallBack = Component.specialize(/** @lends CallBack# */ {
 
             this.defineBinding("currentState", {"<-": "_stateChart.currentState.name"});
 
+            this.checkAlive();
         }
     },
+
+    checkAlive: {
+        value: function() {
+            this.callController.alive().then(function () {
+                this.currentStep = "callNow";
+            }.bind(this)).fail(function () {
+                this.currentStep = "unavailable";
+            }.bind(this));
+        }
+    },
+
 
     callControllerStateDidChange: {
         value: function(controller, state) {

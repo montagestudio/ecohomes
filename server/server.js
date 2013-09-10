@@ -85,6 +85,17 @@ Joey
             });
        });
 
+    $("alive")
+        .method("GET")
+        .contentType("text/plain")
+        .trap(function (response) {
+            response.headers["Access-Control-Allow-Origin"] = "*";
+            response.headers["Access-Control-Allow-Headers"] = "X-Requested-With";
+        })
+        .contentApp(function (request) {
+            return "ALIVE";
+       });
+
 })
 .listen(port)
 .then(function (server) {
