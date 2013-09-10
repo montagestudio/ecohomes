@@ -37,9 +37,9 @@
 
 
 .Card-title {
-    margin: 0 0 1em 0;
+    margin: 0 0 .6em 0;
     font-size: 33px;
-    font-weight: normal;
+    font-weight: bold;
     color: #363636;
 }
 
