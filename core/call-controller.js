@@ -32,7 +32,7 @@ exports.CallController = Montage.specialize({
                 },
                 cancel: function(actionName, stateChart, owner) {
                     callController.cancelCall().done();
-                    console.log("cancelCall, returning to callNow state");
+                    //console.log("cancelCall, returning to callNow state");
                     this.gotoState('callNow');
                 },
                 end: function(actionName, stateChart, owner) {
@@ -84,7 +84,7 @@ exports.CallController = Montage.specialize({
     stateChartWillGoFromStateToState: {
         value: function(stateChart, prevState, nextState) {
             this.callDelegateMethod("stateDidChange", this, nextState.name);
-            console.log("nextState", nextState.name);
+            //console.log("nextState", nextState.name);
         }
     },
 
@@ -136,13 +136,13 @@ exports.CallController = Montage.specialize({
         value: function() {
             var controller = this;
             return this.backend.get("calls").invoke("makeCall", this._normalizedPhoneNumber,function (status) {
-                    console.log("callStatus", status);
+                    //console.log("callStatus", status);
                     this.callStatus = status;
                 }.bind(this), function () {
-                    console.log("callEnded...");
+                    //console.log("callEnded...");
                     this.callEnded()
                 }.bind(this)).then(function (call) {
-                console.log("makeCall", call);
+                //console.log("makeCall", call);
                 controller._currentCall = call;
             });
 //            var calls = this.backend.get("calls");
@@ -156,10 +156,10 @@ exports.CallController = Montage.specialize({
     cancelCall: {
         value: function() {
             if (this._currentCall) {
-                console.log("cancelCall", this._currentCall);
+                //console.log("cancelCall", this._currentCall);
                 return this._currentCall.invoke("cancel");
             } else {
-                console.error("No call to cancel.")
+                //console.error("No call to cancel.")
             }
         }
     },
