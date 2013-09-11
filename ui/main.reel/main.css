@@ -26,8 +26,9 @@
     justify-content: center;
 
     position: relative;
-    background-color: hsl(0,0%,90%);
     z-index: 2;
+    background: hsl(0,0%,90%) url(../../assets/static/ride-viewpoint.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .Main-room {

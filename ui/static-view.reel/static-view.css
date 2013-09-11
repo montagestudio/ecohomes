@@ -5,7 +5,7 @@
     bottom: 0;
     left: 0;
 
-    background-image: url(../../assets/static/ride-viewpoint.png);
+    background-image: url(../../assets/static/ride-viewpoint.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -56,58 +56,58 @@
 
 /* Viewpoints */
 .StaticView--counters {
-    background-image: url(../../assets/static/countertop-viewpoint.png);
+    background-image: url(../../assets/static/countertop-viewpoint.jpg);
 }
 
 .StaticView--kitchen {
-    background-image: url(../../assets/static/kitchen-viewpoint.png);
+    background-image: url(../../assets/static/kitchen-viewpoint.jpg);
 }
 
 .StaticView--laundry {
-    background-image: url(../../assets/static/laundry-viewpoint.png);
+    background-image: url(../../assets/static/laundry-viewpoint.jpg);
 }
 
 .StaticView--staircase {
-    background-image: url(../../assets/static/staircase-viewpoint.png);
+    background-image: url(../../assets/static/staircase-viewpoint.jpg);
 }
 
 .StaticView--windows {
-    background-image: url(../../assets/static/windows-viewpoint.png);
+    background-image: url(../../assets/static/windows-viewpoint.jpg);
 }
 
 /* Staircase Configuration */
 .StaticView .ConfigPreview--staircase-pine {
-    background-image: url(../../assets/static/staircase-pine.png);
+    background-image: url(../../assets/static/staircase-pine.jpg);
 }
 
 .StaticView .ConfigPreview--staircase-ash {
-    background-image: url(../../assets/static/staircase-ash.png);
+    background-image: url(../../assets/static/staircase-ash.jpg);
 }
 
 .StaticView .ConfigPreview--staircase-walnut {
-    background-image: url(../../assets/static/staircase-walnut.png);
+    background-image: url(../../assets/static/staircase-walnut.jpg);
 }
 
 .StaticView .ConfigPreview--staircase-bold {
-    background-image: url(../../assets/static/staircase-bold.png);
+    background-image: url(../../assets/static/staircase-bold.jpg);
 }
 
 /* Countertop Configuration */
 
 .StaticView .ConfigPreview--countertop-paper {
-    background-image: url(../../assets/static/countertop-paper.png);
+    background-image: url(../../assets/static/countertop-paper.jpg);
 }
 
 .StaticView .ConfigPreview--countertop-bamboo {
-    background-image: url(../../assets/static/countertop-bamboo.png);
+    background-image: url(../../assets/static/countertop-bamboo.jpg);
 }
 
 .StaticView .ConfigPreview--countertop-cement {
-    background-image: url(../../assets/static/countertop-cement.png);
+    background-image: url(../../assets/static/countertop-cement.jpg);
 }
 
 .StaticView .ConfigPreview--countertop-quartz {
-    background-image: url(../../assets/static/countertop-quartz.png);
+    background-image: url(../../assets/static/countertop-quartz.jpg);
 }
 
 /* Kitchen Configuration */
@@ -117,15 +117,15 @@
 }
 
 .StaticView .ConfigPreview--kitchen-gutersloh {
-    background-image: url(../../assets/static/kitchen-gutersloh.png);
+    background-image: url(../../assets/static/kitchen-gutersloh.jpg);
 }
 
 .StaticView .ConfigPreview--kitchen-norse {
-    background-image: url(../../assets/static/kitchen-norse.png);
+    background-image: url(../../assets/static/kitchen-norse.jpg);
 }
 
 .StaticView .ConfigPreview--kitchen-vortex {
-    background-image: url(../../assets/static/kitchen-vortex.png);
+    background-image: url(../../assets/static/kitchen-vortex.jpg);
 }
 
 
