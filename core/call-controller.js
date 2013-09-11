@@ -26,7 +26,12 @@ exports.CallController = Montage.specialize({
 
             callingNow = new State().init({
                 enterState: function() {
-                    callController.makeContactCall().done();
+                    callController.callStatus = "";
+                    callController.makeContactCall().fail(function () {
+                        callController.errors.push({
+                             message: "A server error has occured"
+                        });
+                    }).done();
                 },
                 cancel: function(actionName, stateChart, owner) {
                     callController.cancelCall().done();
@@ -157,6 +162,7 @@ exports.CallController = Montage.specialize({
                 //console.log("cancelCall", this._currentCall);
                 return this._currentCall.invoke("cancel");
             } else {
+                return Promise.reject();
                 //console.error("No call to cancel.")
             }
         }
