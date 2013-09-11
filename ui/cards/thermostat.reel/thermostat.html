@@ -9,6 +9,9 @@
             "prototype": "ui/cards/thermostat.reel",
             "properties": {
                 "element": {"#": "thermostat"}
+            },
+            "bindings": {
+                "ownerComponent.temperatureDelta": {"<-": "@den.temperatureDelta"}
             }
         },
         "booleanOptionField1": {

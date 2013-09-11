@@ -38,6 +38,13 @@
       "blueprint": {"@": "root"}
     }
   },
+  "blueprint_unnamed_temperatureDelta": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "temperatureDelta",
+      "blueprint": {"@": "root"}
+    }
+  },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
@@ -50,14 +57,16 @@
         {"@": "blueprint_unnamed_currentPanel"},
         {"@": "blueprint_unnamed_configuration"},
         {"@": "blueprint_unnamed_width"},
-        {"@": "blueprint_unnamed_height"}
+        {"@": "blueprint_unnamed_height"},
+        {"@": "blueprint_unnamed_temperatureDelta"}
       ],
       "propertyBlueprintGroups": {
         "GlView": [
           {"@": "blueprint_unnamed_currentPanel"},
           {"@": "blueprint_unnamed_configuration"},
           {"@": "blueprint_unnamed_width"},
-          {"@": "blueprint_unnamed_height"}
+          {"@": "blueprint_unnamed_height"},
+          {"@": "blueprint_unnamed_temperatureDelta"}
         ]
       },
       "module": {

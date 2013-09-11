@@ -41,6 +41,13 @@
       "cardinality": -1
     }
   },
+  "blueprint_unnamed_temperatureDelta": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "temperatureDelta",
+      "blueprint": {"@": "root"}
+    }
+  },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
@@ -53,7 +60,8 @@
         {"@": "blueprint_unnamed_configuration"},
         {"@": "blueprint_unnamed_showNav"},
         {"@": "blueprint_unnamed_viewKey"},
-        {"@": "blueprint_unnamed_panelDescriptors"}
+        {"@": "blueprint_unnamed_panelDescriptors"},
+        {"@": "blueprint_unnamed_temperatureDelta"}
       ],
       "propertyBlueprintGroups": {
         "default": [],
@@ -61,7 +69,8 @@
           {"@": "blueprint_unnamed_configuration"},
           {"@": "blueprint_unnamed_showNav"},
           {"@": "blueprint_unnamed_viewKey"},
-          {"@": "blueprint_unnamed_panelDescriptors"}
+          {"@": "blueprint_unnamed_panelDescriptors"},
+          {"@": "blueprint_unnamed_temperatureDelta"}
         ]
       },
       "module": {
