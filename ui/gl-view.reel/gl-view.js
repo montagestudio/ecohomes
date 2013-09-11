@@ -31,6 +31,14 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
         value: null
     },
 
+    _neutralFloorColor: {
+        value: null
+    },
+
+    floorColor: {
+        value: null
+    },
+
     _panelKeyViewpointMap: {
         value: null
     },
@@ -43,6 +51,8 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
         value: function GlView() {
             this.super();
 
+            this._neutralFloorColor = [0,0,0,0];
+
             this.defineBinding("isHeating", {"<-": "temperatureDelta > 0"});
             this.defineBinding("isCooling", {"<-": "temperatureDelta < 0"});
 
@@ -52,8 +62,15 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
 
     handleTemperatureDeltaChange: {
         value: function () {
-            this.heatingColor = this.temperatureDelta > 0 ? [1,0,0, 0.7 * this.temperatureDelta] : [0,0,0,0];
-            this.coolingColor = this.temperatureDelta < 0 ? [0,0,1, -0.7 * this.temperatureDelta] : [0,0,0,0];
+            if (this.temperatureDelta > 0) {
+                this.heatingColor = [1,0,0, 0.7 * this.temperatureDelta];
+                this.coolingColor = this._neutralFloorColor;
+                this.floorColor = this.heatingColor;
+            } else {
+                this.coolingColor = [0,0,1, -0.7 * this.temperatureDelta];
+                this.heatingColor = this._neutralFloorColor;
+                this.floorColor = this.coolingColor;
+            }
         }
     },
 
