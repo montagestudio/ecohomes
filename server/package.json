@@ -1,6 +1,6 @@
 {
   "name": "call-back",
-  "version": "0.0.1-1",
+  "version": "0.0.2",
   "dependencies": {
     "twilio": "~1.1.4",
     "joey": "~1.2.0",
