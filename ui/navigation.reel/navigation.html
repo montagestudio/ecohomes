@@ -11,8 +11,20 @@
                 "element": {"#": "Navigation"}
             },
             "bindings": {
-                "classList.has('Navigation--show')": {"<-": "showNav"}
+                "classList.has('Navigation--show')": {"<-": "isShown"}
             }
+        },
+        "dismissPressComposer": {
+            "prototype": "montage/composer/press-composer",
+            "properties": {
+                "lazyLoad": true
+            },
+            "listeners": [
+                {
+                    "type": "pressStart",
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "navItem": {
             "prototype": "ui/navigation.reel/nav-item.reel",
@@ -29,7 +41,7 @@
                 "element": {"#": "navToggle"}
             },
             "bindings": {
-                "checked": {"<->": "@owner.showNav"}
+                "checked": {"<->": "@owner.isShown"}
             }
         },
         "panelList": {
