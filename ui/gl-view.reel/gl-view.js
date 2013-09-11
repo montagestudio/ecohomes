@@ -11,6 +11,26 @@ var Map = require("montage/collections/map");
  */
 exports.GlView = Component.specialize(/** @lends GlView# */ {
 
+    temperatureDelta: {
+        value: 0
+    },
+
+    isHeating: {
+        value: false
+    },
+
+    heatingColor: {
+        value: null
+    },
+
+    isCooling: {
+        value: false
+    },
+
+    coolingColor: {
+        value: null
+    },
+
     _panelKeyViewpointMap: {
         value: null
     },
@@ -22,6 +42,18 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
     constructor: {
         value: function GlView() {
             this.super();
+
+            this.defineBinding("isHeating", {"<-": "temperatureDelta > 0"});
+            this.defineBinding("isCooling", {"<-": "temperatureDelta < 0"});
+
+            this.addPathChangeListener("temperatureDelta", this, "handleTemperatureDeltaChange");
+        }
+    },
+
+    handleTemperatureDeltaChange: {
+        value: function () {
+            this.heatingColor = this.temperatureDelta > 0 ? [1,0,0, 0.7 * this.temperatureDelta] : [0,0,0,0];
+            this.coolingColor = this.temperatureDelta < 0 ? [0,0,1, -0.7 * this.temperatureDelta] : [0,0,0,0];
         }
     },
 

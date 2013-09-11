@@ -10,6 +10,7 @@
             "properties": {
                 "element": {"#": "glView"},
                 "height": "768",
+                "temperatureDelta": "",
                 "width": "674"
             }
         },
@@ -68,12 +69,13 @@
             "prototype": "glTF-webgl-viewer/runtime/material",
             "properties": {
                 "id": "option01",
-                "image": "",
                 "opacity": "0",
+                "filterColor": [0, 0, 0, 0],
                 "scene": {"@": "roomScene"}
             },
             "bindings": {
-                "filterColor": {"<-": "[1, 1, 1, 0]"}
+                "filterColor": {"<-": "@owner.isHeating? @owner.heatingColor : @owner.coolingColor"},
+                "opacity": {"<-": "@owner.configuration.configurationMap.get('thermostat').optionMap.get('thermostat').chosen ? 1 : 0"}
             }
         },
         "kitchenViewpoint": {
