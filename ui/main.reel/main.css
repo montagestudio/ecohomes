@@ -27,6 +27,7 @@
 
     position: relative;
     z-index: 2;
+    background-color: hsl(0,0%,95%);
 }
 
 .Main-room {
@@ -48,6 +49,33 @@
     left: 0;
     right: 0;
 }
+
+/* Loder */
+
+.Main-loader {
+    text-align: center;
+    padding-bottom: 45px; /* Level out the overview. */
+}
+
+.Main-loader-dot {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #b3b3b3;
+    background-color: #d9d9d9;
+    -webkit-animation: Main-loader .9s 0s steps(1) 60;
+    animation: Main-loader .9s 0s steps(1) 60;
+}
+
+.Main-loader-dot:nth-child(2) { -webkit-animation-delay: .3s; animation-delay: .3s; }
+.Main-loader-dot:nth-child(3) { -webkit-animation-delay: .6s; animation-delay: .6s; }
+
+@-webkit-keyframes Main-loader { 66.667% { background-color: #b3b3b3; } }
+@keyframes Main-loader { 66.667% { background-color: #b3b3b3; } }
 
 
 /* Config -------------------------- */
