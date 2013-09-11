@@ -236,6 +236,7 @@ exports.PanelFlow = Component.specialize({
         value: function () {
             this.dispatchEventNamed("flowTranslateStart", true, false);
             this._hideNext = true;
+            this.classList.add("scrolling");
             this.needsDraw = true;
         }
     },
@@ -245,6 +246,8 @@ exports.PanelFlow = Component.specialize({
             if (this._currentPanelIndex !== Math.round(this.scroll)) {
                 this.currentPanelIndex = Math.round(this.scroll);
             }
+            this.classList.remove("scrolling");
+            this.needsDraw = true;
         }
     },
 

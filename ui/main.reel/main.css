@@ -74,7 +74,7 @@
     list-style: none;
 }
 
-.Main .PanelFlow-flow {
+.Main .PanelFlow.scrolling {
     background-color: hsl(0, 0%, 27%);
     background-image: -webkit-linear-gradient(top, hsla(0,0%,20%,0.4) 0%, hsla(0,0%,20%,0.1) 7%, hsla(0,0%,20%,0) 14%);
     background-image: linear-gradient(top, hsla(0,0%,20%,0.4) 0%, hsla(0,0%,20%,0.1) 7%, hsla(0,0%,20%,0) 14%);
@@ -84,13 +84,13 @@
 /* Portrait -------------------------- */
 
 @media (orientation: portrait) {
-    
+
     .Main {
         -webkit-box-orient: vertical;
         -webkit-flex-direction: column;
         flex-direction: column;
     }
-    
+
     .Main-viewport {
         height: auto;
     }
@@ -101,5 +101,5 @@
         min-width: 0;
         min-height: 0;
     }
-    
+
 }
