@@ -13,6 +13,8 @@
     background-size: cover;
     background-color: white;
     box-shadow: 0px 2px 10px hsla(0,0%,0%,0.3);
+    -webkit-transition: background .3s;
+    transition: background .3s;
 }
 
 /* TODO: Not rely on data-montage-id for selecting */

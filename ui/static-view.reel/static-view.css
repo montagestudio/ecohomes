@@ -8,6 +8,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    -webkit-transition: background-image .6s;
+    transition: background-image .6s;
 }
 
 
