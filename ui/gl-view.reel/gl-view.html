@@ -74,7 +74,6 @@
                 "scene": {"@": "roomScene"}
             },
             "bindings": {
-                "filterColor": {"<-": "@owner.isHeating? @owner.heatingColor : @owner.coolingColor"},
                 "opacity": {"<-": "@owner.configuration.configurationMap.get('thermostat').optionMap.get('thermostat').chosen ? 1 : 0"}
             }
         },
