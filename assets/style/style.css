@@ -43,6 +43,10 @@ body {
 	text-align: center;
 }
 
+.montage-Indexloader-logo {
+    width: 185px;
+}
+
 .montage-Indexloader-dot {
     position: relative;
     display: inline-block;
