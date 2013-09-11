@@ -77,7 +77,7 @@ exports.CallController = Montage.specialize({
     },
 
     server: {
-        value: "localhost:8085"
+        value: "audition.nodejitsu.com"
     },
 
     _stateChart: {
