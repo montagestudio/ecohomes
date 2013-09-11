@@ -2,6 +2,22 @@
     
 }
 
+.Kitchen .OptionField:nth-child(1) .digit-RadioButton {
+    background: url(../../../assets/static/kitchen-gutersloh.jpg);
+}
+
+.Kitchen .OptionField:nth-child(2) .digit-RadioButton {
+    background: url(../../../assets/static/kitchen-norse.jpg);
+}
+
+.Kitchen .OptionField:nth-child(3) .digit-RadioButton {
+    background: url(../../../assets/static/kitchen-vortex.jpg);
+}
+
+.Kitchen .OptionField:nth-child(4) .digit-RadioButton {
+    background: hsl(0,0%,80%);
+}
+
 /* Landscape + small height */
 @media (max-height: 600px ) and (orientation: landscape) {
     

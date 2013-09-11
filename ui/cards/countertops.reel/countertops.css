@@ -2,6 +2,23 @@
 
 }
 
+.Countertops .OptionField:nth-child(4) .digit-RadioButton {
+    background-image: url(../../../assets/static/countertop-paper.jpg);
+}
+
+.Countertops .OptionField:nth-child(3) .digit-RadioButton {
+    background-image: url(../../../assets/static/countertop-bamboo.jpg);
+}
+
+.Countertops .OptionField:nth-child(2) .digit-RadioButton {
+    background-image: url(../../../assets/static/countertop-cement.jpg);
+}
+
+.Countertops .OptionField:nth-child(1) .digit-RadioButton {
+    background-image: url(../../../assets/static/countertop-quartz.jpg);
+}
+
+
 /* Landscape + small height */
 @media (max-height: 600px ) and (orientation: landscape) {
     

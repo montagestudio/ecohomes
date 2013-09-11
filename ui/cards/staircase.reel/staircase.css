@@ -1,3 +1,19 @@
 .Staircase {
     
 }
+
+.Staircase .OptionField:nth-child(4) .digit-RadioButton {
+    background-image: url(../../../assets/static/staircase-pine.jpg);
+}
+
+.Staircase .OptionField:nth-child(3) .digit-RadioButton {
+    background-image: url(../../../assets/static/staircase-bold.jpg);
+}
+
+.Staircase .OptionField:nth-child(2) .digit-RadioButton {
+    background-image: url(../../../assets/static/staircase-ash.jpg);
+}
+
+.Staircase .OptionField:nth-child(1) .digit-RadioButton {
+    background-image: url(../../../assets/static/staircase-walnut.jpg);
+}
