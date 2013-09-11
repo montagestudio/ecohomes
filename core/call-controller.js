@@ -7,8 +7,6 @@ var Connection = require("q-connection");
 var adaptConnection = require("q-connection/adapt");
 
 
-Promise.longStackSupport = true;
-
 exports.CallController = Montage.specialize({
 
     constructor: {
