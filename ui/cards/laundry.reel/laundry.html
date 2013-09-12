@@ -11,12 +11,6 @@
                 "element": {"#": "laundry"}
             }
         },
-        "card": {
-            "prototype": "ui/card.reel",
-            "properties": {
-                "element": {"#": "card"}
-            }
-        },
         "dryerField": {
             "prototype": "ui/option-fields/boolean-option-field.reel",
             "properties": {
@@ -46,20 +40,18 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="laundry" class="Laundry">
-        <div data-montage-id="card">
-            <section class="Card-content">
-                <img data-montage-id="laundryHero" class="Card-hero">
-                <h1 class="Card-title">Laundry</h1>
-                <p class="Card-description">
-                    <strong>Clean and efficient</strong> Save water and the environment with energy-efficient washing machines and dryers.
-                </p>
-            </section>
-            <section class="Card-content">
-                <div data-montage-id="washerField"></div>
-                <div data-montage-id="dryerField"></div>
-            </section>
-        </div>
+    <div data-montage-id="laundry" class="Laundry Card">
+        <section class="Card-content">
+            <img data-montage-id="laundryHero" class="Card-hero">
+            <h1 class="Card-title">Laundry</h1>
+            <p class="Card-description">
+                <strong>Clean and efficient</strong> Save water and the environment with energy-efficient washing machines and dryers.
+            </p>
+        </section>
+        <section class="Card-content">
+            <div data-montage-id="washerField"></div>
+            <div data-montage-id="dryerField"></div>
+        </section>
     </div>
 </body>
 </html>

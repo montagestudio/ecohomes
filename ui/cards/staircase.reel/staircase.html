@@ -11,12 +11,6 @@
                 "element": {"#": "staircase"}
             }
         },
-        "card": {
-            "prototype": "ui/card.reel",
-            "properties": {
-                "element": {"#": "card"}
-            }
-        },
         "hero": {
             "prototype": "digit/ui/image.reel",
             "properties": {
@@ -44,19 +38,17 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="staircase" class="Staircase">
-        <div data-montage-id="card">
-            <section class="Card-content">
-                <img data-montage-id="hero" class="Card-hero" src="">
-                <h1 data-montage-id="title" class="Card-title"></h1>
-                <p class="Card-description">
-                    <strong>Simple and economical</strong> A staircase constructed from timbers sourced from sustainable managed forests or recycled stainless steel.
-                </p>
-            </section>
-            <section class="Card-content">
-                <div data-montage-id="staircaseField" class="Card--hasSwatches"></div>
-            </section>
-        </div>
+    <div data-montage-id="staircase" class="Staircase Card">
+        <section class="Card-content">
+            <img data-montage-id="hero" class="Card-hero" src="">
+            <h1 data-montage-id="title" class="Card-title"></h1>
+            <p class="Card-description">
+                <strong>Simple and economical</strong> A staircase constructed from timbers sourced from sustainable managed forests or recycled stainless steel.
+            </p>
+        </section>
+        <section class="Card-content">
+            <div data-montage-id="staircaseField" class="Card--hasSwatches"></div>
+        </section>
     </div>
 </body>
 </html>

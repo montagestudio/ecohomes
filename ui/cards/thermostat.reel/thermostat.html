@@ -23,12 +23,6 @@
                 "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('thermostat')"}
             }
         },
-        "card": {
-            "prototype": "ui/card.reel",
-            "properties": {
-                "element": {"#": "card"}
-            }
-        },
         "den": {
             "prototype": "den/ui/den.reel",
             "properties": {
@@ -47,19 +41,17 @@
     </script>
 </head>
 <body>
-    <div data-montage-id="thermostat" class="Thermostat">
-        <div data-montage-id="card">
-            <section class="Card-content Card-content--thermostat">
-                <div data-montage-id="den" class="Thermostat-den"></div>
-            </section>
-            <section class="Card-content">
-                <h1 data-montage-id="title" class="Card-title">Thermostat</h1>
-                <p class="Card-description">
-                    <strong>Innovative and smart</strong> Install a thermostat that helps protect your comfort zone and the environment.
-                </p>
-                <div data-montage-id="booleanOptionField"></div>
-            </section>
-        </div>
+    <div data-montage-id="thermostat" class="Thermostat Card">
+        <section class="Card-content Card-content--thermostat">
+            <div data-montage-id="den" class="Thermostat-den"></div>
+        </section>
+        <section class="Card-content">
+            <h1 data-montage-id="title" class="Card-title">Thermostat</h1>
+            <p class="Card-description">
+                <strong>Innovative and smart</strong> Install a thermostat that helps protect your comfort zone and the environment.
+            </p>
+            <div data-montage-id="booleanOptionField"></div>
+        </section>
     </div>
 </body>
 </html>
