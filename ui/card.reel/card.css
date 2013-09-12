@@ -148,6 +148,16 @@
     outline: 1px solid red;
 }
 
+/* Reduces invisible target so they don't overlap */
+.Card .digit-RadioButton:after,
+.Card .digit-Checkbox:after {
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    /* background: rgba(255, 0, 45, 0.5); */
+}
+
 
 /* Portrait */
 @media (orientation: portrait) {
