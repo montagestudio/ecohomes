@@ -44,7 +44,8 @@ body {
 }
 
 .montage-Indexloader-logo {
-    width: 185px;
+    height: 120px;
+    margin-bottom: 20px;
 }
 
 .montage-Indexloader-dot {
