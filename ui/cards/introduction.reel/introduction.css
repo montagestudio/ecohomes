@@ -7,6 +7,7 @@
     display: block;
     font-family: 'Droid Serif', serif;
     font-size: .7em;
+    letter-spacing: 0;
 }
 
 /* Landscape + small height */
