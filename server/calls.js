@@ -1,6 +1,8 @@
 
 var Q = require("q");
 
+var twilio = require('twilio');
+
 
 
 var Call = function(client, sid) {
@@ -20,7 +22,7 @@ var Call = function(client, sid) {
 exports.client = function (accountSid, authToken, fromNumber, appEntryUrl, callEndedUrl) {
     var client = {};
 
-    var twilioClient = require('twilio')(accountSid, authToken);
+    var twilioClient = twilio(accountSid, authToken);
     var calls =  {};
     var callIntervals = {};
 

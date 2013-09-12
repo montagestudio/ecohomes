@@ -5,8 +5,7 @@ var Q = require("q");
 var Connection = require("q-connection");
 var Joey = require("joey");
 var SocketServer = require("websocket.io");
-
-Q.longStackSupport = true;
+var twilio = require('twilio');
 
 var argv = require('optimist')
     .usage("node server.js [--env=development|production]")
@@ -48,27 +47,24 @@ Joey
 
     $("initiateCall")
         .method("POST")
-        .trap(function (response) {
-            response.headers["content-type"] = "text/xml";
-        })
+        .contentType("text/xml")
         .contentApp(function (request) {
             console.log("CALL STARTED");
-            var response = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-                "<Response>\n" +
-                    "<Say voice=\"woman\">Please leave a message after the tone.</Say>\n" +
-                    "<Record maxLength=\"20\" />\n" +
-                "</Response>\n";
 
-            console.log(response);
+            var response = new twilio.TwimlResponse();
 
-            return response;
+            response.say("Thank you for contacting Eco Homes. All our dream home specialists are busy helping other customers right now.")
+                .say("Please hold for the next available specialist.")
+                .play('http://www.scientificinvesting.eu/a/Strauss%20-%20Champain%20polka.mp3');
+
+            console.log(response.toString());
+
+            return response.toString();
         });
 
     $("callEnded")
         .method("POST")
-        .trap(function (response) {
-            response.headers["content-type"] = "text/xml";
-        })
+        .contentType("text/xml")
         .contentApp(function (request) {
             return request.body.read().then(function (body) {
                 var params = QS.parse(body.toString("utf-8"));
