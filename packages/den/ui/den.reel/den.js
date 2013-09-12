@@ -96,8 +96,8 @@ exports.Den = Component.specialize(/** @lends Den# */ {
         value: function () {
             var boundingRect = this.element.getBoundingClientRect(),
                 center = {
-                    pageX: 174 + boundingRect.left,
-                    pageY: 151 + boundingRect.top
+                    pageX: (boundingRect.left + boundingRect.right) * .5,
+                    pageY: boundingRect.top * .55 + boundingRect.bottom * .45
                 };
             this._rotateComposer.center = center;
             this.activationArea.removeEventListener("touchstart", this, false);
@@ -108,8 +108,8 @@ exports.Den = Component.specialize(/** @lends Den# */ {
         value: function () {
             var boundingRect = this.element.getBoundingClientRect(),
                 center = {
-                    pageX: 174 + boundingRect.left,
-                    pageY: 151 + boundingRect.top
+                    pageX: (boundingRect.left + boundingRect.right) * .5,
+                    pageY: boundingRect.top * .55 + boundingRect.bottom * .45
                 };
             this._rotateComposer.center = center;
             this.activationArea.removeEventListener("mousedown", this, false);
