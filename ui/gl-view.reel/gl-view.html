@@ -49,6 +49,13 @@
                 "scene": {"@": "roomScene"}
             }
         },
+        "cuisineMaterial": {
+            "prototype": "glTF-webgl-viewer/runtime/material",
+            "properties": {
+                "id": "cuisine",
+                "scene": {"@": "roomScene"}
+            }
+        },
         "dryerNode": {
             "prototype": "glTF-webgl-viewer/runtime/node",
             "properties": {
@@ -68,9 +75,14 @@
         "hvacMaterial": {
             "prototype": "glTF-webgl-viewer/runtime/material",
             "properties": {
+                "filterColor": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
                 "id": "option01",
                 "opacity": "0",
-                "filterColor": [0, 0, 0, 0],
                 "scene": {"@": "roomScene"}
             },
             "bindings": {

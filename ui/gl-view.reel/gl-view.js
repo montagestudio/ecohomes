@@ -191,29 +191,39 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
     handleCountertopMaterialChange: {
         value: function (newMaterial) {
             var countertopMaterial = this.templateObjects.countertopMaterial;
-            var texture = "bar_dessus_paper.jpg";
+            var cuisineMaterial = this.templateObjects.cuisineMaterial;
+
+            var countertopTexture = "bar_dessus_paper.jpg";
+            var cuisineTexture = "16_cuisineVRayCompleteMap.jpg";
 
             //TODO improve this; just done enough to get it working
             //TODO not rely on the fragile name
             if (newMaterial) {
                 switch (newMaterial.name) {
                     case "Black Quartz":
-                        texture = "bar_dessus_black.jpg";
+                        countertopTexture = "bar_dessus_black.jpg";
+                        cuisineTexture = "cuisine_black.jpg";
                         break;
                     case "Paper Composite":
+                        cuisineTexture = "cuisine_paper.jpg";
                         break;
                     case "Bamboo":
-                        texture = "bar_dessus_bamboo.jpg";
+                        countertopTexture = "bar_dessus_bamboo.jpg";
                         break;
                     case "Cement and Fly Ash":
-                        texture = "bar_dessus_cement.jpg";
+                        countertopTexture = "bar_dessus_cement.jpg";
+                        cuisineTexture = "cuisine_cement.jpg";
                         break;
                     default:
-                        texture = "";
+                        countertopTexture = "";
+                        cuisineTexture = "";
                 }
             }
 
-            countertopMaterial.image = texture;
+            console.log(cuisineTexture);
+
+            countertopMaterial.image = countertopTexture;
+            cuisineMaterial.image = cuisineTexture;
         }
     },
 
