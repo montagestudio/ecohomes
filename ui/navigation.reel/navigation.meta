@@ -32,6 +32,14 @@
       "cardinality": -1
     }
   },
+  "blueprint_unnamed_isShown": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "isShown",
+      "blueprint": {"@": "root"},
+      "valueType": "boolean"
+    }
+  },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
@@ -43,13 +51,15 @@
       "propertyBlueprints": [
         {"@": "blueprint_unnamed_configuration"},
         {"@": "blueprint_unnamed_currentPanelIndex"},
-        {"@": "blueprint_unnamed_panelDescriptors"}
+        {"@": "blueprint_unnamed_panelDescriptors"},
+        {"@": "blueprint_unnamed_isShown"}
       ],
       "propertyBlueprintGroups": {
         "Navigation": [
           {"@": "blueprint_unnamed_configuration"},
           {"@": "blueprint_unnamed_currentPanelIndex"},
-          {"@": "blueprint_unnamed_panelDescriptors"}
+          {"@": "blueprint_unnamed_panelDescriptors"},
+          {"@": "blueprint_unnamed_isShown"}
         ]
       },
       "module": {
