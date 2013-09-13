@@ -220,8 +220,6 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
                 }
             }
 
-            console.log(cuisineTexture);
-
             countertopMaterial.image = countertopTexture;
             cuisineMaterial.image = cuisineTexture;
         }
