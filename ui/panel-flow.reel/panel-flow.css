@@ -94,9 +94,9 @@
 
 .Card-hero {
     display: block;
-    margin: 0 auto 2em auto;
+    margin: 0 auto;
     max-width: 100%;
-    max-height: 150px;
+    max-height: 300px;
     -webkit-user-drag: none;
 }
 
