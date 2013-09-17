@@ -27,17 +27,6 @@
     height: 60px;
 }
 
-.Overview-score {
-    margin-left: 40px;
-}
-
-.Overview-ecoBars {
-    height: 30px;
-    width: 80px;
-    vertical-align: middle;
-}
-
-
 .Overview-price {
     font-size: 33px;
     white-space: nowrap;

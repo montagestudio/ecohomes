@@ -10,17 +10,6 @@
                 "element": {"#": "costGraph"}
             }
         },
-        "averageCost": {
-            "prototype": "./bar.reel",
-            "properties": {
-                "element": {"#": "averageCost"},
-                "label": "average"
-            },
-            "bindings": {
-                "maxValue": {"<-": "@owner.max"},
-                "value": {"<-": "@owner.average"}
-            }
-        },
         "consumptionCost": {
             "prototype": "./bar.reel",
             "properties": {
@@ -38,7 +27,6 @@
 <body>
     <div data-montage-id="costGraph" class="usdoe-CostGraph">
         <span class="usdoe-CostGraph-consumptionBar" data-montage-id="consumptionCost"></span>
-        <span class="usdoe-CostGraph-costBar" data-montage-id="averageCost"></span>
     </div>
 </body>
 </html>

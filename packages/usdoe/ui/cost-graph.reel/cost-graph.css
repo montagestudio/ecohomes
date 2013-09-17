@@ -8,27 +8,23 @@
  */
 
 .usdoe-CostGraph {
-    display: inline-block;
     position: relative;
-    width: 75px;
-    height: 45px;
-    border-left: 2px solid #ebede8;
     font-size: 0;
     line-height: 0;
 }
 
 .usdoe-CostGraph .usdoe-Bar {
     display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 0;
+    height: 12px;
 }
 
-.usdoe-CostGraph-costBar .usdoe-Bar-level {
-    background-color: gray;
-    border: 1px solid darkgray;
+.usdoe-CostGraph-consumptionBar {
+    width: 100px;
+    background-color: hsla(0,0%,60%,.9);
+    border-radius: 3px;
 }
 
 .usdoe-CostGraph-consumptionBar .usdoe-Bar-level {
-    background-color: green;
-    border: 1px solid darkgreen;
+    border-radius: inherit;
+    background: #BAD662;
 }

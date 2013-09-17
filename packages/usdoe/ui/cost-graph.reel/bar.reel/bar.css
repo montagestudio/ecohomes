@@ -9,10 +9,10 @@
     left: 0;
     top: 0;
     bottom: 0;
-    -webkit-transition: width 400ms ease-in;
-    -moz-transition: width 400ms ease-in;
-    -ms-transition: width 400ms ease-in;
-    transition: width 400ms ease-in;
+    -webkit-transition: width 400ms;
+    -moz-transition: width 400ms;
+    -ms-transition: width 400ms;
+    transition: width 400ms;
     background-color: blue;
     text-align: center;
 }
