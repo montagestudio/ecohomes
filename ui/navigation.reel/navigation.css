@@ -47,7 +47,7 @@
 	-webkit-flex-direction: column;
 	flex-direction: column;
 	
-	max-height: 700px;
+	max-height: 800px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -95,45 +95,6 @@
 .Navigation-button--selected.Navigation-button {
 	color: #333;
 }
-
-/*
-.Navigation-button:before {
-	content: "";
-	pointer-events: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 48px;
-	background: transparent url(../../assets/images/nav-icons.svg) no-repeat;
-	background-size: 48px auto;
-	background-position: center 48px; /* no icon by default *!/
-}
-
-/*
-.Navigation-button:before {
-	content: "";
-	pointer-events: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 48px;
-	background: transparent url(../../assets/images/nav-icons.svg) no-repeat;
-	background-size: 48px auto;
-	background-position: center 48px; /* no icon by default *!/
-}
-
-.NavItem--introduction .Navigation-button:before { background-position: center 0; }
-.NavItem--staircase .Navigation-button:before { background-position: center -48px; }
-.NavItem--thermostat .Navigation-button:before { background-position: center -288px; }
-.NavItem--kitchen .Navigation-button:before { background-position: center -96px; }
-.NavItem--counters .Navigation-button:before { background-position: center -144px; }
-.NavItem--laundry .Navigation-button:before { background-position: center -192px; }
-.NavItem--window .Navigation-button:before { background-position: center -240px; }
-.NavItem--solarPanels .Navigation-button:before { background-position: center -336px; }
-.NavItem--callBack .Navigation-button:before { background-position: center -384px; }
-*/
 
 
 /* Nav Toggle -------------------------- */
@@ -210,6 +171,48 @@
         display: none;
     }
     
+}
+
+
+/* Only show icons if enough height */
+
+@media (min-height: 660px) {
+        
+    .Navigation-button.digit-Button {
+    	padding: 30px 30px 0 30px;
+    	font-size: 14px;
+    	text-align: center;
+    	font-weight: normal;
+    }
+    
+    .Navigation-button:before {
+    	content: "";
+    	pointer-events: none;
+    	position: absolute;
+    	top: 4px;
+    	left: 0;
+    	right: 0;
+    	height: 48px;
+    	background: transparent url(../../assets/images/nav-icons.svg) no-repeat;
+    	background-size: 48px auto;
+    	background-position: center 48px; /* no icon by default */
+    }
+    
+    .NavItem--introduction .Navigation-button:before { background-position: center 0; }
+    .NavItem--staircase .Navigation-button:before { background-position: center -48px; }
+    .NavItem--thermostat .Navigation-button:before { background-position: center -288px; }
+    .NavItem--kitchen .Navigation-button:before { background-position: center -96px; }
+    .NavItem--counters .Navigation-button:before { background-position: center -144px; }
+    .NavItem--laundry .Navigation-button:before { background-position: center -192px; }
+    .NavItem--window .Navigation-button:before { background-position: center -240px; }
+    .NavItem--solarPanels .Navigation-button:before { background-position: center -336px; }
+    .NavItem--callBack .Navigation-button:before { background-position: center -384px; }
+    
+    .Navigation-button--selected.Navigation-button {
+    	background-color: hsl(0,0%,90%);
+    	background: -webkit-linear-gradient( left, hsl(0,0%,96%), hsl(0,0%,90%) ) no-repeat left top;
+    	background: linear-gradient( left, hsl(0,0%,96%), hsl(0,0%,90%) ) no-repeat left top;
+    }
 }
 
 
