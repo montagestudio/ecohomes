@@ -141,15 +141,18 @@
 .Navigation-toggle.digit-Checkbox {
     display: block;
     position: absolute;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     z-index: 11;
     margin: 0;
     top: 20px;
-    left: -68px; /* width 48 + 20 margin */
-    width: 48px;
-    height: 48px;
-    background-color: #fff;
-    border-radius: 24px;
-    border-color: hsla(0,0%,0%,.2);
+    left: -68px;
+    width: 68px;
+    height: 68px;
+    border-radius: 100px 0 0 100px;
+    border: 1px solid hsl(0,0%,90%);
+    border-right: none;
+    background-color: #f5f5f5;
     -webkit-transform: translateZ(0); /* Force button to own HW layer */
 }
 
@@ -157,26 +160,34 @@
     background-image: none;
 }
 
-.Navigation-toggle:before {
+.Navigation-toggle.montage--active,
+.Navigation-toggle.montage--active.montage-Checkbox--checked {
+    background-color: hsla(0,0%,0%,.1);
+    background: -webkit-linear-gradient( left, hsl(0,0%,90%), hsl(0,0%,96%) ) no-repeat left top;
+    background: linear-gradient( left, hsl(0,0%,90%), hsl(0,0%,96%) ) no-repeat left top;
+}
+
+.Navigation-toggle:after {
     content: "";
     pointer-events: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    top: 10px;
+    left: 10px;
+    width: 48px;
     height: 48px;
+    border-radius: 24px;
     background: transparent url(../../assets/images/toggle-icons.svg) no-repeat;
     background-size: 48px auto;
     background-position: center 0; /* no icon by default */
 }
 
-.Navigation--show .Navigation-toggle:before {
+.Navigation--show .Navigation-toggle:after {
     background-position: center -48px;
 }
 
-.Navigation-toggle.montage--active {
-    background-color: hsla(0,0%,0%,.1);
-}
+
 
 
 /* Responsive Nav */
@@ -233,9 +244,5 @@
     .Navigation-button.digit-Button {
         padding: 0 6px;
     }*/
-    
-    .Navigation-toggle.digit-Checkbox {
-        background-color: #fff;
-    }
     
 }
