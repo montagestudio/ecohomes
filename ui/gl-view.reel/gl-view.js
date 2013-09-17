@@ -60,6 +60,21 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
         }
     },
 
+    enterDocument: {
+        value: function (firstTime) {
+            if (firstTime) {
+                this.canDrawGate.setField("resourcesLoaded", false);
+            }
+        }
+    },
+
+    handleResourcesDidLoad: {
+        value: function (evt) {
+            this.canDrawGate.setField("resourcesLoaded", true);
+            this.needsDraw = true;
+        }
+    },
+
     handleTemperatureDeltaChange: {
         value: function () {
             if (this.temperatureDelta > 0) {

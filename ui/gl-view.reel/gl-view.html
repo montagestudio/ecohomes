@@ -136,7 +136,14 @@
             "prototype": "glTF-webgl-viewer/runtime/scene",
             "properties": {
                 "path": "assets/3d/loft/loft8.json"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "resourcesDidLoad",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "roomView": {
             "prototype": "glTF-webgl-viewer/ui/view.reel",
