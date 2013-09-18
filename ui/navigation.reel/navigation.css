@@ -216,6 +216,16 @@
 }
 
 
+@media (orientation: portrait) and (max-height: 480px ), (orientation: landscape) and (max-height: 300px ) {
+    
+    .Navigation-toggle.digit-Checkbox {
+        top: 0;
+        border-radius: 0 0 0 30px;
+    }
+    
+}
+
+
 /* Portrait */
 @media (orientation: portrait) {
     

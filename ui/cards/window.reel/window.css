@@ -3,7 +3,7 @@
 }
 
 /* Landscape + small height */
-@media (max-height: 600px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .Window .Card-hero {
         position: absolute;
@@ -14,18 +14,26 @@
     }
 }
 
-@media (max-height: 500px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 500px ) {
     
     .Window .Card-hero {
         display: none;
     }
 }
 
-@media (max-height: 400px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 400px ) {
     
     .Window .Card-description {
         padding-right: 40px;
     }
+    
+    .Window .Card-option--rangeField {
+        margin-top: 0;
+    }
+    
+}
+
+@media (orientation: portrait) and (max-width: 560px ) {
     
     .Window .Card-option--rangeField {
         margin-top: 0;

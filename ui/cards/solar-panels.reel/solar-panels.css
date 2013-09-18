@@ -3,7 +3,7 @@
 }
 
 /* Landscape + small height */
-@media (max-height: 600px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .SolarPanels .Card-title {
         width: 140px;
@@ -18,7 +18,7 @@
     }
 }
 
-@media (max-height: 400px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 400px ) {
     
     .SolarPanels.Card {
        padding-top: 60px; /* keeps some room for the logo */

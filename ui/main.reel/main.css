@@ -129,3 +129,19 @@
     }
 
 }
+
+@media (orientation: portrait) and (max-width: 560px) {
+
+    .Main-configuration {
+        height: 300px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-height: 300px) {
+
+    .Main-configuration {
+        display: none;
+    }
+
+}

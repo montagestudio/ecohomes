@@ -259,6 +259,7 @@
 @media (orientation: landscape) and (max-height: 400px )  {
     
     .Card {
+        padding: 12px;
         font-size: 14px;
     }
     
@@ -269,13 +270,19 @@
 
 }
 
-@media (orientation: portrait) and (max-height: 560px), (orientation: portrait) and (max-width: 560px) {
+@media (orientation: portrait) and (max-width: 560px) {
     
     .Card {
         -webkit-box-orient: vertical;
         -webkit-flex-direction: column;
         flex-direction: column;
-        padding: 16px;
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .Card-title {
+        margin-bottom: .2em;
+        font-size: 1.6em;
     }
     
     .Card-content {
@@ -288,6 +295,10 @@
     
     .Card-hero {
         display: none;
+    }
+    
+    .Card-content p {
+        margin-bottom: .6em;
     }
         
 }

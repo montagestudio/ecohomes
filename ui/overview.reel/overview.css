@@ -67,7 +67,7 @@
     
 }
 
-@media (orientation: landscape) and (max-width: 760px ) {
+@media (orientation: landscape) and (max-width: 760px ) and (min-height: 300px ) {
     
     .Overview {
         -webkit-box-orient: vertical;
@@ -101,5 +101,78 @@
     .EcoScore-grade {
         text-align: center;
     }
+}
+
+@media (orientation: landscape) and (max-width: 520px) and (min-height: 300px) {
+    
+    .Overview {
+        padding: 10px;
+    }
+    
+    .Overview-logo {
+        height: auto;
+        width: 100%;
+    }
+    
+    .EcoScore {
+        display: none;
+    }
+    
+    .Overview-price {
+        display: none;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width: 460px) {
+    
+    .Overview-logo {
+        display: none;
+    }
+    
+    .Main-loader {
+        display: none;
+    }
+
+}
+
+
+@media (orientation: portrait) and (max-height: 450px ) {
+    
+    .Overview {
+        height: auto;
+        padding: 10px 80px 10px 10px;
+    }
+    
+    .Overview-logo {
+        height: 30px;
+    }
+    
+    .Overview-price {
+        font-size: 18px;
+    }
+    
+    .EcoScore-title {
+        display: none;
+    }
+    
+}
+
+
+@media (orientation: portrait) and (max-width: 380px ) {
+    
+    .EcoScore-title {
+        display: none;
+    }
+    
+}
+
+@media (orientation: portrait) and (max-height: 400px ) {
+    
+    .Overview {
+        top: 0;
+        background-color: hsla(0,0%,20%,.8);
+    }
+    
 }
 

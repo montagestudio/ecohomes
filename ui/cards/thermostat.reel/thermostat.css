@@ -1,13 +1,10 @@
-.Thermostat {
-    
-}
 
 .Card-content--thermostat {
     min-width: 346px;
 }
 
 /* Landscape + small height */
-@media (max-height: 600px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .Card-content--thermostat {
         min-width: 0;
@@ -22,7 +19,7 @@
     }
 }
 
-@media (max-height: 400px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 400px ) {
     
     .Card-content--thermostat {
         height: 150px;
@@ -47,11 +44,41 @@
 }
 
 /* Portrait + small width */
-@media (max-width: 600px ) and (orientation: portrait) {
+@media (orientation: portrait) and (max-width: 700px ) {
+    
+    .Card-content--thermostat {
+        position: relative;
+        min-width: 0;
+        height: 100%;
+        margin-top: 0;
+    }
     
     .Thermostat-den {
-        margin-left: -30px;
-        margin-top: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: scale(.7);
+        transform: scale(.7);
+        margin: -170px;
     }
 }
 
+
+
+@media (orientation: portrait) and (max-width: 560px) {
+    
+    .Card-content--thermostat {
+        height: 150px;
+    }
+    
+    .Thermostat-den {
+        position: absolute;
+        margin: 0;
+        left: auto;
+        top: -80px;
+        right: -80px;
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+    }
+        
+}
