@@ -23,9 +23,21 @@
     
     .Staircase .Card-hero {
         position: absolute;
-        top: 10px;
-        right: 70px;
-        height: 90px;
         margin: 0;
+        top: 20px;
+        right: 80px;
+        height: 70px;
     }
+}
+
+@media (max-height: 400px ) and (orientation: landscape) {
+    
+    .Staircase .Card-hero {
+        display: none;
+    }
+    
+    .Staircase .Card-description {
+        padding-right: 40px;
+    }
+    
 }

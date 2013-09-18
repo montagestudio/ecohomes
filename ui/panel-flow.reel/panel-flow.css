@@ -67,7 +67,7 @@
     left: 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 0 30px;
 
     display: -webkit-box;
     display: -webkit-flex;
@@ -103,7 +103,7 @@
 
 .Card-title {
     margin: 0 0 .6em 0;
-    font-size: 33px;
+    font-size: 1.8em;
     font-weight: bold;
     color: #363636;
     letter-spacing: -1px;
@@ -206,7 +206,7 @@
 }
 
 .Card--disclaimer {
-    font-size: 14px;
+    font-size: .8em;
     color: #999;
 }
 
@@ -251,4 +251,43 @@
         margin-right: 20px;
     }
 
+}
+
+
+/* Small -------------------------- */
+
+@media (orientation: landscape) and (max-height: 400px )  {
+    
+    .Card {
+        font-size: 14px;
+    }
+    
+    .Card-title {
+        margin-bottom: .2em;
+        font-size: 1.6em;
+    }
+
+}
+
+@media (orientation: portrait) and (max-height: 560px), (orientation: portrait) and (max-width: 560px) {
+    
+    .Card {
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        padding: 16px;
+    }
+    
+    .Card-content {
+        width: 100%;
+    }
+    
+    .Card-content:first-child {
+        margin-right: 0;
+    }
+    
+    .Card-hero {
+        display: none;
+    }
+        
 }

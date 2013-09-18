@@ -15,12 +15,20 @@
     
     .Introduction .Card-logo {
         margin-bottom: 0;
-        height: 90px;
+        height: 68px;
         position: absolute;
-        top: 30px;
-        right: 50px;
+        top: 20px;
+        right: 80px;
     }
 
+}
+
+@media (max-height: 400px ) and (orientation: landscape) {
+    
+    .Introduction.Card {
+       padding-top: 30px; /* keeps some room for the logo */
+    }
+    
 }
 
 /* Portrait */

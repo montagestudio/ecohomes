@@ -118,3 +118,14 @@
     }
     
 }
+
+
+/* Small -------------------------- */
+
+@media (orientation: portrait) and (max-height: 560px) {
+    
+    .StaticView-webglNotice {
+        display: none;
+    }
+        
+}

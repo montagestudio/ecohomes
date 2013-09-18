@@ -29,3 +29,15 @@
         margin: 0;
     }
 }
+
+@media (max-height: 400px ) and (orientation: landscape) {
+    
+    .Kitchen .Card-hero {
+        display: none;
+    }
+    
+    .Kitchen .Card-description {
+        padding-right: 40px;
+    }
+    
+}

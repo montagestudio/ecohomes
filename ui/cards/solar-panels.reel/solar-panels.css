@@ -17,3 +17,18 @@
         margin: 0;
     }
 }
+
+@media (max-height: 400px ) and (orientation: landscape) {
+    
+    .SolarPanels.Card {
+       padding-top: 60px; /* keeps some room for the logo */
+    }
+    
+    .SolarPanels .Card-hero {
+        position: absolute;
+        top: 20px;
+        right: 90px;
+        height: 80px;
+    }
+    
+}
