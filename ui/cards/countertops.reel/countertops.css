@@ -1,5 +1,5 @@
-.Countertops {
-
+.Countertops .Card-hero {
+    margin-bottom: .6em;
 }
 
 .Countertops .OptionField:nth-child(4) .digit-RadioButton {

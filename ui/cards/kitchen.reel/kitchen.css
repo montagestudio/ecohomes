@@ -1,5 +1,5 @@
-.Kitchen {
-    
+.Kitchen .Card-hero {
+    margin-bottom: 1.2em;
 }
 
 .Kitchen .OptionField:nth-child(1) .digit-RadioButton {
