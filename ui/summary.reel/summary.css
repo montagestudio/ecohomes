@@ -71,7 +71,6 @@
 
 .Summary--price {
     display: block;
-    font-family: "HelveticaNeue-Light", inherit;
     font-size: 16px;
     color: hsla(0,0%,15%)
 }
