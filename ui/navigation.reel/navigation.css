@@ -216,7 +216,7 @@
 }
 
 
-@media (orientation: portrait) and (max-height: 480px ), (orientation: landscape) and (max-height: 300px ) {
+@media (orientation: portrait) and (max-height: 480px ), (orientation: landscape) and (max-height: 500px ) {
     
     .Navigation-toggle.digit-Checkbox {
         top: 0;
