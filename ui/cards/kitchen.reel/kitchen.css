@@ -1,5 +1,6 @@
 .Kitchen .Card-hero {
-    margin-bottom: 1.2em;
+    height: 200px;
+    margin-bottom: .6em;
 }
 
 .Kitchen .OptionField:nth-child(1) .digit-RadioButton {

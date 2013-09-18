@@ -1,5 +1,5 @@
-.Staircase {
-    
+.Staircase .Card-hero {
+    height: 140px;
 }
 
 .Staircase .OptionField:nth-child(4) .digit-RadioButton {
