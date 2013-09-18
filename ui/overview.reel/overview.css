@@ -31,3 +31,75 @@
     font-size: 33px;
     white-space: nowrap;
 }
+
+@media (orientation: landscape) and (max-width: 960px ), (orientation: portrait) and (max-width: 560px ) {
+    
+    .Overview {
+        padding: 0px 20px;
+    }
+
+    .Overview-logo {
+        height: 40px;
+    }
+    
+    .Overview-price {
+        font-size: 20px;
+    }
+    
+    
+    .EcoScore-title {
+        font-size: 16px;
+        padding-right: 6px;
+    }
+    
+    .EcoScore-bar {
+        margin-left: 6px;
+    }
+    
+    .EcoScore-grade {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    .usdoe-CostGraph-consumptionBar {
+        width: 80px;
+    }
+    
+}
+
+@media (orientation: landscape) and (max-width: 760px ) {
+    
+    .Overview {
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        top: 0;
+        height: auto;
+        padding: 30px 0;
+        background-color: hsla(0,0%,20%,.8);
+    }
+    
+    .EcoScore {
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    
+    .EcoScore-bar {
+        margin-left: 0;
+    }
+    
+    .EcoScore-title {
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 4px;
+        margin-bottom: 4px;
+        border-right: none;
+        border-bottom: 1px solid hsla(0,0%,100%,.3);
+    }
+    
+    .EcoScore-grade {
+        text-align: center;
+    }
+}
+

@@ -122,10 +122,20 @@
 
 /* Small -------------------------- */
 
-@media (orientation: portrait) and (max-height: 560px) {
+@media (orientation: landscape) and (max-width: 760px), (orientation: landscape) and (max-height: 340px) {
     
-    .StaticView-webglNotice {
+    .StaticView-webglNotice,
+    .StaticView-swatches {
         display: none;
     }
-        
+     
+}
+
+@media (orientation: portrait) and (max-height: 560px) {
+    
+    .StaticView-webglNotice,
+    .StaticView-swatches {
+        display: none;
+    }
+     
 }
