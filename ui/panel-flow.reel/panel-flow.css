@@ -237,9 +237,10 @@
         align-items: center;
     }
 
-    .Card-hero {
+    .Card .Card-hero { /* Higher specificity -> Safari fix */
         margin: 0 0 1em 0;
         max-height: 120px;
+        height: auto;
     }
 
     .Card-content {
