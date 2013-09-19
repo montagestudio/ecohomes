@@ -57,12 +57,6 @@
                 "content": {"<-": "@callController.errors"}
             }
         },
-        "hero": {
-            "prototype": "digit/ui/image.reel",
-            "properties": {
-                "element": {"#": "hero"}
-            }
-        },
         "later": {
             "prototype": "ui/call-back/later.reel",
             "properties": {
@@ -102,7 +96,7 @@
 <body>
     <div data-montage-id="CallBack" class="CallBack Card">
         <section class="Card-content">
-            <img data-montage-id="hero" class="Card-hero" src="">
+            <div data-montage-id="hero" class="Card-hero"></div>
             <h1 data-montage-id="title" class="Card-title"></h1>
             <div data-montage-id="summary"></div>
         </section>

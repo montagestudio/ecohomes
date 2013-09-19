@@ -20,13 +20,6 @@
                 "configurationOption": {"<-": "@owner.configurationSet.optionMap.get('dryer')"}
             }
         },
-        "laundryHero": {
-            "prototype": "digit/ui/image.reel",
-            "properties": {
-                "element": {"#": "laundryHero"},
-                "src": "laundry.png"
-            }
-        },
         "washerField": {
             "prototype": "ui/option-fields/boolean-option-field.reel",
             "properties": {
@@ -42,7 +35,7 @@
 <body>
     <div data-montage-id="laundry" class="Laundry Card">
         <section class="Card-content">
-            <img data-montage-id="laundryHero" class="Card-hero">
+            <div data-montage-id="laundryHero" class="Card-hero"></div>
             <h1 class="Card-title">Laundry</h1>
             <p class="Card-description">
                 <strong>Clean and efficient</strong> Save water and the environment with energy-efficient washing machines and dryers.
