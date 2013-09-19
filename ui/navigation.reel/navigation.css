@@ -108,12 +108,11 @@
     margin: 0;
     top: 20px;
     left: -68px;
-    width: 68px;
-    height: 68px;
-    border-radius: 100px 0 0 100px;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
     border: 1px solid hsl(0,0%,90%);
-    border-right: none;
-    background-color: #f5f5f5;
+    background-color: hsl(0,0%,96%);
     -webkit-transform: translateZ(0); /* Force button to own HW layer */
 }
 
@@ -123,9 +122,7 @@
 
 .Navigation-toggle.montage--active,
 .Navigation-toggle.montage--active.montage-Checkbox--checked {
-    background-color: hsla(0,0%,0%,.1);
-    background: -webkit-linear-gradient( left, hsl(0,0%,90%), hsl(0,0%,96%) ) no-repeat left top;
-    background: linear-gradient( left, hsl(0,0%,90%), hsl(0,0%,96%) ) no-repeat left top;
+    background-color: hsl(0,0%,90%);
 }
 
 .Navigation-toggle:after {
@@ -134,11 +131,11 @@
     position: absolute;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
     width: 48px;
     height: 48px;
-    border-radius: 24px;
+    border-radius: inherit;
     background: transparent url(../../assets/images/toggle-icons.svg) no-repeat;
     background-size: 48px auto;
     background-position: center 0; /* no icon by default */
@@ -210,52 +207,5 @@
     
     .Navigation-button--selected.Navigation-button {
     	background-color: hsl(0,0%,90%);
-    	background: -webkit-linear-gradient( left, hsl(0,0%,96%), hsl(0,0%,90%) ) no-repeat left top;
-    	background: linear-gradient( left, hsl(0,0%,96%), hsl(0,0%,90%) ) no-repeat left top;
     }
-}
-
-
-@media (orientation: portrait) and (max-height: 480px ), (orientation: landscape) and (max-height: 500px ) {
-    
-    .Navigation-toggle.digit-Checkbox {
-        top: 0;
-        border-radius: 0 0 0 30px;
-    }
-    
-}
-
-
-/* Portrait */
-@media (orientation: portrait) {
-    
-    /*.Navigation {
-        width: auto;
-        height: 70px;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: auto;
-        -webkit-transform: translate3d(0,-100%,0);
-    }
-    
-    .Navigation-list {
-        display: -webkit-box;
-    	-webkit-box-orient: horizontal;
-    	-webkit-box-pack: start;
-    	display: -webkit-flex;
-    	-webkit-flex-direction: row;
-    	-webkit-justify-content: flex-start;
-    	height: auto;
-    }
-    
-    .Navigation-listItem {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-    }
-    
-    .Navigation-button.digit-Button {
-        padding: 0 6px;
-    }*/
-    
 }
