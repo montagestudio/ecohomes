@@ -29,6 +29,10 @@
         display: none;
     }
     
+    .Introduction .Card-title {
+        margin-bottom: .6em;
+    }
+    
 }
 
 /* Portrait */
