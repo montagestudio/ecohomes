@@ -104,6 +104,7 @@
 .Card-title {
     margin: 0 0 .6em 0;
     font-size: 1.8em;
+    line-height: 1.1;
     font-weight: bold;
     color: #363636;
     letter-spacing: -1px;
@@ -117,6 +118,7 @@
 /* Content ------------------------------------------- */
 
 .Card-content {
+    position: relative;
     -webkit-margin-collapse: separate; /* Don't collapse margins */
 }
 
@@ -225,7 +227,44 @@
 }
 
 
+
+/* Small -------------------------- */
+
+
+@media (orientation: landscape) and (max-height: 600px ) {
+    
+    .Card .Card-hero {
+        position: absolute;
+        margin: 0;
+    }
+}
+
+
+@media (orientation: landscape) and (max-height: 400px )  {
+    
+    .Card {
+        padding: 20px;
+        font-size: 14px;
+    }
+    
+    .Card-hero {
+        display: none;
+    }
+    
+    .Card-title {
+        margin-bottom: .2em;
+        font-size: 1.6em;
+    }
+    
+    .Card-description {
+        padding-right: 60px;
+    }
+
+}
+
+
 /* Portrait */
+
 @media (orientation: portrait) {
 
     .Card {
@@ -254,30 +293,13 @@
 
 }
 
-
-/* Small -------------------------- */
-
-@media (orientation: landscape) and (max-height: 400px )  {
-    
-    .Card {
-        padding: 12px;
-        font-size: 14px;
-    }
-    
-    .Card-title {
-        margin-bottom: .2em;
-        font-size: 1.6em;
-    }
-
-}
-
 @media (orientation: portrait) and (max-width: 560px) {
     
     .Card {
         -webkit-box-orient: vertical;
         -webkit-flex-direction: column;
         flex-direction: column;
-        padding: 12px;
+        padding: 20px;
         font-size: 14px;
     }
     

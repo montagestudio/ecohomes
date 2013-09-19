@@ -4,21 +4,11 @@
 }
 
 /* Landscape + small height */
-@media (max-height: 600px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .Laundry .Card-hero {
-        height: 120px;
-        margin-bottom: 1em;
-    }
-}
-
-@media (max-height: 400px ) and (orientation: landscape) {
-    
-    .Laundry .Card-hero {
-        position: relative;
-        right: -30px;
         height: 100px;
-        margin-bottom: 0;
+        bottom: 85px;
+        right: 84px;
     }
-    
 }

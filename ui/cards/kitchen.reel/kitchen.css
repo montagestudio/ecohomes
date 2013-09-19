@@ -20,25 +20,9 @@
 }
 
 /* Landscape + small height */
-@media (max-height: 600px ) and (orientation: landscape) {
-    
-    .Kitchen .Card-hero {
-        position: absolute;
-        top: 20px;
-        right: 80px;
-        height: 60px;
-        margin: 0;
-    }
-}
-
-@media (max-height: 400px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .Kitchen .Card-hero {
         display: none;
     }
-    
-    .Kitchen .Card-description {
-        padding-right: 40px;
-    }
-    
 }

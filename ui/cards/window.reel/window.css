@@ -6,11 +6,9 @@
 @media (orientation: landscape) and (max-height: 600px ) {
     
     .Window .Card-hero {
-        position: absolute;
-        top: 20px;
-        right: 100px;
+        bottom: 115px;
+        right: 90px;
         height: 90px;
-        margin: 0;
     }
 }
 
@@ -22,10 +20,6 @@
 }
 
 @media (orientation: landscape) and (max-height: 400px ) {
-    
-    .Window .Card-description {
-        padding-right: 40px;
-    }
     
     .Window .Card-option--rangeField {
         margin-top: 0;

@@ -110,8 +110,7 @@
     }
     
     .Overview-logo {
-        height: auto;
-        width: 100%;
+        display: none;
     }
     
     .EcoScore {
@@ -119,14 +118,6 @@
     }
     
     .Overview-price {
-        display: none;
-    }
-
-}
-
-@media (orientation: landscape) and (max-width: 460px) {
-    
-    .Overview-logo {
         display: none;
     }
     
@@ -142,6 +133,7 @@
     .Overview {
         height: auto;
         padding: 10px 80px 10px 10px;
+        background-color: hsla(0,0%,20%,.8);
     }
     
     .Overview-logo {
@@ -158,6 +150,13 @@
     
 }
 
+@media (orientation: portrait) and (max-height: 300px ) {
+    
+    .Overview {
+        top: 0;
+    }
+    
+}
 
 @media (orientation: portrait) and (max-width: 380px ) {
     
@@ -166,13 +165,3 @@
     }
     
 }
-
-@media (orientation: portrait) and (max-height: 400px ) {
-    
-    .Overview {
-        top: 0;
-        background-color: hsla(0,0%,20%,.8);
-    }
-    
-}
-

@@ -28,22 +28,8 @@
     }
 
     .Countertops .Card-hero {
-        position: absolute;
-        margin: 0;
-        top: 20px;
-        right: 90px;
+        bottom: 104px;
+        right: 70px;
         height: 100px;
     }
-}
-
-@media (max-height: 400px ) and (orientation: landscape) {
-    
-    .Countertops .Card-hero {
-        display: none;
-    }
-    
-    .Countertops .Card-description {
-        padding-right: 40px;
-    }
-    
 }

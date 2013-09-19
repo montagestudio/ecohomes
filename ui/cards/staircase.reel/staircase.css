@@ -19,25 +19,11 @@
 }
 
 /* Landscape + small height */
-@media (max-height: 600px ) and (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .Staircase .Card-hero {
-        position: absolute;
-        margin: 0;
-        top: 20px;
-        right: 80px;
+        bottom: 138px;
+        right: 50px;
         height: 70px;
     }
-}
-
-@media (max-height: 400px ) and (orientation: landscape) {
-    
-    .Staircase .Card-hero {
-        display: none;
-    }
-    
-    .Staircase .Card-description {
-        padding-right: 40px;
-    }
-    
 }

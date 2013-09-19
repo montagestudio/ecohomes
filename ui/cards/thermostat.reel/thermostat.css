@@ -13,7 +13,7 @@
     
     .Thermostat-den {
         position: absolute;
-        top: -50px;
+        bottom: -80px;
         -webkit-transform: scale(.6);
         transform: scale(.6);
     }
@@ -22,14 +22,7 @@
 @media (orientation: landscape) and (max-height: 400px ) {
     
     .Card-content--thermostat {
-        height: 150px;
-    }
-    
-    .Thermostat-den {
-        top: -70px;
-        left: 60px;
-        -webkit-transform: scale(.5);
-        transform: scale(.5);
+        display: none;
     }
 }
 
@@ -68,17 +61,7 @@
 @media (orientation: portrait) and (max-width: 560px) {
     
     .Card-content--thermostat {
-        height: 150px;
-    }
-    
-    .Thermostat-den {
-        position: absolute;
-        margin: 0;
-        left: auto;
-        top: -80px;
-        right: -80px;
-        -webkit-transform: scale(.5);
-        transform: scale(.5);
+        display: none;
     }
         
 }
