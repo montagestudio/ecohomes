@@ -2,8 +2,7 @@ Den-Demo
 ========
 
 This demo showcaes the ease of development of a Montage application by leveraging components, bindings, listeners,
-and the declarative approach and toolset promoted by Montage. It is intended for public distribution; though the
-history will be truncated prior to posting. Regardless, please keep confidential information to a minimum.
+and the declarative approach promoted by Montage.
 
 Installation
 ------------
