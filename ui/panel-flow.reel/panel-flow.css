@@ -119,6 +119,8 @@
 
 .Card-content {
     position: relative;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-margin-collapse: separate; /* Don't collapse margins */
 }
 
@@ -283,12 +285,15 @@
     }
 
     .Card-content {
-        -webkit-box-flex: 1;
         width: 50%;
     }
 
     .Card-content:first-child {
-        margin-right: 20px;
+        padding-right: 10px;
+    }
+    
+    .Card-content:last-child {
+        padding-left: 10px;
     }
 
 }
