@@ -79,6 +79,7 @@
 	padding: 0 30px;
 	border: none;
 	border-radius: 0;
+	font-family: inherit;
 	font-size: 16px;
 	text-align: left;
 	color: #999;
