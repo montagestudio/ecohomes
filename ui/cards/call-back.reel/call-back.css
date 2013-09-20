@@ -44,20 +44,8 @@
 }
 
 /* Landscape + small height */
-@media (orientation: landscape) and (max-height: 660px ) {
-    
-    .Summary-optionName {
-        display: none;
-    }
-    
-    .Summary-optionPrice {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-    }
-}
 
-@media (orientation: landscape) and (max-height: 580px ) {
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .CallBack .Card {
         padding-top: 10px;
@@ -75,20 +63,16 @@
 
 @media (orientation: landscape) and (max-height: 500px ) {
     
+    .Summary-optionGroup {
+        display: none;
+    }
+    
     .Summary-optionGroupName {
         font-size: 13px;
     }
     
     .Summary--price {
         font-size: 13px;
-    }
-    
-}
-
-@media (orientation: landscape) and (max-height: 430px ) {
-    
-    .Summary-optionGroup {
-        display: none;
     }
     
 }
