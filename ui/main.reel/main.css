@@ -138,7 +138,7 @@
 
 }
 
-@media (orientation: landscape) and (max-height: 300px) {
+@media (orientation: landscape) and (max-height: 299px) {
 
     .Main-configuration {
         display: none;

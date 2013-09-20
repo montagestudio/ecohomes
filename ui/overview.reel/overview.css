@@ -150,7 +150,7 @@
     
 }
 
-@media (orientation: portrait) and (max-height: 300px ) {
+@media (orientation: portrait) and (max-height: 400px ) {
     
     .Overview {
         top: 0;
