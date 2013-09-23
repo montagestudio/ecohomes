@@ -82,7 +82,7 @@
 	font-family: inherit;
 	font-size: 16px;
 	text-align: left;
-	color: #999;
+	color: #b2b2b2;
 	font-weight: bold;
 	text-shadow: 0 1px 0 white;
 	background-color: inherit;
@@ -94,7 +94,7 @@
 }
 
 .Navigation-button--selected.Navigation-button {
-	color: #333;
+	color: #000;
 }
 
 

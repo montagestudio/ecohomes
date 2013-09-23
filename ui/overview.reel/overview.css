@@ -12,9 +12,9 @@
     height: 70px;
     padding: 10px 30px;
 
-    color: #fff;
+    color: #eee;
     font-size: 20px;
-    background-color: hsla(0,0%,20%,.5);
+    background-color: hsla(0,0%,20%,.65);
 
     pointer-events: none;
     -webkit-user-select: none;
@@ -29,6 +29,7 @@
 
 .Overview-price {
     font-size: 33px;
+    text-shadow: 0 2px 2px hsla(0,0%,0%,.75);
     white-space: nowrap;
 }
 
