@@ -3,13 +3,6 @@
     height: 120px;
 }
 
-.Introduction .Card-title--sub {
-    display: block;
-    font-family: 'Droid Serif', serif;
-    font-size: .7em;
-    letter-spacing: 0;
-}
-
 /* Landscape + small height */
 @media (orientation: landscape) and (max-height: 600px ) {
     
