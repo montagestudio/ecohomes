@@ -59,17 +59,25 @@
                     "listener": {"@": "owner"}
                 }
             ]
+        },
+        "scroller": {
+            "prototype": "matte/ui/scroller.reel",
+            "properties": {
+                "element": {"#": "scroller"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="Navigation" class="Navigation">
-        <ul data-montage-id="repetition" class="Navigation-list">
-            <li class="Navigation-listItem" data-montage-id="navItem1">
-                <button data-montage-id="panelName" class="Navigation-button"></button>
-            </li>
-        </ul>
+        <div data-montage-id="scroller">
+            <ul data-montage-id="repetition" class="Navigation-list">
+                <li class="Navigation-listItem" data-montage-id="navItem1">
+                    <button data-montage-id="panelName" class="Navigation-button"></button>
+                </li>
+            </ul>
+        </div>
         <button data-montage-id="navToggle" class="Navigation-toggle"></button>
     </div>
 </body>
