@@ -67,9 +67,9 @@
     left: 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 30px;
+    padding: 84px 30px 90px 30px;
 
-    display: -webkit-box;
+    /*display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     -webkit-box-orient: vertical;
@@ -77,10 +77,10 @@
     flex-direction: column;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-    justify-content: center;
+    justify-content: center;*/
 
     font-size: 18px;
-    line-height: 1.36;
+    line-height: 22px;
     color: #808080;
     background-color: #fff;
     -webkit-user-select: none;
@@ -102,23 +102,23 @@
 
 
 .Card-title {
-    margin: 0 0 .6em 0;
+    margin: 0 0 13px 0;
     font-size: 36px;
-    line-height: 1.1;
+    line-height: 34px;
     font-weight: bold;
     color: #000;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
 }
 
 .Card-title--sub {
     display: block;
     font-size: 24px;
     font-weight: normal;
-    letter-spacing: 0;
+    letter-spacing: -1px;
 }
 
 .Card-description {
-    margin: 0 0 1em 0;
+    margin: 0;
 }
 
 
@@ -129,10 +129,6 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-margin-collapse: separate; /* Don't collapse margins */
-}
-
-.Card-content p {
-    margin: 0 0 1em 0;
 }
 
 .Card-optionThumbnail {
@@ -218,6 +214,7 @@
 
 .Card--disclaimer {
     font-size: 9px;
+    line-height: 14px;
     color: #b2b2b2;
 }
 
@@ -236,11 +233,26 @@
 }
 
 
+/* Featured -------------------------- */
 
-/* Small -------------------------- */
+.Card-featured {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    text-align: center;
+}
+
+.Card-featured-img {
+    height: 32px;
+    vertical-align: bottom;
+}
 
 
-@media (orientation: landscape) and (max-height: 600px ) {
+
+/* Landscape -------------------------- */
+
+/*@media (orientation: landscape) and (max-height: 600px ) {
     
     .Card .Card-hero {
         position: absolute;
@@ -269,12 +281,12 @@
         padding-right: 60px;
     }
 
-}
+}*/
 
 
-/* Portrait */
+/* Portrait -------------------------- */
 
-@media (orientation: portrait) {
+/*@media (orientation: portrait) {
 
     .Card {
         -webkit-box-orient: horizontal;
@@ -285,7 +297,7 @@
         align-items: center;
     }
 
-    .Card .Card-hero { /* Higher specificity -> Safari fix */
+    .Card .Card-hero { /* Higher specificity -> Safari fix *!/
         margin: 0 0 1em 0;
         max-height: 120px;
         height: auto;
@@ -335,5 +347,5 @@
     .Card-content p {
         margin-bottom: .6em;
     }
-        
-}
+    
+}*/

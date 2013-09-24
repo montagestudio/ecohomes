@@ -1,11 +1,12 @@
 .Introduction .Card-logo {
-    margin-bottom: 2em;
     height: 134px;
     margin-left: -7px;
+    margin-bottom: 74px;
 }
 
+
 /* Landscape + small height */
-@media (orientation: landscape) and (max-height: 600px ) {
+/*@media (orientation: landscape) and (max-height: 600px ) {
     
     .Introduction .Card-logo {
         position: absolute;
@@ -27,10 +28,10 @@
         margin-bottom: .6em;
     }
     
-}
+}*/
 
 /* Portrait */
-@media (orientation: portrait) {
+/*@media (orientation: portrait) {
     
     .Introduction .Card-logo {
         display: none;
@@ -44,6 +45,23 @@
         margin-bottom: .6em;
     }
 
+}*/
+
+
+/* Debug ------------------------------------------ */
+
+/*.Introduction:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url(design.jpg) no-repeat left top;
+    opacity: .4;
 }
 
-
+.Introduction:hover:before {
+    opacity: 0;
+}*/
