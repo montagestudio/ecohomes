@@ -15,13 +15,13 @@
 
 .usdoe-CostGraph .usdoe-Bar {
     display: inline-block;
-    height: 12px;
+    height: 8px;
 }
 
 .usdoe-CostGraph-consumptionBar {
-    width: 100px;
+    width: 50px;
     background-color: hsla(0,0%,60%,.9);
-    border-radius: 3px;
+    border-radius: 0 3px 3px 0;
 }
 
 .usdoe-CostGraph-consumptionBar .usdoe-Bar-level {
