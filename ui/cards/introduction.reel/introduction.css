@@ -1,6 +1,7 @@
 .Introduction .Card-logo {
     margin-bottom: 2em;
-    height: 120px;
+    height: 134px;
+    margin-left: -7px;
 }
 
 /* Landscape + small height */
