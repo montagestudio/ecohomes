@@ -10,27 +10,73 @@
     margin-bottom: 10px;
 }
 
-.CallBack-controls {
-    margin-top: 8px;
+.CallBack .Card-description {
+    font-weight: bold;
+    margin: 44px 0 33px 0;
 }
 
-.CallBack--actionButton.digit-Button,
-.CallBack--cancelButton.digit-Button {
-    width: 100%;
-    border-color: hsl(71,56%,54%);
-    border-width: 3px;
-    background: hsl(71,56%,64%);
+
+/* Callback Steps ----------- */
+
+.CallBack-steps {
+    text-align: center;
 }
 
-.CallBack--actionButton.digit-Button.montage--active,
-.CallBack--cancelButton.digit-Button.montage--active {
+.CallBack-label {
+    display: block;
+    margin: 0 auto 12px auto;
+    width: 200px;
+    font-size: 12px;
+    color: #808080;
+    text-align: left;
+}
+
+.CallBack-input {
+    display: block;
+    margin: 0 auto 16px auto;
+    width: 200px;
+    height: 2.2em;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.1);
+    background-color: hsl(0, 0%, 94%);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.CallBack-button.digit-Button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 2.2em;
+    border-radius: 6px;
+    color: hsla(0, 0%, 0%, 0.6);
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.4);
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,0.3), inset 0 -1px 1px hsla(0,0%,0%,0.1), 0 1px 3px hsla(0,0%,0%,0.2);
+    background-image: -webkit-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.06) );
+}
+
+.CallBack-button--action.digit-Button {
+    border-color: hsl(71,56%,48%);
+    background-color: hsl(71,56%,64%);
+}
+.CallBack-button--action.digit-Button.montage--active {
     background-color: hsl(71,56%,68%);
 }
 
-.CallBack--cancelButton {
-    -webkit-filter: hue-rotate(285deg);
-    filter: hue-rotate(285deg);
+.CallBack-button--cancel.digit-Button {
+    border-color: hsl(0,56%,54%);
+    background-color: hsl(0,56%,64%);
 }
+.CallBack-button--cancel.digit-Button.montage--active {
+    background-color: hsl(0,56%,68%);
+}
+
+
+
+
 
 .CallBack--activity {
     font-size: 20px;
@@ -45,7 +91,7 @@
 
 /* Landscape + small height */
 
-@media (orientation: landscape) and (max-height: 600px ) {
+/*@media (orientation: landscape) and (max-height: 600px ) {
     
     .CallBack .Card {
         padding-top: 10px;
@@ -75,11 +121,11 @@
         font-size: 13px;
     }
     
-}
+}*/
 
 
 /* Portrait */
-@media (orientation: portrait) {
+/*@media (orientation: portrait) {
     
     .Summary-optionName {
         display: none;
@@ -98,7 +144,7 @@
         display: none;
     }
     
-}
+}*/
 
 
 /* FF fix */
@@ -106,3 +152,28 @@
 .digit-TextField {
     -moz-box-sizing: border-box;
 }
+
+
+/* Debug ------------------------------------------ */
+
+/*.CallBack {
+    display: block !important;
+    padding-top: 81px !important;
+}
+
+.CallBack:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: url(design.jpg) no-repeat left top;
+    opacity: .4;
+}
+
+.CallBack:hover:before {
+    opacity: 0;
+}*/

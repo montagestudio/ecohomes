@@ -88,13 +88,6 @@
                 "configuration": {"<-": "@owner.configuration"},
                 "orderedPanelKeys": {"<-": "@owner.orderedPanelKeys"}
             }
-        },
-        "title": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "title"},
-                "value": "Get in Touch"
-            }
         }
     }
     </script>
@@ -103,14 +96,14 @@
     <div data-montage-id="CallBack" class="CallBack Card">
         <section class="Card-content">
             <img data-montage-id="hero" class="Card-hero" src="">
-            <h1 data-montage-id="title" class="Card-title"></h1>
+            <h1 class="Card-title">Get in Touch <span class='Card-title--sub'>With EcoHomes</span></h1>
             <div data-montage-id="summary"></div>
         </section>
         <section class="Card-content">
             <p class="Card-description">
                 Build your dream home with confidence—we're here to help.
             </p>
-            <div data-montage-id="steps">
+            <div data-montage-id="steps" class="CallBack-steps">
                 <div data-arg="callNow" data-montage-id="callNow"></div>
                 <div data-arg="callingNow" data-montage-id="callingNow"></div>
                 <div data-arg="callLater" data-montage-id="callLater"></div>
