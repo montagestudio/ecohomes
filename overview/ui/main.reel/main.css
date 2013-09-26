@@ -30,6 +30,6 @@ body {
 
 /* Overrides ----------------------- */
 
-.Card--hasSwatches .Custom.digit-RadioButton {
+.Custom--hasSwatches .Custom.digit-RadioButton {
     background: hsl(200,30%,80%);
 }
