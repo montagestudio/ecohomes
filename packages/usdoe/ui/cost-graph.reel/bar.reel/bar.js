@@ -59,16 +59,9 @@ exports.Bar = Component.specialize(/** @lends Bar# */ {
         value: function() {
             var levelWidth;
 
-            // Wait until the Bar styles have been applied so we can measure
-            // them.
-            if (this._width == 0) {
-                this.needsDraw = true;
-            } else {
-                levelWidth = Math.min(
-                    Math.floor(this._value / this._maxValue * 100),
-                    100);
-                this._levelElement.style.width = levelWidth + "%";
-            }
+            levelWidth = Math.min(
+                Math.floor(this._value * 100 / this._maxValue), 100);
+            this._levelElement.style.webkitTransform = "translate3d("+ (levelWidth - 100) + "%, 0, 0)";
         }
     }
 });
