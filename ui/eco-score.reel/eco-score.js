@@ -71,18 +71,5 @@ exports.EcoScore = Component.specialize(/** @lends EcoScore# */ {
 
     ecoSavings: {
         value: null
-    },
-
-    grade: {
-        value: null
-    },
-
-    gradeLevels: {
-        value: Map({
-            "Average": 0,
-            "Good": 1,
-            "Excellent": 185,
-            "Perfect": 369
-        })
     }
 });

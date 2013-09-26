@@ -9,9 +9,6 @@
             "prototype": "ui/eco-score.reel",
             "properties": {
                 "element": {"#": "ecoScore"}
-            },
-            "bindings": {
-                "grade": {"<-": "@owner.gradeLevels.entries().filter{this[1] <= (@owner.ecoSavings - @owner.baseSavings)}.max{this[1]}[0]"}
             }
         },
         "cost-graph": {
@@ -24,15 +21,6 @@
                 "consumption": {"<-": "@owner.ecoSavings"},
                 "max": {"<-": "@owner.maxSavings"}
             }
-        },
-        "grade": {
-            "prototype": "montage/ui/text.reel",
-            "properties": {
-                "element": {"#": "grade"}
-            },
-            "bindings": {
-                "value": {"<-": "@owner.grade"}
-            }
         }
     }
     </script>
@@ -41,7 +29,6 @@
     <div data-montage-id="ecoScore" class="EcoScore">
         <h1 class="EcoScore-title">Eco<br>Score</h1>
         <div class="EcoScore-bar">
-            <div data-montage-id="grade" class="EcoScore-grade"></div>
             <div data-montage-id="cost-graph" class="EcoScore-costGraph"></div>
         </div>
     </div>
