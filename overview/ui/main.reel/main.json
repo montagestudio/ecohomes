@@ -1,0 +1,25 @@
+{
+    "owner": {
+        "properties": {
+            "element": {"#": "main"}
+        }
+    },
+
+    "checkbox-1": { "prototype": "digit/ui/checkbox.reel", "properties": { "element": {"#": "checkbox-1"} } },
+    "checkbox-2": { "prototype": "digit/ui/checkbox.reel", "properties": { "element": {"#": "checkbox-2"} } },
+    
+    "radio-1": { "prototype": "digit/ui/radio-button.reel", "properties": { "element": {"#": "radio-1"} } },
+    "radio-2": { "prototype": "digit/ui/radio-button.reel", "properties": { "element": {"#": "radio-2"} } },
+    
+    "swatch-1": { "prototype": "digit/ui/radio-button.reel", "properties": { "element": {"#": "swatch-1"} } },
+    "swatch-2": { "prototype": "digit/ui/radio-button.reel", "properties": { "element": {"#": "swatch-2"} } },
+    
+    "slider": { "prototype": "digit/ui/slider.reel", "properties": { "element": {"#": "slider"} } },
+    
+    "input-1": { "prototype": "digit/ui/text-field.reel", "properties": { "element": {"#": "input-1"} } },
+    "input-2": { "prototype": "digit/ui/text-field.reel", "properties": { "element": {"#": "input-2"} } },
+    
+    "button-1": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "button-1"} } },
+    "button-2": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "button-2"} } },
+    "button-3": { "prototype": "digit/ui/button.reel", "properties": { "element": {"#": "button-3"} } }
+}

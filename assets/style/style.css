@@ -83,7 +83,7 @@ body {
 
 /* Debug ---------------------------------------- */
 
-.debug-Grid {
+/*.debug-Grid {
     position: relative;
 }
 
@@ -110,6 +110,6 @@ body {
 .debug-Grid--padded:after {
     border: 34px solid hsla(0,100%,50%,0);
     background-clip: content-box;
-}
+}*/
 
 
