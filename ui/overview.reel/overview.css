@@ -29,8 +29,7 @@
 }
 
 .Overview-price {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 24px;
     text-shadow: 0 2px 2px hsla(0,0%,0%,.75);
     white-space: nowrap;
     letter-spacing: 1px;
