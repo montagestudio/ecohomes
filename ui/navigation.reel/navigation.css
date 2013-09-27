@@ -190,17 +190,14 @@
 @media (min-height: 720px) {
         
     .Navigation-button.digit-Button {
-    	padding: 30px 4px 0 4px;
-    	font-size: 9px;
-    	text-align: center;
-    	font-weight: normal;
+    	padding: 32px 4px 0 4px;
     }
     
     .Navigation-button:before {
     	content: "";
     	pointer-events: none;
     	position: absolute;
-    	top: 15px;
+    	top: 14px;
     	left: 25px;
     	width: 40px;
         height: 40px;
