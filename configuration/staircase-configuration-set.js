@@ -16,7 +16,7 @@ exports.StaircaseConfigurationSet = ConfigurationSet.specialize({
             var materialChoice = new ConfigurationChoice().init(
                 new ConfigurationOption().init("Dark Walnut", 3699),
                 new ConfigurationOption().init("Dark Ash", 1799),
-                new ConfigurationOption().init("Powder Coated Metal", 1985),
+                new ConfigurationOption().init("Deep Cherry", 1985),
                 defaultMaterial);
 
             materialChoice.options.select(defaultMaterial);

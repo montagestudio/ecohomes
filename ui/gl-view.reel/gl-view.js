@@ -161,7 +161,7 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
                     case "Dark Walnut":
                         texture = "walnut-stairs.jpg";
                         break;
-                    case "Powder Coated Metal":
+                    case "Deep Cherry":
                         texture = "bold-stairs.jpg";
                         break;
                     default:

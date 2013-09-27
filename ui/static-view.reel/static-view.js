@@ -67,7 +67,7 @@ exports.StaticView = Component.specialize(/** @lends StaticView# */ {
                     case "Dark Walnut":
                         className = "ConfigPreview--staircase-walnut";
                         break;
-                    case "Powder Coated Metal":
+                    case "Deep Cherry":
                         className = "ConfigPreview--staircase-bold";
                         break;
                     default:

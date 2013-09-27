@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: 15px;
+    overflow: hidden;
 }
 
 .usdoe-Bar-level {
@@ -9,10 +10,11 @@
     left: 0;
     top: 0;
     bottom: 0;
-    -webkit-transition: width 400ms;
-    -moz-transition: width 400ms;
-    -ms-transition: width 400ms;
-    transition: width 400ms;
+    right: 0;
+    -webkit-transition: -webkit-transform 400ms;
+    -moz-transition: -moz-transform 400ms;
+    -ms-transition: -ms-transform 400ms;
+    transition: transform 400ms;
     background-color: blue;
     text-align: center;
 }
