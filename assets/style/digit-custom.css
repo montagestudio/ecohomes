@@ -50,7 +50,13 @@
 
 .Custom.digit-Slider {
     border-color: hsl(74,55%,60%);
-    background: hsl(0, 0%, 100%) -webkit-linear-gradient(left, hsla(74,65%,65%,0), hsla(74,65%,65%,1) );
+    background-color: #fff;
+    background-image:
+        -webkit-linear-gradient(left, hsla(74,65%,35%,.3) 2px, hsla(74,65%,65%,0) 2px ),
+        -webkit-linear-gradient(left, hsla(74,65%,65%,0), hsla(74,65%,65%,1) );
+    background-size: -webkit-calc(10% - 2px) 100%, auto auto;
+    background-size: calc(10% - 2px) 100%, auto auto;
+    background-position: 12px top, left top;
     box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, 0.1);
 }
 

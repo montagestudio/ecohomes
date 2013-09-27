@@ -14,7 +14,7 @@
     "swatch-1": { "prototype": "digit/ui/radio-button.reel", "properties": { "element": {"#": "swatch-1"} } },
     "swatch-2": { "prototype": "digit/ui/radio-button.reel", "properties": { "element": {"#": "swatch-2"} } },
     
-    "slider": { "prototype": "digit/ui/slider.reel", "properties": { "element": {"#": "slider"} } },
+    "slider": { "prototype": "digit/ui/slider.reel", "properties": { "element": {"#": "slider"}, "step": "10" } },
     
     "input-1": { "prototype": "digit/ui/text-field.reel", "properties": { "element": {"#": "input-1"} } },
     "input-2": { "prototype": "digit/ui/text-field.reel", "properties": { "element": {"#": "input-2"} } },
