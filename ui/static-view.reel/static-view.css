@@ -20,7 +20,7 @@
     line-height: 1.4;
     color: hsl(210, 20%, 20%);
     background: -webkit-linear-gradient(left, hsla(0,0%,100%,0), hsla(0,0%,100%,.6), hsla(0,0%,100%,0));
-    background: linear-gradient(left, hsla(0,0%,100%,0), hsla(0,0%,100%,.6), hsla(0,0%,100%,0));
+    background: linear-gradient(to right, hsla(0,0%,100%,0), hsla(0,0%,100%,.6), hsla(0,0%,100%,0));
 }
 
 .StaticView-webglNotice-highlight {
