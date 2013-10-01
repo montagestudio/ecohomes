@@ -54,9 +54,20 @@
     margin: 10px 0 0 0;
 }
 
+
 /* Landscape ---------------------------------------------------------- */
 
-/*@media (orientation: landscape) and (max-height: 600px ) {
+@media (orientation: landscape) and (max-height: 700px ) {
+    
+    .CallBack .Card-description {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 20px 0;
+    }
+    
+}
+
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .CallBack .Card {
         padding-top: 10px;
@@ -78,20 +89,12 @@
         display: none;
     }
     
-    .Summary-optionGroupName {
-        font-size: 13px;
-    }
-    
-    .Summary--price {
-        font-size: 13px;
-    }
-    
-}*/
+}
 
 
 /* Portrait ---------------------------------------------------------- */
 
-/*@media (orientation: portrait) {
+@media (orientation: portrait) {
     
     .Summary-optionName {
         display: none;
@@ -110,7 +113,11 @@
         display: none;
     }
     
-}*/
+    .CallBack .Card-description {
+        display: none;
+    }
+    
+}
 
 
 /* FF fix */
