@@ -43,10 +43,6 @@
     width: 200px;
 }
 
-
-
-
-
 .CallBack--activity {
     font-size: 20px;
     text-align: center;
@@ -58,7 +54,7 @@
     margin: 10px 0 0 0;
 }
 
-/* Landscape + small height */
+/* Landscape ---------------------------------------------------------- */
 
 /*@media (orientation: landscape) and (max-height: 600px ) {
     
@@ -93,7 +89,8 @@
 }*/
 
 
-/* Portrait */
+/* Portrait ---------------------------------------------------------- */
+
 /*@media (orientation: portrait) {
     
     .Summary-optionName {

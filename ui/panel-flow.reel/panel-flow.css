@@ -264,9 +264,9 @@
 
 
 
-/* Landscape -------------------------- */
+/* Landscape ---------------------------------------------------- */
 
-/*@media (orientation: landscape) and (max-height: 600px ) {
+@media (orientation: landscape) and (max-height: 600px ) {
     
     .Card .Card-hero {
         position: absolute;
@@ -278,8 +278,9 @@
 @media (orientation: landscape) and (max-height: 400px )  {
     
     .Card {
-        padding: 20px;
+        padding: 0 20px;
         font-size: 14px;
+        line-height: 18px;
     }
     
     .Card-hero {
@@ -295,13 +296,13 @@
         padding-right: 60px;
     }
 
-}*/
+}
 
 
-/* Portrait -------------------------- */
+/* Portrait ---------------------------------------------------- */
 
-/*@media (orientation: portrait) {
-
+@media (orientation: portrait) and (min-width: 560px) {
+    
     .Card {
         -webkit-box-orient: horizontal;
         -webkit-flex-direction: row;
@@ -310,35 +311,39 @@
         -webkit-align-items: center;
         align-items: center;
     }
-
-    .Card .Card-hero { /* Higher specificity -> Safari fix *!/
+    
+    .Card .Card-hero { /* Higher specificity -> Safari fix */
         margin: 0 0 1em 0;
         max-height: 120px;
         height: auto;
     }
-
+    
     .Card-content {
         width: 50%;
     }
-
-    .Card-content:first-child {
-        padding-right: 10px;
+    
+    .Card-content:nth-child(1) {
+        padding-right: 15px;
     }
     
-    .Card-content:last-child {
-        padding-left: 10px;
+    .Card-content:nth-child(2) {
+        padding-left: 15px;
     }
-
+    
+    .Card--hasOptions {
+        margin-top: 0;
+        border-top: none;
+        border-left: 1px solid hsl(0,0%,90%);
+    }
 }
 
-@media (orientation: portrait) and (max-width: 560px) {
+
+@media (orientation: portrait) and (max-width: 561px) {
     
     .Card {
-        -webkit-box-orient: vertical;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        padding: 20px;
+        padding: 0 20px;
         font-size: 14px;
+        line-height: 18px;
     }
     
     .Card-title {
@@ -346,20 +351,13 @@
         font-size: 1.6em;
     }
     
-    .Card-content {
-        width: 100%;
-    }
-    
-    .Card-content:first-child {
-        margin-right: 0;
-    }
-    
     .Card-hero {
         display: none;
     }
     
-    .Card-content p {
-        margin-bottom: .6em;
+    .Card-option--booleanField,
+    .Card-option--choiceField {
+        padding: 4px 0;
     }
     
-}*/
+}

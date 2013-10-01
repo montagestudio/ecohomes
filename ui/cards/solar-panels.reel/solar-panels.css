@@ -2,7 +2,9 @@
     height: 140px;
 }
 
-/* Landscape + small height */
+
+/* Landscape ---------------------------------------------------------- */
+
 @media (orientation: landscape) and (max-height: 600px ) {
     
     .SolarPanels .Card-title {
@@ -10,8 +12,8 @@
     }
     
     .SolarPanels .Card-hero {
-        bottom: 140px;
-        right: 60px;
+        bottom: 80px;
+        right: 50px;
         height: 90px;
     }
 }
