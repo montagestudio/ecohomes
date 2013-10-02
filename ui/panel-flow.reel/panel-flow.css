@@ -257,8 +257,14 @@
     text-align: center;
 }
 
+.Card-featured-caption {
+    font-size: 9px;
+    line-height: 18px;
+    color: #b2b2b2;
+}
+
 .Card-featured-img {
-    height: 32px;
+    height: 22px;
     vertical-align: bottom;
 }
 

@@ -8,7 +8,7 @@
 /* Landscape ---------------------------------------------------------- */
 
 @media (orientation: landscape) and (max-height: 719px ) {
-    .Introduction .Card-featured-img {
+    .Introduction .Card-featured {
         display: none;
     }
 }
