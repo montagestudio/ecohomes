@@ -45,7 +45,13 @@ body {
 
 .montage-Indexloader-logo {
     height: 134px;
-    margin-bottom: 20px;
+}
+
+.montage-Indexloader-tag {
+    margin: .5em 1em 1em 1em;
+    font-style: italic;
+    font-size: 18px;
+    color: hsl(0, 0%, 20%);
 }
 
 .montage-Indexloader-dot {
