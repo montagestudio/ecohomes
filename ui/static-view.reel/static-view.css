@@ -14,17 +14,23 @@
 
 
 .StaticView-webglNotice {
-    padding: 20px;
-    font-size: .8em;
+    padding: 10px;
+    font-size: 12px;
     text-align: center;
     line-height: 1.4;
-    color: hsl(210, 20%, 20%);
-    background: -webkit-linear-gradient(left, hsla(0,0%,100%,0), hsla(0,0%,100%,.6), hsla(0,0%,100%,0));
-    background: linear-gradient(to right, hsla(0,0%,100%,0), hsla(0,0%,100%,.6), hsla(0,0%,100%,0));
+    color: #eee;
+    text-shadow: 0 1px 2px hsla(0,0%,0%,.5);
+    background-color: hsla(0,0%,20%,.65);
+}
+
+.StaticView-webglNotice-logo {
+    vertical-align: middle;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .StaticView-webglNotice-highlight {
-    color: hsl(210, 30%, 50%);
+    color: #c5e265;
     font-weight: bold;
     text-decoration: none;
 }
@@ -111,6 +117,10 @@
     
     .StaticView-webglNotice {
         padding: 10px 80px;
+    }
+    
+    .StaticView-webglNotice-logo {
+        margin-bottom: 5px;
     }
     
     .StaticView-webglNotice-highlight {
