@@ -1,5 +1,6 @@
 .Window .Card-hero {
     height: 180px;
+    margin-bottom: 16px;
 }
 
 
@@ -8,8 +9,8 @@
 @media (orientation: landscape) and (max-height: 600px ) {
     
     .Window .Card-hero {
-        bottom: 79px;
-        right: 88px;
+        bottom: 64px;
+        right: 60px;
         height: 90px;
     }
 }
