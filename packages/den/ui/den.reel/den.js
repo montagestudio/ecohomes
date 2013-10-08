@@ -88,6 +88,15 @@ exports.Den = Component.specialize(/** @lends Den# */ {
             if (firstTime) {
                 this.activationArea.addEventListener("touchstart", this, false);
                 this.activationArea.addEventListener("mousedown", this, false);
+                if("webkitTransform" in this.element.style) {
+                    this._transform = "webkitTransform";
+                } else if("MozTransform" in this.element.style) {
+                    this._transform = "MozTransform";
+                } else if("msTransform" in this.element.style) {
+                    this._transform = "msTransform";
+                } else {
+                    this._transform = "transform";
+                }
             }
         }
     },
@@ -181,14 +190,14 @@ exports.Den = Component.specialize(/** @lends Den# */ {
                 time;
 
             this.temperatureDelta = (this.desiredTemperature - this.ambientTemperature) / (93 - 51);
-            this.rightDigit.style.webkitTransform = "translate3d(" + (-50 * ((this.desiredTemperature | 0) % 10)) + "px, 0, 0)";
-            this.leftDigit.style.webkitTransform = "translate3d(" + (-50 * (this.desiredTemperature / 10 | 0)) + "px, 0, 0)";
+            this.rightDigit.style[this._transform] = "translate3d(" + (-50 * ((this.desiredTemperature | 0) % 10)) + "px, 0, 0)";
+            this.leftDigit.style[this._transform] = "translate3d(" + (-50 * (this.desiredTemperature / 10 | 0)) + "px, 0, 0)";
             if (this._previousTimestamp === null) {
                 this._previousTimestamp = timestamp;
             }
             time = timestamp - this._previousTimestamp;
             this._previousTimestamp = timestamp;
-            this.whiteBar.style.webkitTransform = "rotate3d(0, 0, 1, " + (desiredTemperature * 6 - 126) + "deg)";
+            this.whiteBar.style[this._transform] = "rotate3d(0, 0, 1, " + (desiredTemperature * 6 - 126) + "deg)";
             this.leftRedBar.style.opacity = 0;
             this.rightRedBar.style.opacity = 0;
             this.leftBlueBar.style.opacity = 0;
@@ -201,32 +210,32 @@ exports.Den = Component.specialize(/** @lends Den# */ {
                 if (length <= 30) {
                     this.leftRedBar.style.opacity = 1;
                     this.blackBar.style.opacity = 1;
-                    this.leftRedBar.style.webkitTransform = "rotate3d(0, 0, 1, " + ((1 + ambientTemperature) * 6 - 39) + "deg)";
-                    this.blackBar.style.webkitTransform = "rotate3d(0, 0, 1, " + ((1 + ambientTemperature + length) * 6 - 39) + "deg)";
+                    this.leftRedBar.style[this._transform] = "rotate3d(0, 0, 1, " + ((1 + ambientTemperature) * 6 - 39) + "deg)";
+                    this.blackBar.style[this._transform] = "rotate3d(0, 0, 1, " + ((1 + ambientTemperature + length) * 6 - 39) + "deg)";
                 } else {
                     this.leftRedBar.style.opacity = 1;
                     this.rightRedBar.style.opacity = 1;
-                    this.leftRedBar.style.webkitTransform = "rotate3d(0, 0, 1, " + ((1 + ambientTemperature) * 6 - 39) + "deg)";
-                    this.rightRedBar.style.webkitTransform = "rotate3d(0, 0, 1, " + ((1 + ambientTemperature - (30 - length)) * 6 - 39) + "deg)";
+                    this.leftRedBar.style[this._transform] = "rotate3d(0, 0, 1, " + ((1 + ambientTemperature) * 6 - 39) + "deg)";
+                    this.rightRedBar.style[this._transform] = "rotate3d(0, 0, 1, " + ((1 + ambientTemperature - (30 - length)) * 6 - 39) + "deg)";
                 }
                 this.redFadingBar.style.opacity = 1 - ((this.ambientTemperature - this._temperatureOffset) - ambientTemperature);
-                this.redFadingBar.style.webkitTransform = "rotate3d(0, 0, 1, " + (ambientTemperature * 6 - 126) + "deg)";
+                this.redFadingBar.style[this._transform] = "rotate3d(0, 0, 1, " + (ambientTemperature * 6 - 126) + "deg)";
             } else {
                 if (ambientTemperature > desiredTemperature) {
                     length = ambientTemperature - desiredTemperature - 1;
                     if (length <= 30) {
                         this.leftBlueBar.style.opacity = 1;
                         this.blackBar.style.opacity = 1;
-                        this.leftBlueBar.style.webkitTransform = "rotate3d(0, 0, 1, " + ((1 + desiredTemperature) * 6 - 39) + "deg)";
-                        this.blackBar.style.webkitTransform = "rotate3d(0, 0, 1, " + ((1 + desiredTemperature + length) * 6 - 39) + "deg)";
+                        this.leftBlueBar.style[this._transform] = "rotate3d(0, 0, 1, " + ((1 + desiredTemperature) * 6 - 39) + "deg)";
+                        this.blackBar.style[this._transform] = "rotate3d(0, 0, 1, " + ((1 + desiredTemperature + length) * 6 - 39) + "deg)";
                     } else {
                         this.leftBlueBar.style.opacity = 1;
                         this.rightBlueBar.style.opacity = 1;
-                        this.leftBlueBar.style.webkitTransform = "rotate3d(0, 0, 1, " + ((1 + desiredTemperature) * 6 - 39) + "deg)";
-                        this.rightBlueBar.style.webkitTransform = "rotate3d(0, 0, 1, " + ((1 + desiredTemperature - (30 - length)) * 6 - 39) + "deg)";
+                        this.leftBlueBar.style[this._transform] = "rotate3d(0, 0, 1, " + ((1 + desiredTemperature) * 6 - 39) + "deg)";
+                        this.rightBlueBar.style[this._transform] = "rotate3d(0, 0, 1, " + ((1 + desiredTemperature - (30 - length)) * 6 - 39) + "deg)";
                     }
                     this.blueFadingBar.style.opacity = (this.ambientTemperature - this._temperatureOffset) - ambientTemperature;
-                    this.blueFadingBar.style.webkitTransform = "rotate3d(0, 0, 1, " + (ambientTemperature * 6 - 126) + "deg)";
+                    this.blueFadingBar.style[this._transform] = "rotate3d(0, 0, 1, " + (ambientTemperature * 6 - 126) + "deg)";
                 }
             }
             if (!this._isRotating) {

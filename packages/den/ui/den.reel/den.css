@@ -42,6 +42,9 @@
     width: 155.5px;
     height: 77.75px;
     -webkit-transform-origin: 50% 100% 0;
+    -moz-transform-origin: 50% 100% 0;
+    -ms-transform-origin: 50% 100% 0;
+    transform-origin: 50% 100% 0;
 }
 .Den-left-red-bar,
 .Den-right-red-bar {
@@ -62,6 +65,9 @@
     top: 74px;
     left: 170.33px;
     -webkit-transform-origin: 50% 76.75px 0;
+    -moz-transform-origin: 50% 76.75px 0;
+    -ms-transform-origin: 50% 76.75px 0;
+    transform-origin: 50% 76.75px 0;
 }
 .Den-red-fading-bar {
     width: 6.5px;
@@ -71,6 +77,9 @@
     top: 74px;
     left: 170.33px;
     -webkit-transform-origin: 50% 76.75px 0;
+    -moz-transform-origin: 50% 76.75px 0;
+    -ms-transform-origin: 50% 76.75px 0;
+    transform-origin: 50% 76.75px 0;
 }
 .Den-blue-fading-bar {
     width: 6.5px;
@@ -80,6 +89,9 @@
     top: 74px;
     left: 170.33px;
     -webkit-transform-origin: 50% 76.75px 0;
+    -moz-transform-origin: 50% 76.75px 0;
+    -ms-transform-origin: 50% 76.75px 0;
+    transform-origin: 50% 76.75px 0;
 }
 .Den-left-digit-clip {
     position: absolute;
@@ -109,6 +121,9 @@
     background-image: url(numbers.png);
     background-size: 500px 73px;
     -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 .Den-icon {
     position: absolute;

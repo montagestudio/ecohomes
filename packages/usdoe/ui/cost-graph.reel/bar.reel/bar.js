@@ -15,6 +15,22 @@ exports.Bar = Component.specialize(/** @lends Bar# */ {
         }
     },
 
+    enterDocument: {
+        value: function (firstTime) {
+            if (firstTime) {
+                if("webkitTransform" in this.element.style) {
+                    this._transform = "webkitTransform";
+                } else if("MozTransform" in this.element.style) {
+                    this._transform = "MozTransform";
+                } else if("msTransform" in this.element.style) {
+                    this._transform = "msTransform";
+                } else {
+                    this._transform = "transform";
+                }
+            }
+        }
+    },
+
     _value: {
         value: 0
     },
@@ -61,7 +77,7 @@ exports.Bar = Component.specialize(/** @lends Bar# */ {
 
             levelWidth = Math.min(
                 Math.floor(this._value * 100 / this._maxValue), 100);
-            this._levelElement.style.webkitTransform = "translate3d("+ (levelWidth - 100) + "%, 0, 0)";
+            this._levelElement.style[this._transform] = "translate3d("+ (levelWidth - 100) + "%, 0, 0)";
         }
     }
 });
