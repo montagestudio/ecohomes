@@ -99,6 +99,18 @@
     
 }
 
+@media (orientation: landscape) and (max-height: 299px) {
+
+    .CallBack .CallBack--info {
+        display: none;
+    }
+    
+    .CallBack .Card-content:nth-child(2) {
+        display: block;
+    }
+
+}
+
 
 /* Portrait ---------------------------------------------------------- */
 

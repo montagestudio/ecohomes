@@ -85,7 +85,7 @@
     position: relative;
     height: 100%;
     width: 400px;
-    min-height: 300px; /* Might fix empty flow issue */
+    min-height: 100px; /* Might fix empty flow issue */
 }
 
 .Main-panel {
@@ -141,8 +141,19 @@
 
 @media (orientation: landscape) and (max-height: 299px) {
 
+    .Card-content:nth-child(2) {
+        display: none;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width: 420px) {
+
     .Main-configuration {
         display: none;
     }
 
 }
+
+
+

@@ -28,6 +28,18 @@
     }
 }
 
+@media (orientation: landscape) and (max-height: 299px) {
+
+    .Thermostat .Card-content:nth-child(2) {
+        display: block;
+    }
+    
+    .Thermostat .Card--hasOptions {
+        display: none;
+    }
+
+}
+
 
 /* Portrait ---------------------------------------------------------- */
 
