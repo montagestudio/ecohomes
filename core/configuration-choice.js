@@ -7,12 +7,13 @@ var ConfigurationOption = require("./configuration-option").ConfigurationOption,
  * @class ConfigurationOption
  * @extends Montage
  */
-exports.ConfigurationChoice= ConfigurationOption.specialize(/** @lends ConfigurationChoice# */ {
+exports.ConfigurationChoice = ConfigurationOption.specialize(/** @lends ConfigurationChoice# */ {
 
     constructor: {
         value: function ConfigurationChoice() {
             this.super();
             this.options = new RangeController();
+            this.options.selection = [];
             this.defineBindings({
                 "_selectedOption": {"<-": "options.selection[0]"},
                 "name": {"<-": "_selectedOption.name"},
