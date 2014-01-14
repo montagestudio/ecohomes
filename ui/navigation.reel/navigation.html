@@ -20,7 +20,7 @@
                 "element": {"#": "navItem1"}
             },
             "bindings": {
-                "panelKey": {"<-": "@panelList.objectAtCurrentIteration.panelKey"}
+                "panelKey": {"<-": "@panelList:iteration.object.panelKey"}
             }
         },
         "navToggle": {
@@ -47,10 +47,10 @@
                 "element": {"#": "panelName"}
             },
             "bindings": {
-                "classList.has('Navigation-button--selected')": {"<-": "@panelList.currentIteration.index == @owner.currentPanelIndex"},
-                "detail.get('index')": {"<-": "@panelList.currentIteration.index"},
-                "detail.get('panelKey')": {"<-": "@panelList.objectAtCurrentIteration.panelKey"},
-                "label": {"<-": "@panelList.objectAtCurrentIteration.label"}
+                "classList.has('Navigation-button--selected')": {"<-": "@panelList:iteration.index == @owner.currentPanelIndex"},
+                "detail.get('index')": {"<-": "@panelList:iteration.index"},
+                "detail.get('panelKey')": {"<-": "@panelList:iteration.object.panelKey"},
+                "label": {"<-": "@panelList:iteration.object.label"}
             },
             "listeners": [
                 {
