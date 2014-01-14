@@ -4,8 +4,7 @@
     @requires montage/ui/component
 */
 var Component = require("montage/ui/component").Component,
-    KeyComposer = require("montage/composer/key-composer").KeyComposer,
-    observeProperty = require("montage/frb/observers").observeProperty;
+    KeyComposer = require("montage/composer/key-composer").KeyComposer;
 
 /**
     Description TODO
@@ -189,18 +188,6 @@ exports.PanelFlow = Component.specialize({
 
     contentController: {
         value: null
-    },
-
-    observeProperty: {
-        value: function (key, emit, source, parameters, beforeChange) {
-            if (key === "objectAtCurrentIteration" || key === "currentIteration") {
-                if (this.flow) {
-                    return this.flow.observeProperty(key, emit, source, parameters, beforeChange);
-                }
-            } else {
-                return observeProperty(this, key, emit, source, parameters, beforeChange);
-            }
-        }
     },
 
     _scroll: {
