@@ -1,5 +1,6 @@
 precision highp float;
 varying vec3 v_normal;
+uniform float u_shininess;
 varying vec2 v_texcoord0;
 uniform sampler2D u_diffuse;
 uniform float u_transparency;
