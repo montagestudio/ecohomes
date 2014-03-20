@@ -9,7 +9,7 @@
     "dependencies": {
         "montage": "git+https://github.com/montagejs/montage.git#f9f6581cdd1985a9a3353849be9bcbd416b476c7",
         "digit": "git+https://github.com/montagejs/digit.git#fbc935ff2a432f1cb3fcc76668ac297de83fb794",
-        "glTF-webgl-viewer": "git+https://github.com/fabrobinet/glTF-webgl-viewer.git#cf69413964b1f1c116c0c625515059f832376a50",
+        "glTF-webgl-viewer": "git+https://github.com/fabrobinet/glTF-webgl-viewer.git#c2738b0f81b3395c72a47cda96d3473f83929776",
         "q-connection": "0.5.3"
     },
     "mappings": {
@@ -24,7 +24,7 @@
         }
     },
     "devDependencies": {
-        "montage-testing": "0.2.0"
+        "montage-testing": "0.4.0"
     },
     "exclude": [
         "run-tests.html",
