@@ -60,22 +60,23 @@
 .Main-loader-dot {
     position: relative;
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid #b3b3b3;
-    background-color: #d9d9d9;
-    -webkit-animation: Main-loader .9s 0s steps(1) 60;
-    animation: Main-loader .9s 0s steps(1) 60;
+    border: 1px solid hsla(0,0%,0%,.12);
+    background-color: hsl(0, 0%, 94%);
+    box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.1);
+    -webkit-animation: Main-loader .9s 0s steps(1) 10;
+    animation: Main-loader .9s 0s steps(1) 10;
 }
 
 .Main-loader-dot:nth-child(2) { -webkit-animation-delay: .3s; animation-delay: .3s; }
 .Main-loader-dot:nth-child(3) { -webkit-animation-delay: .6s; animation-delay: .6s; }
 
-@-webkit-keyframes Main-loader { 66.667% { background-color: #b3b3b3; } }
-@keyframes Main-loader { 66.667% { background-color: #b3b3b3; } }
+@-webkit-keyframes Main-loader { 66.667% { background-color: hsl(74,65%,65%); } }
+@keyframes Main-loader { 66.667% { background-color: hsl(74,65%,65%); } }
 
 
 /* Config -------------------------- */
@@ -84,7 +85,7 @@
     position: relative;
     height: 100%;
     width: 400px;
-    min-height: 300px; /* Might fix empty flow issue */
+    min-height: 100px; /* Might fix empty flow issue */
 }
 
 .Main-panel {
@@ -140,8 +141,19 @@
 
 @media (orientation: landscape) and (max-height: 299px) {
 
+    .Card-content:nth-child(2) {
+        display: none;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width: 420px) {
+
     .Main-configuration {
         display: none;
     }
 
 }
+
+
+

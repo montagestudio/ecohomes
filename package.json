@@ -7,9 +7,10 @@
         "url": "git+ssh://git@github.com:declarativ/den-demo.git"
     },
     "dependencies": {
-        "montage": "git://github.com/montagejs/montage.git#76e54ba9993d0408adab20cf5c0ffc9dbfef5b65",
-        "digit": "git://github.com/montagejs/digit.git#0d2fbfc3112bdfa5a1dacadbc50868bb435e39e4",
-        "glTF-webgl-viewer": "git+ssh://git@github.com:fabrobinet/glTF-webgl-viewer.git#98ae581c7e67ab868e9da1d96f5c3bb0d807aadf",
+        "montage": "0.14.6",
+        "digit": "0.5.1",
+        "glTF-webgl-viewer": "git+https://github.com/fabrobinet/glTF-webgl-viewer.git#213c4ba721a283e957b890ae12855bd0a913fb84",
+
         "q-connection": "0.5.3"
     },
     "mappings": {
@@ -24,7 +25,7 @@
         }
     },
     "devDependencies": {
-        "montage-testing": "0.2.0"
+        "montage-testing": "0.4.0"
     },
     "exclude": [
         "run-tests.html",

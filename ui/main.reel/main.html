@@ -5,6 +5,7 @@
     <title>
         Main
     </title>
+    <link rel="stylesheet" type="text/css" href="../../assets/style/digit-custom.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <script type="text/montage-serialization">
     {
@@ -76,7 +77,7 @@
                 "element": {"#": "configurationPanels"}
             },
             "bindings": {
-                "switchValue": {"<-": "@panelFlow.objectAtCurrentIteration.panelKey"}
+                "switchValue": {"<-": "@panelFlow:iteration.object.panelKey"}
             }
         },
         "countersPanel": {

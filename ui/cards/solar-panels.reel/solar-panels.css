@@ -2,7 +2,9 @@
     height: 140px;
 }
 
-/* Landscape + small height */
+
+/* Landscape ---------------------------------------------------------- */
+
 @media (orientation: landscape) and (max-height: 600px ) {
     
     .SolarPanels .Card-title {
@@ -10,8 +12,28 @@
     }
     
     .SolarPanels .Card-hero {
-        bottom: 140px;
-        right: 60px;
+        bottom: 80px;
+        right: 50px;
         height: 90px;
     }
 }
+
+
+/* Debug ------------------------------------------ */
+
+/*.SolarPanels:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: url(design.jpg) no-repeat left top;
+    opacity: .4;
+}
+
+.SolarPanels:hover:before {
+    opacity: 0;
+}*/

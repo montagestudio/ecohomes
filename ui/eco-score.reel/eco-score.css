@@ -9,13 +9,13 @@
 
 .EcoScore-grade {
     color: #c5e265;
-    font-size: 9px;
-    line-height: 18px;
-    margin-left: 4px;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .EcoScore-bar {
-    padding-top: 6px;
+    padding-top: 2px;
+    margin-left: 6px;
 }
 
 .EcoScore-title {
@@ -23,11 +23,12 @@
     height: 45px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding-top: 9px;
-    font-size: 12px;
-    line-height: 1;
-    font-weight: bold;
-    text-align: right;
+    padding-top: 3px;
     padding-right: 6px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: normal;
+    text-align: right;
+    text-shadow: 0 2px 2px hsla(0,0%,0%,.5);
     border-right: 1px solid hsla(0,0%,100%,.3);
 }

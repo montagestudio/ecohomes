@@ -28,8 +28,7 @@
         "number": {
             "prototype": "digit/ui/text-field.reel",
             "properties": {
-                "element": {"#": "number"},
-                "placeholderValue": "555123456"
+                "element": {"#": "number"}
             },
             "bindings": {
                 "value": {"<->": "@owner.controller.phoneNumber"}
@@ -46,24 +45,9 @@
 </head>
 <body>
     <div data-montage-id="Now" class="Now">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <span class="Card-option-labelArea">
-                            Phone Number
-                        </span>
-                    </td>
-                    <td>
-                        <input type="tel" data-montage-id="number"></input>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <section class="CallBack-controls">
-            <button data-montage-id="call" class="CallBack--actionButton"></button>
-        <section>
+        <span class="CallBack-label">Enter Your Phone Number:</span>
+        <input data-montage-id="number" class="Custom CallBack-input" type="tel"></input>
+        <button data-montage-id="call" class="Custom Custom--action CallBack-button"></button>
     </div>
 </body>
 </html>

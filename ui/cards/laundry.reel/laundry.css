@@ -1,14 +1,16 @@
 .Laundry .Card-hero {
-    height: 220px;
-    margin-bottom: 0;
+    height: 182px;
+    margin-bottom: -18px;
 }
 
-/* Landscape + small height */
+
+/* Landscape ---------------------------------------------------------- */
+
 @media (orientation: landscape) and (max-height: 600px ) {
     
     .Laundry .Card-hero {
         height: 100px;
-        bottom: 85px;
-        right: 84px;
+        bottom: 64px;
+        right: 61px;
     }
 }

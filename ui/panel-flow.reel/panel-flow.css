@@ -41,6 +41,28 @@
     }
 }
 
+@keyframes nextPage {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50%, 40px, 0) rotate3d(0, 0, 1, 180deg);
+    }
+    20% {
+        opacity: .1;
+    }
+    40% {
+        opacity: .1;
+        transform: translate3d(-50%, 0, 0) rotate3d(0, 0, 1, 180deg);
+    }
+    80% {
+        opacity: .1;
+        transform: translate3d(-50%, 0, 0) rotate3d(0, 0, 1, 180deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(-50%, 0, 0) rotate3d(0, 0, 1, 180deg);
+    }
+}
+
 .PanelFlow .PanelFlow-nextPage {
     position: absolute;
     bottom: 30px;
@@ -51,6 +73,7 @@
     background-size: 70px 17.1px;
     background-repeat: no-repeat;
     -webkit-animation: nextPage 4s infinite;
+    animation: nextPage 4s infinite;
     opacity: 0;
     pointer-events: none;
 }
@@ -80,7 +103,7 @@
     justify-content: center;
 
     font-size: 18px;
-    line-height: 1.36;
+    line-height: 22px;
     color: #808080;
     background-color: #fff;
     -webkit-user-select: none;
@@ -94,31 +117,37 @@
 
 .Card-hero {
     display: block;
-    margin: 0 auto 1.6em auto;
+    margin: 0 auto 22px auto;
     max-width: 100%;
     max-height: 300px;
     -webkit-user-drag: none;
+        -ms-user-drag: none;
+            user-drag: none;
 }
 
 
 .Card-title {
-    margin: 0 0 .6em 0;
+    margin: 0 0 8px 0;
     font-size: 36px;
-    line-height: 1.1;
+    line-height: 34px;
     font-weight: bold;
     color: #000;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
 }
 
 .Card-title--sub {
     display: block;
     font-size: 24px;
     font-weight: normal;
-    letter-spacing: 0;
+    letter-spacing: -1px;
 }
 
 .Card-description {
-    margin: 0 0 1em 0;
+    margin: 0;
+}
+
+.Card-strong {
+    display: block;
 }
 
 
@@ -131,9 +160,11 @@
     -webkit-margin-collapse: separate; /* Don't collapse margins */
 }
 
-.Card-content p {
-    margin: 0 0 1em 0;
+.Card--hasOptions {
+    margin-top: 18px;
+    border-top: 1px solid hsl(0,0%,90%);
 }
+
 
 .Card-optionThumbnail {
     display: inline-block;
@@ -151,24 +182,7 @@
     display: flex;
     -webkit-flex: 1 0 50%;
     flex: 1 0 50%;
-    padding: 6px 10px;
-}
-
-/* Has Swatches */
-.Card--hasSwatches .Card-option--choiceField {
-    padding: 4px 10px;
-}
-
-.Card--hasSwatches .digit-RadioButton {
-    font-size: 20px;
-    border: none;
-    background-repeat: repeat;
-    background-position: center;
-    background-size: auto 100%;
-}
-
-.Card--hasSwatches .digit-RadioButton.montage-RadioButton--checked {
-    box-shadow: inset 0 0px 0px 4px hsl(0,0%,100%), 0 0 0 2px hsla(0,0%,0%,.2);
+    padding: 6px 0;
 }
 
 .Card-option--rangeField {
@@ -176,11 +190,7 @@
     margin-top: 20px;
     -webkit-flex: 1 0 50%;
     flex: 1 0 50%;
-    padding: 5px 10px;
-}
-
-.Card-option--slider {
-
+    padding: 6px 0;
 }
 
 .Card-option-labelArea {
@@ -193,10 +203,11 @@
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     justify-content: space-between;
-    padding-left: 12px;
+    padding-left: 10px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
+
 
 .Card-option-label {
     -webkit-box-flex: 1;
@@ -218,27 +229,48 @@
 
 .Card--disclaimer {
     font-size: 9px;
+    line-height: 14px;
     color: #b2b2b2;
 }
 
-.debug .Card * {
+
+/* Has Swatches */
+
+.Card.Card--hasSwatches .Card-option--choiceField {
+    padding: 4px 10px;
+}
+
+/*.debug .Card * {
     outline: 1px solid red;
+}*/
+
+
+
+
+/* Featured -------------------------- */
+
+.Card-featured {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    text-align: center;
 }
 
-/* Reduces invisible target so they don't overlap */
-.Card .digit-RadioButton:after,
-.Card .digit-Checkbox:after {
-    top: -6px;
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
-    /* background: rgba(255, 0, 45, 0.5); */
+.Card-featured-caption {
+    font-size: 9px;
+    line-height: 18px;
+    color: #b2b2b2;
+}
+
+.Card-featured-img {
+    height: 22px;
+    vertical-align: bottom;
 }
 
 
 
-/* Small -------------------------- */
-
+/* Landscape ---------------------------------------------------- */
 
 @media (orientation: landscape) and (max-height: 600px ) {
     
@@ -252,8 +284,9 @@
 @media (orientation: landscape) and (max-height: 400px )  {
     
     .Card {
-        padding: 20px;
+        padding: 0 20px;
         font-size: 14px;
+        line-height: 18px;
     }
     
     .Card-hero {
@@ -272,10 +305,10 @@
 }
 
 
-/* Portrait */
+/* Portrait ---------------------------------------------------- */
 
-@media (orientation: portrait) {
-
+@media (orientation: portrait) and (min-width: 560px) {
+    
     .Card {
         -webkit-box-orient: horizontal;
         -webkit-flex-direction: row;
@@ -284,35 +317,39 @@
         -webkit-align-items: center;
         align-items: center;
     }
-
+    
     .Card .Card-hero { /* Higher specificity -> Safari fix */
         margin: 0 0 1em 0;
         max-height: 120px;
         height: auto;
     }
-
+    
     .Card-content {
         width: 50%;
     }
-
-    .Card-content:first-child {
-        padding-right: 10px;
+    
+    .Card-content:nth-child(1) {
+        padding-right: 15px;
     }
     
-    .Card-content:last-child {
-        padding-left: 10px;
+    .Card-content:nth-child(2) {
+        padding-left: 15px;
     }
-
+    
+    .Card--hasOptions {
+        margin-top: 0;
+        border-top: none;
+        border-left: 1px solid hsl(0,0%,90%);
+    }
 }
 
-@media (orientation: portrait) and (max-width: 560px) {
+
+@media (orientation: portrait) and (max-width: 561px) {
     
     .Card {
-        -webkit-box-orient: vertical;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        padding: 20px;
+        padding: 0 20px;
         font-size: 14px;
+        line-height: 18px;
     }
     
     .Card-title {
@@ -320,20 +357,13 @@
         font-size: 1.6em;
     }
     
-    .Card-content {
-        width: 100%;
-    }
-    
-    .Card-content:first-child {
-        margin-right: 0;
-    }
-    
     .Card-hero {
         display: none;
     }
     
-    .Card-content p {
-        margin-bottom: .6em;
+    .Card-option--booleanField,
+    .Card-option--choiceField {
+        padding: 4px 0;
     }
-        
+    
 }

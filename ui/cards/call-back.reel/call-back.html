@@ -42,7 +42,7 @@
                 "value": "Text"
             },
             "bindings": {
-                "value": {"<-": "@errors.currentIteration.content.message"}
+                "value": {"<-": "@errors:iteration.object.message"}
             }
         },
         "errors": {
@@ -101,16 +101,16 @@
 </head>
 <body>
     <div data-montage-id="CallBack" class="CallBack Card">
-        <section class="Card-content">
+        <section class="Card-content CallBack--info">
             <img data-montage-id="hero" class="Card-hero" src="">
             <h1 data-montage-id="title" class="Card-title"></h1>
             <div data-montage-id="summary"></div>
         </section>
-        <section class="Card-content">
+        <section class="Card-content CallBack--controls">
             <p class="Card-description">
                 Need help? Answers to your questions are only a click away. Enter your phone number below and we'll call you back.
             </p>
-            <div data-montage-id="steps">
+            <div data-montage-id="steps" class="CallBack-steps">
                 <div data-arg="callNow" data-montage-id="callNow"></div>
                 <div data-arg="callingNow" data-montage-id="callingNow"></div>
                 <div data-arg="callLater" data-montage-id="callLater"></div>

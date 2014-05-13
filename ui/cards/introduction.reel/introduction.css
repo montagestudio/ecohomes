@@ -1,35 +1,38 @@
 .Introduction .Card-logo {
-    margin-bottom: 2em;
     height: 134px;
     margin-left: -7px;
+    margin-bottom: 74px;
 }
 
-/* Landscape + small height */
+
+/* Landscape ---------------------------------------------------------- */
+
+@media (orientation: landscape) and (max-height: 719px ) {
+    .Introduction .Card-featured {
+        display: none;
+    }
+}
+
 @media (orientation: landscape) and (max-height: 600px ) {
-    
     .Introduction .Card-logo {
         position: absolute;
         margin-bottom: 0;
-        height: 80px;
-        bottom: 199px;
-        right: 40px;
+        height: 60px;
+        bottom: 146px;
+        right: 76px;
     }
-
 }
 
 @media (orientation: landscape) and (max-height: 400px ) {
-    
     .Introduction .Card-logo {
         display: none;
     }
-    
-    .Introduction .Card-title {
-        margin-bottom: .6em;
-    }
-    
 }
 
-/* Portrait */
+
+
+/* Portrait ---------------------------------------------------------- */
+
 @media (orientation: portrait) {
     
     .Introduction .Card-logo {
@@ -38,12 +41,44 @@
 
 }
 
+@media (orientation: portrait) and (min-width: 561px) {
+    
+    
+    .Introduction .Card--disclaimer {
+        margin-top: 50px;
+    }
+    
+    .Introduction .Card-featured {
+        left: 50%;
+        bottom: auto;
+        top: 140px;
+    }
+
+}
+
 @media (orientation: portrait) and (max-width: 560px) {
     
-    .Introduction .Card-title {
-        margin-bottom: .6em;
+    .Card-featured {
+        display: none;
     }
 
 }
 
 
+/* Debug ------------------------------------------ */
+
+/*.Introduction:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url(design.jpg) no-repeat left top;
+    opacity: .4;
+}
+
+.Introduction:hover:before {
+    opacity: 0;
+}*/

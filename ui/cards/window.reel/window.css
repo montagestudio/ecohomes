@@ -1,13 +1,16 @@
 .Window .Card-hero {
     height: 180px;
+    margin-bottom: 16px;
 }
 
-/* Landscape + small height */
+
+/* Landscape ---------------------------------------------------------- */
+
 @media (orientation: landscape) and (max-height: 600px ) {
     
     .Window .Card-hero {
-        bottom: 115px;
-        right: 90px;
+        bottom: 64px;
+        right: 60px;
         height: 90px;
     }
 }
@@ -26,6 +29,9 @@
     }
     
 }
+
+
+/* Portrait ---------------------------------------------------------- */
 
 @media (orientation: portrait) and (max-width: 560px ) {
     

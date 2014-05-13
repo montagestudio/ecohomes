@@ -1,6 +1,6 @@
 .Countertops .Card-hero {
     height: 180px;
-    margin-bottom: .6em;
+    margin-bottom: 4px;
 }
 
 .Countertops .OptionField:nth-child(4) .digit-RadioButton {
@@ -20,16 +20,13 @@
 }
 
 
-/* Landscape + small height */
-@media (max-height: 600px ) and (orientation: landscape) {
-    
-    .Countertops .Card-title {
-        width: 170px;
-    }
+/* Landscape ---------------------------------------------------------- */
+
+@media (orientation: landscape) and (max-height: 600px ) {
 
     .Countertops .Card-hero {
-        bottom: 104px;
-        right: 70px;
-        height: 100px;
+        bottom: 67px;
+        right: 50px;
+        height: 80px;
     }
 }

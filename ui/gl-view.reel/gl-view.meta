@@ -45,6 +45,14 @@
       "blueprint": {"@": "root"}
     }
   },
+  "blueprint_unnamed_floorColor": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "floorColor",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
   "root": {
     "prototype": "den/montage/core/meta/module-blueprint",
     "properties": {
@@ -58,7 +66,8 @@
         {"@": "blueprint_unnamed_configuration"},
         {"@": "blueprint_unnamed_width"},
         {"@": "blueprint_unnamed_height"},
-        {"@": "blueprint_unnamed_temperatureDelta"}
+        {"@": "blueprint_unnamed_temperatureDelta"},
+        {"@": "blueprint_unnamed_floorColor"}
       ],
       "propertyBlueprintGroups": {
         "GlView": [
@@ -66,7 +75,8 @@
           {"@": "blueprint_unnamed_configuration"},
           {"@": "blueprint_unnamed_width"},
           {"@": "blueprint_unnamed_height"},
-          {"@": "blueprint_unnamed_temperatureDelta"}
+          {"@": "blueprint_unnamed_temperatureDelta"},
+          {"@": "blueprint_unnamed_floorColor"}
         ]
       },
       "module": {

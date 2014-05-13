@@ -1,5 +1,6 @@
 .Summary {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 22px;
 }
 
 .Summary-optionGroup,
@@ -17,16 +18,17 @@
 }
 
 .Summary-optionGroupName {
-    font-weight: bold;
-    color: hsl(0,0%,30%);
     width: 120px;
+    font-weight: bold;
+    text-align: right;
+    color: #808080;
 }
 
 .Card-content .Summary-optionGroupName {
     margin: 0 16px 0 0;
 }
 
-.Summary-subtotals .Summary-optionGroupName {
+.Summary-subtotals .Summary-optionPrice {
     display: block;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -47,7 +49,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: hsl(0,0%,60%);
+    color: #b2b2b2;
     padding-right: 12px;
 }
 
@@ -56,28 +58,28 @@
 }
 
 .Summary-subtotals {
-    padding-top: 4px;
+    margin-top: 14px;
     border: 1px solid #E0E0E0;
     border-width: 1px 0;
 }
 
 .Summary-total {
     text-align: right;
-    padding: 4px 0 10px 0;
+    padding-top: 4px;
 }
 
 .Summary-optionGroupItem {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
-    margin-bottom: 5px;
 }
 
 .Summary--price {
     display: block;
-    color: hsl(0,0%,30%);
+    color: #000;
 }
 
 .Summary-total.Summary--price {
     font-weight: bold;
+    font-size: 18px;
 }

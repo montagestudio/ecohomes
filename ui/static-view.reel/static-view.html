@@ -31,6 +31,13 @@
                 "element": {"#": "staircase"},
                 "label": "Staircase"
             }
+        },
+        "logo": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "logo"},
+                "src": "../../assets/images/webgl.png"
+            }
         }
     }
     </script>
@@ -38,8 +45,9 @@
 <body>
     <div data-montage-id="staticView" class="StaticView">
         <div class="StaticView-webglNotice">
-            This demo highlights WebGL.
-            <a class="StaticView-webglNotice-highlight" href="http://get.webgl.org" target="_blank">Please check your browser's WebGL support.</a>
+            <img data-montage-id="logo" class="StaticView-webglNotice-logo" src="">
+            <a class="StaticView-webglNotice-highlight" href="http://get.webgl.org" target="_blank">This demo highlights WebGL.</a>
+            Please check your browser's WebGL support.
         </div>
         <section class="StaticView-swatches">
             <div data-montage-id="countertop"></div>

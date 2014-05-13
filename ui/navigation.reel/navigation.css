@@ -3,7 +3,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 160px;
+    width: 90px;
     z-index: 10;
     
     display: -webkit-box;
@@ -16,8 +16,7 @@
     -webkit-justify-content: center;
     justify-content: center;
     
-    background-color: #f5f5f5;
-    border-left: 1px solid hsl(0,0%,90%);
+    background-color: #f2f2f2;
     -webkit-transform: translate3d(100%,0,0);
     transform: translate3d(100%,0,0);
     -webkit-transition: -webkit-transform .2s;
@@ -29,6 +28,7 @@
 }
 
 .Navigation.Navigation--show {
+    box-shadow: inset 0 0 1px 1px hsla(0,0%,100%,.75), 0 0 3px 0px hsla(0,0%,0%,.25);
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
@@ -47,7 +47,7 @@
 	-webkit-flex-direction: column;
 	flex-direction: column;
 	
-	max-height: 800px;
+	max-height: 720px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -76,14 +76,13 @@
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	padding: 0 30px;
+	padding: 0 10px;
 	border: none;
 	border-radius: 0;
 	font-family: inherit;
-	font-size: 16px;
-	text-align: left;
+	font-size: 12px;
+	text-align: center;
 	color: #b2b2b2;
-	font-weight: bold;
 	text-shadow: 0 1px 0 white;
 	background-color: inherit;
 }
@@ -107,13 +106,14 @@
     box-sizing: border-box;
     z-index: 11;
     margin: 0;
-    top: 20px;
-    left: -68px;
-    width: 48px;
-    height: 48px;
-    border-radius: 24px;
-    border: 1px solid hsl(0,0%,90%);
-    background-color: hsl(0,0%,96%);
+    top: 30px;
+    left: -40px;
+    width: 40px;
+    height: 34px;
+    border-radius: 17px 0 0 17px;
+    border: none;
+    box-shadow: inset 0 0 1px 1px hsla(0,0%,100%,.75), 0 0 3px 0px hsla(0,0%,0%,.25);
+    background-color: #f2f2f2;
     -webkit-transform: translateZ(0); /* Force button to own HW layer */
 }
 
@@ -121,9 +121,9 @@
     background-image: none;
 }
 
-.Navigation-toggle.montage--active,
-.Navigation-toggle.montage--active.montage-Checkbox--checked {
-    background-color: hsl(0,0%,90%);
+.Navigation-toggle.montage--active:after,
+.Navigation-toggle.montage--active.montage-Checkbox--checked:after {
+    opacity: .6;
 }
 
 .Navigation-toggle:after {
@@ -132,18 +132,31 @@
     position: absolute;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    top: -1px;
-    left: -1px;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 34px;
+    top: 0;
+    left: 0;
     border-radius: inherit;
-    background: transparent url(../../assets/images/toggle-icons.svg) no-repeat;
-    background-size: 48px auto;
-    background-position: center 0; /* no icon by default */
+    background: transparent url(../../assets/images/toggle-icons.png) no-repeat;
+    background-size: 50px auto;
+    background-position: -8px -8px;
 }
 
 .Navigation--show .Navigation-toggle:after {
-    background-position: center -48px;
+    background-position: -8px -58px;
+}
+
+.Navigation-toggle:before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 10px;
+    height: 34px;
+    top: 0;
+    right: -5px;
+    background-color: inherit;
 }
 
 
@@ -174,39 +187,43 @@
 
 /* Only show icons if enough height */
 
-@media (min-height: 660px) {
+@media (min-height: 720px) {
         
     .Navigation-button.digit-Button {
-    	padding: 30px 30px 0 30px;
-    	font-size: 14px;
-    	text-align: center;
-    	font-weight: normal;
+    	padding: 32px 4px 0 4px;
     }
     
     .Navigation-button:before {
     	content: "";
     	pointer-events: none;
     	position: absolute;
-    	top: 4px;
-    	left: 0;
-    	right: 0;
-    	height: 48px;
-    	background: transparent url(../../assets/images/nav-icons.svg) no-repeat;
-    	background-size: 48px auto;
-    	background-position: center 48px; /* no icon by default */
+    	top: 14px;
+    	left: 25px;
+    	width: 40px;
+        height: 40px;
+    	background: transparent url(../../assets/images/nav-icons.png) no-repeat;
+    	background-size: 80px auto;
+    	background-position: 0 40px; /* no icon by default */
     }
     
-    .NavItem--introduction .Navigation-button:before { background-position: center 0; }
-    .NavItem--staircase .Navigation-button:before { background-position: center -48px; }
-    .NavItem--thermostat .Navigation-button:before { background-position: center -288px; }
-    .NavItem--kitchen .Navigation-button:before { background-position: center -96px; }
-    .NavItem--counters .Navigation-button:before { background-position: center -144px; }
-    .NavItem--laundry .Navigation-button:before { background-position: center -192px; }
-    .NavItem--window .Navigation-button:before { background-position: center -240px; }
-    .NavItem--solarPanels .Navigation-button:before { background-position: center -336px; }
-    .NavItem--callBack .Navigation-button:before { background-position: center -384px; }
+    .NavItem--introduction .Navigation-button:before { background-position: 0 0; }
+    .NavItem--thermostat   .Navigation-button:before { background-position: 0 -40px; }
+    .NavItem--solarPanels  .Navigation-button:before { background-position: 0 -80px; }
+    .NavItem--counters     .Navigation-button:before { background-position: 0 -120px; }
+    .NavItem--kitchen      .Navigation-button:before { background-position: 0 -160px; }
+    .NavItem--laundry      .Navigation-button:before { background-position: 0 -200px; }
+    .NavItem--window       .Navigation-button:before { background-position: 0 -240px; }
+    .NavItem--staircase    .Navigation-button:before { background-position: 0 -280px; }
+    .NavItem--callBack     .Navigation-button:before { background-position: 0 -320px; }
     
-    .Navigation-button--selected.Navigation-button {
-    	background-color: hsl(0,0%,90%);
-    }
+    .NavItem--introduction .Navigation-button--selected:before { background-position: -40px 0; }
+    .NavItem--thermostat   .Navigation-button--selected:before { background-position: -40px -40px; }
+    .NavItem--solarPanels  .Navigation-button--selected:before { background-position: -40px -80px; }
+    .NavItem--counters     .Navigation-button--selected:before { background-position: -40px -120px; }
+    .NavItem--kitchen      .Navigation-button--selected:before { background-position: -40px -160px; }
+    .NavItem--laundry      .Navigation-button--selected:before { background-position: -40px -200px; }
+    .NavItem--window       .Navigation-button--selected:before { background-position: -40px -240px; }
+    .NavItem--staircase    .Navigation-button--selected:before { background-position: -40px -280px; }
+    .NavItem--callBack     .Navigation-button--selected:before { background-position: -40px -320px; }
+    
 }

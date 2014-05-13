@@ -19,10 +19,15 @@
     background: hsl(0,0%,80%);
 }
 
-/* Landscape + small height */
+
+/* Landscape ---------------------------------------------------------- */
+
 @media (orientation: landscape) and (max-height: 600px ) {
     
     .Kitchen .Card-hero {
-        display: none;
+        height: 80px;
+        bottom: 73px;
+        right: 134px;
     }
+    
 }
