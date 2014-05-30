@@ -107,6 +107,19 @@
     background-image: linear-gradient(top, hsla(0,0%,20%,0.4) 0%, hsla(0,0%,20%,0.1) 7%, hsla(0,0%,20%,0) 14%);
 }
 
+.Main-ribbon {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 30px;
+    width: 56px;
+    height: 78px;
+    overflow: hidden;
+    font-size: 0;
+    color: hsla(0, 0%, 0%, 0);
+    background: url(../../assets/images/montage-made.svg) no-repeat center top;
+    background-size: 100% auto;
+}
 
 /* Portrait -------------------------- */
 
@@ -128,6 +141,10 @@
         min-width: 0;
         min-height: 0;
     }
+    
+    .Main-ribbon {
+        left: 20px;
+    }
 
 }
 
@@ -135,6 +152,9 @@
 
     .Main-configuration {
         height: 300px;
+    }
+    .Main-ribbon {
+        width: 40px;
     }
 
 }

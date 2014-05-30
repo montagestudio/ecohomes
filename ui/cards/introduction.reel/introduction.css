@@ -4,6 +4,19 @@
     margin-bottom: 74px;
 }
 
+.Introduction-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.Introduction-link:hover {
+    color: #333;
+}
+
+.Introduction-link:hover {
+    color: #555;
+}
+
 
 /* Landscape ---------------------------------------------------------- */
 
