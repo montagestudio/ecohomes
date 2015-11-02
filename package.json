@@ -9,7 +9,7 @@
     "dependencies": {
         "montage": "0.14.6",
         "digit": "0.5.1",
-        "glTF-webgl-viewer": "git+https://github.com/fabrobinet/glTF-webgl-viewer.git#213c4ba721a283e957b890ae12855bd0a913fb84",
+        "glTF-webgl-viewer": "git+https://github.com/cdebost/glTF-webgl-viewer.git#3f04cc780acc7930e9fac3469d21bda3debbf2e1",
 
         "q-connection": "0.5.3"
     },
