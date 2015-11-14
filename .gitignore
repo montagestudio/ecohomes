@@ -4,5 +4,6 @@ npm-debug.log
 atlassian-ide-plugin.xml
 TEST-*.xml
 /builds
+/node_modules
 /server/config/credentials.js
 /server/node_modules
