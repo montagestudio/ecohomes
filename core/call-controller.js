@@ -27,14 +27,14 @@ exports.CallController = Montage.specialize({
             callingNow = new State().init({
                 enterState: function() {
                     callController.callStatus = "";
-                    callController.makeContactCall().fail(function () {
+                    callController.makeContactCall().caught(function () {
                         callController.errors.push({
                              message: "A server error has occured"
                         });
-                    }).done();
+                    });
                 },
                 cancel: function(actionName, stateChart, owner) {
-                    callController.cancelCall().done();
+                    callController.cancelCall();
                     //console.log("cancelCall, returning to callNow state");
                     this.gotoState('callNow');
                 },
@@ -241,24 +241,25 @@ exports.CallController = Montage.specialize({
         value: function() {
             var pendingTimeout;
             var timeout = 500;
-            var response = Promise.defer();
             var request = new XMLHttpRequest();
-            request.open("GET", "http://"+this.server+"/alive", true);
-            request.onreadystatechange = function () {
-                if (request.readyState === 4) {
-                    if (request.status === 200) {
-                        if(pendingTimeout) {
-                            clearTimeout(pendingTimeout);
+            var promise = new Promise(function(resolve, reject) {
+                request.open("GET", "http://"+this.server+"/alive", true);
+                request.onreadystatechange = function () {
+                    if (request.readyState === 4) {
+                        if (request.status === 200) {
+                            if(pendingTimeout) {
+                                clearTimeout(pendingTimeout);
+                            }
+                            resolve(request.responseText);
+                        } else {
+                            reject(new Error("HTTP " + request.status + " for " + "http://"+this.server+"/alive"));
                         }
-                        response.resolve(request.responseText);
-                    } else {
-                        response.reject("HTTP " + request.status + " for " + "http://"+this.server+"/alive");
                     }
-                }
-            };
-            pendingTimeout = setTimeout(response.reject, timeout - 50);
+                };
+                pendingTimeout = setTimeout(reject, timeout - 50);
+             });
             request.send();
-            return response.promise.timeout(timeout);
+            return promise.timeout(timeout);
         }
     },
 

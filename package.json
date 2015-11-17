@@ -4,12 +4,12 @@
 	"private": true,
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com:declarativ/den-demo.git"
+        "url": "git+ssh://git@github.com:montagestudio/ecohomes.git"
     },
     "dependencies": {
-        "montage": "0.14.6",
-        "digit": "0.5.1",
-        "glTF-webgl-viewer": "git+https://github.com/cdebost/glTF-webgl-viewer.git#3f04cc780acc7930e9fac3469d21bda3debbf2e1",
+        "montage": "montagejs/montage#master",
+        "digit": "montagejs/digit#master",
+        "glTF-webgl-viewer": "./node_modules/glTF-webgl-viewer",
 
         "q-connection": "0.5.3"
     },
