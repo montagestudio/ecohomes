@@ -382,35 +382,35 @@ var GLSLProgram = exports.GLSLProgram = Object.create(Object.prototype, {
     _commitSwitch: {
         value: (function () {
             var theSwitch = [];
-            theSwitch[WebGLRenderingContext.FLOAT_MAT2] = function uniformMatrix2fv(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.FLOAT_MAT2] = function uniformMatrix2fv(GL, location , count, value) {
                 GL.uniformMatrix2fv(location , count, value);
             };
-            theSwitch[WebGLRenderingContext.FLOAT_MAT3] = function uniformMatrix3fv(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.FLOAT_MAT3] = function uniformMatrix3fv(GL, location , count, value) {
                 GL.uniformMatrix3fv(location , count, value);
             };
-            theSwitch[WebGLRenderingContext.FLOAT_MAT4] = function uniformMatrix4fv(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.FLOAT_MAT4] = function uniformMatrix4fv(GL, location , count, value) {
                 GL.uniformMatrix4fv(location , count, value);
             };
-            theSwitch[WebGLRenderingContext.FLOAT] = function uniform1f(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.FLOAT] = function uniform1f(GL, location , count, value) {
                 GL.uniform1f(location,value);
             };
-            theSwitch[WebGLRenderingContext.FLOAT_VEC2] = function uniform2fv(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.FLOAT_VEC2] = function uniform2fv(GL, location , count, value) {
                 GL.uniform2fv(location,value);
             };
-            theSwitch[WebGLRenderingContext.FLOAT_VEC3] = function uniform3fv(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.FLOAT_VEC3] = function uniform3fv(GL, location , count, value) {
                 GL.uniform3fv(location,value);
             };
-            theSwitch[WebGLRenderingContext.FLOAT_VEC4] = function uniform4fv(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.FLOAT_VEC4] = function uniform4fv(GL, location , count, value) {
                 GL.uniform4fv(location,value);
             };
-            theSwitch[WebGLRenderingContext.INT] = function uniform1i(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.INT] = function uniform1i(GL, location , count, value) {
                 GL.uniform1i(location, value);
             };
-            theSwitch[WebGLRenderingContext.SAMPLER_2D] = function uniform1i(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.SAMPLER_2D] = function uniform1i(GL, location , count, value) {
                 GL.uniform1i(location, value);
             };
 
-            theSwitch[WebGLRenderingContext.SAMPLER_CUBE] = function uniform1i(GL, location , count, value) {
+            theSwitch[WebGLRenderingContext.prototype.SAMPLER_CUBE] = function uniform1i(GL, location , count, value) {
                 GL.uniform1i(location, value);
             };
 
