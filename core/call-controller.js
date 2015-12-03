@@ -243,22 +243,26 @@ exports.CallController = Montage.specialize({
             var timeout = 500;
             var request = new XMLHttpRequest();
             var promise = new Promise(function(resolve, reject) {
-                request.open("GET", "http://"+this.server+"/alive", true);
-                request.onreadystatechange = function () {
-                    if (request.readyState === 4) {
-                        if (request.status === 200) {
-                            if(pendingTimeout) {
-                                clearTimeout(pendingTimeout);
+                if (this.server) {
+                    request.open("GET", "http://"+this.server+"/alive", true);
+                    request.onreadystatechange = function () {
+                        if (request.readyState === 4) {
+                            if (request.status === 200) {
+                                if(pendingTimeout) {
+                                    clearTimeout(pendingTimeout);
+                                }
+                                resolve(request.responseText);
+                            } else {
+                                reject(new Error("HTTP " + request.status + " for " + "http://"+this.server+"/alive"));
                             }
-                            resolve(request.responseText);
-                        } else {
-                            reject(new Error("HTTP " + request.status + " for " + "http://"+this.server+"/alive"));
                         }
-                    }
-                };
-                pendingTimeout = setTimeout(reject, timeout - 50);
-             });
-            request.send();
+                    };
+                    pendingTimeout = setTimeout(reject, timeout - 50);
+                    request.send();
+                } else {
+                    reject(new Error("No server connected"));
+                }
+            });
             return promise.timeout(timeout);
         }
     },

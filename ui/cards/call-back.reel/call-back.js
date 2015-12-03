@@ -33,11 +33,13 @@ exports.CallBack = Component.specialize(/** @lends CallBack# */ {
 
     checkAlive: {
         value: function() {
+            var self = this;
+
             this.callController.alive().then(function () {
-                this.currentStep = "callNow";
-            }.bind(this)).caught(function () {
-                this.currentStep = "unavailable";
-            }.bind(this));
+                self.currentStep = "callNow";
+            }).catch(function () {
+                self.currentStep = "unavailable";
+            });
         }
     },
 
