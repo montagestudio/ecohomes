@@ -6,3 +6,5 @@ TEST-*.xml
 /builds
 /server/config/credentials.js
 /server/node_modules
+/node_modules/*
+!/node_modules/glTF-webgl-viewer
