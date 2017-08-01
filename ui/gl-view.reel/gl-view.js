@@ -102,7 +102,7 @@ exports.GlView = Component.specialize(/** @lends GlView# */ {
             var templateObjects = this.templateObjects;
 
             // Setup which viewpoint to use for each panel
-            this._panelKeyViewpointMap = new Map({
+            this._panelKeyViewpointMap = Map.from({
                 staircase: templateObjects.staircaseViewpoint,
                 kitchen: templateObjects.kitchenViewpoint,
                 counters: templateObjects.counterViewpoint,
