@@ -239,27 +239,30 @@ exports.CallController = Montage.specialize({
 
     alive: {
         value: function() {
-            var pendingTimeout;
-            var timeout = 500;
-            var request = new XMLHttpRequest();
-            var promise = new Promise(function(resolve, reject) {
-                request.open("GET", "http://"+this.server+"/alive", true);
-                request.onreadystatechange = function () {
-                    if (request.readyState === 4) {
-                        if (request.status === 200) {
-                            if(pendingTimeout) {
-                                clearTimeout(pendingTimeout);
-                            }
-                            resolve(request.responseText);
-                        } else {
-                            reject(new Error("HTTP " + request.status + " for " + "http://"+this.server+"/alive"));
-                        }
-                    }
-                };
-                pendingTimeout = setTimeout(reject, timeout - 50);
-             });
-            request.send();
-            return promise.timeout(timeout);
+            // var pendingTimeout;
+            // var timeout = 500;
+            // var request = new XMLHttpRequest();
+            // var promise = new Promise(function(resolve, reject) {
+            //     request.open("GET", "http://"+this.server+"/alive", true);
+            //     request.onreadystatechange = function () {
+            //         if (request.readyState === 4) {
+            //             if (request.status === 200) {
+            //                 if(pendingTimeout) {
+            //                     clearTimeout(pendingTimeout);
+            //                 }
+            //                 resolve(request.responseText);
+            //             } else {
+            //                 reject(new Error("HTTP " + request.status + " for " + "http://"+this.server+"/alive"));
+            //             }
+            //         }
+            //     };
+            //     pendingTimeout = setTimeout(reject, timeout - 50);
+            //  });
+            // request.send();
+            //return promise.timeout(timeout);
+
+            return Promise.resolve();
+
         }
     },
 
