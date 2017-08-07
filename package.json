@@ -9,8 +9,7 @@
     "dependencies": {
         "montage": "montagejs/montage#master",
         "digit": "montagejs/digit#master",
-        "glTF-webgl-viewer": "./node_modules/glTF-webgl-viewer",
-
+        "mjs-volume": "marchant/mjs-volume#master",
         "q-connection": "0.5.3"
     },
     "mappings": {
