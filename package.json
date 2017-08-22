@@ -9,8 +9,6 @@
     "dependencies": {
         "montage": "montagejs/montage#master",
         "digit": "montagejs/digit#master",
-        "glTF-webgl-viewer": "./node_modules/glTF-webgl-viewer",
-
         "q-connection": "0.5.3"
     },
     "mappings": {
@@ -22,6 +20,9 @@
         },
         "usdoe": {
             "location": "packages/usdoe"
+        },
+        "glTF-webgl-viewer": {
+            "location": "packages/glTF-webgl-viewer"
         }
     },
     "devDependencies": {
