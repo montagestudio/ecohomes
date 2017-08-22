@@ -73,7 +73,8 @@ body {
 /* Hide/show */
 
 .montage-Indexloader {
-	visibility: hidden;
+	/*visibility: hidden;*/
+    display: none;
 }
 
 .montage-app-bootstrapping .montage-Indexloader,
