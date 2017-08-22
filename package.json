@@ -9,7 +9,6 @@
     "dependencies": {
         "montage": "montagejs/montage#master",
         "digit": "montagejs/digit#master",
-        "mjs-volume": "montagejs/mjs-volume#master",
         "q-connection": "0.5.3"
     },
     "mappings": {
