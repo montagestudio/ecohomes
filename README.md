@@ -23,7 +23,7 @@ Manual Installation:
 
 Throughout the course of development run `npm update` to fetch the latest dependencies
 
-NOTE: Prior to running `npm update` **remove glTF-webgl-viewer from node_modules**, (`rm -rf node_modules/glTF-webgl-viewer`)
+NOTE: Prior to running `npm update` **remove mjs-volume from node_modules**, (`rm -rf node_modules/mjs-volume`)
 
 Contributing
 ------------
@@ -56,7 +56,7 @@ For example you can create & configure a viewPoint named "viewPoint0" - either i
 
 ```
         "viewPoint0": {
-            "prototype": "glTF-webgl-viewer/runtime/node",
+            "prototype": "mjs-volume/runtime/node",
             "properties": {
                 "id": "node-camera001",
                 "scene": {"@": "scene1"}
@@ -72,7 +72,7 @@ Then this viewPoint is referred by a `View` as in:
 
 ```
         "view": {
-            "prototype": "glTF-webgl-viewer/ui/view.reel",
+            "prototype": "mjs-volume/ui/view.reel",
             "properties": {
                 "element": {"#": "colladaView"},
                 "height": "768",
