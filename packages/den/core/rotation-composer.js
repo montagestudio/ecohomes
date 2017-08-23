@@ -64,7 +64,7 @@ exports.RotationComposer = Composer.specialize(/** @lends RotationComposer# */ {
     load: {
         value: function() {
             this.component.addComposerForElement(this._translateComposer, this.element);
-            this._translateComposer._load();
+            this._translateComposer.load();
             this._translateComposer.addEventListener("translateStart", this, false);
             this._translateComposer.addEventListener("translateEnd", this, false);
             this._translateComposer.addEventListener("translate", this, false);
