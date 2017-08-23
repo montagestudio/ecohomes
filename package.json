@@ -7,8 +7,8 @@
         "url": "git+ssh://git@github.com:montagestudio/ecohomes.git"
     },
     "dependencies": {
-        "montage": "montagejs/montage#master",
-        "digit": "montagejs/digit#master",
+        "montage": "17.0.11",
+        "digit": "3.0.0",
         "mjs-volume": "montagejs/mjs-volume#bugs/ecohomes-upgrade",
         "q-connection": "0.5.3"
     },
