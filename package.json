@@ -9,7 +9,7 @@
     "dependencies": {
         "montage": "montagejs/montage#master",
         "digit": "montagejs/digit#master",
-        "mjs-volume": "montagejs/mjs-volume#master",
+        "mjs-volume": "montagejs/mjs-volume#bugs/ecohomes-upgrade",
         "q-connection": "0.5.3"
     },
     "mappings": {
