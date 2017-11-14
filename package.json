@@ -1,37 +1,41 @@
 {
-    "name": "eco-home",
-    "version": "0.2.0",
-	"private": true,
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com:montagestudio/ecohomes.git"
+  "name": "eco-home",
+  "version": "0.2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:montagestudio/ecohomes.git"
+  },
+  "dependencies": {
+    "digit": "^3.0.0",
+    "montage": "^17.0.11",
+    "q-connection": "0.5.3"
+  },
+  "mappings": {
+    "amazon": {
+      "location": "packages/amazon"
     },
-    "dependencies": {
-        "montage": "montagejs/montage#master",
-        "digit": "montagejs/digit#master",
-        "q-connection": "0.5.3"
+    "den": {
+      "location": "packages/den"
     },
-    "mappings": {
-        "amazon": {
-            "location": "packages/amazon"
-        },
-        "den": {
-            "location": "packages/den"
-        },
-        "usdoe": {
-            "location": "packages/usdoe"
-        },
-        "glTF-webgl-viewer": {
-            "location": "packages/glTF-webgl-viewer"
-        }
+    "usdoe": {
+      "location": "packages/usdoe"
     },
-    "devDependencies": {
-        "montage-testing": "0.4.0"
-    },
-    "exclude": [
-        "run-tests.html",
-        "test"
-    ],
-    "bundle": ["ui/main.reel"],
-    "shard": 1
+    "glTF-webgl-viewer": {
+      "location": "packages/glTF-webgl-viewer"
+    }
+  },
+  "devDependencies": {
+    "minit": "^0.5.7",
+    "mop": "^16.0.1"
+  },
+  "scripts": {
+    "build": "mop .",
+    "start": "minit serve",
+    "start:dist": "minit serve -r dist"
+  },
+  "bundle": [
+    "ui/main.reel"
+  ],
+  "shard": 1
 }

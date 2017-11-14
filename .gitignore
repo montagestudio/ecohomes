@@ -1,6 +1,7 @@
 
 node_modules
 builds
+dist/packages/**/*.md
 server/config/credentials.js
 server/node_modules
 
