@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/commonjs/tests/modules/1.0/exactExports/a",{dependencies:["program"],factory:function(e,r,o){define(["require","exports","module","program"],function(e,r,o){r.program=function(){return e("program")}})}});

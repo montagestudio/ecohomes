@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/circular/b",{dependencies:[],factory:function(e,n,c){define(["c","exports"],function(e,n){n.name="b",n.c=e})}});

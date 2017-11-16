@@ -1,0 +1,1 @@
+define(["require","exports","module","test","submodule/a"],function(e,t,u){var o=e("test");e("submodule/a"),o.print("DONE","info")});

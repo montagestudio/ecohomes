@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/universal/tail",{dependencies:[],factory:function(e,n,t){!function(e,n){"undefined"!=typeof t?t.exports=n():"function"==typeof define&&"object"==typeof define.amd?define("tail",function(){return n()}):this[e]=n()}("tail",function(){return{name:"tail"}})}});

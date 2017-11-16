@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/doh/_rhinoRunner",{dependencies:[],factory:function(o,n,e){this.dojo&&dojo.provide("doh._rhinoRunner"),doh.debug=print,function(){var o=doh._report;doh._report=function(){o.apply(doh,arguments),(this._failureCount>0||this._errorCount>0)&&quit(1)}}()}});

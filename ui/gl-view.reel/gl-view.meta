@@ -1,0 +1,88 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "den/montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_currentPanel": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "currentPanel",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_configuration": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configuration",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_width": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "width",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_height": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "height",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_temperatureDelta": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "temperatureDelta",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_floorColor": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "floorColor",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
+  "root": {
+    "prototype": "den/montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/gl-view.reel/gl-view.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_currentPanel"},
+        {"@": "blueprint_unnamed_configuration"},
+        {"@": "blueprint_unnamed_width"},
+        {"@": "blueprint_unnamed_height"},
+        {"@": "blueprint_unnamed_temperatureDelta"},
+        {"@": "blueprint_unnamed_floorColor"}
+      ],
+      "propertyBlueprintGroups": {
+        "GlView": [
+          {"@": "blueprint_unnamed_currentPanel"},
+          {"@": "blueprint_unnamed_configuration"},
+          {"@": "blueprint_unnamed_width"},
+          {"@": "blueprint_unnamed_height"},
+          {"@": "blueprint_unnamed_temperatureDelta"},
+          {"@": "blueprint_unnamed_floorColor"}
+        ]
+      },
+      "module": {
+        "%": "ui/gl-view.reel"
+      },
+      "exportName": "GlView"
+    }
+  }
+}

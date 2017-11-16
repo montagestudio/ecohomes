@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/commonjs/tests/modules/1.0/transitive/program",{dependencies:["test","a"],factory:function(e,t,s){define(["require","exports","module","test","a"],function(e,t,s){var n=e("test");n.assert(1==e("a").foo(),"transitive"),n.print("DONE","info")})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/priority/priorityWithDeps/script/req/app",{dependencies:[],factory:function(e,i,n){define("Carousel",function(){return function(e){this.service=e,this.someType="Carousel"}}),define("app",["Carousel"],function(){})}});

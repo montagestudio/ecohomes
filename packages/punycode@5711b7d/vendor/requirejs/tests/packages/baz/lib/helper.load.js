@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/baz/lib/helper",{dependencies:[],factory:function(e,n,a){define({name:"baz/helper"})}});

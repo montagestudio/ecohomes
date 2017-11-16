@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/tres",{dependencies:[],factory:function(e,n,t){define("tres",function(){return{name:"tres"}})}});

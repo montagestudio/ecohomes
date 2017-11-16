@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.Later=Component.specialize({constructor:{value:function(){this["super"]()}},handleCallAction:{value:function(){this.controller.call()}},handleCallNowAction:{value:function(){this.controller.now()}},controller:{value:null}});

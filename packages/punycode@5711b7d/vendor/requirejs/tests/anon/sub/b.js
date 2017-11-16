@@ -1,0 +1,1 @@
+define(function(n,f,u){f.f=function(){return"sub/b"}});

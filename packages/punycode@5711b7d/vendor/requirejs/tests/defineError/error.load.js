@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/defineError/error",{dependencies:["main"],factory:function(e,n,r){define(["require","main"],function(e,n){return{name:"error",bad:doesNotExist.bad(),doSomething:function(){e("main").doSomething()}}})}});

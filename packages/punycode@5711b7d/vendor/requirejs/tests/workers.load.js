@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/workers",{dependencies:[],factory:function(e,s,n){importScripts("../require.js"),e({baseUrl:"./"},["require","simple","anon/blue","func","anon/green"],function(e,s,n,o,r){postMessage(s.color),postMessage(r.name),postMessage(o()),postMessage(n.name)})}});

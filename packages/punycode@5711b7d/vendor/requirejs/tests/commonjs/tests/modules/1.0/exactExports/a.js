@@ -1,0 +1,1 @@
+define(["require","exports","module","program"],function(r,e,o){e.program=function(){return r("program")}});

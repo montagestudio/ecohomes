@@ -1,0 +1,43 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "usdoe/montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_configuration": {
+    "prototype": "usdoe/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configuration",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
+  "root": {
+    "prototype": "usdoe/montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/overview.reel/overview.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_configuration"}
+      ],
+      "propertyBlueprintGroups": {
+        "Overview": [
+          {"@": "blueprint_unnamed_configuration"}
+        ]
+      },
+      "module": {
+        "%": "ui/overview.reel"
+      },
+      "exportName": "Overview"
+    }
+  }
+}

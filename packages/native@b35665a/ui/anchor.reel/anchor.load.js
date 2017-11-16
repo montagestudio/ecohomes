@@ -1,0 +1,1 @@
+montageDefine("b35665a","ui/anchor.reel/anchor",{dependencies:["ui/native-control"],factory:function(e,n,l){var t=e("ui/native-control").NativeControl,u=n.Anchor=t.specialize({blur:{value:function(){this._element.blur()}},focus:{value:function(){this._element.focus()}}});u.addAttributes({textContent:null,href:null,hreflang:null,media:null,rel:null,target:null,type:null})}});

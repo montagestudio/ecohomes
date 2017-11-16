@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/browsertests/onerror/scriptError",{dependencies:[],factory:function(r,e,o){throw"scriptError throwing"}});

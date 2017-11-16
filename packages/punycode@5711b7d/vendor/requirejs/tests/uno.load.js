@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/uno",{dependencies:[],factory:function(e,n,o){define("uno",["dos","tres"],function(e,n){return{name:"uno",doSomething:function(){return{dosName:e.name,tresName:n.name}}}})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/browsertests/vardefine/three",{dependencies:[],factory:function(e,n,t){if("function"!=typeof r)var r=window.badDefine;r("three.js script")}});

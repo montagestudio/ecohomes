@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/relative/greek/alpha",{dependencies:["."],factory:function(e,n,a){define(function(e,n){n.name="alpha",n.getGreekName=function(){return e(".").name}})}});

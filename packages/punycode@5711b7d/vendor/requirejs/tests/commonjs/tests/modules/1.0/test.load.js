@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/commonjs/tests/modules/1.0/test",{dependencies:["system"],factory:function(e,s,t){define(["require","exports","module","system"],function(e,s,t){s.print=function(){var s=e("system"),t=s.stdio;t.print.apply(t,arguments)},s.assert=function(e,s){e?console.log("PASS "+s,"pass"):console.error("FAIL "+s,"fail")}})}});

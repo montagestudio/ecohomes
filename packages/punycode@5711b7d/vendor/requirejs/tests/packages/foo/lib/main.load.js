@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/foo/lib/main",{dependencies:["alpha"],factory:function(e,a,n){define(function(e,a){a.name="foo",a.alphaName=e("alpha").name})}});

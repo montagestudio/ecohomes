@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/anon/a",{dependencies:["sub/b"],factory:function(e,n,a){define(function(e){var n=e("sub/b");return{name:"a",bName:n.f()}})}});

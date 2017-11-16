@@ -1,0 +1,1 @@
+require({baseUrl:require.isBrowser?"./":"./plugins/textDepend",paths:{text:"../../../text"}},["textDepend!a"],function(e){doh.register("textDepend",[function(t){t.is("hello world",e)}]),doh.run()});

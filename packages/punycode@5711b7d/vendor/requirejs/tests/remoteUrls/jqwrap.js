@@ -1,0 +1,1 @@
+define(function(n){function i(){}return n("https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"),{isFunction:jQuery.isFunction(i)}});

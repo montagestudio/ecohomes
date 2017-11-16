@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/plugins/prime/c",{dependencies:[],factory:function(e,n,i){define({name:"cPrime"})}});

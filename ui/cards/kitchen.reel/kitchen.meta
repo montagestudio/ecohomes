@@ -1,0 +1,43 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_configurationSet": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configurationSet",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/cards/kitchen.reel/kitchen.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_configurationSet"}
+      ],
+      "propertyBlueprintGroups": {
+        "Kitchen": [
+          {"@": "blueprint_unnamed_configurationSet"}
+        ]
+      },
+      "module": {
+        "%": "ui/cards/kitchen.reel"
+      },
+      "exportName": "Kitchen"
+    }
+  }
+}

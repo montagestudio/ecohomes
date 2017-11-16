@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/pkgs/alpha/main",{dependencies:[],factory:function(e,a,n){define({name:"alpha"})}});

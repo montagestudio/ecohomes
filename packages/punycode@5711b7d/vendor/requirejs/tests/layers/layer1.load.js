@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/layers/layer1",{dependencies:[],factory:function(e,a,n){define("alpha",["beta","gamma"],function(e,a){return{name:"alpha",betaName:e.name}}),define("beta",["gamma"],function(e){return{name:"beta",gammaName:e.name}}),define("gamma",["epsilon"],function(e){return{name:"gamma",epsilonName:e.name}})}});

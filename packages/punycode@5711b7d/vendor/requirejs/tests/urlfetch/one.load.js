@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/urlfetch/one",{dependencies:[],factory:function(e,n,t){}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/order/bar",{dependencies:[],factory:function(e,n,r){var t=0;define(function(){return t+=1,function(){t+=2}})}});

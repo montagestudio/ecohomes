@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/universal/universal-tests",{dependencies:[],factory:function(e,s,n){e({baseUrl:e.isBrowser?"./":"./universal/"},["spell"],function(e){doh.register("universal",[function(s){s.is("spell",e.name),s.is("newt",e.newtName),s.is("tail",e.tailName),s.is("eye",e.eyeName)}]),doh.run()})}});

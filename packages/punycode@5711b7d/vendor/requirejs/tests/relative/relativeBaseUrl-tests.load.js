@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/relative/relativeBaseUrl-tests",{dependencies:[],factory:function(e,r,t){e.relativeBaseUrlCounter=0,e({baseUrl:e.isBrowser?"./":"./relative/"},["./top","top"],function(r,t){doh.register("relativeBaseUrl",[function(i){i.is(r.id,t.id),i.is(1,e.relativeBaseUrlCounter),delete e.relativeBaseUrlCounter}]),doh.run()})}});

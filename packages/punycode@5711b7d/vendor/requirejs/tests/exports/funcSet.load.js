@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/exports/funcSet",{dependencies:[],factory:function(e,n,t){define("funcSet",["require","exports","module"],function(e,n,t){t.exports="funcSet"})}});

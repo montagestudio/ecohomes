@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/domReady/one",{dependencies:[],factory:function(e,n,d){define({addToDom:function(){var e=document.createElement("div");e.id="one",e.setAttribute("data-name","one"),document.getElementsByTagName("body")[0].appendChild(e)}})}});

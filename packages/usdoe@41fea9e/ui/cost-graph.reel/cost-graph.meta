@@ -1,0 +1,63 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_max": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "max",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_average": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "average",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_consumption": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "consumption",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": "CostGraph",
+      "blueprintModule": {
+        "%": "usdoe/ui/cost-graph.reel/cost-graph.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_max"},
+        {"@": "blueprint_unnamed_average"},
+        {"@": "blueprint_unnamed_consumption"}
+      ],
+      "propertyBlueprintGroups": {
+        "default": [
+          {"@": "blueprint_unnamed_max"},
+          {"@": "blueprint_unnamed_average"},
+          {"@": "blueprint_unnamed_consumption"}
+        ]
+      },
+      "module": {
+        "%": "usdoe/ui/cost-graph.reel"
+      },
+      "exportName": "CostGraph"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/call-back/calling-now.reel/calling-now",{dependencies:["montage/ui/component"],factory:function(n,e,o){var l=n("montage/ui/component").Component;e.CallingNow=l.specialize({constructor:{value:function(){this["super"]()}},controller:{value:null},handleCancelAction:{value:function(){this.controller.cancel()}}})}});

@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/call-back/later.reel/later",{dependencies:["montage/ui/component"],factory:function(e,n,l){var o=e("montage/ui/component").Component;n.Later=o.specialize({constructor:{value:function(){this["super"]()}},handleCallAction:{value:function(){this.controller.call()}},handleCallNowAction:{value:function(){this.controller.now()}},controller:{value:null}})}});

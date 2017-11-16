@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/cards/solar-panels.reel/solar-panels",{dependencies:["montage/ui/component"],factory:function(e,n,o){var a=e("montage/ui/component").Component;n.SolarPanels=a.specialize({constructor:{value:function(){this["super"]()}}})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/plugins/textDepend/textDepend-tests",{dependencies:[],factory:function(e,t,n){e({baseUrl:e.isBrowser?"./":"./plugins/textDepend",paths:{text:"../../../text"}},["textDepend!a"],function(e){doh.register("textDepend",[function(t){t.is("hello world",e)}]),doh.run()})}});

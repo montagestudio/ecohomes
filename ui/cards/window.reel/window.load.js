@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/cards/window.reel/window",{dependencies:["montage/ui/component"],factory:function(e,n,o){var i=e("montage/ui/component").Component;n.Window=i.specialize({constructor:{value:function(){this["super"]()}}})}});

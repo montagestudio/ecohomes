@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/jsonp/lamp",{dependencies:[],factory:function(e,n,o){define("lamp",{color:"blue"})}});

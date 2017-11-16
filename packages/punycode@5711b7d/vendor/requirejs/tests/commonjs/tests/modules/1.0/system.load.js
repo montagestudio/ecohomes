@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/commonjs/tests/modules/1.0/system",{dependencies:[],factory:function(e,n,o){define({stdio:{print:function(e,n){console.log(e,n)}}})}});

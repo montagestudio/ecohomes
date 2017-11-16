@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/commonjs/tests/modules/1.0/nested/program",{dependencies:["test","a/b/c/d"],factory:function(e,t,n){define(["require","exports","module","test","a/b/c/d"],function(e,t,n){var s=e("test");s.assert(1==e("a/b/c/d").foo(),"nested module identifier"),s.print("DONE","info")})}});

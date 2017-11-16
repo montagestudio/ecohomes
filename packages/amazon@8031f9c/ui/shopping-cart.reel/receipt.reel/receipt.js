@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.Receipt=Component.specialize({constructor:{value:function(){this["super"]()}},_trackingNumber:{get:function(){for(var o="",e=0;e<10;e++)o+=Math.floor(10*Math.random());return o}}});

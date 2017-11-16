@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/relative/outsideBaseUrl/b/3",{dependencies:[],factory:function(e,n,r){define(["require","exports","module"],function(){return{name:"b3"}})}});

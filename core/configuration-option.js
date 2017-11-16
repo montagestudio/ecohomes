@@ -1,0 +1,1 @@
+var Montage=require("montage/core/core").Montage;exports.ConfigurationOption=Montage.specialize({constructor:{value:function(){this["super"]()}},init:{value:function(e,n,i,t){return this.name=e,this.price=n,this.consumptionSavings=i,this.value=t,this}},name:{value:null},price:{value:0},consumptionSavings:{value:0},value:{value:null},description:{value:null},chosen:{value:!1}});

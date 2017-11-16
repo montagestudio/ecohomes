@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/browsertests/vardefine/two",{dependencies:[],factory:function(e,t,n){if("function"!=typeof o)var o=window.badDefine;o("two.js script"),setTimeout(function(){o("two.js timeout, expected")},13)}});

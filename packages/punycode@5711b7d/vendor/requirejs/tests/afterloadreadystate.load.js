@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/afterloadreadystate",{dependencies:[],factory:function(e,t,a){doh.is("complete",document.readyState),d.callback(!0)}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/optimizing/packages/engine/main",{dependencies:[],factory:function(e,n,a){define(["./pistons","./sparkplugs"],function(e,n){return{name:"engine",pistonsName:e.name,sparkplugsName:n.name}})}});

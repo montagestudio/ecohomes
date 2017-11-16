@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/uniques/two",{dependencies:[],factory:function(e,n,o){define("two",["one","three","one"],function(e,n,o){return{name:"two",oneName:e.name,oneName2:o.name,threeName:n.name}})}});

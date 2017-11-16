@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/plugins/textDepend/textDepend",{dependencies:[],factory:function(e,t,n){define(["text!test.txt"],function(e){return{load:function(t,n,d,i){d(e)}}})}});

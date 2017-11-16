@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/browsertests/vardefine/one",{dependencies:[],factory:function(e,n,i){if("function"!=typeof o)var o=window.badDefine;o("one.js script")}});

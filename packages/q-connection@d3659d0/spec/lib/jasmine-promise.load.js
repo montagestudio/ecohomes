@@ -1,0 +1,1 @@
+montageDefine("d3659d0","spec/lib/jasmine-promise",{dependencies:[],factory:function(e,n,t){"use strict";jasmine.Block.prototype.execute=function(e){var n,t=this.spec;try{n=this.func.call(t,e),n&&"function"==typeof n.then?n.then(function(){e()},function(n){t.fail(n),e()}):0===this.func.length&&e()}catch(c){t.fail(c),e()}}}});

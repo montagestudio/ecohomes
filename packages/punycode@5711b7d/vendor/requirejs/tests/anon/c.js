@@ -1,0 +1,1 @@
+define(function(a){var e=a("a");return{name:"c",aName:e.name}});

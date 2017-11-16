@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/optimizing/packages/engine/sparkplugs",{dependencies:[],factory:function(e,n,s){define({name:"sparkplugs"})}});

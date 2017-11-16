@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/two",{dependencies:["one"],factory:function(e,n,o){define("two",["require","one"],function(e,n){return{size:"small",color:"redtwo",doSomething:function(){return e("one").doSomething()}}})}});

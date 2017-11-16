@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/version2/omega",{dependencies:[],factory:function(e,n,o){define("omega",function(){return{version:2}})}});

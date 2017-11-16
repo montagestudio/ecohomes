@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.CostGraph=Component.specialize({constructor:{value:function(){this["super"]()}},max:{value:null},average:{value:null},consumption:{value:null}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/optimizing/packages/tires/main",{dependencies:[],factory:function(e,i,n){define({name:"tires"})}});

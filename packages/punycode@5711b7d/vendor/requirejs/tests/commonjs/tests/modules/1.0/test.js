@@ -1,0 +1,1 @@
+define(["require","exports","module","system"],function(e,o,s){o.print=function(){var o=e("system"),s=o.stdio;s.print.apply(s,arguments)},o.assert=function(e,o){e?console.log("PASS "+o,"pass"):console.error("FAIL "+o,"fail")}});

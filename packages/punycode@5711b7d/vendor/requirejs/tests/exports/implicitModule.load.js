@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/exports/implicitModule",{dependencies:[],factory:function(e,i,n){define(function(e,i,n){n.exports&&(n.exports=function(){return"implicitModule"})})}});

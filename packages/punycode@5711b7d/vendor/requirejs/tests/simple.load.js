@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/simple",{dependencies:[],factory:function(e,n,i){define("simple",function(){return{color:"blue"}})}});

@@ -1,0 +1,1 @@
+define(function(e,n){n.name="alpha",n.getGreekName=function(){return e(".").name}});

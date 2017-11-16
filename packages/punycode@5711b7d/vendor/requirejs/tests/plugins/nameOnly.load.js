@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/plugins/nameOnly",{dependencies:[],factory:function(e,n,i){define({load:function(e,n,i,a){i({name:"nameOnly"})}})}});

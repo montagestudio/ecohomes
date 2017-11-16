@@ -1,0 +1,30 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "amazon/ui/shopping-cart.reel/receipt.reel/receipt.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprintGroups": {
+        "Receipt": []
+      },
+      "module": {
+        "%": "amazon/ui/shopping-cart.reel/receipt.reel"
+      },
+      "exportName": "Receipt"
+    }
+  }
+}

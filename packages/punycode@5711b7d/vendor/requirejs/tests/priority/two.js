@@ -1,0 +1,1 @@
+define("gamma",["theta","epsilon"],function(e,a){return{name:"gamma",thetaName:e.name,epsilonName:a.name}}),define("theta",function(){return{name:"theta"}});

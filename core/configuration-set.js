@@ -1,0 +1,1 @@
+var Montage=require("montage/core/core").Montage,Map=require("montage/collections/map");exports.ConfigurationSet=Montage.specialize({constructor:{value:function(){this["super"](),this.optionMap=new Map}},optionMap:{value:null},name:{value:null}});

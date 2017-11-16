@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/index.html",{"text":"<!DOCTYPE html><html><head><title>require.js: Tests</title></head><body><h1>require.js: Tests</h1><ol><li><a href=\"doh/runner.html?testUrl=../all\">All Automated Tests</a></li></ol></body></html>"})

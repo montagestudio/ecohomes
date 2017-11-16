@@ -1,0 +1,1 @@
+!function(e){e("spell",function(e){var n=e("newt");return{name:"spell",newtName:n.name,tailName:n.tailName,eyeName:n.eyeName}})}("function"==typeof define&&define.amd?define:function(e,n){"undefined"!=typeof module&&module.exports?module.exports=n(require):window.myGlobal=n(function(e){return window[e]})});

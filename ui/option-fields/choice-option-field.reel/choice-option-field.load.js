@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/option-fields/choice-option-field.reel/choice-option-field",{dependencies:["montage/ui/component"],factory:function(e,o,i){var n=e("montage/ui/component").Component;o.ChoiceOptionField=n.specialize({constructor:{value:function(){this["super"]()}}})}});

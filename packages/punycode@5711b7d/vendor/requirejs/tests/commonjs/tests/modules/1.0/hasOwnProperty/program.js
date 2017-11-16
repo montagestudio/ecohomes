@@ -1,0 +1,1 @@
+define(["require","exports","module","hasOwnProperty","toString","test"],function(t,r,e){var n=(t("hasOwnProperty"),t("toString"),t("test"));n.print("DONE","info")});

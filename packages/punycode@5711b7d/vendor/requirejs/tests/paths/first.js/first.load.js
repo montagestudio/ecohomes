@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/paths/first.js/first",{dependencies:[],factory:function(e,n,t){globalCounter+=1,define(["./second"],function(e){return globalCounter+=1,{load:e}})}});

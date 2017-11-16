@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/commonjs/tests/modules/1.0/hasOwnProperty/program",{dependencies:["hasOwnProperty","toString","test"],factory:function(e,t,r){define(["require","exports","module","hasOwnProperty","toString","test"],function(e,t,r){var n=(e("hasOwnProperty"),e("toString"),e("test"));n.print("DONE","info")})}});

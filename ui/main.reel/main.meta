@@ -1,0 +1,82 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "den/montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_configuration": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configuration",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
+  "blueprint_unnamed_showNav": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "showNav",
+      "blueprint": {"@": "root"},
+      "valueType": "boolean"
+    }
+  },
+  "blueprint_unnamed_viewKey": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "viewKey",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_panelDescriptors": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "panelDescriptors",
+      "blueprint": {"@": "root"},
+      "cardinality": -1
+    }
+  },
+  "blueprint_unnamed_temperatureDelta": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "temperatureDelta",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "den/montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/main.reel/main.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_configuration"},
+        {"@": "blueprint_unnamed_showNav"},
+        {"@": "blueprint_unnamed_viewKey"},
+        {"@": "blueprint_unnamed_panelDescriptors"},
+        {"@": "blueprint_unnamed_temperatureDelta"}
+      ],
+      "propertyBlueprintGroups": {
+        "default": [],
+        "Main": [
+          {"@": "blueprint_unnamed_configuration"},
+          {"@": "blueprint_unnamed_showNav"},
+          {"@": "blueprint_unnamed_viewKey"},
+          {"@": "blueprint_unnamed_panelDescriptors"},
+          {"@": "blueprint_unnamed_temperatureDelta"}
+        ]
+      },
+      "module": {
+        "%": "ui/main.reel"
+      },
+      "exportName": "Main"
+    }
+  }
+}

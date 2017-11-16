@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/browsertests/scriptload/five",{dependencies:[],factory:function(e,s,t){log("five.js script")}});

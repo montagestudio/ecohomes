@@ -1,0 +1,1 @@
+montageDefine("8031f9c","service/products",{dependencies:["montage","./products.json"],factory:function(e,t,n){var o=e("montage").Montage,c=e("./products.json");t.Products=o.specialize({constructor:{value:function(){this["super"]()}}},{getProduct:{value:function(e){return c[e]}}})}});

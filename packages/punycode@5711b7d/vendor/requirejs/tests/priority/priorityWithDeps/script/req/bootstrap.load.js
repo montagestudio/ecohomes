@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/priority/priorityWithDeps/script/req/bootstrap",{dependencies:[],factory:function(e,t,r){define("req/bootstrap",["req/begin","req/config","req/utils/utils"],function(){ip.bootstrap="bootstrap"})}});

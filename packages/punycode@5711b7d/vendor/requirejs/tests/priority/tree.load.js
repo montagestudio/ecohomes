@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/priority/tree",{dependencies:[],factory:function(e,r,a){define("bark",function(){return{name:"bark"}});var n=globalLeafName;define("tree",["leaf","bark"],function(){return{name:"tree",leafName:n,barkName:bark.name}})}});

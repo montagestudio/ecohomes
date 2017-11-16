@@ -1,0 +1,30 @@
+{
+  "blueprint_unnamed_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": null,
+        "blueprintModule": {
+          "%": "ui/card.reel/card.meta"
+        }
+      }
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/cards/staircase.reel/staircase.meta"
+      },
+      "parent": {"@": "blueprint_unnamed_reference"},
+      "propertyBlueprintGroups": {
+        "Staircase": []
+      },
+      "module": {
+        "%": "ui/cards/staircase.reel"
+      },
+      "exportName": "Staircase"
+    }
+  }
+}

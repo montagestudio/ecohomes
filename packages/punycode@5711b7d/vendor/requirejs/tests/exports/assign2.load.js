@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/exports/assign2",{dependencies:[],factory:function(e,n,s){define(["module","exports","require"],function(e,n,s){e.exports="assign2"})}});

@@ -1,0 +1,1 @@
+montageDefine("8031f9c","package.json",{exports:{name:"amazon",version:"0.1.0","private":!0,dependencies:{montage:"~0.13.2",digit:"~0.3.1"},main:"index",hash:"8031f9c",mappings:{montage:{name:"montage",hash:"b0111a3",location:"../montage@b0111a3/"},digit:{name:"digit",hash:"3ef65ed",location:"../digit@3ef65ed/"}},production:!0,useScriptInjection:!0}});

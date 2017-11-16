@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/browsertests/scriptload/three",{dependencies:[],factory:function(e,t,r){log("three.js script")}});

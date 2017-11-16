@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.CallingNow=Component.specialize({constructor:{value:function(){this["super"]()}},controller:{value:null},handleCancelAction:{value:function(){this.controller.cancel()}}});

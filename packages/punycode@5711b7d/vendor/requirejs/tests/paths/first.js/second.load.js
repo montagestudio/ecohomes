@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/paths/first.js/second",{dependencies:[],factory:function(e,n,s){define(["./first"],function(){return function(e,n,s){s({name:"first",secondName:"second"})}})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/text/resources/local.html",{"text":"<html><head></head><body><h1>Local</h1></body></html>"})

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/foo/lib/second",{dependencies:[],factory:function(e,n,o){define({name:"foo/second"})}});

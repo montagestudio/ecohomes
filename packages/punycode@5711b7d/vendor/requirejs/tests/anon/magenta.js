@@ -1,0 +1,1 @@
+define(function(e,t,a){var m=e("red"),n=e("./blue"),o=e("text!./message.txt");t.name=m.name+n.name,t.path=e.toUrl("./foo.html"),t.message=o});

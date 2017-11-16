@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/exports/moduleAndExports-tests",{dependencies:[],factory:function(e,s,n){e({baseUrl:e.isBrowser?"./":"./exports/"},["am"],function(e){doh.register("moduleAndExports",[function(s){s.is("am",e.name),s.is("bm",e.bName),s.is("cm",e.cName)}]),doh.run()})}});

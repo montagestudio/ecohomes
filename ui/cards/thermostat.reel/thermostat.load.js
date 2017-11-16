@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/cards/thermostat.reel/thermostat",{dependencies:["montage/ui/component"],factory:function(e,t,n){var o=e("montage/ui/component").Component;t.Thermostat=o.specialize({constructor:{value:function(){this["super"]()}}})}});

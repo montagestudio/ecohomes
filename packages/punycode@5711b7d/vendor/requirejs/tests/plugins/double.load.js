@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/plugins/double",{dependencies:[],factory:function(e,n,d){define({load:function(e,n,d,i){d("x")}})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/commonjs/tests/modules/1.0/absolute/program",{dependencies:["test","submodule/a","b"],factory:function(e,o,s){define(["require","exports","module","test","submodule/a","b"],function(e,o,s){var t=e("test"),r=e("submodule/a"),u=e("b");t.assert(r.foo().foo===u.foo,"require works with absolute identifiers"),t.print("DONE","info")})}});

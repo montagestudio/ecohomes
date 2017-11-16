@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/plugins/a",{dependencies:[],factory:function(e,n,i){define({name:"a"})}});

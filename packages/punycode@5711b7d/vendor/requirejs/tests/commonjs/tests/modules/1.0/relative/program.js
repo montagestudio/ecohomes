@@ -1,0 +1,1 @@
+define(["require","exports","module","test","submodule/a","submodule/b"],function(e,o,u){var r=e("test"),s=e("submodule/a"),t=e("submodule/b");r.assert(s.foo==t.foo,"a and b share foo through a relative require"),r.print("DONE","info")});

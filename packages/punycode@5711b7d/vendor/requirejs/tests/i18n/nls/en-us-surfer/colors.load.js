@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/i18n/nls/en-us-surfer/colors",{dependencies:[],factory:function(e,n,d){define({red:"red, dude"})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/nestedDefine/nestedDefine2",{dependencies:[],factory:function(e,n,t){e(["one"],function(n){define("nested",["two"],function(e){return{name:"nested",two:e}}),e(["nested"],function(e){doh.register("nestedDefine2",[function(t){t.is("one",n.name),t.is("two",e.two.name),t.is("nested",e.name)}]),doh.run()})})}});

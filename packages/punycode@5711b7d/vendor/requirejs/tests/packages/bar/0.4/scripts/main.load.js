@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/bar/0.4/scripts/main",{dependencies:[],factory:function(e,n,a){define({name:"bar",version:"0.4"})}});

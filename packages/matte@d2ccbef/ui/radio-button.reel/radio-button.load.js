@@ -1,0 +1,1 @@
+montageDefine("d2ccbef","ui/radio-button.reel/radio-button",{dependencies:["montage/ui/base/abstract-radio-button"],factory:function(t,a,e){var o=t("montage/ui/base/abstract-radio-button").AbstractRadioButton;a.RadioButton=o.specialize({hasTemplate:{value:!0},constructor:{value:function(){this["super"](),this.classList.add("matte-RadioButton")}}})}});

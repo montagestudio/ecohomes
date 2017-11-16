@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/text/subwidget",{dependencies:[],factory:function(e,t,i){define("subwidget",["text!subwidget.html!strip","text!subwidget2.html"],function(e,t){return{name:"subwidget",template:e,template2:t}})}});

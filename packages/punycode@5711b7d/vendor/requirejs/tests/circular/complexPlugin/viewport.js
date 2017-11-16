@@ -1,0 +1,1 @@
+define(function(t){return{name:"viewport",template:t("slowText!viewport.html"),toolbar:t("toolbar")}});

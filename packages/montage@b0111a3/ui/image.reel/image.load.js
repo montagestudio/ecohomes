@@ -1,0 +1,1 @@
+montageDefine("b0111a3","ui/image.reel/image",{dependencies:["ui/component"],factory:function(e,n,a){var i=e("ui/component").Component,l=n.Image=i.specialize({hasTemplate:{value:!1}});l.addAttributes({alt:null,height:null,src:null,width:null})}});

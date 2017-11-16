@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/browsertests/scriptloadinteractive/eight",{dependencies:[],factory:function(e,t,n){def(function(){return{name:"eight"}})}});

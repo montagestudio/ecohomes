@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/cards/laundry.reel/laundry",{dependencies:["montage/ui/component"],factory:function(e,n,o){var a=e("montage/ui/component").Component;n.Laundry=a.specialize({constructor:{value:function(){this["super"]()}}})}});

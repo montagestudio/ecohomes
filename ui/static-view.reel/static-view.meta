@@ -1,0 +1,51 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "den/montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_configuration": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "configuration",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_currentPanel": {
+    "prototype": "den/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "currentPanel",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "den/montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/static-view.reel/static-view.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_configuration"},
+        {"@": "blueprint_unnamed_currentPanel"}
+      ],
+      "propertyBlueprintGroups": {
+        "StaticView": [
+          {"@": "blueprint_unnamed_configuration"},
+          {"@": "blueprint_unnamed_currentPanel"}
+        ]
+      },
+      "module": {
+        "%": "ui/static-view.reel"
+      },
+      "exportName": "StaticView"
+    }
+  }
+}

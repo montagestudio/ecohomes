@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("montage/ui/component").Component;exports.Options=Montage.create(Component,{bytesLimit:{value:100},concurrentRequests:{value:0},showReflection:{value:!1},showBBOX:{value:!1},modelsController:{value:null},camerasController:{value:null},handleRestartAction:{value:function(){this.dispatchEventNamed("reload")}}});

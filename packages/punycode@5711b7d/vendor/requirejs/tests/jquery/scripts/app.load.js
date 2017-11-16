@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/jquery/scripts/app",{dependencies:[],factory:function(e,n,r){define(["jquery.alpha","jquery.beta"],function(){})}});

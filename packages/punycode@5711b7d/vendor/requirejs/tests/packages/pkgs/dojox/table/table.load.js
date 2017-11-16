@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/pkgs/dojox/table/table",{dependencies:[],factory:function(e,n,a){define(["dojox/chair"],function(e){return{name:"dojox/table",chairName:e.name}})}});

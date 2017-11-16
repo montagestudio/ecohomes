@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,products=require("./products.json");exports.Products=Montage.specialize({constructor:{value:function(){this["super"]()}}},{getProduct:{value:function(t){return products[t]}}});

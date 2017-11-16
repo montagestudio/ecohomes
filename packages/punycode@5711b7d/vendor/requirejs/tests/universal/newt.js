@@ -1,0 +1,1 @@
+!function(e){e(function(e){var n=e("tail"),o=e("eye");return{name:"newt",eyeName:o.name,tailName:n.name}})}("function"==typeof define&&define.amd?define:function(e,n){"undefined"!=typeof module&&module.exports?module.exports=n(require):window.myGlobal=n(function(e){return window[e]})});

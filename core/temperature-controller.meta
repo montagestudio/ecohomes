@@ -1,0 +1,85 @@
+{
+    "temperatureController_dayTemperature": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "dayTemperature",
+            "blueprint": {
+                "@": "root"
+            },
+            "valueType": "number"
+        }
+    },
+    "temperatureController_nightTemperature": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "nightTemperature",
+            "blueprint": {
+                "@": "root"
+            },
+            "valueType": "number"
+        }
+    },
+    "temperatureController_averageConsumption": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "averageConsumption",
+            "blueprint": {
+                "@": "root"
+            },
+            "valueType": "number"
+        }
+    },
+    "temperatureController_consumption": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "consumption",
+            "blueprint": {
+                "@": "root"
+            },
+            "valueType": "number",
+            "readyOnly": true
+        }
+    },
+    "root": {
+        "prototype": "montage/core/meta/module-blueprint",
+        "properties": {
+            "name": "TemperatureController",
+            "customPrototype": false,
+            "propertyBlueprints": [
+                {
+                    "@": "temperatureController_dayTemperature"
+                },
+                {
+                    "@": "temperatureController_nightTemperature"
+                },
+                {
+                    "@": "temperatureController_averageConsumption"
+                },
+                {
+                    "@": "temperatureController_consumption"
+                }
+            ],
+            "propertyBlueprintGroups": {
+                "temperatureController": [
+                    {
+                        "@": "temperatureController_dayTemperature"
+                    },
+                    {
+                        "@": "temperatureController_nightTemperature"
+                    },
+                    {
+                        "@": "temperatureController_averageConsumption"
+                    }
+                ]
+            },
+            "propertyValidationRules": {},
+            "blueprintModule": {
+                "%": "core/temperature-controller.meta"
+            },
+            "exportName": "TemperatureController",
+            "module": {
+                "%": "core/temperature-controller"
+            }
+        }
+    }
+}

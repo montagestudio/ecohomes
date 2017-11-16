@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/cards/kitchen.reel/kitchen",{dependencies:["montage/ui/component"],factory:function(e,n,t){var o=e("montage/ui/component").Component;n.Kitchen=o.specialize({constructor:{value:function(){this["super"]()}}})}});

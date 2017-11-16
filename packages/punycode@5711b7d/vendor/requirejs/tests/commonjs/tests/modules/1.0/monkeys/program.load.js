@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/commonjs/tests/modules/1.0/monkeys/program",{dependencies:["a","test"],factory:function(e,t,n){define(["require","exports","module","a","test"],function(e,t,n){var s=(e("a"),e("test"));s.assert(10==t.monkey,"monkeys permitted"),s.print("DONE","info")})}});

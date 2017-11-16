@@ -1,0 +1,1 @@
+montageDefine("41fea9e","ui/cost-graph.reel/cost-graph",{dependencies:["montage/ui/component"],factory:function(e,n,o){var a=e("montage/ui/component").Component;n.CostGraph=a.specialize({constructor:{value:function(){this["super"]()}},max:{value:null},average:{value:null},consumption:{value:null}})}});

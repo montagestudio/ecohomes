@@ -1,0 +1,1 @@
+montageDefine("d2ccbef","ui/input-checkbox.reel/input-checkbox",{dependencies:["native/ui/input-checkbox.reel"],factory:function(e,c,t){var i=e("native/ui/input-checkbox.reel").InputCheckbox;c.InputCheckbox=i.specialize({hasTemplate:{value:!0},constructor:{value:function(){this["super"](),this.classList.add("matte-InputCheckbox")}}})}});

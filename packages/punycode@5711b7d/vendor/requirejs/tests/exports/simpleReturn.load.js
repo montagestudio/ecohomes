@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/exports/simpleReturn",{dependencies:[],factory:function(e,n,t){define(function(){return function(){return"simpleReturn"}})}});

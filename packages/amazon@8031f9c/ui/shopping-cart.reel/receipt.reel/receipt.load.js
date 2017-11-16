@@ -1,0 +1,1 @@
+montageDefine("8031f9c","ui/shopping-cart.reel/receipt.reel/receipt",{dependencies:["montage/ui/component"],factory:function(e,n,t){var o=e("montage/ui/component").Component;n.Receipt=o.specialize({constructor:{value:function(){this["super"]()}},_trackingNumber:{get:function(){for(var e="",n=0;n<10;n++)e+=Math.floor(10*Math.random());return e}}})}});

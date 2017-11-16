@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/i18n/commonB",{dependencies:[],factory:function(e,n,o){define(["i18n!nls/colors"],function(e){return e.blue})}});

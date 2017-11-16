@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/anon/magenta",{dependencies:["fake1","red","./blue","text!./message.txt","fake2"],factory:function(e,t,n){define(function(e,t,n){var a=e("red"),s=e("./blue"),m=e("text!./message.txt");t.name=a.name+s.name,t.path=e.toUrl("./foo.html"),t.message=m})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/jquery/scripts/jquery.epsilon",{dependencies:[],factory:function(e,n,i){!function(){function e(e){e.fn.epsilon=function(){return"epsilon"},e(function(){doh.is("epsilon",e("body").epsilon()),readyFired()})}"undefined"!=typeof define&&define.amd?define(["jquery"],e):"undefined"!=typeof jQuery&&e(jQuery)}()}});

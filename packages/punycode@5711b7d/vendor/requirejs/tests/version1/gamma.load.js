@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/version1/gamma",{dependencies:[],factory:function(e,n,o){gamma={color:"green"}}});

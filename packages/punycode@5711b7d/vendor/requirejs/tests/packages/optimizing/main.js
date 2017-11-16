@@ -1,0 +1,1 @@
+require.config({packagePaths:{packages:["engine","tires","fuel"]}}),define(["engine","tires","fuel"],function(e,i,s){doh.register("optimizingPackages",[function(n){n.is("engine",e.name),n.is("pistons",e.pistonsName),n.is("sparkplugs",e.sparkplugsName),n.is("tires",i.name),n.is("fuel",s.name)}]),doh.run()});

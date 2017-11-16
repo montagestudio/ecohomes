@@ -1,0 +1,70 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_desiredTemperature": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "desiredTemperature",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_ambientTemperature": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "ambientTemperature",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_heatingRate": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "heatingRate",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_coolingRate": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "coolingRate",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_desiredTemperature"},
+        {"@": "blueprint_unnamed_ambientTemperature"},
+        {"@": "blueprint_unnamed_heatingRate"},
+        {"@": "blueprint_unnamed_coolingRate"}
+      ],
+      "propertyBlueprintGroups": {
+        "Den": [
+          {"@": "blueprint_unnamed_desiredTemperature"},
+          {"@": "blueprint_unnamed_ambientTemperature"},
+          {"@": "blueprint_unnamed_heatingRate"},
+          {"@": "blueprint_unnamed_coolingRate"}
+        ]
+      },
+      "module": {
+        "%": "ui/den.reel"
+      },
+      "exportName": "Den"
+    }
+  }
+}

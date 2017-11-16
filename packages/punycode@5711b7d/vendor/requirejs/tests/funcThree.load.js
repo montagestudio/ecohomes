@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/funcThree",{dependencies:["funcFour"],factory:function(n,e,u){define("funcThree",["funcFour"],function(e){var u=function(e){return e+"-"+n("funcFour").suffix()};return u.suffix=function(){return"THREE_SUFFIX"},u})}});

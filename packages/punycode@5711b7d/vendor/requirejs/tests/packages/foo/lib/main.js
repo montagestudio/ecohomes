@@ -1,0 +1,1 @@
+define(function(a,e){e.name="foo",e.alphaName=a("alpha").name});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/browsertests/scriptloadinteractive/four",{dependencies:[],factory:function(e,n,r){def(function(){return{name:"four"}})}});

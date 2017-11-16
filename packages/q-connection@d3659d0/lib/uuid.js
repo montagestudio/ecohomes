@@ -1,0 +1,1 @@
+function generate(){return R(8)+"-"+R(4)+"-4"+R(3)+"-"+R(8)+R(4)}function R(e){return(Math.random().toString(16)+"00000000").slice(2,2+e).toUpperCase()}exports.generate=generate;

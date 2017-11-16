@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/text/subwidget.html",{"text":"<!DOCTYPE html><html><head><title>sample.html</title><script src=../require.js></script></head><body class=foo onload=\"alert('hello')\"><div data-type=subwidget><h1>This is a subwidget</h1></div></body></html>"})

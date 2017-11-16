@@ -1,0 +1,1 @@
+montageDefine("d2ccbef","ui/anchor.reel/anchor",{dependencies:["montage/ui/component","native/ui/anchor.reel"],factory:function(e,n,o){var a=(e("montage/ui/component").Component,e("native/ui/anchor.reel").Anchor);n.Anchor=a.specialize({hasTemplate:{value:!1},constructor:{value:function(){this["super"](),this.classList.add("matte-Anchor")}}})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/packages/funky/lib/monkey",{dependencies:[],factory:function(e,n,i){define({name:"monkey"})}});

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/funcTwo",{dependencies:["funcOne"],factory:function(e,n,t){define("funcTwo",["require","funcOne"],function(e){var n=function(n){this.name=n,this.one=new(e("funcOne"))("ONE")};return n.prototype.oneName=function(){return this.one.getName()},n})}});

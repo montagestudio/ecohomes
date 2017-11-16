@@ -1,0 +1,1 @@
+montageDefine("22a41ee","core/configuration-set",{dependencies:["montage/core/core","montage/collections/map"],factory:function(e,o,n){var t=e("montage/core/core").Montage,a=e("montage/collections/map");o.ConfigurationSet=t.specialize({constructor:{value:function(){this["super"](),this.optionMap=new a}},optionMap:{value:null},name:{value:null}})}});

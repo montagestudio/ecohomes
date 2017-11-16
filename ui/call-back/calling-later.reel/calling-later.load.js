@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/call-back/calling-later.reel/calling-later",{dependencies:["montage/ui/component"],factory:function(e,n,l){var a=e("montage/ui/component").Component;n.CallingLater=a.specialize({constructor:{value:function(){this["super"]()}},controller:{value:null},handleCancelAction:{value:function(){this.controller.cancel()}}})}});

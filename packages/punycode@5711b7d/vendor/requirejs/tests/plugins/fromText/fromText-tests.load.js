@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/plugins/fromText/fromText-tests",{dependencies:[],factory:function(e,t,n){e({baseUrl:e.isBrowser?"./":"./plugins/fromText",paths:{text:"../../../text"}},["refine!a"],function(e){doh.register("pluginsFromText",[function(t){t.is("a",e.name)}]),doh.run()})}});

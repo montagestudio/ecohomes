@@ -1,0 +1,1 @@
+define(["require","main"],function(n,e){return{name:"error",bad:doesNotExist.bad(),doSomething:function(){n("main").doSomething()}}});

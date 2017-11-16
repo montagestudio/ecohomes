@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/circular/circularPlugin-tests",{dependencies:[],factory:function(e,r,i){e({baseUrl:e.isBrowser?"./":"./circular"},["require","plugin!a"],function(e,r){doh.register("circularPlugin",[function(e){e.is("a",r.name),e.is("b",r.b.name),e.is("c",r.b.c.name)}]),doh.run()})}});

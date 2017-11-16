@@ -1,0 +1,1 @@
+define(function(e){var n=e("sub/b");return{name:"a",bName:n.f()}});

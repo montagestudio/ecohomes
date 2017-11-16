@@ -1,0 +1,1 @@
+montageDefine("22a41ee","ui/option-fields/range-option-field.reel/range-option-field",{dependencies:["montage/ui/component"],factory:function(e,n,o){var i=e("montage/ui/component").Component;n.RangeOptionField=i.specialize({constructor:{value:function(){this["super"]()}}})}});

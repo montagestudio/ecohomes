@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/remoteUrls/remoteUrls-tests",{dependencies:[],factory:function(e,r,s){e({baseUrl:e.isBrowser?"./":"./remoteUrls/"},["require","jqwrap"],function(e,r){doh.register("remoteUrls",[function(e){e.is(!0,r.isFunction)}]),doh.run()})}});

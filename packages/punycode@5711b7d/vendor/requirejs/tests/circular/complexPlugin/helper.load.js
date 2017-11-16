@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/circular/complexPlugin/helper",{dependencies:["main"],factory:function(e,n,i){define(function(e,n){e("main");n.name="helper"})}});

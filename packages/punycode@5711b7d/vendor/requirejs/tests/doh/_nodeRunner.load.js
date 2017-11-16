@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/doh/_nodeRunner",{dependencies:[],factory:function(o,e,r){var n=Array.prototype.slice;doh.debug=function(){var o=n.call(arguments,0).join(" ");console.log(o)};var t=doh._report;doh._report=function(){t.apply(doh,arguments),(this._failureCount>0||this._errorCount>0)&&process.exit(1)}}});

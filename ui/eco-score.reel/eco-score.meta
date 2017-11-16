@@ -1,0 +1,64 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "usdoe/montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "usdoe/montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_baseConsumption": {
+    "prototype": "usdoe/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "baseConsumption",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_ecoConsumption": {
+    "prototype": "usdoe/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "ecoConsumption",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "blueprint_unnamed_maxSavings": {
+    "prototype": "usdoe/montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "maxSavings",
+      "blueprint": {"@": "root"},
+      "valueType": "number"
+    }
+  },
+  "root": {
+    "prototype": "usdoe/montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/eco-score.reel/eco-score.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_baseConsumption"},
+        {"@": "blueprint_unnamed_ecoConsumption"},
+        {"@": "blueprint_unnamed_maxSavings"}
+      ],
+      "propertyBlueprintGroups": {
+        "EcoSavings": [
+          {"@": "blueprint_unnamed_baseConsumption"},
+          {"@": "blueprint_unnamed_ecoConsumption"},
+          {"@": "blueprint_unnamed_maxSavings"}
+        ],
+        "EcoScore": []
+      },
+      "module": {
+        "%": "ui/eco-score.reel"
+      },
+      "exportName": "EcoSavings"
+    }
+  }
+}

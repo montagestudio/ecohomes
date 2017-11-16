@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/priority/priorityWithDeps/script/req/begin",{dependencies:[],factory:function(e,i,n){define("req/begin",function(){window.ip={begin:"begin",controllers:{},models:{},views:{},utils:{},config:{}}})}});

@@ -1,0 +1,1 @@
+montageDefine("b35665a","ui/input-date.reel/input-date",{dependencies:["montage","montage/ui/component","ui/text-input"],factory:function(t,e,n){var i=(t("montage").Montage,t("montage/ui/component").Component,t("ui/text-input").TextInput),u=e.InputDate=i.specialize({});u.addAttributes({max:null,min:null,step:null})}});

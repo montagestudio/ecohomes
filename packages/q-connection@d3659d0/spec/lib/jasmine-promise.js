@@ -1,0 +1,1 @@
+"use strict";jasmine.Block.prototype.execute=function(t){var n,c=this.spec;try{n=this.func.call(c,t),n&&"function"==typeof n.then?n.then(function(){t()},function(n){c.fail(n),t()}):0===this.func.length&&t()}catch(e){c.fail(e),t()}};

@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/i18n/testModule",{dependencies:[],factory:function(e,n,i){define(["i18n!nls/colors"],function(e){e.red})}});

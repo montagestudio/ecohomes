@@ -1,0 +1,1 @@
+montageDefine("5711b7d","vendor/requirejs/tests/paths/relativeModuleId-tests",{dependencies:[],factory:function(e,r,a){e({baseUrl:"./",paths:{array:"impl/array"}},["require","array"],function(e,r){doh.register("relativeModuleId",[function(e){e.is("impl/array",r.name),e.is("util",r.utilName)}]),doh.run()})}});
