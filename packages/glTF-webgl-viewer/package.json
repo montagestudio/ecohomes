@@ -2,10 +2,9 @@
   "name": "glTF-webgl-viewer",
   "version": "0.1.0",
   "dependencies": {
-    "montage": "~0.14.6",
-    "digit": "~0.4.0",
-    "matte": "0.1.1",
-    "q": "0.9.6",
+    "digit": "^0.4.0",
+    "montage": "^0.14.15",
+    "q": "^1.5.1",
     "url": "0.7.9"
   },
   "repository": {
